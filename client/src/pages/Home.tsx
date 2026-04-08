@@ -1,25 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* Home — Contemporary Studio, Warm Geometric
+   Assembles all landing page sections in order */
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import LogosCarousel from "@/components/LogosCarousel";
+import ServicesSection from "@/components/ServicesSection";
+import ProcessSection from "@/components/ProcessSection";
+import WorkSection from "@/components/WorkSection";
+import PricingSection from "@/components/PricingSection";
+import ComparisonSection from "@/components/ComparisonSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import Footer from "@/components/Footer";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-[#FAF7F4]" style={{ scrollBehavior: "smooth" }}>
+      <Navbar />
+      <HeroSection />
+      <LogosCarousel />
+      <ServicesSection />
+      <ProcessSection />
+      <WorkSection />
+      <PricingSection />
+      <ComparisonSection />
+      <TestimonialsSection />
+      <Footer />
     </div>
   );
 }
