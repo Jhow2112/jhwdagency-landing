@@ -23,7 +23,7 @@ export default function HeroSection() {
       />
 
       {/* Content — pt accounts for fixed navbar height */}
-      <div className="container relative z-10 pt-28 pb-16 sm:pt-36 sm:pb-20 md:pt-44 md:pb-24 lg:pt-52 lg:pb-28">
+      <div className="container relative z-10 pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-24 lg:pt-48 lg:pb-28">
         <div className="max-w-2xl flex flex-col gap-5 md:gap-6">
           {/* Label */}
           <div className="fade-up fade-up-delay-1">
