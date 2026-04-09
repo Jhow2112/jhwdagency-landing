@@ -16,12 +16,12 @@ export default function WorkSection() {
   }, []);
 
   return (
-    <section id="work" className="py-24 bg-white" ref={ref}>
+    <section id="work" className="py-24 bg-white" ref={ref} aria-labelledby="work-heading">
       <div className="container">
         {/* Header */}
         <div className="flex flex-col gap-3 mb-12">
           <span className="section-label">Featured Work</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 id="work-heading" className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             Real results for real businesses.
           </h2>
         </div>
@@ -42,7 +42,7 @@ export default function WorkSection() {
           <div className="absolute inset-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-              alt="Crisis to Comfort website"
+              alt="Screenshot of Crisis to Comfort counseling website built by Jeremy Howard Web Design — Coeur d'Alene, Idaho"
               className="w-full h-full object-cover object-top opacity-30"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/97 via-[#0D1B2A]/70 to-transparent" />
@@ -134,7 +134,7 @@ export default function WorkSection() {
                 </div>
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-                  alt="Crisis to Comfort website preview"
+                  alt="Crisis to Comfort counseling website homepage designed by Jeremy Howard Web Design"
                   className="w-full object-cover object-top"
                   style={{ maxHeight: "200px" }}
                 />

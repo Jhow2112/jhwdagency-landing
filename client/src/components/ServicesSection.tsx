@@ -106,13 +106,13 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-[#F4F7FA]">
+    <section id="services" className="py-24 bg-[#F4F7FA]" aria-labelledby="services-heading">
       <div className="container">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div className="flex flex-col gap-3 max-w-xl">
             <span className="section-label">What I Do</span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight" style={{ fontFamily: "Syne, sans-serif" }}>
+            <h2 id="services-heading" className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight" style={{ fontFamily: "Syne, sans-serif" }}>
               Everything your business needs to{" "}
               <span style={{ color: "#4A90D9" }}>get found online</span>.
             </h2>

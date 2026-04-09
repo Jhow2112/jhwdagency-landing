@@ -63,13 +63,13 @@ export default function TestimonialsSection() {
               </span>
             </div>
 
-            {/* Quote */}
-            <p
-              className="text-xl text-[#0D1B2A] leading-relaxed font-medium relative z-10"
+            {/* Quote — semantic blockquote for crawlers */}
+            <blockquote
+              className="text-xl text-[#0D1B2A] leading-relaxed font-medium relative z-10 not-italic"
               style={{ fontFamily: "Nunito Sans, sans-serif" }}
             >
-              "I had no idea where to start with getting a website for my counseling practice. Jeremy made the whole process easy — he asked the right questions, handled everything from design to hosting, and had my site live within a week. It looks professional, it's easy to navigate, and I've already had new clients find me through it. I couldn't be happier."
-            </p>
+              <p>"I had no idea where to start with getting a website for my counseling practice. Jeremy made the whole process easy — he asked the right questions, handled everything from design to hosting, and had my site live within a week. It looks professional, it's easy to navigate, and I've already had new clients find me through it. I couldn't be happier."</p>
+            </blockquote>
 
             {/* Attribution */}
             <div className="flex items-center gap-4 pt-2 border-t border-[#C8DCF0]">
