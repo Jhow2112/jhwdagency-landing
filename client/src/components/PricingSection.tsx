@@ -1,5 +1,6 @@
-/* PricingSection — Contemporary Studio, Cool Blue
-   Updated prices: $495 / $895 / $1295 */
+/* PricingSection — Jeremy Howard Web Design
+   Mobile-first: cards stack single column on mobile, 3-col on md+
+   Highlighted card does NOT scale on mobile (causes overflow) */
 import { useEffect, useRef, useState } from "react";
 
 const plans = [
@@ -91,14 +92,12 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
       ref={ref}
       className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
-          ? "shadow-2xl scale-105 z-10"
+          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#4A90D9]/40"
           : "border border-[#C8DCF0] bg-white shadow-md hover:shadow-xl"
       }`}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible
-          ? plan.highlight ? "scale(1.05) translateY(0)" : "translateY(0)"
-          : "translateY(32px)",
+        transform: visible ? "translateY(0)" : "translateY(32px)",
         transition: `opacity 0.6s ease ${index * 0.12}s, transform 0.6s ease ${index * 0.12}s, box-shadow 0.3s ease`,
         background: plan.highlight
           ? "linear-gradient(160deg, #1E3A5F 0%, #1a3357 40%, #0f2240 100%)"
@@ -114,7 +113,7 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
         </div>
       )}
 
-      <div className={`flex flex-col flex-1 p-7 gap-6 ${plan.popular ? "pt-10" : ""}`}>
+      <div className={`flex flex-col flex-1 p-6 sm:p-7 gap-5 sm:gap-6 ${plan.popular ? "pt-10" : ""}`}>
         {/* Plan name + description */}
         <div>
           <h3
@@ -198,21 +197,21 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-24 bg-[#F4F7FA]">
+    <section id="pricing" className="py-16 sm:py-24 bg-[#F4F7FA]">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-6">
           <span className="section-label">Pricing Plans</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             Simple, transparent pricing.
           </h2>
-          <p className="mt-4 text-base text-[#3D5A7A] max-w-md mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="mt-4 text-sm sm:text-base text-[#3D5A7A] max-w-md mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             No long-term contracts. Cancel monthly plans anytime with 30 days notice.
           </p>
         </div>
 
         {/* Comparison teaser */}
-        <div className="flex flex-wrap justify-center gap-6 mb-14">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mb-10 sm:mb-14">
           {[
             { label: "Agency cost", value: "$3,000–$10,000+" },
             { label: "DIY builder", value: "$15–$150/mo" },
@@ -220,7 +219,7 @@ export default function PricingSection() {
           ].map((item) => (
             <div
               key={item.label}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm ${
+              className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm ${
                 item.highlight
                   ? "bg-[#1E3A5F] text-white font-bold"
                   : "bg-white border border-[#C8DCF0] text-[#3D5A7A]"
@@ -233,17 +232,17 @@ export default function PricingSection() {
           ))}
         </div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        {/* Cards — single col on mobile, 3-col on md+ */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 items-center">
           {plans.map((plan, i) => (
             <PlanCard key={plan.name} plan={plan} index={i} />
           ))}
         </div>
 
         {/* Custom build note */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm">
-            <div className="flex flex-col text-left">
+        <div className="mt-10 sm:mt-12 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 sm:px-6 py-4 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm w-full sm:w-auto">
+            <div className="flex flex-col text-center sm:text-left">
               <span className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>Need a Fully Custom Build?</span>
               <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                 E-commerce, integrations, and advanced features — contact us for a custom quote.

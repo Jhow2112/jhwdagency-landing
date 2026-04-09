@@ -1,13 +1,12 @@
 /* Footer — Jeremy Howard Web Design
-   Contact form powered by Formspree (replace YOUR_FORMSPREE_ID with your real endpoint)
-   Office: Meridian, ID — also available via web/Zoom */
+   Mobile-first: single column on mobile, 2-col on lg+
+   Contact form powered by Formspree
+   Email: jeremy@jeremyhowardwebdesign.com */
 import { useState } from "react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
-
-// Replace with your Formspree form ID from https://formspree.io
-// e.g. "https://formspree.io/f/xpwzgkab"
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
+const EMAIL = "jeremy@jeremyhowardwebdesign.com";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
@@ -22,11 +21,7 @@ export default function Footer() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(form),
       });
-      if (res.ok) {
-        setStatus("success");
-      } else {
-        setStatus("error");
-      }
+      setStatus(res.ok ? "success" : "error");
     } catch {
       setStatus("error");
     }
@@ -37,20 +32,20 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="bg-[#0D1B2A] text-white">
-      {/* Main footer content */}
-      <div className="container py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Left: Contact form */}
+      <div className="container py-14 sm:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
+          {/* ── LEFT: Contact form ── */}
           <div>
             <span className="section-label" style={{ color: "#B8D4F0" }}>Get In Touch</span>
             <h2
-              className="mt-3 text-3xl md:text-4xl font-extrabold text-white leading-tight mb-2"
+              className="mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight mb-2"
               style={{ fontFamily: "Syne, sans-serif" }}
             >
               Ready for a website that{" "}
               <span style={{ color: "#4A90D9" }}>actually works?</span>
             </h2>
-            <p className="text-sm text-white/50 mb-8" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+            <p className="text-sm text-white/50 mb-6 sm:mb-8" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
               No long-term contracts. Cancel monthly plans anytime with 30 days notice.
             </p>
 
@@ -68,6 +63,7 @@ export default function Footer() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                {/* Name + Email row — stacks on mobile */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-semibold text-white/45 mb-1.5 tracking-wide uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
@@ -85,7 +81,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-white/45 mb-1.5 tracking-wide uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
-                      Email
+                      Your Email
                     </label>
                     <input
                       type="email"
@@ -133,14 +129,15 @@ export default function Footer() {
 
                 {status === "error" && (
                   <p className="text-sm text-red-400" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    Something went wrong. Please try again or email me directly.
+                    Something went wrong. Please try again or email me at{" "}
+                    <a href={`mailto:${EMAIL}`} className="underline hover:text-red-300">{EMAIL}</a>.
                   </p>
                 )}
 
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="btn-terra inline-flex items-center justify-center gap-2 px-7 py-4 text-base mt-1 disabled:opacity-60"
+                  className="btn-terra inline-flex items-center justify-center gap-2 px-7 py-4 text-base mt-1 disabled:opacity-60 w-full sm:w-auto"
                 >
                   {status === "sending" ? "Sending…" : "Send Message"}
                   {status !== "sending" && (
@@ -153,56 +150,77 @@ export default function Footer() {
             )}
           </div>
 
-          {/* Right: Location + links */}
-          <div className="flex flex-col gap-10">
-            {/* Location */}
+          {/* ── RIGHT: Location + contact info + links ── */}
+          <div className="flex flex-col gap-8 sm:gap-10">
+
+            {/* Direct contact */}
+            <div>
+              <span className="section-label" style={{ color: "#B8D4F0" }}>Direct Contact</span>
+              <div className="mt-4">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="inline-flex items-center gap-3 group"
+                >
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/>
+                      <path d="M2 4l6 5 6-5"/>
+                    </svg>
+                  </div>
+                  <span
+                    className="text-sm font-semibold text-white/70 group-hover:text-white transition-colors break-all"
+                    style={{ fontFamily: "Nunito Sans, sans-serif" }}
+                  >
+                    {EMAIL}
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            {/* Locations */}
             <div>
               <span className="section-label" style={{ color: "#B8D4F0" }}>Where to Find Me</span>
-              <div className="mt-4 flex flex-col gap-4">
+              <div className="mt-4 flex flex-col gap-3">
                 {/* In-person */}
-                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
-                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z"/>
-                        <circle cx="8" cy="6" r="1.5"/>
-                      </svg>
-                    </div>
-                    <span className="text-base font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
-                      Meridian, Idaho
-                    </span>
+                <div className="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z"/>
+                      <circle cx="8" cy="6" r="1.5"/>
+                    </svg>
                   </div>
-                  <p className="text-sm text-white/50 pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    Available for in-person meetings in the Treasure Valley area
-                  </p>
+                  <div>
+                    <p className="text-sm font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>Meridian, Idaho</p>
+                    <p className="text-xs text-white/50 mt-0.5" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                      Available for in-person meetings in the Treasure Valley
+                    </p>
+                  </div>
                 </div>
 
                 {/* Remote */}
-                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-white/5 border border-white/10">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
-                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect x="1" y="4" width="14" height="9" rx="1.5"/>
-                        <path d="M11 4V3a1 1 0 00-1-1H6a1 1 0 00-1 1v1"/>
-                        <path d="M6 10l2-1.5L10 10V7L8 8.5 6 7v3z"/>
-                      </svg>
-                    </div>
-                    <span className="text-base font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
-                      Zoom / Web
-                    </span>
+                <div className="flex items-start gap-3 p-4 rounded-2xl bg-white/5 border border-white/10">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="1" y="4" width="14" height="9" rx="1.5"/>
+                      <path d="M11 4V3a1 1 0 00-1-1H6a1 1 0 00-1 1v1"/>
+                      <path d="M6 10l2-1.5L10 10V7L8 8.5 6 7v3z"/>
+                    </svg>
                   </div>
-                  <p className="text-sm text-white/50 pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    Serving clients anywhere via Zoom, phone, or email — no travel required
-                  </p>
+                  <div>
+                    <p className="text-sm font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>Zoom / Web</p>
+                    <p className="text-xs text-white/50 mt-0.5" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                      Serving clients anywhere via Zoom, phone, or email
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Quick links */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Services</p>
-                <ul className="flex flex-col gap-2.5">
+                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Services</p>
+                <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {["Web Design", "Visual Identity", "SEO & Local Search", "Custom Builds"].map((s) => (
                     <li key={s}>
                       <a href="#services" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
@@ -213,13 +231,13 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Quick Links</p>
-                <ul className="flex flex-col gap-2.5">
+                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Quick Links</p>
+                <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {[
                     { label: "Our Work", href: "#work" },
                     { label: "Pricing", href: "#pricing" },
                     { label: "How It Works", href: "#services" },
-                    { label: "Contact", href: "#contact" },
+                    { label: "FAQ", href: "#faq" },
                   ].map((s) => (
                     <li key={s.label}>
                       <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
@@ -236,11 +254,11 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="container py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <a href="#" className="flex items-center">
-            <img src={LOGO_URL} alt="Jeremy Howard Web Design" className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src={LOGO_URL} alt="Jeremy Howard Web Design" className="h-7 sm:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
           </a>
-          <p className="text-xs text-white/30" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="text-xs text-white/30 order-last sm:order-none" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             © {new Date().getFullYear()} Jeremy Howard Web Design. All rights reserved.
           </p>
           <div className="flex items-center gap-4">

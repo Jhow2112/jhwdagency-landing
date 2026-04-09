@@ -1,5 +1,5 @@
 /* Navbar — Jeremy Howard Web Design
-   Logo is large and prominent — triple the original size
+   Mobile-first: compact on small screens, large logo on desktop
    Transparent over hero, frosted glass on scroll */
 import { useState, useEffect } from "react";
 
@@ -30,13 +30,14 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-        <div className="container flex items-center justify-between h-36 md:h-44">
-        {/* Logo — large and prominent */}
+      {/* Nav bar — compact on mobile, tall on desktop */}
+      <div className="container flex items-center justify-between h-20 md:h-28 lg:h-36">
+        {/* Logo — scales up on larger screens */}
         <a href="#" className="flex items-center group flex-shrink-0">
           <img
             src={LOGO_URL}
             alt="Jeremy Howard Web Design"
-            className="h-32 md:h-40 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            className="h-14 sm:h-20 md:h-24 lg:h-32 w-auto object-contain group-hover:opacity-90 transition-opacity"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
@@ -56,7 +57,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA */}
+        {/* Desktop CTA */}
         <div className="hidden md:block">
           <a
             href="#contact"
@@ -67,23 +68,33 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
+        {/* Mobile: CTA pill + hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <a
+            href="#contact"
+            className="text-xs font-bold text-white px-3 py-1.5 rounded-lg border border-white/30 hover:bg-white/10 transition-all"
+            style={{ fontFamily: "Syne, sans-serif" }}
+          >
+            Get Started
+          </a>
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          </button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile dropdown menu */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-        } bg-[#0D1B2A]/95 backdrop-blur-md border-b border-white/10`}
+        } bg-[#0D1B2A]/97 backdrop-blur-md border-b border-white/10`}
       >
         <nav className="container flex flex-col gap-1 py-4">
           {links.map((l) => (
@@ -97,14 +108,6 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className="inline-flex items-center justify-center mt-3 px-5 py-3 text-sm font-bold text-white rounded-xl border border-white/30 hover:bg-white/15 transition-all"
-            style={{ fontFamily: "Syne, sans-serif" }}
-          >
-            Get Started
-          </a>
         </nav>
       </div>
     </header>
