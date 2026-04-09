@@ -58,9 +58,9 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section className="py-24 bg-[#F4F7FA]" ref={ref}>
+    <section className="py-14 sm:py-20 md:py-24 bg-[#F4F7FA]" ref={ref}>
       <div className="container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <span className="section-label">How It Works</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             From idea to live in{" "}

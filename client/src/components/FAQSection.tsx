@@ -116,7 +116,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 
 export default function FAQSection() {
   return (
-    <section id="faq" className="py-24 bg-white" aria-labelledby="faq-heading">
+    <section id="faq" className="py-14 sm:py-20 md:py-24 bg-white" aria-labelledby="faq-heading">
       <div className="container">
         <div className="max-w-3xl mx-auto">
           {/* Header */}

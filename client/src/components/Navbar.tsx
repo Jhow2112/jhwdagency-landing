@@ -1,6 +1,7 @@
 /* Navbar — Jeremy Howard Web Design
-   Mobile: logo h-10, bar h-16 — fits cleanly with hamburger
-   Desktop: logo h-28, bar h-32 — large, prominent branding */
+   Mobile: logo h-16 in h-20 bar — clearly visible, no clipping
+   Desktop: logo h-24 in h-28 bar — large, prominent branding
+   No emoji anywhere — all icons are inline SVG */
 import { useState, useEffect } from "react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
@@ -26,19 +27,19 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0D1B2A]/92 backdrop-blur-md shadow-lg border-b border-white/10"
+          ? "bg-[#0D1B2A]/95 backdrop-blur-md shadow-lg border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      {/* Bar height: 64px mobile → 96px md → 128px lg */}
-      <div className="container flex items-center justify-between h-16 md:h-24 lg:h-32">
+      {/* Bar: h-20 mobile, h-28 desktop */}
+      <div className="container flex items-center justify-between h-20 md:h-28">
 
-        {/* Logo — h-10 mobile keeps it well inside h-16 bar */}
-        <a href="#" className="flex items-center group flex-shrink-0">
+        {/* Logo — h-16 mobile keeps it prominent without clipping in h-20 bar */}
+        <a href="#" className="flex items-center group flex-shrink-0 py-2">
           <img
             src={LOGO_URL}
             alt="Jeremy Howard Web Design"
-            className="h-10 sm:h-14 md:h-20 lg:h-28 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
@@ -69,16 +70,28 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile: hamburger only — CTA is in the dropdown */}
+        {/* Mobile: hamburger only */}
         <button
-          className="md:hidden flex flex-col justify-center gap-[5px] p-2 -mr-1"
+          className="md:hidden flex flex-col justify-center gap-[5px] p-2 -mr-1 flex-shrink-0"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
         >
-          <span className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          <span
+            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${
+              menuOpen ? "rotate-45 translate-y-[7px]" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+              menuOpen ? "opacity-0 scale-x-0" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${
+              menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
+            }`}
+          />
         </button>
       </div>
 
@@ -94,7 +107,7 @@ export default function Navbar() {
               key={l.label}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="py-3.5 text-base font-semibold text-white/80 hover:text-white transition-colors border-b border-white/8 last:border-0"
+              className="py-4 text-base font-semibold text-white/80 hover:text-white transition-colors border-b border-white/8 last:border-0"
               style={{ fontFamily: "Nunito Sans, sans-serif" }}
             >
               {l.label}
@@ -103,10 +116,16 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-3 mb-1 inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-bold text-white rounded-xl border border-white/30 hover:bg-white/10 transition-all"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className="mt-4 mb-2 inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white rounded-xl"
+            style={{
+              background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
+              fontFamily: "Syne, sans-serif",
+            }}
           >
             Get Started
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </a>
         </nav>
       </div>

@@ -17,7 +17,7 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="py-24 bg-[#F4F7FA]" ref={ref}>
+    <section className="py-14 sm:py-20 md:py-24 bg-[#F4F7FA]" ref={ref}>
       <div className="container">
         {/* Section header */}
         <div className="text-center mb-12">

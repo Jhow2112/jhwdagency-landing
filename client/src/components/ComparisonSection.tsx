@@ -101,7 +101,8 @@ export default function ComparisonSection() {
                 </th>
                 <th className="px-6 py-4 text-center" style={{ fontFamily: "Syne, sans-serif" }}>
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#1E3A5F] to-[#4A90D9] text-white text-xs font-bold">
-                    ✦ Our Service
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="white"><path d="M4 0l.9 2.6H8L5.5 4.2l.9 2.6L4 5.2l-2.4 1.6.9-2.6L0 2.6h3.1z"/></svg>
+                    Our Service
                   </span>
                 </th>
               </tr>

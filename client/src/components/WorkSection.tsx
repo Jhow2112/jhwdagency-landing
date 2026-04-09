@@ -1,7 +1,32 @@
 /* WorkSection — Jeremy Howard Web Design
    Real case study: Crisis to Comfort (crisis2comfort.com)
-   Mobile-first: single column, no min-h, no overflow clipping */
+   Mobile-first: single column, no emoji, clean SVG icons only */
 import { useEffect, useRef, useState } from "react";
+
+const ExternalLinkIcon = () => (
+  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" className="inline-block flex-shrink-0">
+    <path d="M5 2H2.5A1.5 1.5 0 001 3.5v6A1.5 1.5 0 002.5 11h6A1.5 1.5 0 0010 9.5V7M7 1h4m0 0v4M11 1L5.5 6.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const ArrowIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
+    <circle cx="8" cy="8" r="7.5" stroke="#4A90D9" strokeOpacity="0.5"/>
+    <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const StarIcon = () => (
+  <svg width="12" height="12" viewBox="0 0 16 16" fill="#4A90D9">
+    <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
+  </svg>
+);
 
 export default function WorkSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,12 +56,12 @@ export default function WorkSection() {
           </h2>
         </div>
 
-        {/* Case study card — full card is a link */}
+        {/* Case study card */}
         <a
           href="https://crisis2comfort.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="block group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0D1B2A] shadow-2xl hover:shadow-[0_24px_64px_rgba(74,144,217,0.25)] transition-shadow duration-300"
+          className="block group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-[#0D1B2A] shadow-2xl hover:shadow-[0_24px_64px_rgba(74,144,217,0.2)] transition-shadow duration-300"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(40px)",
@@ -47,40 +72,46 @@ export default function WorkSection() {
           <div className="absolute inset-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-              alt="Screenshot of Crisis to Comfort counseling website built by Jeremy Howard Web Design"
-              className="w-full h-full object-cover object-top opacity-25"
+              alt="Screenshot of Crisis to Comfort counseling website"
+              className="w-full h-full object-cover object-top opacity-20"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B2A]/95 via-[#0D1B2A]/85 to-[#0D1B2A]/95 lg:bg-gradient-to-r lg:from-[#0D1B2A]/97 lg:via-[#0D1B2A]/70 lg:to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B2A]/95 via-[#0D1B2A]/85 to-[#0D1B2A]/95 lg:bg-gradient-to-r lg:from-[#0D1B2A]/97 lg:via-[#0D1B2A]/75 lg:to-[#0D1B2A]/30" />
           </div>
 
-          {/* Visit site banner */}
-          <div className="relative z-10 flex items-center justify-center gap-2 py-2.5 sm:py-3 bg-[#4A90D9]/20 border-b border-[#4A90D9]/30 group-hover:bg-[#4A90D9]/30 transition-colors">
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
-              <path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M10 2h4m0 0v4m0-4L7 9" stroke="#B8D4F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+          {/* Visit site banner — no emoji */}
+          <div className="relative z-10 flex items-center justify-center gap-2 py-3 bg-[#4A90D9]/20 border-b border-[#4A90D9]/30 group-hover:bg-[#4A90D9]/30 transition-colors">
+            <ExternalLinkIcon />
             <span className="text-xs font-bold text-[#B8D4F0] tracking-wide" style={{ fontFamily: "Syne, sans-serif" }}>
-              Click to visit crisis2comfort.com ↗
+              Click to visit crisis2comfort.com
             </span>
+            <ExternalLinkIcon />
           </div>
 
-          {/* Content — single col on mobile, 2-col on lg+ */}
+          {/* Content */}
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-10 md:p-12 lg:p-14">
 
-            {/* Left: text content */}
+            {/* Left: text */}
             <div className="flex flex-col gap-5 sm:gap-6">
-              {/* Tags */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              {/* Tags — no emoji, clean text only */}
+              <div className="flex flex-wrap items-center gap-2">
                 <span
                   className="text-xs px-3 py-1 rounded-full bg-[#4A90D9]/20 text-[#B8D4F0] font-semibold border border-[#4A90D9]/30"
                   style={{ fontFamily: "Syne, sans-serif" }}
                 >
-                  Counseling Practice · Service Business
+                  Counseling Practice
                 </span>
                 <span
-                  className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/60 font-semibold border border-white/20"
+                  className="text-xs px-3 py-1 rounded-full bg-[#4A90D9]/20 text-[#B8D4F0] font-semibold border border-[#4A90D9]/30"
                   style={{ fontFamily: "Syne, sans-serif" }}
                 >
-                  crisis2comfort.com ↗
+                  Service Business
+                </span>
+                <span
+                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full bg-white/10 text-white/60 font-semibold border border-white/20"
+                  style={{ fontFamily: "Syne, sans-serif" }}
+                >
+                  crisis2comfort.com
+                  <ExternalLinkIcon />
                 </span>
               </div>
 
@@ -97,12 +128,12 @@ export default function WorkSection() {
               </div>
 
               <p className="text-sm sm:text-base text-white/70 leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                Ann McGaver, M.A., BCMHC, runs a Christian counseling and coaching practice serving individuals, couples, and families in Coeur d'Alene and across the Inland Northwest via telehealth. She needed a warm, professional web presence that communicated trust, reflected her faith-based approach, and made it easy for people in crisis to take the first step — without her having to write a single word or touch a line of code.
+                Ann McGaver, M.A., BCMHC, runs a Christian counseling and coaching practice serving individuals, couples, and families in Coeur d'Alene and across the Inland Northwest via telehealth. She needed a warm, professional web presence that communicated trust, reflected her faith-based approach, and made it easy for people in crisis to take the first step.
               </p>
 
               <div className="flex flex-col gap-2">
                 <p className="text-sm font-semibold text-white/80" style={{ fontFamily: "Syne, sans-serif" }}>What we delivered:</p>
-                <ul className="flex flex-col gap-1.5">
+                <ul className="flex flex-col gap-2">
                   {[
                     "Full 5-page site — Home, About, Services, FAQs, Contact",
                     "Professional copywriting aligned with her voice and values",
@@ -111,42 +142,42 @@ export default function WorkSection() {
                     "Mobile-first design with warm, calming visual identity",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
-                      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-                        <circle cx="8" cy="8" r="7.5" stroke="#4A90D9" strokeOpacity="0.5"/>
-                        <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                      <CheckIcon />
                       <span className="text-sm text-white/65" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* CTA — stops the click from bubbling to the outer link */}
+              {/* CTA — intercepts click so it goes to #contact, not the external site */}
               <div
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.hash = "#contact"; }}
-                className="btn-terra inline-flex items-center gap-2 px-6 py-3 text-sm self-start cursor-pointer rounded-full"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white rounded-full self-start cursor-pointer transition-all duration-200 hover:opacity-90"
+                style={{
+                  background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
+                  fontFamily: "Syne, sans-serif",
+                }}
                 role="link"
+                tabIndex={0}
               >
                 Start Your Project
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <ArrowIcon />
               </div>
             </div>
 
-            {/* Right: site preview + quote — shown below text on mobile */}
+            {/* Right: preview + quote */}
             <div className="flex flex-col gap-4 lg:items-end">
               {/* Browser mockup */}
               <div className="w-full lg:max-w-sm rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 shadow-2xl">
                 <div className="bg-[#1a2a3a] px-3 py-2 flex items-center gap-1.5">
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white/20" />
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white/20" />
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-white/20" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
                   <span className="ml-2 text-xs text-white/40 font-mono truncate">crisis2comfort.com</span>
                 </div>
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-                  alt="Crisis to Comfort counseling website homepage"
+                  alt="Crisis to Comfort counseling website homepage designed by Jeremy Howard Web Design"
                   className="w-full object-cover object-top"
                   style={{ maxHeight: "180px" }}
                 />
@@ -154,12 +185,8 @@ export default function WorkSection() {
 
               {/* Quote card */}
               <div className="w-full lg:max-w-sm p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/6 border border-white/12">
-                <div className="flex gap-0.5 mb-3">
-                  {[1,2,3,4,5].map(i => (
-                    <svg key={i} width="12" height="12" viewBox="0 0 16 16" fill="#4A90D9">
-                      <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
-                    </svg>
-                  ))}
+                <div className="flex gap-1 mb-3">
+                  {[1,2,3,4,5].map(i => <StarIcon key={i} />)}
                 </div>
                 <p className="text-sm text-white/70 leading-relaxed italic" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                   "Jeremy built me a beautiful website that truly reflects my practice. He handled everything — the design, the writing, even setting up my Google listing. I had zero technical knowledge and he made the whole process easy and stress-free."
@@ -177,7 +204,7 @@ export default function WorkSection() {
           <p className="text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             More case studies available on request.{" "}
             <a href="#contact" className="text-[#4A90D9] font-semibold hover:underline">
-              Get in touch →
+              Get in touch
             </a>
           </p>
         </div>
