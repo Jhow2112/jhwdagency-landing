@@ -1,5 +1,4 @@
-/* WorkSection — Contemporary Studio, Warm Geometric
-   Featured case study with full-bleed image and overlaid text panel */
+/* WorkSection — Contemporary Studio, Cool Blue */
 import { useEffect, useRef, useState } from "react";
 
 const caseStudies = [
@@ -14,7 +13,7 @@ const caseStudies = [
       { label: "Inquiry Increase", value: "3×" },
       { label: "Bounce Rate Drop", value: "−38%" },
     ],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/case-study-preview-6MCBDMQGuvYUA765bb6ygF.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/case-study-blue-Q9LWBmoJfQhZ5JkTfYb5Gb.webp",
     plan: "Plus Plan",
   },
 ];
@@ -40,14 +39,14 @@ export default function WorkSection() {
         {/* Header */}
         <div className="flex flex-col gap-3 mb-12">
           <span className="section-label">Featured Work</span>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             Real results for real businesses.
           </h2>
         </div>
 
         {/* Case study card */}
         <div
-          className="relative rounded-3xl overflow-hidden bg-[#0F0E0D] shadow-2xl"
+          className="relative rounded-3xl overflow-hidden bg-[#0D1B2A] shadow-2xl"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(40px)",
@@ -59,9 +58,9 @@ export default function WorkSection() {
             <img
               src={cs.image}
               alt={cs.client}
-              className="w-full h-full object-cover opacity-40"
+              className="w-full h-full object-cover opacity-35"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0F0E0D]/90 via-[#0F0E0D]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/65 to-transparent" />
           </div>
 
           {/* Content */}
@@ -69,7 +68,7 @@ export default function WorkSection() {
             <div className="flex flex-col gap-6">
               {/* Category + plan */}
               <div className="flex items-center gap-3">
-                <span className="text-xs px-3 py-1 rounded-full bg-[#C96442]/20 text-[#E8A882] font-semibold border border-[#C96442]/30" style={{ fontFamily: "Syne, sans-serif" }}>
+                <span className="text-xs px-3 py-1 rounded-full bg-[#4A90D9]/20 text-[#B8D4F0] font-semibold border border-[#4A90D9]/30" style={{ fontFamily: "Syne, sans-serif" }}>
                   {cs.category}
                 </span>
                 <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/70 font-semibold border border-white/20" style={{ fontFamily: "Syne, sans-serif" }}>
@@ -78,7 +77,7 @@ export default function WorkSection() {
               </div>
 
               <div>
-                <p className="text-sm text-[#E8A882] font-semibold mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
+                <p className="text-sm text-[#B8D4F0] font-semibold mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
                   {cs.client}
                 </p>
                 <h3 className="text-3xl md:text-4xl font-extrabold text-white leading-tight" style={{ fontFamily: "Syne, sans-serif" }}>
@@ -106,12 +105,12 @@ export default function WorkSection() {
               {cs.results.map((r) => (
                 <div
                   key={r.label}
-                  className="glass-card flex-1 lg:flex-none p-5 bg-white/10 border-white/15"
+                  className="glass-card flex-1 lg:flex-none p-5 bg-white/8 border-white/12"
                 >
                   <p className="text-3xl font-extrabold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
                     {r.value}
                   </p>
-                  <p className="text-sm text-white/60 mt-1" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                  <p className="text-sm text-white/55 mt-1" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                     {r.label}
                   </p>
                 </div>
@@ -122,9 +121,9 @@ export default function WorkSection() {
 
         {/* More work teaser */}
         <div className="mt-8 text-center">
-          <p className="text-sm text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             More case studies available on request.{" "}
-            <a href="#contact" className="text-[#C96442] font-semibold hover:underline">
+            <a href="#contact" className="text-[#4A90D9] font-semibold hover:underline">
               Get in touch →
             </a>
           </p>

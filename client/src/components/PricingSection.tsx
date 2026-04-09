@@ -1,6 +1,4 @@
-/* PricingSection — Contemporary Studio, Warm Geometric
-   3-tier pricing cards from service-one-pager-v2.pdf
-   Center card elevated with terracotta gradient, "Most Popular" badge */
+/* PricingSection — Contemporary Studio, Cool Blue */
 import { useEffect, useRef, useState } from "react";
 
 const plans = [
@@ -62,8 +60,8 @@ const plans = [
 
 const checkIcon = (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" stroke="#C96442" strokeOpacity="0.3"/>
-    <path d="M5 8l2 2 4-4" stroke="#C96442" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" stroke="#4A90D9" strokeOpacity="0.4"/>
+    <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -93,7 +91,7 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
       className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
           ? "shadow-2xl scale-105 z-10"
-          : "border border-[#E8E0D5] bg-white shadow-md hover:shadow-xl"
+          : "border border-[#C8DCF0] bg-white shadow-md hover:shadow-xl"
       }`}
       style={{
         opacity: visible ? 1 : 0,
@@ -102,14 +100,14 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
           : "translateY(32px)",
         transition: `opacity 0.6s ease ${index * 0.12}s, transform 0.6s ease ${index * 0.12}s, box-shadow 0.3s ease`,
         background: plan.highlight
-          ? "linear-gradient(160deg, #C96442 0%, #B5522F 40%, #8A3A1E 100%)"
+          ? "linear-gradient(160deg, #1E3A5F 0%, #1a3357 40%, #0f2240 100%)"
           : undefined,
       }}
     >
       {/* Most Popular badge */}
       {plan.popular && (
         <div className="absolute top-0 left-0 right-0 flex justify-center">
-          <div className="bg-white text-[#C96442] text-xs font-bold px-4 py-1.5 rounded-b-xl shadow-sm" style={{ fontFamily: "Syne, sans-serif" }}>
+          <div className="bg-white text-[#1E3A5F] text-xs font-bold px-4 py-1.5 rounded-b-xl shadow-sm" style={{ fontFamily: "Syne, sans-serif" }}>
             MOST POPULAR
           </div>
         </div>
@@ -119,13 +117,13 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
         {/* Plan name + description */}
         <div>
           <h3
-            className={`text-xl font-bold mb-1 ${plan.highlight ? "text-white" : "text-[#0F0E0D]"}`}
+            className={`text-xl font-bold mb-1 ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
             style={{ fontFamily: "Syne, sans-serif" }}
           >
             {plan.name}
           </h3>
           <p
-            className={`text-sm ${plan.highlight ? "text-white/70" : "text-[#8A7A72]"}`}
+            className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#6B8BAA]"}`}
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
             {plan.description}
@@ -136,13 +134,13 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
         <div className="flex flex-col gap-1">
           <div className="flex items-end gap-2">
             <span
-              className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#0F0E0D]"}`}
+              className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
               style={{ fontFamily: "Syne, sans-serif" }}
             >
               {plan.oneTime}
             </span>
             <span
-              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/60" : "text-[#8A7A72]"}`}
+              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}
               style={{ fontFamily: "Nunito Sans, sans-serif" }}
             >
               one-time
@@ -150,17 +148,17 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
           </div>
           <div className="flex items-center gap-1.5">
             <span
-              className={`text-lg font-bold ${plan.highlight ? "text-white/90" : "text-[#C96442]"}`}
+              className={`text-lg font-bold ${plan.highlight ? "text-[#B8D4F0]" : "text-[#4A90D9]"}`}
               style={{ fontFamily: "Syne, sans-serif" }}
             >
               {plan.monthly}
-              <span className={`text-sm font-normal ${plan.highlight ? "text-white/60" : "text-[#8A7A72]"}`}>/mo</span>
+              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}>/mo</span>
             </span>
           </div>
         </div>
 
         {/* Divider */}
-        <div className={`h-px ${plan.highlight ? "bg-white/20" : "bg-[#E8E0D5]"}`} />
+        <div className={`h-px ${plan.highlight ? "bg-white/15" : "bg-[#C8DCF0]"}`} />
 
         {/* Features */}
         <ul className="flex flex-col gap-3 flex-1">
@@ -168,7 +166,7 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
             <li key={f} className="flex items-start gap-2.5">
               {plan.highlight ? checkIconWhite : checkIcon}
               <span
-                className={`text-sm ${plan.highlight ? "text-white/85" : "text-[#4A3F38]"}`}
+                className={`text-sm ${plan.highlight ? "text-white/80" : "text-[#3D5A7A]"}`}
                 style={{ fontFamily: "Nunito Sans, sans-serif" }}
               >
                 {f}
@@ -182,7 +180,7 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
           href="#contact"
           className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold transition-all duration-200 ${
             plan.highlight
-              ? "bg-white text-[#C96442] hover:bg-[#FAF7F4] shadow-lg"
+              ? "bg-white text-[#1E3A5F] hover:bg-[#EEF4FB] shadow-lg"
               : "btn-terra"
           }`}
           style={{ fontFamily: "Syne, sans-serif" }}
@@ -199,15 +197,15 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-24 bg-[#FAF7F4]">
+    <section id="pricing" className="py-24 bg-[#F4F7FA]">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-6">
           <span className="section-label">Pricing Plans</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             Simple, transparent pricing.
           </h2>
-          <p className="mt-4 text-base text-[#6B5C52] max-w-md mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="mt-4 text-base text-[#3D5A7A] max-w-md mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             No long-term contracts. Cancel monthly plans anytime with 30 days notice.
           </p>
         </div>
@@ -223,8 +221,8 @@ export default function PricingSection() {
               key={item.label}
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm ${
                 item.highlight
-                  ? "bg-[#C96442] text-white font-bold"
-                  : "bg-white border border-[#E8E0D5] text-[#6B5C52]"
+                  ? "bg-[#1E3A5F] text-white font-bold"
+                  : "bg-white border border-[#C8DCF0] text-[#3D5A7A]"
               }`}
               style={{ fontFamily: "Nunito Sans, sans-serif" }}
             >
@@ -243,17 +241,14 @@ export default function PricingSection() {
 
         {/* Custom build note */}
         <div className="mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-white border border-[#E8E0D5] shadow-sm">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm">
             <div className="flex flex-col text-left">
-              <span className="text-sm font-bold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>Need a Fully Custom Build?</span>
-              <span className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+              <span className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>Need a Fully Custom Build?</span>
+              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                 E-commerce, integrations, and advanced features — contact us for a custom quote.
               </span>
             </div>
-            <a
-              href="#contact"
-              className="btn-ghost-pill px-5 py-2 text-sm whitespace-nowrap"
-            >
+            <a href="#contact" className="btn-ghost-pill px-5 py-2 text-sm whitespace-nowrap">
               Contact Us
             </a>
           </div>

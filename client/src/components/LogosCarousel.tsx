@@ -1,5 +1,4 @@
-/* LogosCarousel — Contemporary Studio, Warm Geometric
-   Infinite marquee of client logos with pause-on-hover */
+/* LogosCarousel — Contemporary Studio, Cool Blue */
 
 const logos = [
   { name: "Bloom Bakery", abbr: "BB" },
@@ -17,10 +16,10 @@ const logos = [
 function LogoItem({ name, abbr }: { name: string; abbr: string }) {
   return (
     <div className="flex items-center gap-3 px-8 select-none">
-      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#E8E0D5] to-[#D4C8BE] flex items-center justify-center flex-shrink-0">
-        <span className="text-xs font-bold text-[#6B5C52]" style={{ fontFamily: "Syne, sans-serif" }}>{abbr}</span>
+      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C8DCF0] to-[#B0CCE8] flex items-center justify-center flex-shrink-0">
+        <span className="text-xs font-bold text-[#1E3A5F]" style={{ fontFamily: "Syne, sans-serif" }}>{abbr}</span>
       </div>
-      <span className="text-base font-semibold text-[#8A7A72] whitespace-nowrap" style={{ fontFamily: "Syne, sans-serif" }}>
+      <span className="text-base font-semibold text-[#6B8BAA] whitespace-nowrap" style={{ fontFamily: "Syne, sans-serif" }}>
         {name}
       </span>
     </div>
@@ -31,9 +30,9 @@ export default function LogosCarousel() {
   const doubled = [...logos, ...logos];
 
   return (
-    <section className="py-16 bg-white border-y border-[#E8E0D5] overflow-hidden">
+    <section className="py-16 bg-white border-y border-[#C8DCF0] overflow-hidden">
       <div className="container mb-8">
-        <p className="text-center text-xs font-semibold tracking-widest uppercase text-[#B0A098]" style={{ fontFamily: "Syne, sans-serif" }}>
+        <p className="text-center text-xs font-semibold tracking-widest uppercase text-[#9BB5CC]" style={{ fontFamily: "Syne, sans-serif" }}>
           Trusted by local businesses across the country
         </p>
       </div>

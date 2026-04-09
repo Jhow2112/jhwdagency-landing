@@ -1,5 +1,4 @@
-/* TestimonialsSection — Contemporary Studio, Warm Geometric
-   3 testimonial cards with avatar initials, star ratings, and quotes */
+/* TestimonialsSection — Contemporary Studio, Cool Blue */
 import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
@@ -39,7 +38,7 @@ function StarRating({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#C96442">
+        <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#4A90D9">
           <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
         </svg>
       ))}
@@ -61,11 +60,11 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="py-24 bg-[#FAF7F4]" ref={ref}>
+    <section className="py-24 bg-[#F4F7FA]" ref={ref}>
       <div className="container">
         <div className="text-center mb-14">
           <span className="section-label">Client Stories</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
             Don't take our word for it.
           </h2>
         </div>
@@ -74,7 +73,7 @@ export default function TestimonialsSection() {
           {testimonials.map((t, i) => (
             <div
               key={t.name}
-              className="flex flex-col gap-5 p-7 rounded-2xl bg-white border border-[#E8E0D5] shadow-sm hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col gap-5 p-7 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm hover:shadow-lg transition-shadow duration-300"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(28px)",
@@ -85,23 +84,23 @@ export default function TestimonialsSection() {
               <StarRating count={t.stars} />
 
               {/* Quote */}
-              <p className="text-sm text-[#4A3F38] leading-relaxed flex-1" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+              <p className="text-sm text-[#3D5A7A] leading-relaxed flex-1" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                 "{t.quote}"
               </p>
 
               {/* Plan tag */}
-              <span className="self-start text-xs px-3 py-1 rounded-full bg-[#F5EDE7] text-[#C96442] font-semibold" style={{ fontFamily: "Syne, sans-serif" }}>
+              <span className="self-start text-xs px-3 py-1 rounded-full bg-[#EEF4FB] text-[#1E3A5F] font-semibold" style={{ fontFamily: "Syne, sans-serif" }}>
                 {t.plan}
               </span>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-1 border-t border-[#E8E0D5]">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#C96442] to-[#E8A882] flex items-center justify-center flex-shrink-0">
+              <div className="flex items-center gap-3 pt-1 border-t border-[#C8DCF0]">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
                   <span className="text-white text-xs font-bold" style={{ fontFamily: "Syne, sans-serif" }}>{t.initials}</span>
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>{t.name}</p>
-                  <p className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{t.business} · {t.location}</p>
+                  <p className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>{t.name}</p>
+                  <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{t.business} · {t.location}</p>
                 </div>
               </div>
             </div>

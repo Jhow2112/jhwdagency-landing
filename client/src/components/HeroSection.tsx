@@ -1,16 +1,16 @@
-/* HeroSection — Contemporary Studio, Warm Geometric
+/* HeroSection — Contemporary Studio, Cool Blue
    Split layout: left bold headline + CTA, right floating abstract image
-   Fade-up entrance animations, terracotta gradient accents */
+   Fade-up entrance animations, navy-to-sky gradient accents */
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#FAF7F4] pt-20">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F4F7FA] pt-20">
       {/* Subtle radial gradient background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 75% 45%, oklch(0.74 0.09 42 / 0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, oklch(0.52 0.13 38 / 0.08) 0%, transparent 60%)",
+            "radial-gradient(ellipse 70% 60% at 75% 45%, oklch(0.80 0.055 230 / 0.25) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, oklch(0.52 0.14 240 / 0.08) 0%, transparent 60%)",
         }}
       />
 
@@ -22,14 +22,14 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="fade-up fade-up-delay-2 text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#0F0E0D] leading-[1.05] tracking-tight"
+            className="fade-up fade-up-delay-2 text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#0D1B2A] leading-[1.05] tracking-tight"
             style={{ fontFamily: "Syne, sans-serif" }}
           >
             Websites that{" "}
             <span
               className="relative inline-block"
               style={{
-                background: "linear-gradient(135deg, #C96442, #E8A882)",
+                background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -41,13 +41,13 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="fade-up fade-up-delay-3 text-lg md:text-xl text-[#6B5C52] leading-relaxed max-w-md"
+            className="fade-up fade-up-delay-3 text-lg md:text-xl text-[#3D5A7A] leading-relaxed max-w-md"
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
             Designed, built, hosted, and maintained — so you can focus on
             running your business. Live in as little as{" "}
-            <strong className="text-[#0F0E0D]">5 days</strong>, starting at{" "}
-            <strong className="text-[#C96442]">$395</strong>.
+            <strong className="text-[#0D1B2A]">5 days</strong>, starting at{" "}
+            <strong className="text-[#1E3A5F]">$395</strong>.
           </p>
 
           <div className="fade-up fade-up-delay-4 flex flex-wrap gap-4 items-center">
@@ -71,49 +71,49 @@ export default function HeroSection() {
           {/* Social proof strip */}
           <div className="fade-up fade-up-delay-4 flex items-center gap-6 pt-2">
             <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>50+</span>
-              <span className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Sites Launched</span>
+              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>50+</span>
+              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Sites Launched</span>
             </div>
-            <div className="w-px h-10 bg-[#E8E0D5]" />
+            <div className="w-px h-10 bg-[#C8DCF0]" />
             <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>5 days</span>
-              <span className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Avg. Turnaround</span>
+              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>5 days</span>
+              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Avg. Turnaround</span>
             </div>
-            <div className="w-px h-10 bg-[#E8E0D5]" />
+            <div className="w-px h-10 bg-[#C8DCF0]" />
             <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>100%</span>
-              <span className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Satisfaction</span>
+              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>100%</span>
+              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Satisfaction</span>
             </div>
           </div>
         </div>
 
         {/* Right: Abstract hero image */}
         <div className="relative flex items-center justify-center lg:justify-end fade-up fade-up-delay-2">
-          {/* Floating card behind image */}
+          {/* Glow behind image */}
           <div
-            className="absolute -top-6 -left-6 w-32 h-32 rounded-3xl opacity-60"
+            className="absolute -top-6 -left-6 w-32 h-32 rounded-3xl opacity-50"
             style={{
-              background: "linear-gradient(135deg, #C96442 0%, #E8A882 100%)",
-              filter: "blur(40px)",
+              background: "linear-gradient(135deg, #1E3A5F 0%, #4A90D9 100%)",
+              filter: "blur(48px)",
             }}
           />
           <div className="relative glass-card overflow-hidden w-full max-w-lg lg:max-w-full aspect-[4/3] shadow-2xl">
             <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/hero-abstract-Eyt8iHdTYZSf3jfFqmc3Wc.webp"
-              alt="Abstract design composition"
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/hero-abstract-blue-PRqk8G7XcZsrFedaNHmhRw.webp"
+              alt="Abstract blue design composition"
               className="w-full h-full object-cover"
             />
             {/* Floating stat card */}
             <div className="absolute bottom-4 left-4 glass-card px-4 py-3 shadow-lg">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#C96442] to-[#E8A882] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                     <path d="M8 2v12M2 8h12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#0F0E0D]" style={{ fontFamily: "Syne, sans-serif" }}>New site live!</p>
-                  <p className="text-xs text-[#8A7A72]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Launched in 6 days</p>
+                  <p className="text-xs font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>New site live!</p>
+                  <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Launched in 6 days</p>
                 </div>
               </div>
             </div>
@@ -123,8 +123,8 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <span className="text-xs text-[#8A7A72] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-[#C96442] to-transparent" />
+        <span className="text-xs text-[#6B8BAA] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>Scroll</span>
+        <div className="w-px h-8 bg-gradient-to-b from-[#4A90D9] to-transparent" />
       </div>
     </section>
   );
