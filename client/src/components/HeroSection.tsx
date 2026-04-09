@@ -1,59 +1,80 @@
-/* HeroSection — Contemporary Studio, Cool Blue
-   Split layout: left bold headline + CTA, right floating abstract image
-   Fade-up entrance animations, navy-to-sky gradient accents */
+/* HeroSection — Jeremy Howard Web Design
+   Full-bleed background image hero, text overlaid on dark gradient
+   Style reference: Silver Valley Painting — bold headline, left-aligned, dark overlay */
+
+const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/hero-fullbleed-BhXgiyH2FfTzqVDBwK9NU8.webp";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#F4F7FA] pt-20">
-      {/* Subtle radial gradient background glow */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Full-bleed background image */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${HERO_BG})` }}
+      />
+
+      {/* Dark overlay — heavier on left for text legibility, lighter on right */}
+      <div
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 75% 45%, oklch(0.80 0.055 230 / 0.25) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, oklch(0.52 0.14 240 / 0.08) 0%, transparent 60%)",
+            "linear-gradient(105deg, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.72) 50%, rgba(10,22,40,0.35) 100%)",
         }}
       />
 
-      <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center py-16 lg:py-24">
-        {/* Left: Text */}
-        <div className="flex flex-col gap-6 lg:gap-8">
+      {/* Content */}
+      <div className="container relative z-10 pt-28 pb-20 md:pt-36 md:pb-28">
+        <div className="max-w-2xl flex flex-col gap-6">
+          {/* Label */}
           <div className="fade-up fade-up-delay-1">
-            <span className="section-label">Jeremy Howard Web Design</span>
+            <span
+              className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-[#7BB8E8] border border-[#4A90D9]/40 rounded-full px-4 py-1.5"
+              style={{ fontFamily: "Syne, sans-serif" }}
+            >
+              Jeremy Howard Web Design · Meridian, ID
+            </span>
           </div>
 
+          {/* Headline */}
           <h1
-            className="fade-up fade-up-delay-2 text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#0D1B2A] leading-[1.05] tracking-tight"
+            className="fade-up fade-up-delay-2 text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight"
             style={{ fontFamily: "Syne, sans-serif" }}
           >
             Websites that{" "}
             <span
-              className="relative inline-block"
               style={{
-                background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
+                background: "linear-gradient(135deg, #7BB8E8, #4A90D9)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
               }}
             >
               actually
-            </span>{" "}
+            </span>
+            <br />
             work.
           </h1>
 
+          {/* Subtext */}
           <p
-            className="fade-up fade-up-delay-3 text-lg md:text-xl text-[#3D5A7A] leading-relaxed max-w-md"
+            className="fade-up fade-up-delay-3 text-lg md:text-xl text-white/75 leading-relaxed max-w-lg"
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
-            Designed, built, hosted, and maintained — so you can focus on
-            running your business. Live in as little as{" "}
-            <strong className="text-[#0D1B2A]">5 days</strong>, starting at{" "}
-            <strong className="text-[#1E3A5F]">$495</strong>.
+            Designed, built, hosted, and maintained — so you can focus on running your business. Live in as little as{" "}
+            <strong className="text-white">5 days</strong>, starting at{" "}
+            <strong className="text-white">$495</strong>.
           </p>
 
+          {/* CTAs */}
           <div className="fade-up fade-up-delay-4 flex flex-wrap gap-4 items-center">
             <a
               href="#pricing"
-              className="btn-terra inline-flex items-center gap-2 px-7 py-3.5 text-base"
+              className="inline-flex items-center gap-2 px-7 py-4 text-base font-bold text-white rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+              style={{
+                background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
+                fontFamily: "Syne, sans-serif",
+                boxShadow: "0 4px 24px rgba(74,144,217,0.35)",
+              }}
             >
               Choose a Plan
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -62,75 +83,40 @@ export default function HeroSection() {
             </a>
             <a
               href="#work"
-              className="btn-ghost-pill inline-flex items-center gap-2 px-7 py-3.5 text-base"
+              className="inline-flex items-center gap-2 px-7 py-4 text-base font-bold text-white rounded-xl border border-white/30 hover:bg-white/10 transition-all duration-200"
+              style={{ fontFamily: "Syne, sans-serif" }}
             >
               See Our Work
             </a>
           </div>
 
-          {/* Trust strip — only real claims */}
-          <div className="fade-up fade-up-delay-4 flex flex-wrap items-center gap-5 pt-2">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
-                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          {/* Trust strip — honest claims only */}
+          <div className="fade-up fade-up-delay-4 flex flex-wrap items-center gap-6 pt-2">
+            {[
+              "Live in as little as 5 days",
+              "No long-term contracts",
+              "Hosting & support included",
+            ].map((claim, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                  <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span
+                  className="text-sm text-white/70"
+                  style={{ fontFamily: "Nunito Sans, sans-serif" }}
+                >
+                  {claim}
+                </span>
               </div>
-              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Live in as little as <strong className="text-[#0D1B2A]">5 days</strong></span>
-            </div>
-            <div className="w-px h-6 bg-[#C8DCF0] hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
-                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </div>
-              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>No long-term contracts</span>
-            </div>
-            <div className="w-px h-6 bg-[#C8DCF0] hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
-                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </div>
-              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Hosting &amp; support included</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Abstract hero image */}
-        <div className="relative flex items-center justify-center lg:justify-end fade-up fade-up-delay-2">
-          {/* Glow behind image */}
-          <div
-            className="absolute -top-6 -left-6 w-32 h-32 rounded-3xl opacity-50"
-            style={{
-              background: "linear-gradient(135deg, #1E3A5F 0%, #4A90D9 100%)",
-              filter: "blur(48px)",
-            }}
-          />
-          <div className="relative glass-card overflow-hidden w-full max-w-lg lg:max-w-full aspect-[4/3] shadow-2xl">
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/hero-abstract-blue-PRqk8G7XcZsrFedaNHmhRw.webp"
-              alt="Abstract blue design composition"
-              className="w-full h-full object-cover"
-            />
-            {/* Floating stat card */}
-            <div className="absolute bottom-4 left-4 glass-card px-4 py-3 shadow-lg">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                    <path d="M8 2v12M2 8h12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>New site live!</p>
-                  <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Launched in 6 days</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-        <span className="text-xs text-[#6B8BAA] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-[#4A90D9] to-transparent" />
+        <span className="text-xs text-white/60 tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>Scroll</span>
+        <div className="w-px h-8 bg-gradient-to-b from-white/60 to-transparent" />
       </div>
     </section>
   );
