@@ -7,7 +7,7 @@ const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGq
 
 // Replace with your Formspree form ID from https://formspree.io
 // e.g. "https://formspree.io/f/xpwzgkab"
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });

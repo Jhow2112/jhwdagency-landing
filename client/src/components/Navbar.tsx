@@ -30,13 +30,13 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container flex items-center justify-between h-20 md:h-24">
+        <div className="container flex items-center justify-between h-36 md:h-44">
         {/* Logo — large and prominent */}
         <a href="#" className="flex items-center group flex-shrink-0">
           <img
             src={LOGO_URL}
             alt="Jeremy Howard Web Design"
-            className="h-16 md:h-20 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            className="h-32 md:h-40 w-auto object-contain group-hover:opacity-90 transition-opacity"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>

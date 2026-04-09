@@ -23,7 +23,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="container relative z-10 pt-28 pb-20 md:pt-36 md:pb-28">
+      <div className="container relative z-10 pt-44 pb-20 md:pt-52 md:pb-28">
         <div className="max-w-2xl flex flex-col gap-6">
           {/* Label */}
           <div className="fade-up fade-up-delay-1">
