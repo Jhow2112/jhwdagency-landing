@@ -1,32 +1,33 @@
-/* ServicesSection — Contemporary Studio, Cool Blue */
+/* ServicesSection — Jeremy Howard Web Design
+   Services: Web Design & Development, Visual Identity, SEO & Local Search */
 import { useEffect, useRef, useState } from "react";
 
 const services = [
   {
     number: "01",
-    title: "Brand Strategy",
+    title: "Web Design & Development",
     description:
-      "We help you define who you are, who you serve, and how to communicate it. From positioning to messaging, we build the foundation your business stands on.",
-    tags: ["Positioning", "Messaging", "Voice & Tone"],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-brand-blue-ceD9U4C6TzLE84JPXJRjXv.webp",
+      "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days — not months. Hosting, updates, and support are all included.",
+    tags: ["Custom Design", "Mobile-First", "Hosting Included"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-digital-blue-HMTqZKgc45AQW58YVHRsCA.webp",
     color: "from-[#1E3A5F]/10 to-[#4A90D9]/5",
   },
   {
     number: "02",
     title: "Visual Identity",
     description:
-      "Logos, color systems, typography, and brand guidelines that make your business instantly recognizable and consistently beautiful across every touchpoint.",
-    tags: ["Logo Design", "Color Systems", "Brand Guidelines"],
+      "Your website should look like it belongs to you. I create cohesive visual styles — color, typography, and layout — that reflect your brand and build trust with visitors.",
+    tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-visual-blue-XZbzys4F3eFwQpn4ipiTFq.webp",
     color: "from-[#4A90D9]/10 to-[#B8D4F0]/5",
   },
   {
     number: "03",
-    title: "Digital Design",
+    title: "SEO & Local Search",
     description:
-      "Fast, beautiful websites designed for real businesses. Custom-built on proven templates, live in days — not months. Hosting, updates, and support included.",
-    tags: ["Web Design", "Hosting", "Ongoing Support"],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-digital-blue-HMTqZKgc45AQW58YVHRsCA.webp",
+      "Get found by the customers who are already searching for you. I set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
+    tags: ["Google Business", "Local SEO", "Page Speed"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-brand-blue-ceD9U4C6TzLE84JPXJRjXv.webp",
     color: "from-[#B8D4F0]/20 to-[#F4F7FA]/5",
   },
 ];
@@ -93,7 +94,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#4A90D9] hover:gap-3 transition-all duration-200 mt-1"
           style={{ fontFamily: "Syne, sans-serif" }}
         >
-          Learn more
+          Get started
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -110,14 +111,14 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div className="flex flex-col gap-3 max-w-xl">
-            <span className="section-label">What We Do</span>
+            <span className="section-label">What I Do</span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight" style={{ fontFamily: "Syne, sans-serif" }}>
-              Everything your brand needs to{" "}
-              <span style={{ color: "#4A90D9" }}>stand out</span>.
+              Everything your business needs to{" "}
+              <span style={{ color: "#4A90D9" }}>get found online</span>.
             </h2>
           </div>
           <p className="text-base text-[#3D5A7A] max-w-xs leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-            From strategy to pixels — we handle the full picture so you don't have to.
+            From design to launch to ongoing support — I handle it all so you can focus on your business.
           </p>
         </div>
 

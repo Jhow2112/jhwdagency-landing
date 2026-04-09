@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FAF7F4]" style={{ scrollBehavior: "smooth" }}>
+    <div className="min-h-screen bg-[#F4F7FA]" style={{ scrollBehavior: "smooth" }}>
       <Navbar />
       <HeroSection />
       <LogosCarousel />

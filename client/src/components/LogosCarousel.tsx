@@ -1,42 +1,20 @@
-/* LogosCarousel — Contemporary Studio, Cool Blue */
+/* ValueStrip — replaces the logos carousel until real client logos are available
+   Shows honest, specific value props instead of fake client names */
 
-const logos = [
-  { name: "Bloom Bakery", abbr: "BB" },
-  { name: "Peak Fitness", abbr: "PF" },
-  { name: "Verdant Co.", abbr: "VC" },
-  { name: "Harbor Law", abbr: "HL" },
-  { name: "Solstice Spa", abbr: "SS" },
-  { name: "Ridgeline Realty", abbr: "RR" },
-  { name: "Craft & Co.", abbr: "CC" },
-  { name: "Ember Eats", abbr: "EE" },
-  { name: "Tidal Media", abbr: "TM" },
-  { name: "Foxwood Studio", abbr: "FS" },
+const props = [
+  { icon: "⚡", label: "Live in 5–10 days" },
+  { icon: "📍", label: "Meridian, ID — serving clients everywhere" },
+  { icon: "🔒", label: "No long-term contracts" },
+  { icon: "📱", label: "Mobile-first design" },
+  { icon: "🛠️", label: "Hosting & support included" },
+  { icon: "📞", label: "Meet via Zoom or in person" },
 ];
 
-function LogoItem({ name, abbr }: { name: string; abbr: string }) {
-  return (
-    <div className="flex items-center gap-3 px-8 select-none">
-      <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#C8DCF0] to-[#B0CCE8] flex items-center justify-center flex-shrink-0">
-        <span className="text-xs font-bold text-[#1E3A5F]" style={{ fontFamily: "Syne, sans-serif" }}>{abbr}</span>
-      </div>
-      <span className="text-base font-semibold text-[#6B8BAA] whitespace-nowrap" style={{ fontFamily: "Syne, sans-serif" }}>
-        {name}
-      </span>
-    </div>
-  );
-}
-
 export default function LogosCarousel() {
-  const doubled = [...logos, ...logos];
+  const doubled = [...props, ...props];
 
   return (
-    <section className="py-16 bg-white border-y border-[#C8DCF0] overflow-hidden">
-      <div className="container mb-8">
-        <p className="text-center text-xs font-semibold tracking-widest uppercase text-[#9BB5CC]" style={{ fontFamily: "Syne, sans-serif" }}>
-          Trusted by local businesses across the country
-        </p>
-      </div>
-
+    <section className="py-10 bg-white border-y border-[#C8DCF0] overflow-hidden">
       {/* Marquee */}
       <div className="relative">
         {/* Fade edges */}
@@ -47,8 +25,14 @@ export default function LogosCarousel() {
 
         <div className="flex overflow-hidden">
           <div className="flex marquee-track">
-            {doubled.map((logo, i) => (
-              <LogoItem key={`${logo.name}-${i}`} name={logo.name} abbr={logo.abbr} />
+            {doubled.map((item, i) => (
+              <div key={i} className="flex items-center gap-2.5 px-8 select-none whitespace-nowrap">
+                <span className="text-base">{item.icon}</span>
+                <span className="text-sm font-semibold text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                  {item.label}
+                </span>
+                <span className="ml-6 text-[#C8DCF0] text-lg">·</span>
+              </div>
             ))}
           </div>
         </div>

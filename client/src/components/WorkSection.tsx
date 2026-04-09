@@ -26,9 +26,12 @@ export default function WorkSection() {
           </h2>
         </div>
 
-        {/* Case study card */}
-        <div
-          className="relative rounded-3xl overflow-hidden bg-[#0D1B2A] shadow-2xl"
+        {/* Case study card — full card is a link to the live site */}
+        <a
+          href="https://crisis2comfort.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group relative rounded-3xl overflow-hidden bg-[#0D1B2A] shadow-2xl hover:shadow-[0_24px_64px_rgba(74,144,217,0.25)] transition-shadow duration-300"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(40px)",
@@ -43,6 +46,16 @@ export default function WorkSection() {
               className="w-full h-full object-cover object-top opacity-30"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0D1B2A]/97 via-[#0D1B2A]/70 to-transparent" />
+          </div>
+
+          {/* Visit site banner */}
+          <div className="relative z-10 flex items-center justify-center gap-2 py-3 bg-[#4A90D9]/20 border-b border-[#4A90D9]/30 group-hover:bg-[#4A90D9]/30 transition-colors">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-[#B8D4F0]">
+              <path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3M10 2h4m0 0v4m0-4L7 9" stroke="#B8D4F0" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span className="text-xs font-bold text-[#B8D4F0] tracking-wide" style={{ fontFamily: "Syne, sans-serif" }}>
+              Click to visit crisis2comfort.com ↗
+            </span>
           </div>
 
           {/* Content */}
@@ -145,7 +158,7 @@ export default function WorkSection() {
               </div>
             </div>
           </div>
-        </div>
+        </a>
 
         {/* More work teaser */}
         <div className="mt-8 text-center">

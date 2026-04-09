@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 const rows = [
   { label: "Build cost", agency: "$3,000–$10,000+", diy: "$20–$200+", us: "$495–$1,295" },
-  { label: "Monthly", agency: "$100–$500", diy: "$15–$50", us: "$29–$99" },
+  { label: "Monthly", agency: "$100–$500", diy: "$15–$150", us: "$29–$99" },
   { label: "Turnaround", agency: "4–8 weeks", diy: "Days to ∞", us: "5–10 days" },
   { label: "Your effort", agency: "Multiple meetings", diy: "All yours", us: "Answer questions, approve" },
   { label: "Support", agency: "Varies", diy: "You figure it out", us: "Included in plan" },

@@ -215,7 +215,7 @@ export default function PricingSection() {
         <div className="flex flex-wrap justify-center gap-6 mb-14">
           {[
             { label: "Agency cost", value: "$3,000–$10,000+" },
-            { label: "DIY builder", value: "$20–$200+" },
+            { label: "DIY builder", value: "$15–$150/mo" },
             { label: "Our service", value: "$495–$1,295", highlight: true },
           ].map((item) => (
             <div

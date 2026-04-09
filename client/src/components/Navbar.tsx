@@ -1,5 +1,7 @@
-/* Navbar — Contemporary Studio, Cool Blue */
+/* Navbar — Jeremy Howard Web Design */
 import { useState, useEffect } from "react";
+
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,13 +30,12 @@ export default function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
-            <span className="text-white font-bold text-sm" style={{ fontFamily: 'Syne, sans-serif' }}>S</span>
-          </div>
-          <span className="text-[#0D1B2A] font-bold text-lg tracking-tight" style={{ fontFamily: 'Syne, sans-serif' }}>
-            Studio
-          </span>
+        <a href="#" className="flex items-center group">
+          <img
+            src={LOGO_URL}
+            alt="Jeremy Howard Web Design"
+            className="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition-opacity"
+          />
         </a>
 
         {/* Desktop Nav */}

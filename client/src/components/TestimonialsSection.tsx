@@ -69,11 +69,11 @@ export default function TestimonialsSection() {
               <div>
                 <p className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>J.T.</p>
                 <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                  Client of{" "}
+                  client of{" "}
                   <a href="https://crisis2comfort.com" target="_blank" rel="noopener noreferrer" className="text-[#4A90D9] hover:underline">
                     Crisis to Comfort
                   </a>
-                  {" "}· Coeur d'Alene, ID
+                  {" "}&mdash; built by Jeremy Howard Web Design
                 </p>
               </div>
             </div>

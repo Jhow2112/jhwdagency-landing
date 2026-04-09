@@ -1,31 +1,35 @@
-/* Footer — Contemporary Studio, Cool Blue
-   Deep navy footer with contact form and office locations */
+/* Footer — Jeremy Howard Web Design
+   Contact form powered by Formspree (replace YOUR_FORMSPREE_ID with your real endpoint)
+   Office: Meridian, ID — also available via web/Zoom */
 import { useState } from "react";
 
-const offices = [
-  {
-    city: "Austin",
-    state: "TX",
-    address: "1204 S Congress Ave, Suite 300",
-    email: "austin@studio.agency",
-    phone: "+1 (512) 000-0000",
-  },
-  {
-    city: "Denver",
-    state: "CO",
-    address: "2400 Larimer St, Suite 110",
-    email: "denver@studio.agency",
-    phone: "+1 (720) 000-0000",
-  },
-];
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
+
+// Replace with your Formspree form ID from https://formspree.io
+// e.g. "https://formspree.io/f/xpwzgkab"
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputClass =
@@ -50,7 +54,7 @@ export default function Footer() {
               No long-term contracts. Cancel monthly plans anytime with 30 days notice.
             </p>
 
-            {submitted ? (
+            {status === "success" ? (
               <div className="rounded-2xl border border-[#4A90D9]/30 bg-[#4A90D9]/10 p-8 text-center">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center mx-auto mb-4">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -59,7 +63,7 @@ export default function Footer() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "Syne, sans-serif" }}>Message Received!</h3>
                 <p className="text-sm text-white/55" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                  We'll be in touch within one business day to schedule your free intake call.
+                  I'll be in touch within one business day to schedule a free consultation.
                 </p>
               </div>
             ) : (
@@ -115,7 +119,7 @@ export default function Footer() {
 
                 <div>
                   <label className="block text-xs font-semibold text-white/45 mb-1.5 tracking-wide uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
-                    Tell us about your business
+                    Tell me about your business
                   </label>
                   <textarea
                     rows={4}
@@ -127,47 +131,70 @@ export default function Footer() {
                   />
                 </div>
 
+                {status === "error" && (
+                  <p className="text-sm text-red-400" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                    Something went wrong. Please try again or email me directly.
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="btn-terra inline-flex items-center justify-center gap-2 px-7 py-4 text-base mt-1"
+                  disabled={status === "sending"}
+                  className="btn-terra inline-flex items-center justify-center gap-2 px-7 py-4 text-base mt-1 disabled:opacity-60"
                 >
-                  Send Message
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  {status === "sending" ? "Sending…" : "Send Message"}
+                  {status !== "sending" && (
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  )}
                 </button>
               </form>
             )}
           </div>
 
-          {/* Right: Offices + links */}
+          {/* Right: Location + links */}
           <div className="flex flex-col gap-10">
-            {/* Office locations */}
+            {/* Location */}
             <div>
-              <span className="section-label" style={{ color: "#B8D4F0" }}>Our Offices</span>
-              <div className="mt-4 flex flex-col gap-6">
-                {offices.map((office) => (
-                  <div key={office.city} className="flex flex-col gap-1.5 p-5 rounded-2xl bg-white/5 border border-white/10">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
-                        <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z"/>
-                          <circle cx="8" cy="6" r="1.5"/>
-                        </svg>
-                      </div>
-                      <span className="text-base font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
-                        {office.city}, {office.state}
-                      </span>
+              <span className="section-label" style={{ color: "#B8D4F0" }}>Where to Find Me</span>
+              <div className="mt-4 flex flex-col gap-4">
+                {/* In-person */}
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-white/5 border border-white/10">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5z"/>
+                        <circle cx="8" cy="6" r="1.5"/>
+                      </svg>
                     </div>
-                    <p className="text-sm text-white/50 pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{office.address}</p>
-                    <a href={`mailto:${office.email}`} className="text-sm text-[#4A90D9] hover:text-white transition-colors pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                      {office.email}
-                    </a>
-                    <a href={`tel:${office.phone}`} className="text-sm text-white/50 hover:text-white transition-colors pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                      {office.phone}
-                    </a>
+                    <span className="text-base font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
+                      Meridian, Idaho
+                    </span>
                   </div>
-                ))}
+                  <p className="text-sm text-white/50 pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                    Available for in-person meetings in the Treasure Valley area
+                  </p>
+                </div>
+
+                {/* Remote */}
+                <div className="flex flex-col gap-1.5 p-5 rounded-2xl bg-white/5 border border-white/10">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="1" y="4" width="14" height="9" rx="1.5"/>
+                        <path d="M11 4V3a1 1 0 00-1-1H6a1 1 0 00-1 1v1"/>
+                        <path d="M6 10l2-1.5L10 10V7L8 8.5 6 7v3z"/>
+                      </svg>
+                    </div>
+                    <span className="text-base font-bold text-white" style={{ fontFamily: "Syne, sans-serif" }}>
+                      Zoom / Web
+                    </span>
+                  </div>
+                  <p className="text-sm text-white/50 pl-9" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                    Serving clients anywhere via Zoom, phone, or email — no travel required
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -176,7 +203,7 @@ export default function Footer() {
               <div>
                 <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Services</p>
                 <ul className="flex flex-col gap-2.5">
-                  {["Brand Strategy", "Visual Identity", "Digital Design", "Custom Builds"].map((s) => (
+                  {["Web Design", "Visual Identity", "SEO & Local Search", "Custom Builds"].map((s) => (
                     <li key={s}>
                       <a href="#services" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                         {s}
@@ -186,12 +213,17 @@ export default function Footer() {
                 </ul>
               </div>
               <div>
-                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Company</p>
+                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Quick Links</p>
                 <ul className="flex flex-col gap-2.5">
-                  {["Our Work", "Pricing", "How It Works", "Contact"].map((s) => (
-                    <li key={s}>
-                      <a href="#contact" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                        {s}
+                  {[
+                    { label: "Our Work", href: "#work" },
+                    { label: "Pricing", href: "#pricing" },
+                    { label: "How It Works", href: "#services" },
+                    { label: "Contact", href: "#contact" },
+                  ].map((s) => (
+                    <li key={s.label}>
+                      <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                        {s.label}
                       </a>
                     </li>
                   ))}
@@ -205,14 +237,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center">
-              <span className="text-white font-bold text-xs" style={{ fontFamily: "Syne, sans-serif" }}>S</span>
-            </div>
-            <span className="text-sm font-bold text-white/75" style={{ fontFamily: "Syne, sans-serif" }}>Studio</span>
-          </div>
+          <a href="#" className="flex items-center">
+            <img src={LOGO_URL} alt="Jeremy Howard Web Design" className="h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+          </a>
           <p className="text-xs text-white/30" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-            © {new Date().getFullYear()} Studio Agency. All rights reserved.
+            © {new Date().getFullYear()} Jeremy Howard Web Design. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             {["Privacy", "Terms"].map((l) => (

@@ -18,7 +18,7 @@ export default function HeroSection() {
         {/* Left: Text */}
         <div className="flex flex-col gap-6 lg:gap-8">
           <div className="fade-up fade-up-delay-1">
-            <span className="section-label">Web Design Agency</span>
+            <span className="section-label">Jeremy Howard Web Design</span>
           </div>
 
           <h1
@@ -47,7 +47,7 @@ export default function HeroSection() {
             Designed, built, hosted, and maintained — so you can focus on
             running your business. Live in as little as{" "}
             <strong className="text-[#0D1B2A]">5 days</strong>, starting at{" "}
-            <strong className="text-[#1E3A5F]">$395</strong>.
+            <strong className="text-[#1E3A5F]">$495</strong>.
           </p>
 
           <div className="fade-up fade-up-delay-4 flex flex-wrap gap-4 items-center">
@@ -68,21 +68,27 @@ export default function HeroSection() {
             </a>
           </div>
 
-          {/* Social proof strip */}
-          <div className="fade-up fade-up-delay-4 flex items-center gap-6 pt-2">
-            <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>50+</span>
-              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Sites Launched</span>
+          {/* Trust strip — only real claims */}
+          <div className="fade-up fade-up-delay-4 flex flex-wrap items-center gap-5 pt-2">
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Live in as little as <strong className="text-[#0D1B2A]">5 days</strong></span>
             </div>
-            <div className="w-px h-10 bg-[#C8DCF0]" />
-            <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>5 days</span>
-              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Avg. Turnaround</span>
+            <div className="w-px h-6 bg-[#C8DCF0] hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>No long-term contracts</span>
             </div>
-            <div className="w-px h-10 bg-[#C8DCF0]" />
-            <div className="flex flex-col">
-              <span className="text-2xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>100%</span>
-              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Satisfaction</span>
+            <div className="w-px h-6 bg-[#C8DCF0] hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#EEF4FB] flex items-center justify-center">
+                <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              </div>
+              <span className="text-sm text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Hosting &amp; support included</span>
             </div>
           </div>
         </div>
