@@ -1,50 +1,6 @@
-/* TestimonialsSection — Contemporary Studio, Cool Blue */
+/* TestimonialsSection — replaced with a real-review highlight + CTA
+   We only use the one verified Google review from crisis2comfort.com */
 import { useEffect, useRef, useState } from "react";
-
-const testimonials = [
-  {
-    name: "Rachel M.",
-    business: "Bloom Bakery",
-    location: "Austin, TX",
-    plan: "Plus Plan",
-    quote:
-      "I was dreading the whole website process. Studio made it so easy — I answered a few questions, approved the draft, and we were live in 8 days. My online orders have doubled.",
-    initials: "RM",
-    stars: 5,
-  },
-  {
-    name: "David K.",
-    business: "Peak Fitness",
-    location: "Denver, CO",
-    plan: "Premium Plan",
-    quote:
-      "The copywriting alone was worth the premium price. I didn't have to write a single word. The site looks more professional than studios charging 5× as much.",
-    initials: "DK",
-    stars: 5,
-  },
-  {
-    name: "Sandra T.",
-    business: "Harbor Law Group",
-    location: "Seattle, WA",
-    plan: "Minimum Plan",
-    quote:
-      "Needed something simple and professional fast. Got exactly that. The ongoing support means I never have to worry about the site — it just works.",
-    initials: "ST",
-    stars: 5,
-  },
-];
-
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex gap-0.5">
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="14" height="14" viewBox="0 0 16 16" fill="#4A90D9">
-          <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
-        </svg>
-      ))}
-    </div>
-  );
-}
 
 export default function TestimonialsSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -62,49 +18,85 @@ export default function TestimonialsSection() {
   return (
     <section className="py-24 bg-[#F4F7FA]" ref={ref}>
       <div className="container">
-        <div className="text-center mb-14">
-          <span className="section-label">Client Stories</span>
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <span className="section-label">From Our Clients</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
-            Don't take our word for it.
+            What clients say.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+        {/* Single verified review card — centered, prominent */}
+        <div
+          className="max-w-2xl mx-auto"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(28px)",
+            transition: "opacity 0.7s ease, transform 0.7s ease",
+          }}
+        >
+          <div className="relative flex flex-col gap-6 p-10 rounded-3xl bg-white border border-[#C8DCF0] shadow-lg">
+            {/* Large quote mark */}
             <div
-              key={t.name}
-              className="flex flex-col gap-5 p-7 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm hover:shadow-lg transition-shadow duration-300"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(28px)",
-                transition: `opacity 0.6s ease ${i * 0.12}s, transform 0.6s ease ${i * 0.12}s`,
-              }}
+              className="absolute top-6 right-8 text-8xl font-serif leading-none select-none pointer-events-none"
+              style={{ color: "#EEF4FB", fontFamily: "Georgia, serif" }}
             >
-              {/* Stars */}
-              <StarRating count={t.stars} />
+              "
+            </div>
 
-              {/* Quote */}
-              <p className="text-sm text-[#3D5A7A] leading-relaxed flex-1" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                "{t.quote}"
-              </p>
-
-              {/* Plan tag */}
-              <span className="self-start text-xs px-3 py-1 rounded-full bg-[#EEF4FB] text-[#1E3A5F] font-semibold" style={{ fontFamily: "Syne, sans-serif" }}>
-                {t.plan}
+            {/* Stars */}
+            <div className="flex gap-1">
+              {[1,2,3,4,5].map(i => (
+                <svg key={i} width="18" height="18" viewBox="0 0 16 16" fill="#4A90D9">
+                  <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
+                </svg>
+              ))}
+              <span className="ml-2 text-xs text-[#6B8BAA] self-center font-semibold" style={{ fontFamily: "Syne, sans-serif" }}>
+                5-Star Google Review
               </span>
+            </div>
 
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-1 border-t border-[#C8DCF0]">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xs font-bold" style={{ fontFamily: "Syne, sans-serif" }}>{t.initials}</span>
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>{t.name}</p>
-                  <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{t.business} · {t.location}</p>
-                </div>
+            {/* Quote */}
+            <p className="text-xl text-[#0D1B2A] leading-relaxed font-medium relative z-10" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+              "Ann has been a great resource for navigating life's bumps. She worked with my schedule and has been affordable as well during tough times. Her first 30 minute consult was free which was nice to see if she was a good fit for me. Can't go wrong!"
+            </p>
+
+            {/* Attribution */}
+            <div className="flex items-center gap-4 pt-2 border-t border-[#C8DCF0]">
+              <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
+                <span className="text-white text-sm font-bold" style={{ fontFamily: "Syne, sans-serif" }}>JT</span>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>J.T.</p>
+                <p className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                  Client of{" "}
+                  <a href="https://crisis2comfort.com" target="_blank" rel="noopener noreferrer" className="text-[#4A90D9] hover:underline">
+                    Crisis to Comfort
+                  </a>
+                  {" "}· Coeur d'Alene, ID
+                </p>
               </div>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* CTA below */}
+        <div
+          className="mt-12 text-center"
+          style={{
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.7s ease 0.2s",
+          }}
+        >
+          <p className="text-sm text-[#6B8BAA] mb-4" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+            Ready to be our next success story?
+          </p>
+          <a href="#contact" className="btn-terra inline-flex items-center gap-2 px-7 py-3.5 text-base">
+            Start Your Project
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
     </section>

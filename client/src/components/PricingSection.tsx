@@ -1,10 +1,11 @@
-/* PricingSection — Contemporary Studio, Cool Blue */
+/* PricingSection — Contemporary Studio, Cool Blue
+   Updated prices: $495 / $895 / $1295 */
 import { useEffect, useRef, useState } from "react";
 
 const plans = [
   {
     name: "Minimum",
-    oneTime: "$395",
+    oneTime: "$495",
     monthly: "$29",
     description: "Everything you need to get online fast.",
     features: [
@@ -22,7 +23,7 @@ const plans = [
   },
   {
     name: "Plus",
-    oneTime: "$795",
+    oneTime: "$895",
     monthly: "$49",
     description: "More pages, more edits, faster launch.",
     features: [
@@ -39,7 +40,7 @@ const plans = [
   },
   {
     name: "Premium",
-    oneTime: "$995",
+    oneTime: "$1,295",
     monthly: "$99",
     description: "Full-service with copy, SEO, and Google optimization.",
     features: [
@@ -215,7 +216,7 @@ export default function PricingSection() {
           {[
             { label: "Agency cost", value: "$3,000–$10,000+" },
             { label: "DIY builder", value: "$20–$200+" },
-            { label: "Our service", value: "$395–$995", highlight: true },
+            { label: "Our service", value: "$495–$1,295", highlight: true },
           ].map((item) => (
             <div
               key={item.label}
