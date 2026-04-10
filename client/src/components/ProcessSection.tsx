@@ -25,7 +25,7 @@ const steps = [
   {
     number: "3",
     title: "You Review",
-    description: "Preview your site, request changes, and approve. We handle revisions until you're happy.",
+    description: "Preview your site and request changes. Revisions included vary by package — from 1 round on Minimum to unlimited on Premium.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>

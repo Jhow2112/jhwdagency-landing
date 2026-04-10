@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 6 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee starting at $29/month — no surprise costs.",
+    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 6 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan — no surprise costs.",
   },
   {
     q: "How long does it take to build my website?",
@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     q: "Do I own my website?",
-    a: "Yes — you own your website and all its content outright. The monthly fee covers hosting, maintenance, and support, not ownership. You can take your site to another host at any time.",
+    a: "Yes — you own your website and all its content outright. The monthly fee of $29–$99/month covers hosting, maintenance, and support, not ownership. You can take your site to another host at any time.",
   },
   {
     q: "Is hosting included in the price?",
-    a: "Yes. All packages include managed hosting, an SSL certificate (the padlock in your browser), and ongoing support for a low monthly fee starting at $29/month. There are no hidden fees.",
+    a: "Yes. All packages include managed hosting, an SSL certificate (the padlock in your browser), and ongoing support for $29–$99/month depending on your plan. There are no hidden fees.",
   },
   {
     q: "Can you help my business show up on Google?",

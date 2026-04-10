@@ -152,7 +152,7 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
               style={{ fontFamily: "Syne, sans-serif" }}
             >
               {plan.monthly}
-              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}>/mo</span>
+              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}>/mo hosting &amp; upkeep</span>
             </span>
           </div>
         </div>

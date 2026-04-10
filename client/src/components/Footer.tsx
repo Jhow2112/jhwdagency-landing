@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
-const EMAIL = "jeremy@jeremyhowardwebdesign.com";
+const EMAIL = "info@jeremyhowardwebdesign.com";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
