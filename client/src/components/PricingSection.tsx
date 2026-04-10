@@ -52,7 +52,7 @@ const plans = [
       "Google Business optimization",
       "SEO optimization",
       "3 edits per month",
-      "3 revisions during design",
+      "3 revision rounds during design",
     ],
     cta: "Go Premium",
     popular: false,

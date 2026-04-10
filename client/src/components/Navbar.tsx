@@ -31,15 +31,15 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      {/* Bar: h-20 mobile, h-28 desktop */}
-      <div className="container flex items-center justify-between h-20 md:h-28">
+      {/* Bar: h-32 mobile, h-36 desktop — tall to accommodate large logo */}
+      <div className="container flex items-center justify-between h-32 md:h-36">
 
-        {/* Logo — h-16 mobile keeps it prominent without clipping in h-20 bar */}
+        {/* Logo — h-28 mobile, h-32 desktop — large and prominent */}
         <a href="#" className="flex items-center group flex-shrink-0 py-2">
           <img
             src={LOGO_URL}
             alt="Jeremy Howard Web Design"
-            className="h-16 sm:h-20 md:h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
+            className="h-28 md:h-32 w-auto object-contain group-hover:opacity-90 transition-opacity"
             style={{ filter: "brightness(0) invert(1)" }}
           />
         </a>
