@@ -21,6 +21,7 @@ const plans = [
     cta: "Get Started",
     popular: false,
     highlight: false,
+    stripeUrl: "https://buy.stripe.com/dRmdR9bCy9ox1lbdtkcMM00",
   },
   {
     name: "Plus",
@@ -38,6 +39,7 @@ const plans = [
     cta: "Choose Plus",
     popular: true,
     highlight: true,
+    stripeUrl: "https://buy.stripe.com/28EaEX0XU58h0h7gFwcMM01",
   },
   {
     name: "Premium",
@@ -57,6 +59,7 @@ const plans = [
     cta: "Go Premium",
     popular: false,
     highlight: false,
+    stripeUrl: "https://buy.stripe.com/3cI14nayucAJgg5fBscMM02",
   },
 ];
 
@@ -74,7 +77,7 @@ const checkIconWhite = (
   </svg>
 );
 
-function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
+function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -175,9 +178,11 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA — Stripe Payment Link */}
         <a
-          href="#contact"
+          href={plan.stripeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold transition-all duration-200 ${
             plan.highlight
               ? "bg-white text-[#1E3A5F] hover:bg-[#EEF4FB] shadow-lg"
@@ -185,11 +190,20 @@ function PlanCard({ plan, index }: { plan: typeof plans[0]; index: number }) {
           }`}
           style={{ fontFamily: "Syne, sans-serif" }}
         >
+          {/* Lock icon for trust */}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
           {plan.cta}
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </a>
+        {/* Stripe trust note */}
+        <p className={`text-center text-xs mt-1 ${plan.highlight ? "text-white/40" : "text-[#9BB5CC]"}`} style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          Secure checkout via Stripe
+        </p>
       </div>
     </div>
   );
