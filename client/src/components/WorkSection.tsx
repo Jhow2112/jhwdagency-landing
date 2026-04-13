@@ -120,11 +120,10 @@ export default function WorkSection() {
                   Crisis to Comfort — Coeur d'Alene, ID
                 </p>
                 <h3
-                  className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight break-words hyphens-auto"
-                  style={{ fontFamily: "Syne, sans-serif", overflowWrap: "break-word", wordBreak: "break-word" }}
-                  lang="en"
+                  className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight"
+                  style={{ fontFamily: "Syne, sans-serif" }}
                 >
-                  A compassionate counselor needed a site that matched her mission.
+                  A counselor needed a site that matched her mission.
                 </h3>
               </div>
 
