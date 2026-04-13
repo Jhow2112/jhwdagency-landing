@@ -33,6 +33,10 @@ const faqs = [
     q: "Are there long-term contracts?",
     a: "No. There are no long-term contracts. Monthly hosting and support plans can be cancelled with 30 days notice at any time — no penalties, no hassle.",
   },
+  {
+    q: "What types of businesses do you build websites for?",
+    a: "I work with a wide range of local businesses — counselors, therapists, contractors, restaurants, retail shops, real estate agents, coaches, consultants, and service businesses of all kinds. If you need a professional website that attracts local customers, I can help.",
+  },
 ];
 
 function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {

@@ -91,7 +91,7 @@ export default function WorkSection() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 p-6 sm:p-10 md:p-12 lg:p-14">
 
             {/* Left: text */}
-            <div className="flex flex-col gap-5 sm:gap-6">
+            <div className="flex flex-col gap-5 sm:gap-6 min-w-0 overflow-hidden">
               {/* Tags — no emoji, clean text only */}
               <div className="flex flex-wrap items-center gap-2">
                 <span
@@ -120,8 +120,9 @@ export default function WorkSection() {
                   Crisis to Comfort — Coeur d'Alene, ID
                 </p>
                 <h3
-                  className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-tight"
-                  style={{ fontFamily: "Syne, sans-serif" }}
+                  className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight break-words hyphens-auto"
+                  style={{ fontFamily: "Syne, sans-serif", overflowWrap: "break-word", wordBreak: "break-word" }}
+                  lang="en"
                 >
                   A compassionate counselor needed a site that matched her mission.
                 </h3>
