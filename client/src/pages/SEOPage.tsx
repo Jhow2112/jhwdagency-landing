@@ -3,7 +3,7 @@
    Honest, specific, no overpromising
    Design: matches main site — navy/blue palette, Syne + Nunito Sans */
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -54,15 +54,6 @@ const whatIsDone = [
   },
 ];
 
-const whatIDontDo = [
-  "I don't guarantee specific Google rankings — no one honestly can.",
-  "I don't run paid ad campaigns (Google Ads, Meta Ads).",
-  "I don't do link-building outreach or backlink acquisition.",
-  "I don't manage social media accounts.",
-  "I don't write blog posts or ongoing content (beyond the initial site copy on Premium).",
-  "I don't provide keyword rank tracking reports — though I can point you to free tools to do this yourself.",
-];
-
 const faqs = [
   {
     q: "How long does it take to see results from SEO?",
@@ -104,24 +95,20 @@ function PlanBadge({ plan }: { plan: string }) {
   );
 }
 
-function ServiceCard({ item, index }: { item: typeof whatIsDone[0]; index: number }) {
+// Simplified ServiceCard — flat structure, no nested wrapper divs
+function ServiceCard({ item }: { item: typeof whatIsDone[0] }) {
   return (
-    <div
-      className="bg-white rounded-2xl border border-[#C8DCF0] p-6 sm:p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
-      style={{ animationDelay: `${index * 0.05}s` }}
-    >
-      <div className="flex flex-col gap-2">
-        <h3
-          className="text-lg font-bold text-[#0D1B2A]"
-          style={{ fontFamily: "Syne, sans-serif" }}
-        >
-          {item.title}
-        </h3>
-        <div className="flex flex-wrap gap-1.5">
-          {item.included.map((plan) => (
-            <PlanBadge key={plan} plan={plan} />
-          ))}
-        </div>
+    <div className="bg-white rounded-2xl border border-[#C8DCF0] p-6 sm:p-7 flex flex-col gap-3 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <h3
+        className="text-lg font-bold text-[#0D1B2A]"
+        style={{ fontFamily: "Syne, sans-serif" }}
+      >
+        {item.title}
+      </h3>
+      <div className="flex flex-wrap gap-1.5">
+        {item.included.map((plan) => (
+          <PlanBadge key={plan} plan={plan} />
+        ))}
       </div>
       <p
         className="text-sm text-[#3D5A7A] leading-relaxed"
@@ -133,49 +120,22 @@ function ServiceCard({ item, index }: { item: typeof whatIsDone[0]; index: numbe
   );
 }
 
+// Always-expanded FAQ item — no toggle button
 function FAQItem({ faq }: { faq: typeof faqs[0] }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <div
-      className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-        open
-          ? "border-[#4A90D9]/40 bg-white shadow-md"
-          : "border-[#C8DCF0] bg-white/60 hover:bg-white hover:border-[#4A90D9]/30"
-      }`}
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
-        aria-expanded={open}
+    <div className="rounded-2xl border border-[#C8DCF0] bg-white p-6 shadow-sm">
+      <h3
+        className="text-base font-bold text-[#0D1B2A] mb-2"
+        style={{ fontFamily: "Syne, sans-serif" }}
       >
-        <span
-          className="text-base font-bold text-[#0D1B2A]"
-          style={{ fontFamily: "Syne, sans-serif" }}
-        >
-          {faq.q}
-        </span>
-        <span
-          className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
-            open ? "bg-[#4A90D9] rotate-45" : "bg-[#EEF4FB]"
-          }`}
-        >
-          <svg
-            width="12" height="12" viewBox="0 0 12 12" fill="none"
-            stroke={open ? "white" : "#1E3A5F"} strokeWidth="2" strokeLinecap="round"
-          >
-            <path d="M6 1v10M1 6h10" />
-          </svg>
-        </span>
-      </button>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-        <p
-          className="px-6 pb-5 text-sm text-[#3D5A7A] leading-relaxed"
-          style={{ fontFamily: "Nunito Sans, sans-serif" }}
-        >
-          {faq.a}
-        </p>
-      </div>
+        {faq.q}
+      </h3>
+      <p
+        className="text-sm text-[#3D5A7A] leading-relaxed"
+        style={{ fontFamily: "Nunito Sans, sans-serif" }}
+      >
+        {faq.a}
+      </p>
     </div>
   );
 }
@@ -257,58 +217,14 @@ export default function SEOPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {whatIsDone.map((item, i) => (
-              <ServiceCard key={item.title} item={item} index={i} />
+              <ServiceCard key={item.title} item={item} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* What I don't do */}
-      <section className="py-14 sm:py-20 bg-white">
-        <div className="container max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="section-label">Honest Scope</span>
-            <h2
-              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]"
-              style={{ fontFamily: "Syne, sans-serif" }}
-            >
-              What I don't do.
-            </h2>
-            <p
-              className="mt-3 text-sm sm:text-base text-[#3D5A7A] max-w-md mx-auto"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
-            >
-              I'd rather be upfront than overpromise. These services are outside my scope.
-            </p>
-          </div>
-
-          <ul className="flex flex-col gap-3">
-            {whatIDontDo.map((item, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-3 bg-[#F4F7FA] rounded-xl px-5 py-4 border border-[#E2EAF2]"
-              >
-                <svg
-                  className="flex-shrink-0 mt-0.5"
-                  width="16" height="16" viewBox="0 0 16 16" fill="none"
-                >
-                  <circle cx="8" cy="8" r="7.5" stroke="#9BB5CC" strokeOpacity="0.6"/>
-                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#9BB5CC" strokeWidth="1.6" strokeLinecap="round"/>
-                </svg>
-                <span
-                  className="text-sm text-[#3D5A7A] leading-relaxed"
-                  style={{ fontFamily: "Nunito Sans, sans-serif" }}
-                >
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-14 sm:py-20">
+      <section className="py-14 sm:py-20 bg-white">
         <div className="container max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <span className="section-label">Common Questions</span>
@@ -319,7 +235,7 @@ export default function SEOPage() {
               SEO questions, answered.
             </h2>
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-4">
             {faqs.map((faq, i) => (
               <FAQItem key={i} faq={faq} />
             ))}
