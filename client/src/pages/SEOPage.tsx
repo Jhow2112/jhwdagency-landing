@@ -13,13 +13,13 @@ const whatIsDone = [
   {
     title: "On-Page SEO",
     description:
-      "Every page is built with clean, crawlable HTML. Title tags, meta descriptions, heading hierarchy (H1–H3), image alt text, and internal linking are all set up intentionally — not as an afterthought.",
+      "Your site is built so Google can actually read it. The right page titles, descriptions, and structure are all set up from the start — so search engines know what your business is and who it's for.",
     included: ["Minimum", "Plus", "Premium"],
   },
   {
     title: "AEO — Answer Engine Optimization",
     description:
-      "AI tools like ChatGPT, Perplexity, and Google's AI Overviews pull answers from structured content. I add JSON-LD schema markup (LocalBusiness, FAQPage, Service, Review) and write FAQ content that directly answers the questions your customers are already asking.",
+      "More people are using AI tools like ChatGPT and Google's AI search to find local businesses. I make sure your site is set up so those tools can accurately describe your business — what you do, where you are, and what customers say about you.",
     included: ["Plus", "Premium"],
   },
   {
@@ -60,7 +60,6 @@ const whatIDontDo = [
   "I don't do link-building outreach or backlink acquisition.",
   "I don't manage social media accounts.",
   "I don't write blog posts or ongoing content (beyond the initial site copy on Premium).",
-  "I don't provide keyword rank tracking reports — though I can point you to free tools to do this yourself.",
 ];
 
 const faqs = [

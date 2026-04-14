@@ -7,6 +7,8 @@ import { useState } from "react";
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
 const EMAIL = "info@jeremyhowardwebdesign.com";
+const PHONE = "(208) 615-2884";
+const PHONE_HREF = "tel:+12086152884";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
@@ -156,22 +158,26 @@ export default function Footer() {
             {/* Direct contact */}
             <div>
               <span className="section-label" style={{ color: "#B8D4F0" }}>Direct Contact</span>
-              <div className="mt-4">
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="inline-flex items-center gap-3 group"
-                >
+              <div className="mt-4 flex flex-col gap-3">
+                <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-3 group">
                   <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/>
                       <path d="M2 4l6 5 6-5"/>
                     </svg>
                   </div>
-                  <span
-                    className="text-sm font-semibold text-white/70 group-hover:text-white transition-colors break-all"
-                    style={{ fontFamily: "Nunito Sans, sans-serif" }}
-                  >
+                  <span className="text-sm font-semibold text-white/70 group-hover:text-white transition-colors break-all" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                     {EMAIL}
+                  </span>
+                </a>
+                <a href={PHONE_HREF} className="inline-flex items-center gap-3 group">
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center flex-shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M3 2h3l1.5 3.5-1.75 1.25c.8 1.6 2 2.8 3.5 3.5L10.5 8.5 14 10v3a1 1 0 01-1 1C6.27 14 2 9.73 2 4a1 1 0 011-2z"/>
+                    </svg>
+                  </div>
+                  <span className="text-sm font-semibold text-white/70 group-hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                    {PHONE}
                   </span>
                 </a>
               </div>
