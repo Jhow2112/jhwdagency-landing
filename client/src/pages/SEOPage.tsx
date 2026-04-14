@@ -76,14 +76,6 @@ const faqs = [
     q: "Will my site show up on Google Maps?",
     a: "Google Maps results are driven primarily by your Google Business Profile, not your website. I set up and optimize your profile on Plus and Premium plans. Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
   },
-  {
-    q: "Do I need to do anything for SEO after the site launches?",
-    a: "On the Minimum plan, the site is optimized at launch but you'd need to maintain it yourself going forward. On Plus, the initial setup is done for you. On Premium, I handle monthly updates so your SEO stays current without you having to think about it.",
-  },
-  {
-    q: "What is JSON-LD schema markup?",
-    a: "It's a block of structured data added to your website's code that tells search engines and AI tools exactly what your business is, where you're located, what you offer, and what customers say about you. It's invisible to visitors but very readable by Google and AI crawlers.",
-  },
 ];
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
