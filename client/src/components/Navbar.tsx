@@ -18,6 +18,7 @@ export default function Navbar() {
 
   const links = [
     { label: "Services", href: "#services" },
+    { label: "SEO & AEO", href: "/seo-aeo" },
     { label: "Work", href: "#work" },
     { label: "Pricing", href: "#pricing" },
     { label: "Contact", href: "#contact" },
@@ -35,7 +36,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-20 md:h-28">
 
         {/* Logo — h-14 mobile (fits in h-20 bar), h-24 desktop */}
-        <a href="#" className="flex items-center group flex-shrink-0 py-1">
+        <a href="/" className="flex items-center group flex-shrink-0 py-1">
           <img
             src={LOGO_URL}
             alt="Jeremy Howard Web Design"
