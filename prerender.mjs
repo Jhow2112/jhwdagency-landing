@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, 'dist/public');
-const ROUTES = ['/', '/seo-aeo'];
+const ROUTES = ['/', '/seo-aeo', '/privacy', '/terms'];
 
 // Read the built index.html as the shell template
 const indexHtml = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');

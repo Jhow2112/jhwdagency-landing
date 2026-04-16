@@ -268,11 +268,8 @@ export default function Footer() {
             © {new Date().getFullYear()} Jeremy Howard Web Design. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            {["Privacy", "Terms"].map((l) => (
-              <a key={l} href="#" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                {l}
-              </a>
-            ))}
+            <a href="/privacy" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Privacy</a>
+            <a href="/terms" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Terms</a>
           </div>
         </div>
       </div>
