@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "noEmit": false,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "allowImportingTsExtensions": false,
+    "paths": {
+      "@/*": ["./client/src/*"],
+      "@shared/*": ["./shared/*"]
+    }
+  }
+}

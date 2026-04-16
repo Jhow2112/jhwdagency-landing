@@ -2,7 +2,6 @@
    Design: Deep navy/sky blue palette, Syne headings, Nunito Sans body
    Route: /privacy */
 
-import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 
 const LAST_UPDATED = "April 15, 2026";
@@ -18,12 +17,12 @@ export default function PrivacyPage() {
 
           {/* Header */}
           <div className="mb-10">
-            <Link href="/" className="inline-flex items-center gap-2 text-sm text-[#4A90D9] hover:text-[#1E3A5F] transition-colors mb-6 font-semibold" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm text-[#4A90D9] hover:text-[#1E3A5F] transition-colors mb-6 font-semibold" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M10 12L6 8l4-4"/>
               </svg>
               Back to Home
-            </Link>
+            </a>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1E3A5F] mb-3" style={{ fontFamily: "Syne, sans-serif" }}>
               Privacy Policy
             </h1>
