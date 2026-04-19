@@ -72,7 +72,7 @@ export default function WorkSection() {
           <div className="absolute inset-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-              alt="Screenshot of Crisis to Comfort counseling website"
+              alt="Crisis to Comfort counseling website designed by Jeremy Howard Web Design"
               className="w-full h-full object-cover object-top opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0D1B2A]/95 via-[#0D1B2A]/85 to-[#0D1B2A]/95 lg:bg-gradient-to-r lg:from-[#0D1B2A]/97 lg:via-[#0D1B2A]/75 lg:to-[#0D1B2A]/30" />
@@ -177,7 +177,7 @@ export default function WorkSection() {
                 </div>
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-                  alt="Crisis to Comfort counseling website homepage designed by Jeremy Howard Web Design"
+                  alt="Crisis to Comfort counseling website designed by Jeremy Howard Web Design"
                   className="w-full object-cover object-top"
                   style={{ maxHeight: "180px" }}
                 />

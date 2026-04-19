@@ -39,7 +39,7 @@ export default function Navbar() {
         <a href="/" className="flex items-center group flex-shrink-0 py-1">
           <img
             src={LOGO_URL}
-            alt="Jeremy Howard Web Design"
+            alt="Jeremy Howard Web Design logo"
             className="h-14 md:h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
             style={{ filter: "brightness(0) invert(1)" }}
           />

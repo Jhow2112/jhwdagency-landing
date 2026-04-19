@@ -229,7 +229,7 @@ export default function Footer() {
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {["Web Design", "Visual Identity", "SEO & Local Search", "Custom Builds"].map((s) => (
                     <li key={s}>
-                      <a href="#services" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                      <a href="/#services" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                         {s}
                       </a>
                     </li>
@@ -240,10 +240,10 @@ export default function Footer() {
                 <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Quick Links</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {[
-                    { label: "Our Work", href: "#work" },
-                    { label: "Pricing", href: "#pricing" },
-                    { label: "How It Works", href: "#services" },
-                    { label: "FAQ", href: "#faq" },
+                    { label: "Our Work", href: "/#work" },
+                    { label: "Pricing", href: "/#pricing" },
+                    { label: "How It Works", href: "/#services" },
+                    { label: "FAQ", href: "/#faq" },
                   ].map((s) => (
                     <li key={s.label}>
                       <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
@@ -262,7 +262,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container py-5 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <a href="#" className="flex items-center">
-            <img src={LOGO_URL} alt="Jeremy Howard Web Design" className="h-7 sm:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+            <img src={LOGO_URL} alt="Jeremy Howard Web Design logo" className="h-7 sm:h-8 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
           </a>
           <p className="text-xs text-white/30 order-last sm:order-none" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
             © {new Date().getFullYear()} Jeremy Howard Web Design. All rights reserved.

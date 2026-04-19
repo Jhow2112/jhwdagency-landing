@@ -10,6 +10,7 @@ const services = [
       "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days — not months. Hosting, updates, and support are all included.",
     tags: ["Custom Design", "Mobile-First", "Hosting Included"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-digital-blue-HMTqZKgc45AQW58YVHRsCA.webp",
+    imageAlt: "Web design and development services illustration — custom websites for local businesses",
     color: "from-[#1E3A5F]/10 to-[#4A90D9]/5",
   },
   {
@@ -19,6 +20,7 @@ const services = [
       "Your website should look like it belongs to you. I create cohesive visual styles — color, typography, and layout — that reflect your brand and build trust with visitors.",
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-visual-blue-XZbzys4F3eFwQpn4ipiTFq.webp",
+    imageAlt: "Visual identity and branding services illustration — color, typography, and layout for small businesses",
     color: "from-[#4A90D9]/10 to-[#B8D4F0]/5",
   },
   {
@@ -28,6 +30,7 @@ const services = [
       "Get found by the customers who are already searching for you. I set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
     tags: ["Google Business", "Local SEO", "Page Speed"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-brand-blue-ceD9U4C6TzLE84JPXJRjXv.webp",
+    imageAlt: "SEO and local search services illustration — Google Business Profile setup and page speed optimization",
     color: "from-[#B8D4F0]/20 to-[#F4F7FA]/5",
   },
 ];
@@ -59,7 +62,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${service.color}`}>
         <img
           src={service.image}
-          alt={service.title}
+          alt={service.imageAlt}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
         {/* Number badge */}

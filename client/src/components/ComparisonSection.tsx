@@ -34,9 +34,9 @@ export default function ComparisonSection() {
           </h2>
         </div>
 
-        {/* ── MOBILE: card-per-row layout (hidden on md+) ── */}
+        {/* Styled comparison — card-per-row layout */}
         <div
-          className="md:hidden flex flex-col gap-3"
+          className="flex flex-col gap-3 max-w-4xl mx-auto"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
@@ -45,90 +45,38 @@ export default function ComparisonSection() {
         >
           {/* Column header */}
           <div className="grid grid-cols-3 gap-2 px-3 pb-1">
-            <span className="text-xs font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>Agency</span>
-            <span className="text-xs font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>DIY</span>
-            <span className="text-xs font-bold tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-[#1E3A5F] to-[#4A90D9] text-white text-xs font-bold">
-                Us
+            <span className="text-xs sm:text-sm font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>Agency</span>
+            <span className="text-xs sm:text-sm font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>DIY Builder</span>
+            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#1E3A5F] to-[#4A90D9] text-white text-xs font-bold">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="white"><path d="M4 0l.9 2.6H8L5.5 4.2l.9 2.6L4 5.2l-2.4 1.6.9-2.6L0 2.6h3.1z"/></svg>
+                Our Service
               </span>
             </span>
           </div>
 
           {rows.map((row) => (
-            <div key={row.label} className="rounded-xl border border-[#C8DCF0] overflow-hidden">
+            <div key={row.label} className="rounded-xl border border-[#C8DCF0] overflow-hidden shadow-sm">
               {/* Row label */}
-              <div className="bg-[#F4F7FA] px-4 py-2 border-b border-[#C8DCF0]">
-                <span className="text-xs font-bold text-[#0D1B2A] uppercase tracking-wide" style={{ fontFamily: "Syne, sans-serif" }}>
+              <div className="bg-[#F4F7FA] px-4 sm:px-6 py-2 sm:py-3 border-b border-[#C8DCF0]">
+                <span className="text-xs sm:text-sm font-bold text-[#0D1B2A] uppercase tracking-wide" style={{ fontFamily: "Syne, sans-serif" }}>
                   {row.label}
                 </span>
               </div>
               {/* Values */}
               <div className="grid grid-cols-3 divide-x divide-[#C8DCF0]">
-                <div className="px-3 py-3 text-center">
-                  <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.agency}</span>
+                <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
+                  <span className="text-xs sm:text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.agency}</span>
                 </div>
-                <div className="px-3 py-3 text-center">
-                  <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.diy}</span>
+                <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
+                  <span className="text-xs sm:text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.diy}</span>
                 </div>
-                <div className="px-3 py-3 text-center bg-[#EEF4FB]">
-                  <span className="text-xs font-semibold text-[#1E3A5F]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.us}</span>
+                <div className="px-3 sm:px-5 py-3 sm:py-4 text-center bg-[#EEF4FB]">
+                  <span className="text-xs sm:text-sm font-semibold text-[#1E3A5F]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.us}</span>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* ── DESKTOP: traditional table (hidden on mobile) ── */}
-        <div
-          className="hidden md:block overflow-x-auto rounded-2xl border border-[#C8DCF0] shadow-sm"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}
-        >
-          <table className="w-full min-w-[540px]">
-            <thead>
-              <tr className="bg-[#F4F7FA]">
-                <th className="text-left px-6 py-4 text-xs font-bold text-[#6B8BAA] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
-                  &nbsp;
-                </th>
-                <th className="px-6 py-4 text-center text-xs font-bold text-[#6B8BAA] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
-                  Agency
-                </th>
-                <th className="px-6 py-4 text-center text-xs font-bold text-[#6B8BAA] tracking-widest uppercase" style={{ fontFamily: "Syne, sans-serif" }}>
-                  DIY Builder
-                </th>
-                <th className="px-6 py-4 text-center" style={{ fontFamily: "Syne, sans-serif" }}>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#1E3A5F] to-[#4A90D9] text-white text-xs font-bold">
-                    <svg width="8" height="8" viewBox="0 0 8 8" fill="white"><path d="M4 0l.9 2.6H8L5.5 4.2l.9 2.6L4 5.2l-2.4 1.6.9-2.6L0 2.6h3.1z"/></svg>
-                    Our Service
-                  </span>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, i) => (
-                <tr
-                  key={row.label}
-                  className={`border-t border-[#C8DCF0] ${i % 2 === 0 ? "bg-white" : "bg-[#F4F7FA]/50"}`}
-                >
-                  <td className="px-6 py-4 text-sm font-semibold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
-                    {row.label}
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    {row.agency}
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    {row.diy}
-                  </td>
-                  <td className="px-6 py-4 text-center text-sm font-semibold text-[#1E3A5F] bg-[#EEF4FB]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                    {row.us}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 6 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan — no surprise costs.",
+    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 5 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan — no surprise costs.",
   },
   {
     q: "How long does it take to build my website?",

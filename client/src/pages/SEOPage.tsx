@@ -176,7 +176,40 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
 export default function SEOPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "SEO & AEO Services | Jeremy Howard Web Design | Meridian, ID";
+    document.title = "SEO & AEO Services for Small Businesses | Jeremy Howard Web Design | Meridian, Idaho";
+
+    const setMeta = (selector: string, attr: string, value: string) => {
+      let el = document.head.querySelector(selector) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement("meta");
+        const [key, rawName] = selector.replace(/^meta\[/, "").replace(/\]$/, "").split("=");
+        const name = rawName?.replace(/['"]/g, "");
+        if (key && name) el.setAttribute(key, name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute(attr, value);
+    };
+
+    const description =
+      "On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.";
+
+    setMeta('meta[name="description"]', "content", description);
+    setMeta('meta[property="og:title"]', "content", "SEO & AEO Services | Jeremy Howard Web Design");
+    setMeta(
+      'meta[property="og:description"]',
+      "content",
+      "Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses."
+    );
+    setMeta('meta[property="og:url"]', "content", "https://jeremyhowardwebdesign.com/seo-aeo/");
+    setMeta('meta[name="twitter:title"]', "content", "SEO & AEO Services | Jeremy Howard Web Design");
+    setMeta(
+      'meta[name="twitter:description"]',
+      "content",
+      "Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses."
+    );
+
+    const canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (canonical) canonical.setAttribute("href", "https://jeremyhowardwebdesign.com/seo-aeo/");
   }, []);
 
   return (
