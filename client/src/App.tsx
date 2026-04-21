@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import SEOPage from "./pages/SEOPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import ActiveSEOPage from "./pages/ActiveSEOPage";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path={"/seo-aeo"} component={SEOPage} />
       <Route path={"/privacy"} component={PrivacyPage} />
       <Route path={"/terms"} component={TermsPage} />
+      <Route path={"/active-seo"} component={ActiveSEOPage} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>

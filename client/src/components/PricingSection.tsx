@@ -261,7 +261,7 @@ export default function PricingSection() {
             <div className="flex flex-col text-center sm:text-left">
               <span className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>Need a Fully Custom Build?</span>
               <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                E-commerce, integrations, and advanced features — contact us for a custom quote.
+                E-commerce, integrations, and advanced features. Contact us for a custom quote.
               </span>
             </div>
             <a href="#contact" className="btn-ghost-pill px-5 py-2 text-sm whitespace-nowrap">

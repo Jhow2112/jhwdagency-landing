@@ -68,7 +68,7 @@ export default function TestimonialsSection() {
               className="text-xl text-[#0D1B2A] leading-relaxed font-medium relative z-10 not-italic"
               style={{ fontFamily: "Nunito Sans, sans-serif" }}
             >
-              <p>"I had no idea where to start with getting a website for my counseling practice. Jeremy made the whole process easy — he asked the right questions, handled everything from design to hosting, and had my site live within a week. It looks professional, it's easy to navigate, and I've already had new clients find me through it. I couldn't be happier."</p>
+              <p>"I had no idea where to start with getting a website for my counseling practice. Jeremy made the whole process easy. He asked the right questions, handled everything from design to hosting, and had my site live within a week. It looks professional, it's easy to navigate, and I've already had new clients find me through it. I couldn't be happier."</p>
             </blockquote>
 
             {/* Attribution */}
@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
                   >
                     Crisis to Comfort Counseling
                   </a>{" "}
-                  &mdash; Meridian, ID
+                  Meridian, ID
                 </p>
               </div>
             </div>

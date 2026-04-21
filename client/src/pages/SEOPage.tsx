@@ -13,19 +13,17 @@ const whatIsDone = [
   {
     title: "On-Page SEO",
     description:
-      "Your site is built so Google can actually read it. The right page titles, descriptions, and structure are all set up from the start — so search engines know what your business is and who it's for.",
+      "Your site is built so Google can actually read it. The right page titles, descriptions, and structure are all set up from the start so search engines know what your business is and who it's for.",
     included: ["Minimum", "Plus", "Premium"],
   },
   {
-    title: "AEO — Answer Engine Optimization",
-    description:
-      "More people are using AI tools like ChatGPT and Google's AI search to find local businesses. I make sure your site is set up so those tools can accurately describe your business — what you do, where you are, and what customers say about you.",
+    title: "AEO: Answer Engine Optimization",
+    description:      "More people are using AI tools like ChatGPT and Google's AI search to find local businesses. I make sure your site is set up so those tools can accurately describe your business: what you do, where you are, and what customers say about you.",
     included: ["Plus", "Premium"],
   },
   {
     title: "Google Business Profile Setup",
-    description:
-      "A complete, accurate Google Business Profile is one of the most impactful things a local business can have. I set up or clean up your profile — business category, service areas, hours, photos, and description — so you show up correctly in Maps and local search.",
+    description:      "A complete, accurate Google Business Profile is one of the most impactful things a local business can have. I set up or clean up your profile (business category, service areas, hours, photos, and description) so you show up correctly in Maps and local search.",
     included: ["Plus", "Premium"],
   },
   {
@@ -49,14 +47,13 @@ const whatIsDone = [
   {
     title: "Google Business Profile Management",
     description:
-      "On the Premium plan, I handle ongoing updates to your Google Business Profile — keeping your hours, photos, and service descriptions current. Consistent, active profiles rank better in local search.",
+      "On the Premium plan, I handle ongoing updates to your Google Business Profile, keeping your hours, photos, and service descriptions current. Consistent, active profiles rank better in local search.",
     included: ["Premium"],
   },
 ];
 
 const whatIDontDo = [
-  "I don't guarantee specific Google rankings — no one honestly can.",
-  "I don't run paid ad campaigns (Google Ads, Meta Ads).",
+  "I don't guarantee specific Google rankings. No one honestly can.",  "I don't run paid ad campaigns (Google Ads, Meta Ads).",
   "I don't do link-building outreach or backlink acquisition.",
   "I don't manage social media accounts.",
   "I don't write blog posts or ongoing content (beyond the initial site copy on Premium).",
@@ -68,9 +65,7 @@ const faqs = [
     a: "Honest answer: it varies. For local searches with low competition, some clients see movement in 4–8 weeks. For more competitive markets, it can take 3–6 months. SEO is a long-term investment, not a quick fix. What I can do is make sure your site is set up correctly from day one so you're not starting from behind.",
   },
   {
-    q: "What is AEO and why does it matter?",
-    a: "AEO stands for Answer Engine Optimization. It's the practice of structuring your content so that AI tools — like ChatGPT, Perplexity, Google's AI Overviews, and Siri — can accurately represent your business when someone asks a relevant question. As more people use AI to find local services, being well-represented in those answers matters more and more.",
-  },
+    q: "What is AEO and why does it matter?",    a: "AEO stands for Answer Engine Optimization. It's the practice of structuring your content so that AI tools like ChatGPT, Perplexity, Google's AI Overviews, and Siri can accurately represent your business when someone asks a relevant question. As more people use AI to find local services, being well-represented in those answers matters more and more." },
   {
     q: "Will my site show up on Google Maps?",
     a: "Google Maps results are driven primarily by your Google Business Profile, not your website. I set up and optimize your profile on Plus and Premium plans. Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
@@ -236,7 +231,7 @@ export default function SEOPage() {
             className="text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
-            Every site I build includes foundational SEO. Plus and Premium plans go further — with structured data, Google Business setup, and ongoing optimization so your business shows up where your customers are looking.
+            Every site I build includes foundational SEO. Plus and Premium plans go further, with structured data, Google Business setup, and ongoing optimization so your business shows up where your customers are looking.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -364,7 +359,7 @@ export default function SEOPage() {
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
-            Start with a plan that includes SEO and AEO from day one — no add-ons, no surprises.
+            Start with a plan that includes SEO and AEO from day one. No add-ons, no surprises.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

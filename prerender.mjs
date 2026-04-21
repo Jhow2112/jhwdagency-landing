@@ -24,6 +24,7 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, 'dist/public');
+<<<<<<< Updated upstream
 const SITE_ORIGIN = 'https://jeremyhowardwebdesign.com';
 const LOGO_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp';
 
@@ -119,6 +120,9 @@ function applyRouteMeta(html, meta) {
   out = replaceMetaContent(out, /<meta name="twitter:image"[^>]*>/, meta.twitterImage);
   return out;
 }
+=======
+const ROUTES = ['/', '/seo-aeo', '/active-seo', '/privacy', '/terms'];
+>>>>>>> Stashed changes
 
 // Read the Vite-built index.html shell
 const indexHtml = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');

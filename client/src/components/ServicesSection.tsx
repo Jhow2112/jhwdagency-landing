@@ -7,20 +7,28 @@ const services = [
     number: "01",
     title: "Web Design & Development",
     description:
-      "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days — not months. Hosting, updates, and support are all included.",
+      "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days, not months. Hosting, updates, and support are all included.",
     tags: ["Custom Design", "Mobile-First", "Hosting Included"],
+<<<<<<< Updated upstream
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-digital-blue-HMTqZKgc45AQW58YVHRsCA.webp",
     imageAlt: "Web design and development services illustration — custom websites for local businesses",
+=======
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-contractor-bgXiBQZvn3CX4CGsizQjKp.webp",
+>>>>>>> Stashed changes
     color: "from-[#1E3A5F]/10 to-[#4A90D9]/5",
   },
   {
     number: "02",
     title: "Visual Identity",
     description:
-      "Your website should look like it belongs to you. I create cohesive visual styles — color, typography, and layout — that reflect your brand and build trust with visitors.",
+      "Your website should look like it belongs to you. I create cohesive visual styles in color, typography, and layout that reflect your brand and build trust with visitors.",
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
+<<<<<<< Updated upstream
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-visual-blue-XZbzys4F3eFwQpn4ipiTFq.webp",
     imageAlt: "Visual identity and branding services illustration — color, typography, and layout for small businesses",
+=======
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-restaurant-aREJ6AvRtneKLgdTb2u3gm.webp",
+>>>>>>> Stashed changes
     color: "from-[#4A90D9]/10 to-[#B8D4F0]/5",
   },
   {
@@ -29,8 +37,12 @@ const services = [
     description:
       "Get found by the customers who are already searching for you. I set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
     tags: ["Google Business", "Local SEO", "Page Speed"],
+<<<<<<< Updated upstream
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/service-brand-blue-ceD9U4C6TzLE84JPXJRjXv.webp",
     imageAlt: "SEO and local search services illustration — Google Business Profile setup and page speed optimization",
+=======
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-counseling-nG9Npw57ZJtcFSmQsfdxd9.webp",
+>>>>>>> Stashed changes
     color: "from-[#B8D4F0]/20 to-[#F4F7FA]/5",
   },
 ];
@@ -121,7 +133,7 @@ export default function ServicesSection() {
             </h2>
           </div>
           <p className="text-base text-[#3D5A7A] max-w-xs leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-            From design to launch to ongoing support — I handle it all so you can focus on your business.
+            From design to launch to ongoing support, I handle it all so you can focus on your business.
           </p>
         </div>
 
