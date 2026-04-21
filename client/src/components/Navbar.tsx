@@ -19,14 +19,9 @@ export default function Navbar() {
   const links = [
     { label: "Services", href: "/#services" },
     { label: "SEO & AEO", href: "/seo-aeo" },
-<<<<<<< Updated upstream
+    { label: "Active SEO", href: "/active-seo" },
     { label: "Work", href: "/#work" },
     { label: "Pricing", href: "/#pricing" },
-=======
-    { label: "Active SEO", href: "/active-seo" },
-    { label: "Work", href: "#work" },
-    { label: "Pricing", href: "#pricing" },
->>>>>>> Stashed changes
     { label: "Contact", href: "#contact" },
   ];
 

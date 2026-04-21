@@ -24,7 +24,6 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, 'dist/public');
-<<<<<<< Updated upstream
 const SITE_ORIGIN = 'https://jeremyhowardwebdesign.com';
 const LOGO_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp';
 
@@ -87,9 +86,25 @@ const ROUTE_META = {
     twitterDescription: 'The agreement governing engagement with Jeremy Howard Web Design.',
     twitterImage: LOGO_URL,
   },
+  '/active-seo': {
+    title: 'Active SEO Service | Monthly Done-For-You SEO & AEO | Jeremy Howard Web Design',
+    description:
+      'Monthly SEO and AEO management for local businesses. Google Business Profile management, on-page SEO audits, schema tuning, and performance reports. $399/month. No contracts.',
+    canonical: `${SITE_ORIGIN}/active-seo/`,
+    ogTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    ogDescription:
+      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+    ogUrl: `${SITE_ORIGIN}/active-seo/`,
+    ogImage: LOGO_URL,
+    twitterTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    twitterDescription:
+      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+    twitterImage: LOGO_URL,
+  },
 };
 
 const ROUTES = Object.keys(ROUTE_META);
+
 
 function escapeAttr(s) {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -120,9 +135,7 @@ function applyRouteMeta(html, meta) {
   out = replaceMetaContent(out, /<meta name="twitter:image"[^>]*>/, meta.twitterImage);
   return out;
 }
-=======
-const ROUTES = ['/', '/seo-aeo', '/active-seo', '/privacy', '/terms'];
->>>>>>> Stashed changes
+
 
 // Read the Vite-built index.html shell
 const indexHtml = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');
