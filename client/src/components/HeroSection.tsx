@@ -32,7 +32,7 @@ export default function HeroSection() {
               className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#7BB8E8] border border-[#4A90D9]/40 rounded-full px-3 py-1.5"
               style={{ fontFamily: "Syne, sans-serif" }}
             >
-              Jeremy Howard Web Design · Meridian, ID
+              Jeremy Howard · Meridian, ID
             </span>
           </div>
 
@@ -61,7 +61,7 @@ export default function HeroSection() {
             className="fade-up fade-up-delay-3 text-base sm:text-lg text-white/75 leading-relaxed max-w-lg"
             style={{ fontFamily: "Nunito Sans, sans-serif" }}
           >
-            Designed, built, hosted, and maintained — so you can focus on running your business. Live in as little as{" "}
+            Designed, built, hosted, and maintained so you can focus on running your business. Live in as little as{" "}
             <strong className="text-white">5 days</strong>, starting at{" "}
             <strong className="text-white">$495</strong>.
           </p>

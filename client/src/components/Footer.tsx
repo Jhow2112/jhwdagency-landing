@@ -109,10 +109,10 @@ export default function Footer() {
                     style={{ fontFamily: "Nunito Sans, sans-serif" }}
                   >
                     <option value="" className="bg-[#0D1B2A]">Select a plan...</option>
-                    <option value="minimum" className="bg-[#0D1B2A]">Minimum — $495 + $29/mo</option>
-                    <option value="plus" className="bg-[#0D1B2A]">Plus — $895 + $49/mo</option>
-                    <option value="premium" className="bg-[#0D1B2A]">Premium — $1,295 + $99/mo</option>
-                    <option value="custom" className="bg-[#0D1B2A]">Custom Build — Let's talk</option>
+                    <option value="minimum" className="bg-[#0D1B2A]">Minimum ($495 + $29/mo)</option>
+                    <option value="plus" className="bg-[#0D1B2A]">Plus ($895 + $49/mo)</option>
+                    <option value="premium" className="bg-[#0D1B2A]">Premium ($1,295 + $99/mo)</option>
+                    <option value="custom" className="bg-[#0D1B2A]">Custom Build (Let's talk)</option>
                     <option value="unsure" className="bg-[#0D1B2A]">Not sure yet</option>
                   </select>
                 </div>

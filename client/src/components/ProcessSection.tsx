@@ -15,7 +15,7 @@ const steps = [
   {
     number: "2",
     title: "We Design & Build",
-    description: "Your site is designed, written, and built for you — no technical knowledge needed on your end.",
+    description: "Your site is designed, written, and built for you. No technical knowledge needed on your end.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -25,7 +25,7 @@ const steps = [
   {
     number: "3",
     title: "You Review",
-    description: "Preview your site and request changes. Revisions included vary by package — 1 round on Minimum, 2 on Plus, and 3 on Premium.",
+    description: "Preview your site and request changes. Revisions included: 1 round on Minimum, 2 on Plus, and 3 on Premium.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>

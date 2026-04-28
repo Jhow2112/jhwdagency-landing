@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import SEOPage from "./pages/SEOPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import ActiveSEOPage from "./pages/ActiveSEOPage";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 
@@ -17,6 +18,7 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/seo-aeo": SEOPage,
   "/privacy": PrivacyPage,
   "/terms": TermsPage,
+  "/active-seo": ActiveSEOPage,
 };
 
 export function render(url: string): string {

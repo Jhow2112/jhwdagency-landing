@@ -95,6 +95,23 @@ const ROUTE_META = {
     sitemapPriority: '0.3',
     sitemapChangefreq: 'yearly',
   },
+  '/active-seo': {
+    title: 'Active SEO Service | Monthly Done-For-You SEO & AEO | Jeremy Howard Web Design',
+    description:
+      'Monthly SEO and AEO management for local businesses. Google Business Profile management, on-page SEO audits, schema tuning, and performance reports. $399/month. No contracts.',
+    canonical: `${SITE_ORIGIN}/active-seo/`,
+    ogTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    ogDescription:
+      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+    ogUrl: `${SITE_ORIGIN}/active-seo/`,
+    ogImage: LOGO_URL,
+    twitterTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    twitterDescription:
+      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+    twitterImage: LOGO_URL,
+    sitemapPriority: '0.8',
+    sitemapChangefreq: 'monthly',
+  },
 };
 
 // ─── Load landing page data from TS via tsx ──────────────────────────────
@@ -139,6 +156,7 @@ for (const lp of [...cities, ...industries]) {
 }
 
 const ROUTES = Object.keys(ROUTE_META);
+
 
 function escapeAttr(s) {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');

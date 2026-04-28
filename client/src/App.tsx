@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import SEOPage from "./pages/SEOPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import ActiveSEOPage from "./pages/ActiveSEOPage";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 
@@ -18,6 +19,7 @@ function Router() {
       <Route path={"/seo-aeo"} component={SEOPage} />
       <Route path={"/privacy"} component={PrivacyPage} />
       <Route path={"/terms"} component={TermsPage} />
+      <Route path={"/active-seo"} component={ActiveSEOPage} />
       {[...CITIES, ...INDUSTRIES].map((d) => (
         <Route key={d.slug} path={d.slug}>
           <LandingPageTemplate data={d} />

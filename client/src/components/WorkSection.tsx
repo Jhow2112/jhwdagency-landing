@@ -117,7 +117,7 @@ export default function WorkSection() {
 
               <div>
                 <p className="text-sm text-[#B8D4F0] font-semibold mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
-                  Crisis to Comfort — Coeur d'Alene, ID
+                  Crisis to Comfort · Coeur d'Alene, ID
                 </p>
                 <h3
                   className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white leading-tight"
@@ -135,7 +135,7 @@ export default function WorkSection() {
                 <p className="text-sm font-semibold text-white/80" style={{ fontFamily: "Syne, sans-serif" }}>What we delivered:</p>
                 <ul className="flex flex-col gap-2">
                   {[
-                    "Full 5-page site — Home, About, Services, FAQs, Contact",
+                    "Full 5-page site: Home, About, Services, FAQs, Contact",
                     "Professional copywriting aligned with her voice and values",
                     "Telehealth booking integration and free consultation CTA",
                     "Google Business optimization for local Coeur d'Alene search",
@@ -189,10 +189,10 @@ export default function WorkSection() {
                   {[1,2,3,4,5].map(i => <StarIcon key={i} />)}
                 </div>
                 <p className="text-sm text-white/70 leading-relaxed italic" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
-                  "Jeremy built me a beautiful website that truly reflects my practice. He handled everything — the design, the writing, even setting up my Google listing. I had zero technical knowledge and he made the whole process easy and stress-free."
+                  "Jeremy built me a beautiful website that truly reflects my practice. He handled everything: the design, the writing, even setting up my Google listing. I had zero technical knowledge and he made the whole process easy and stress-free."
                 </p>
                 <p className="text-xs text-white/40 mt-3 font-semibold" style={{ fontFamily: "Syne, sans-serif" }}>
-                  — Ann McGaver, LPC · Crisis to Comfort Counseling
+                  Ann McGaver, LPC · Crisis to Comfort Counseling
                 </p>
               </div>
             </div>

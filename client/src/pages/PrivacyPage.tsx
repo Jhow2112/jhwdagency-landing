@@ -68,7 +68,7 @@ export default function PrivacyPage() {
               <ul className="list-disc pl-6 mt-3 space-y-2 text-base">
                 <li>To respond to consultation requests and inquiries submitted through the contact form.</li>
                 <li>To understand how visitors use the site so we can improve its content and usability.</li>
-                <li>To process payments when you purchase a service plan (payments are handled entirely by Stripe — we do not store your payment card information).</li>
+                <li>To process payments when you purchase a service plan (payments are handled entirely by Stripe; we do not store your payment card information).</li>
               </ul>
               <p className="text-base mt-4">
                 We do not sell, rent, or share your personal information with third parties for marketing purposes.
@@ -82,15 +82,15 @@ export default function PrivacyPage() {
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-2 text-base">
                 <li>
-                  <strong>Formspree</strong> — processes contact form submissions.{" "}
+                  <strong>Formspree</strong> processes contact form submissions.{" "}
                   <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#4A90D9] hover:underline">Formspree Privacy Policy</a>
                 </li>
                 <li>
-                  <strong>Stripe</strong> — processes payments for service plans.{" "}
+                  <strong>Stripe</strong> processes payments for service plans.{" "}
                   <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#4A90D9] hover:underline">Stripe Privacy Policy</a>
                 </li>
                 <li>
-                  <strong>Google Analytics</strong> — collects anonymized site usage data.{" "}
+                  <strong>Google Analytics</strong> collects anonymized site usage data.{" "}
                   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#4A90D9] hover:underline">Google Privacy Policy</a>
                 </li>
               </ul>
