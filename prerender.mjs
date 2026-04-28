@@ -9,16 +9,16 @@
  *
  * How it works:
  * 1. Reads the Vite-built index.html as a shell template
- * 2. Uses tsx to run entry-server.tsx (React SSR entry point)
- * 3. Injects the rendered HTML string into the shell's <div id="root">
- * 4. Writes the result to dist/public/<route>/index.html
- *
- * The output HTML contains full page content (headings, body text, FAQ answers,
- * pricing, etc.) so non-JS crawlers can read everything.
+ * 2. Loads city + industry landing-page data from client/src/data/landingPages.ts
+ *    (via tsx so we can keep one source of truth in TS)
+ * 3. Uses tsx to run entry-server.tsx (React SSR entry point) per route
+ * 4. Injects the rendered HTML string into the shell's <div id="root">
+ * 5. Writes the result to dist/public/<route>/index.html
+ * 6. Generates dist/public/sitemap.xml from the same route list
  */
 
 import { execSync } from 'child_process';
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -27,9 +27,10 @@ const DIST_DIR = join(__dirname, 'dist/public');
 const SITE_ORIGIN = 'https://jeremyhowardwebdesign.com';
 const LOGO_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp';
 
-// Per-route metadata for head tag injection. Each route inherits defaults from index.html,
-// but title, description, canonical, OG, and Twitter tags are replaced so crawlers see
-// page-specific metadata even without executing JavaScript.
+// ─── Static-route metadata ────────────────────────────────────────────────
+// Per-route head tags for the four hand-built routes. Landing pages (cities +
+// industries) are appended below from landingPages.ts so adding a new entry
+// only requires a single edit in that data file.
 const ROUTE_META = {
   '/': {
     title: 'Web Design Meridian Idaho | Jeremy Howard Web Design | Starting at $495',
@@ -45,6 +46,8 @@ const ROUTE_META = {
     twitterDescription:
       'Websites designed, built, hosted, and maintained for small businesses. Starting at $495. Live in 5 days.',
     twitterImage: LOGO_URL,
+    sitemapPriority: '1.0',
+    sitemapChangefreq: 'monthly',
   },
   '/seo-aeo': {
     title: 'SEO & AEO Services for Small Businesses | Jeremy Howard Web Design | Meridian, Idaho',
@@ -60,6 +63,8 @@ const ROUTE_META = {
     twitterDescription:
       'Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses.',
     twitterImage: LOGO_URL,
+    sitemapPriority: '0.8',
+    sitemapChangefreq: 'monthly',
   },
   '/privacy': {
     title: 'Privacy Policy | Jeremy Howard Web Design',
@@ -73,6 +78,8 @@ const ROUTE_META = {
     twitterTitle: 'Privacy Policy | Jeremy Howard Web Design',
     twitterDescription: 'How Jeremy Howard Web Design handles information collected through this site.',
     twitterImage: LOGO_URL,
+    sitemapPriority: '0.3',
+    sitemapChangefreq: 'yearly',
   },
   '/terms': {
     title: 'Terms of Service | Jeremy Howard Web Design',
@@ -85,8 +92,51 @@ const ROUTE_META = {
     twitterTitle: 'Terms of Service | Jeremy Howard Web Design',
     twitterDescription: 'The agreement governing engagement with Jeremy Howard Web Design.',
     twitterImage: LOGO_URL,
+    sitemapPriority: '0.3',
+    sitemapChangefreq: 'yearly',
   },
 };
+
+// ─── Load landing page data from TS via tsx ──────────────────────────────
+const dataHelper = join(__dirname, '.prerender-data.tsx');
+writeFileSync(
+  dataHelper,
+  `import { CITIES, INDUSTRIES } from "./client/src/data/landingPages";\nprocess.stdout.write(JSON.stringify({ cities: CITIES, industries: INDUSTRIES }));\n`
+);
+let cities = [];
+let industries = [];
+try {
+  const dataJson = execSync(
+    `npx tsx --tsconfig tsconfig.ssr.json "${dataHelper}"`,
+    {
+      cwd: __dirname,
+      env: { ...process.env, NODE_ENV: 'production', VITE_SSR: 'true' },
+      maxBuffer: 10 * 1024 * 1024,
+    }
+  ).toString();
+  const parsed = JSON.parse(dataJson);
+  cities = parsed.cities || [];
+  industries = parsed.industries || [];
+} finally {
+  try { unlinkSync(dataHelper); } catch {}
+}
+
+for (const lp of [...cities, ...industries]) {
+  ROUTE_META[lp.slug] = {
+    title: lp.metaTitle,
+    description: lp.metaDescription,
+    canonical: `${SITE_ORIGIN}${lp.slug}/`,
+    ogTitle: lp.metaTitle,
+    ogDescription: lp.metaDescription,
+    ogUrl: `${SITE_ORIGIN}${lp.slug}/`,
+    ogImage: LOGO_URL,
+    twitterTitle: lp.metaTitle,
+    twitterDescription: lp.metaDescription,
+    twitterImage: LOGO_URL,
+    sitemapPriority: '0.7',
+    sitemapChangefreq: 'monthly',
+  };
+}
 
 const ROUTES = Object.keys(ROUTE_META);
 
@@ -102,28 +152,21 @@ function replaceMetaContent(html, selectorRegex, value) {
 
 function applyRouteMeta(html, meta) {
   let out = html;
-  // <title>
   out = out.replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(meta.title)}</title>`);
-  // <meta name="description">
   out = replaceMetaContent(out, /<meta name="description"[^>]*>/, meta.description);
-  // <link rel="canonical">
   out = out.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${escapeAttr(meta.canonical)}" />`);
-  // Open Graph
   out = replaceMetaContent(out, /<meta property="og:url"[^>]*>/, meta.ogUrl);
   out = replaceMetaContent(out, /<meta property="og:title"[^>]*>/, meta.ogTitle);
   out = replaceMetaContent(out, /<meta property="og:description"[^>]*>/, meta.ogDescription);
   out = replaceMetaContent(out, /<meta property="og:image"[^>]*content="[^"]*"[^>]*>/, meta.ogImage);
-  // Twitter
   out = replaceMetaContent(out, /<meta name="twitter:title"[^>]*>/, meta.twitterTitle);
   out = replaceMetaContent(out, /<meta name="twitter:description"[^>]*>/, meta.twitterDescription);
   out = replaceMetaContent(out, /<meta name="twitter:image"[^>]*>/, meta.twitterImage);
   return out;
 }
 
-// Read the Vite-built index.html shell
 const indexHtml = readFileSync(join(DIST_DIR, 'index.html'), 'utf-8');
 
-// Write a small helper script that tsx can run to get the rendered HTML
 const helperScript = join(__dirname, '.prerender-helper.tsx');
 writeFileSync(helperScript, `
 import { render } from "./client/src/entry-server";
@@ -134,43 +177,31 @@ process.stdout.write(html);
 
 for (const route of ROUTES) {
   try {
-    // Run the helper via tsx to get the server-rendered HTML string
     const renderedBody = execSync(
       `npx tsx --tsconfig tsconfig.ssr.json "${helperScript}" "${route}"`,
       {
         cwd: __dirname,
-        env: {
-          ...process.env,
-          NODE_ENV: 'production',
-          // Suppress browser-only API warnings
-          VITE_SSR: 'true',
-        },
-        maxBuffer: 10 * 1024 * 1024, // 10MB
+        env: { ...process.env, NODE_ENV: 'production', VITE_SSR: 'true' },
+        maxBuffer: 10 * 1024 * 1024,
       }
     ).toString();
 
-    // Apply per-route head metadata (title, description, canonical, OG, Twitter)
     const meta = ROUTE_META[route];
     const htmlWithMeta = meta ? applyRouteMeta(indexHtml, meta) : indexHtml;
-
-    // Inject rendered HTML into the <div id="root"> placeholder
     const fullHtml = htmlWithMeta.replace(
       '<div id="root"></div>',
       `<div id="root">${renderedBody}</div>`
     );
 
-    // Write to the correct output path
     const outputDir = route === '/' ? DIST_DIR : join(DIST_DIR, route.slice(1));
     if (!existsSync(outputDir)) mkdirSync(outputDir, { recursive: true });
     const outputPath = join(outputDir, 'index.html');
     writeFileSync(outputPath, fullHtml, 'utf-8');
 
-    // Quick sanity check: count text nodes in output
     const textLength = renderedBody.replace(/<[^>]+>/g, '').trim().length;
     console.log(`✓ Pre-rendered ${route} → ${outputPath} (${textLength} chars of text content)`);
   } catch (err) {
     console.error(`✗ Failed to pre-render ${route}:`, err.message?.slice(0, 300));
-    // Don't fail the build — fall back to the empty shell with per-route meta applied
     const outputDir = route === '/' ? DIST_DIR : join(DIST_DIR, route.slice(1));
     if (!existsSync(outputDir)) mkdirSync(outputDir, { recursive: true });
     const meta = ROUTE_META[route];
@@ -180,7 +211,28 @@ for (const route of ROUTES) {
   }
 }
 
-// Clean up helper script
-try { execSync(`rm "${helperScript}"`); } catch {}
+try { unlinkSync(helperScript); } catch {}
+
+// ─── Generate sitemap.xml from the same route list ───────────────────────
+const today = new Date().toISOString().slice(0, 10);
+const sitemapEntries = ROUTES.map((route) => {
+  const m = ROUTE_META[route];
+  const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}`;
+  return `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${m.sitemapChangefreq}</changefreq>
+    <priority>${m.sitemapPriority}</priority>
+  </url>`;
+}).join('\n\n');
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+${sitemapEntries}
+
+</urlset>
+`;
+writeFileSync(join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
+console.log(`✓ Generated sitemap.xml with ${ROUTES.length} URLs`);
 
 console.log('Pre-rendering complete.');

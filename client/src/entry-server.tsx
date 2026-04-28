@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import SEOPage from "./pages/SEOPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import LandingPageTemplate from "./components/LandingPageTemplate";
+import { CITIES, INDUSTRIES } from "./data/landingPages";
 
 const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/": Home,
@@ -19,6 +21,10 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
 
 export function render(url: string): string {
   const Page = ROUTE_MAP[url];
-  if (!Page) throw new Error(`No component found for route: ${url}`);
-  return renderToString(<Page />);
+  if (Page) return renderToString(<Page />);
+
+  const data = [...CITIES, ...INDUSTRIES].find((d) => d.slug === url);
+  if (data) return renderToString(<LandingPageTemplate data={data} />);
+
+  throw new Error(`No component found for route: ${url}`);
 }

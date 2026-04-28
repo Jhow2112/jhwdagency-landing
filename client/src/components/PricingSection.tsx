@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const plans = [
   {
     name: "Minimum",
+    tagline: "Get online and look professional.",
     oneTime: "$495",
     monthly: "$29",
     description: "Everything you need to get online fast.",
@@ -25,6 +26,7 @@ const plans = [
   },
   {
     name: "Plus",
+    tagline: "Get found on Google.",
     oneTime: "$895",
     monthly: "$49",
     description: "More pages, more reach, and built to be found.",
@@ -44,6 +46,7 @@ const plans = [
   },
   {
     name: "Premium",
+    tagline: "Dominate local search.",
     oneTime: "$1,295",
     monthly: "$99",
     description: "Full-service with copy, SEO/AEO, and ongoing optimization.",
@@ -119,14 +122,20 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
       )}
 
       <div className={`flex flex-col flex-1 p-6 sm:p-7 gap-5 sm:gap-6 ${plan.popular ? "pt-10" : ""}`}>
-        {/* Plan name + description */}
+        {/* Plan name + tagline + description */}
         <div>
           <h3
-            className={`text-xl font-bold mb-1 ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
+            className={`text-xl font-bold ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
             style={{ fontFamily: "Syne, sans-serif" }}
           >
             {plan.name}
           </h3>
+          <p
+            className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-[#B8D4F0]" : "text-[#4A90D9]"}`}
+            style={{ fontFamily: "Syne, sans-serif" }}
+          >
+            {plan.tagline}
+          </p>
           <p
             className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#6B8BAA]"}`}
             style={{ fontFamily: "Nunito Sans, sans-serif" }}

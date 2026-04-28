@@ -3,6 +3,7 @@
    Contact form powered by Formspree
    Email: jeremy@jeremyhowardwebdesign.com */
 import { useState } from "react";
+import { CITIES, INDUSTRIES } from "@/data/landingPages";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
@@ -112,6 +113,7 @@ export default function Footer() {
                     <option value="plus" className="bg-[#0D1B2A]">Plus — $895 + $49/mo</option>
                     <option value="premium" className="bg-[#0D1B2A]">Premium — $1,295 + $99/mo</option>
                     <option value="custom" className="bg-[#0D1B2A]">Custom Build — Let's talk</option>
+                    <option value="unsure" className="bg-[#0D1B2A]">Not sure yet</option>
                   </select>
                 </div>
 
@@ -222,8 +224,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick links */}
-            <div className="grid grid-cols-2 gap-6 sm:gap-8">
+            {/* Quick links — 2x2 grid: Services, Quick Links, Service Areas, Industries */}
+            <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-8">
               <div>
                 <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Services</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
@@ -248,6 +250,30 @@ export default function Footer() {
                     <li key={s.label}>
                       <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                         {s.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Service Areas</p>
+                <ul className="flex flex-col gap-2 sm:gap-2.5">
+                  {CITIES.map((c) => (
+                    <li key={c.slug}>
+                      <a href={c.slug} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                        {c.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-xs font-bold text-white/35 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Syne, sans-serif" }}>Industries We Serve</p>
+                <ul className="flex flex-col gap-2 sm:gap-2.5">
+                  {INDUSTRIES.map((i) => (
+                    <li key={i.slug}>
+                      <a href={i.slug} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                        {i.label}
                       </a>
                     </li>
                   ))}

@@ -10,8 +10,13 @@ import WorkSection from "@/components/WorkSection";
 import PricingSection from "@/components/PricingSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
+import ReferralCallout from "@/components/ReferralCallout";
 import Footer from "@/components/Footer";
+
+// Toggle to true when the About Jeremy section is ready to go public.
+const SHOW_ABOUT = false;
 
 export default function Home() {
   return (
@@ -51,8 +56,14 @@ export default function Home() {
         {/* Testimonials — social proof */}
         <TestimonialsSection />
 
+        {/* About Jeremy — hidden until SHOW_ABOUT is flipped to true */}
+        {SHOW_ABOUT && <AboutSection />}
+
         {/* FAQ — AEO answer targeting, mirrors JSON-LD FAQPage schema */}
         <FAQSection />
+
+        {/* Referral callout — above footer */}
+        <ReferralCallout />
       </main>
 
       {/* Footer — contact form, office locations, nav */}
