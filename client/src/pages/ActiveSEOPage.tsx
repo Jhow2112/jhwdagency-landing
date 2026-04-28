@@ -179,7 +179,7 @@ export default function ActiveSEOPage() {
                 </svg>
               </a>
               <a
-                href="/seo-aeo"
+                href="/seo-aeo/"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 text-sm font-bold text-white rounded-xl border border-white/25 hover:bg-white/10 transition-all duration-200"
                 style={{ fontFamily: "Syne, sans-serif" }}
               >

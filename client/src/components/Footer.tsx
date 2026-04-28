@@ -260,7 +260,7 @@ export default function Footer() {
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {CITIES.map((c) => (
                     <li key={c.slug}>
-                      <a href={c.slug} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                      <a href={`${c.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                         {c.label}
                       </a>
                     </li>
@@ -272,7 +272,7 @@ export default function Footer() {
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {INDUSTRIES.map((i) => (
                     <li key={i.slug}>
-                      <a href={i.slug} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                      <a href={`${i.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
                         {i.label}
                       </a>
                     </li>
@@ -294,8 +294,8 @@ export default function Footer() {
             © {new Date().getFullYear()} Jeremy Howard Web Design. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="/privacy" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Privacy</a>
-            <a href="/terms" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Terms</a>
+            <a href="/privacy/" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Privacy</a>
+            <a href="/terms/" className="text-xs text-white/30 hover:text-white/65 transition-colors" style={{ fontFamily: "Nunito Sans, sans-serif" }}>Terms</a>
           </div>
         </div>
       </div>
