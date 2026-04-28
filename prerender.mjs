@@ -235,7 +235,9 @@ try { unlinkSync(helperScript); } catch {}
 const today = new Date().toISOString().slice(0, 10);
 const sitemapEntries = ROUTES.map((route) => {
   const m = ROUTE_META[route];
-  const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}`;
+  // Trailing slash matches canonicals + Netlify's pretty-URL normalization,
+  // so Googlebot crawls the sitemap URL directly with no 301 redirect.
+  const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}/`;
   return `  <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>

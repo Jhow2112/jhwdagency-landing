@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jeremyhowardwebdesign.com/sitemap.xml
+Sitemap: https://jeremyhowardwebdesign.com/sitemap.xml
