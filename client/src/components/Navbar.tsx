@@ -1,10 +1,8 @@
-/* Navbar — Jeremy Howard Web Design
-   Mobile: logo h-16 in h-20 bar — clearly visible, no clipping
-   Desktop: logo h-24 in h-28 bar — large, prominent branding
-   No emoji anywhere — all icons are inline SVG */
+/* Navbar — Aralo Studio
+   Lockup over dark hero (transparent) or solid forest (scrolled).
+   On both, the lockup uses cream + terracotta (on-forest contrast). */
 import { useState, useEffect } from "react";
-
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp";
+import Lockup from "./brand/Lockup";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,46 +27,38 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0D1B2A]/95 backdrop-blur-md shadow-lg border-b border-white/10"
+          ? "bg-[#1f2a22]/95 backdrop-blur-md border-b border-[rgba(243,239,230,0.16)]"
           : "bg-transparent"
       }`}
     >
-      {/* Bar: h-20 mobile, h-28 desktop */}
-      <div className="container flex items-center justify-between h-20 md:h-28">
-
-        {/* Logo — h-14 mobile (fits in h-20 bar), h-24 desktop */}
-        <a href="/" className="flex items-center group flex-shrink-0 py-1">
-          <img
-            src={LOGO_URL}
-            alt="Jeremy Howard Web Design logo"
-            className="h-14 md:h-24 w-auto object-contain group-hover:opacity-90 transition-opacity"
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
+      <div className="container flex items-center justify-between h-16 md:h-20">
+        {/* Lockup — cream + terracotta for dark contexts */}
+        <a href="/" aria-label="Aralo Studio home" className="flex items-center flex-shrink-0 py-1">
+          <Lockup markSize={28} primary="#f3efe6" accent="#b85433" />
         </a>
 
         {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {links.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="text-sm font-semibold text-white/80 hover:text-white transition-colors duration-200 relative group"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="text-sm text-[rgba(243,239,230,0.72)] hover:text-[#f3efe6] transition-colors duration-200"
+              style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
             >
               {l.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-[#4A90D9] rounded-full transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
 
-        {/* Desktop CTA */}
+        {/* Desktop CTA — bordered pill on dark */}
         <div className="hidden md:block">
           <a
             href="#contact"
-            className="inline-flex items-center px-5 py-2.5 text-sm font-bold text-white rounded-xl border border-white/30 hover:bg-white/15 transition-all duration-200"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className="inline-flex items-center gap-1.5 px-4 py-2 text-[13px] rounded-full border border-[rgba(243,239,230,0.32)] text-[#f3efe6] hover:bg-[rgba(243,239,230,0.08)] transition-colors"
+            style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, letterSpacing: "0.02em" }}
           >
-            Get Started
+            Get in touch
           </a>
         </div>
 
@@ -80,17 +70,17 @@ export default function Navbar() {
           aria-expanded={menuOpen}
         >
           <span
-            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${
+            className={`block w-6 h-[2px] bg-[#f3efe6] rounded transition-all duration-300 origin-center ${
               menuOpen ? "rotate-45 translate-y-[7px]" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 ${
+            className={`block w-6 h-[2px] bg-[#f3efe6] rounded transition-all duration-300 ${
               menuOpen ? "opacity-0 scale-x-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-[2px] bg-white rounded transition-all duration-300 origin-center ${
+            className={`block w-6 h-[2px] bg-[#f3efe6] rounded transition-all duration-300 origin-center ${
               menuOpen ? "-rotate-45 -translate-y-[7px]" : ""
             }`}
           />
@@ -101,7 +91,7 @@ export default function Navbar() {
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        } bg-[#0D1B2A] border-b border-white/10`}
+        } bg-[#1f2a22] border-b border-[rgba(243,239,230,0.16)]`}
       >
         <nav className="container flex flex-col py-3">
           {links.map((l) => (
@@ -109,8 +99,8 @@ export default function Navbar() {
               key={l.label}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="py-4 text-base font-semibold text-white/80 hover:text-white transition-colors border-b border-white/8 last:border-0"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="py-4 text-base text-[rgba(243,239,230,0.72)] hover:text-[#f3efe6] transition-colors border-b border-[rgba(243,239,230,0.12)] last:border-0"
+              style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
             >
               {l.label}
             </a>
@@ -118,13 +108,10 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 mb-2 inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold text-white rounded-xl"
-            style={{
-              background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
-              fontFamily: "Syne, sans-serif",
-            }}
+            className="mt-4 mb-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#b85433] text-[#f3efe6]"
+            style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: "13px", letterSpacing: "0.02em" }}
           >
-            Get Started
+            Get in touch
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

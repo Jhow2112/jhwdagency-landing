@@ -1,21 +1,21 @@
-/* ActiveSEOPage — Jeremy Howard Web Design
+/* ActiveSEOPage — Aralo Studio
    Active SEO: monthly done-for-you SEO and AEO service at $399/mo
-   Design: matches main site — navy/blue palette, Syne + Nunito Sans */
+   Design: matches main site — cream/forest palette, Inter + Fraunces */
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const CheckIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" fill="#4A90D9" fillOpacity="0.15" stroke="#4A90D9" strokeOpacity="0.5"/>
-    <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" fill="#b85433" fillOpacity="0.15" stroke="#b85433" strokeOpacity="0.5"/>
+    <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" fill="#94a3b8" fillOpacity="0.15" stroke="#94a3b8" strokeOpacity="0.4"/>
-    <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#94a3b8" strokeWidth="1.6" strokeLinecap="round"/>
+    <circle cx="8" cy="8" r="7.5" fill="#8a857a" fillOpacity="0.15" stroke="#8a857a" strokeOpacity="0.4"/>
+    <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#8a857a" strokeWidth="1.6" strokeLinecap="round"/>
   </svg>
 );
 
@@ -85,8 +85,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
     <div
       className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
         open
-          ? "border-[#4A90D9]/40 bg-white shadow-md"
-          : "border-[#C8DCF0] bg-white/60 hover:bg-white hover:border-[#4A90D9]/30 hover:shadow-sm"
+          ? "border-[#b85433]/40 bg-white shadow-md"
+          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30 hover:shadow-sm"
       }`}
       style={{ animationDelay: `${index * 0.07}s` }}
     >
@@ -95,17 +95,17 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
         className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
         aria-expanded={open}
       >
-        <span className="text-base font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+        <span className="text-base font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
           {faq.q}
         </span>
-        <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${open ? "bg-[#4A90D9] rotate-45" : "bg-[#EEF4FB]"}`}>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke={open ? "white" : "#1E3A5F"} strokeWidth="2" strokeLinecap="round">
+        <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${open ? "bg-[#b85433] rotate-45" : "bg-[#e7e2d6]"}`}>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke={open ? "white" : "#1f2a22"} strokeWidth="2" strokeLinecap="round">
             <path d="M6 1v10M1 6h10" />
           </svg>
         </span>
       </button>
       <div className={`overflow-hidden transition-all duration-300 ease-in-out ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
-        <p className="px-6 pb-5 text-sm text-[#3D5A7A] leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+        <p className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
           {faq.a}
         </p>
       </div>
@@ -119,48 +119,29 @@ export default function ActiveSEOPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="relative bg-[#0D1B2A] overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "radial-gradient(circle at 20% 50%, #4A90D9 0%, transparent 60%), radial-gradient(circle at 80% 20%, #1E3A5F 0%, transparent 50%)",
-          }}
-        />
+      <section className="relative bg-[#1f2a22] pt-36 pb-20 sm:pt-44 sm:pb-28">
         <div className="container relative z-10">
           <div className="max-w-3xl">
-            <span
-              className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#7BB8E8] border border-[#4A90D9]/40 rounded-full px-3 py-1.5 mb-6"
-              style={{ fontFamily: "Syne, sans-serif" }}
-            >
+            <span className="section-label" style={{ color: "#d97a55" }}>
               Monthly Service
             </span>
             <h1
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="font-display mt-3 text-5xl sm:text-6xl md:text-7xl text-[#f3efe6] leading-[1.05] mb-6"
             >
               Active SEO.{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #7BB8E8, #4A90D9)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
-              >
-                Done for you.
-              </span>
+              <span style={{ color: "#d97a55" }}>Done for you.</span>
             </h1>
             <p
               className="text-base sm:text-lg text-white/70 leading-relaxed max-w-xl mb-8"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Monthly SEO and AEO management that keeps your business visible in Google, Google Maps, and AI search tools. No contracts. Cancel any time.
             </p>
 
             {/* Price callout */}
             <div className="inline-flex items-baseline gap-2 mb-8">
-              <span className="text-5xl sm:text-6xl font-extrabold text-white" style={{ fontFamily: "Syne, sans-serif" }}>$399</span>
-              <span className="text-lg text-white/50" style={{ fontFamily: "Nunito Sans, sans-serif" }}>/month</span>
+              <span className="text-5xl sm:text-6xl font-extrabold text-white" style={{ fontFamily: "Inter, sans-serif" }}>$399</span>
+              <span className="text-lg text-white/50" style={{ fontFamily: "Inter, sans-serif" }}>/month</span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
@@ -168,8 +149,8 @@ export default function ActiveSEOPage() {
                 href="#contact"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 text-sm font-bold text-white rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
                 style={{
-                  background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
-                  fontFamily: "Syne, sans-serif",
+                  background: "#b85433",
+                  fontFamily: "Inter, sans-serif",
                   boxShadow: "0 4px 24px rgba(74,144,217,0.35)",
                 }}
               >
@@ -181,7 +162,7 @@ export default function ActiveSEOPage() {
               <a
                 href="/seo-aeo/"
                 className="inline-flex items-center justify-center gap-2 px-7 py-4 text-sm font-bold text-white rounded-xl border border-white/25 hover:bg-white/10 transition-all duration-200"
-                style={{ fontFamily: "Syne, sans-serif" }}
+                style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Learn About SEO & AEO
               </a>
@@ -191,19 +172,19 @@ export default function ActiveSEOPage() {
       </section>
 
       {/* What's included */}
-      <section className="py-16 sm:py-24 bg-[#F4F7FA]">
+      <section className="py-16 sm:py-24 bg-[#f3efe6]">
         <div className="container">
           <div className="text-center mb-12">
             <span className="section-label">What's Included</span>
             <h2
-              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Everything done for you, every month.
             </h2>
             <p
-              className="mt-4 text-base text-[#3D5A7A] max-w-lg mx-auto leading-relaxed"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="mt-4 text-base text-[#2f3b32] max-w-lg mx-auto leading-relaxed"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               One flat monthly fee. No hourly billing, no surprise invoices.
             </p>
@@ -213,16 +194,16 @@ export default function ActiveSEOPage() {
             {deliverables.map((item) => (
               <div
                 key={item.icon}
-                className="flex flex-col gap-4 p-6 rounded-2xl bg-white border border-[#C8DCF0] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+                className="flex flex-col gap-4 p-6 rounded-2xl bg-white border border-[#d6d2c5] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#EEF4FB] flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs font-bold text-[#1E3A5F]" style={{ fontFamily: "Syne, sans-serif" }}>{item.icon}</span>
+                <div className="w-10 h-10 rounded-xl bg-[#e7e2d6] flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>{item.icon}</span>
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#0D1B2A] mb-2" style={{ fontFamily: "Syne, sans-serif" }}>
+                  <h3 className="text-base font-bold text-[#1f2a22] mb-2" style={{ fontFamily: "Inter, sans-serif" }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[#3D5A7A] leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+                  <p className="text-sm text-[#2f3b32] leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
                     {item.description}
                   </p>
                 </div>
@@ -238,8 +219,8 @@ export default function ActiveSEOPage() {
           <div className="text-center mb-12">
             <span className="section-label">How It Compares</span>
             <h2
-              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Active SEO vs. website plans.
             </h2>
@@ -249,9 +230,9 @@ export default function ActiveSEOPage() {
             <table className="w-full text-sm border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left py-4 px-5 text-[#0D1B2A] font-bold" style={{ fontFamily: "Syne, sans-serif" }}>Feature</th>
-                  <th className="py-4 px-5 text-center text-[#0D1B2A] font-bold" style={{ fontFamily: "Syne, sans-serif" }}>Premium Plan</th>
-                  <th className="py-4 px-5 text-center text-white font-bold rounded-t-xl bg-[#1E3A5F]" style={{ fontFamily: "Syne, sans-serif" }}>Active SEO</th>
+                  <th className="text-left py-4 px-5 text-[#1f2a22] font-bold" style={{ fontFamily: "Inter, sans-serif" }}>Feature</th>
+                  <th className="py-4 px-5 text-center text-[#1f2a22] font-bold" style={{ fontFamily: "Inter, sans-serif" }}>Premium Plan</th>
+                  <th className="py-4 px-5 text-center text-white font-bold rounded-t-xl bg-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Active SEO</th>
                 </tr>
               </thead>
               <tbody>
@@ -267,40 +248,40 @@ export default function ActiveSEOPage() {
                   ["Quarterly competitor snapshot", false, true],
                   ["Works with any existing website", false, true],
                 ].map(([feature, premium, active], i) => (
-                  <tr key={i} className={`border-t border-[#EEF4FB] ${i % 2 === 0 ? "bg-[#F9FBFD]" : "bg-white"}`}>
-                    <td className="py-3.5 px-5 text-[#3D5A7A]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{feature as string}</td>
+                  <tr key={i} className={`border-t border-[#e7e2d6] ${i % 2 === 0 ? "bg-[#f3efe6]" : "bg-white"}`}>
+                    <td className="py-3.5 px-5 text-[#2f3b32]" style={{ fontFamily: "Inter, sans-serif" }}>{feature as string}</td>
                     <td className="py-3.5 px-5 text-center">
                       {premium ? <CheckIcon /> : <XIcon />}
                     </td>
-                    <td className="py-3.5 px-5 text-center bg-[#EEF4FB]/60">
+                    <td className="py-3.5 px-5 text-center bg-[#e7e2d6]/60">
                       {active ? <CheckIcon /> : <XIcon />}
                     </td>
                   </tr>
                 ))}
-                <tr className="border-t border-[#EEF4FB]">
-                  <td className="py-3.5 px-5 font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>Monthly cost</td>
-                  <td className="py-3.5 px-5 text-center font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>$99/mo</td>
-                  <td className="py-3.5 px-5 text-center font-bold text-[#4A90D9] bg-[#EEF4FB]/60" style={{ fontFamily: "Syne, sans-serif" }}>$399/mo</td>
+                <tr className="border-t border-[#e7e2d6]">
+                  <td className="py-3.5 px-5 font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Monthly cost</td>
+                  <td className="py-3.5 px-5 text-center font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>$99/mo</td>
+                  <td className="py-3.5 px-5 text-center font-bold text-[#b85433] bg-[#e7e2d6]/60" style={{ fontFamily: "Inter, sans-serif" }}>$399/mo</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p className="text-center text-xs text-[#6B8BAA] mt-4 max-w-lg mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="text-center text-xs text-[#8a857a] mt-4 max-w-lg mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             Active SEO is a standalone add-on service. It does not include website hosting or design. Premium plan hosting ($99/mo) is separate.
           </p>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-[#F4F7FA]">
+      <section className="py-16 sm:py-24 bg-[#f3efe6]">
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <span className="section-label">Questions</span>
               <h2
-                className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight"
-                style={{ fontFamily: "Syne, sans-serif" }}
+                className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight"
+                style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Common questions.
               </h2>
@@ -315,17 +296,17 @@ export default function ActiveSEOPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 sm:py-24 bg-[#0D1B2A]">
+      <section className="py-16 sm:py-24 bg-[#1f2a22]">
         <div className="container text-center">
           <h2
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             Ready to stay visible?
           </h2>
           <p
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
-            style={{ fontFamily: "Nunito Sans, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             $399/month. Month-to-month. Cancel any time. Get in touch and I'll start with a free audit of your current SEO setup.
           </p>
@@ -333,8 +314,8 @@ export default function ActiveSEOPage() {
             href="/#contact"
             className="inline-flex items-center gap-2 px-8 py-4 text-sm font-bold text-white rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
             style={{
-              background: "linear-gradient(135deg, #1E3A5F, #4A90D9)",
-              fontFamily: "Syne, sans-serif",
+              background: "#b85433",
+              fontFamily: "Inter, sans-serif",
               boxShadow: "0 4px 24px rgba(74,144,217,0.35)",
             }}
           >

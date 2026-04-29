@@ -1,4 +1,4 @@
-/* Home — Jeremy Howard Web Design
+/* Home — Aralo Studio
    SEO/AEO optimized: proper semantic landmarks, section ordering
    FAQSection added before Footer for AEO answer targeting */
 import Navbar from "@/components/Navbar";
@@ -20,11 +20,11 @@ const SHOW_ABOUT = false;
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F4F7FA]" style={{ scrollBehavior: "smooth" }}>
+    <div className="min-h-screen bg-[#f3efe6]" style={{ scrollBehavior: "smooth" }}>
       {/* Skip to main content for accessibility / crawlers */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-[#1E3A5F] focus:rounded-lg focus:font-bold"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-[#1f2a22] focus:rounded-lg focus:font-bold"
       >
         Skip to main content
       </a>

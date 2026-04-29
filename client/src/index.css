@@ -4,20 +4,30 @@
 @custom-variant dark (&:is(.dark *));
 
 /* ============================================================
-   DESIGN SYSTEM — Contemporary Studio, Cool Blue
-   Palette: Off-white #F4F7FA · Near-black #0D1B2A
-   Primary: Deep Navy #1E3A5F · Sky Blue #4A90D9
-   Light: Icy Blue #B8D4F0 · Surface: #EEF4FB
-   Type: Syne (display) + Nunito Sans (body)
-   Radius: 16-24px large rounded corners throughout
+   ARALO STUDIO — Design System
+   Palette: Cream (page) · White (surfaces) · Paper (inset)
+            Forest (ink) · Terracotta (accent)
+   Type:    Fraunces (display) · Inter (UI/body) · JetBrains Mono (eyebrows)
+   Rule:    No gradients. Terracotta does the work gradients usually do.
+   Surfaces: 1px ink-rule borders, 4px radius for paper-layered feel.
    ============================================================ */
 
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Fraunces", "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Aralo brand tokens — exposed as Tailwind colors */
+  --color-cream: #f3efe6;
+  --color-paper: #e7e2d6;
+  --color-forest: #1f2a22;
+  --color-ink-soft: #2f3b32;
+  --color-ink-mute: #8a857a;
+  --color-terracotta: #b85433;
+  --color-terracotta-soft: #d97a55;
+}
+
 @theme inline {
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 8px);
-  --radius-2xl: calc(var(--radius) + 16px);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -37,39 +47,44 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-navy: var(--navy);
-  --color-sky: var(--sky);
-  --color-icy: var(--icy);
 }
 
 :root {
-  --radius: 1rem;
-  /* Backgrounds */
-  --background: oklch(0.972 0.008 230);
-  --foreground: oklch(0.115 0.025 240);
-  --card: oklch(0.995 0.004 230);
-  --card-foreground: oklch(0.115 0.025 240);
-  --popover: oklch(0.995 0.004 230);
-  --popover-foreground: oklch(0.115 0.025 240);
-  /* Primary = Sky Blue */
-  --primary: oklch(0.52 0.14 240);
-  --primary-foreground: oklch(0.99 0.004 230);
-  /* Secondary */
-  --secondary: oklch(0.93 0.018 230);
-  --secondary-foreground: oklch(0.22 0.03 240);
-  --muted: oklch(0.93 0.018 230);
-  --muted-foreground: oklch(0.52 0.025 240);
-  --accent: oklch(0.88 0.03 230);
-  --accent-foreground: oklch(0.22 0.03 240);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.875 0.022 230);
-  --input: oklch(0.875 0.022 230);
-  --ring: oklch(0.52 0.14 240);
-  /* Custom brand tokens */
-  --navy: oklch(0.28 0.07 240);
-  --sky: oklch(0.52 0.14 240);
-  --icy: oklch(0.80 0.055 230);
+  --radius: 0.25rem;
+
+  /* Aralo brand tokens (raw values for inline use) */
+  --bg-cream: #f3efe6;
+  --bg-surface: #ffffff;
+  --bg-paper: #e7e2d6;
+  --ink-primary: #1f2a22;
+  --ink-soft: #2f3b32;
+  --ink-mute: #8a857a;
+  --ink-rule: rgba(31, 42, 34, 0.14);
+  --accent: #b85433;
+  --accent-soft: #d97a55;
+  --on-forest: #f3efe6;
+  --on-forest-soft: rgba(243, 239, 230, 0.72);
+  --on-forest-rule: rgba(243, 239, 230, 0.16);
+
+  /* Mapped Tailwind shadcn tokens */
+  --background: #f3efe6;
+  --foreground: #1f2a22;
+  --card: #ffffff;
+  --card-foreground: #1f2a22;
+  --popover: #ffffff;
+  --popover-foreground: #1f2a22;
+  --primary: #1f2a22;
+  --primary-foreground: #f3efe6;
+  --secondary: #e7e2d6;
+  --secondary-foreground: #1f2a22;
+  --muted: #e7e2d6;
+  --muted-foreground: #8a857a;
+  --accent-foreground: #ffffff;
+  --destructive: #b85433;
+  --destructive-foreground: #f3efe6;
+  --border: rgba(31, 42, 34, 0.14);
+  --input: rgba(31, 42, 34, 0.14);
+  --ring: #b85433;
 }
 
 @layer base {
@@ -80,11 +95,26 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--ink-soft);
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Syne', sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--ink-primary);
+  }
+  /* Hero / display headings opt in via .font-display */
+  .font-display {
+    font-family: "Fraunces", "Times New Roman", serif;
+    font-weight: 300;
+    font-variation-settings: "opsz" 144;
+    letter-spacing: -0.022em;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -128,58 +158,79 @@
     }
   }
 
-  /* Navy-to-sky gradient button */
+  /* Primary button — forest pill, cream text */
   .btn-terra {
-    background: linear-gradient(135deg, oklch(0.28 0.07 240), oklch(0.52 0.14 240));
-    color: oklch(0.99 0.004 230);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: var(--ink-primary);
+    color: var(--on-forest);
     border-radius: 9999px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 20px oklch(0.28 0.07 240 / 0.3);
+    padding: 13px 22px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: 1px solid var(--ink-primary);
   }
   .btn-terra:hover {
-    background: linear-gradient(135deg, oklch(0.22 0.07 240), oklch(0.44 0.14 240));
-    box-shadow: 0 6px 28px oklch(0.28 0.07 240 / 0.45);
+    background: var(--accent);
+    border-color: var(--accent);
     transform: translateY(-1px);
   }
 
-  /* Ghost pill button */
+  /* Secondary button — bordered, transparent */
   .btn-ghost-pill {
-    border: 1.5px solid oklch(0.28 0.07 240);
-    color: oklch(0.28 0.07 240);
-    border-radius: 9999px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 600;
-    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--ink-rule);
+    border-radius: 9999px;
+    padding: 13px 22px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    transition: border-color 0.2s ease, color 0.2s ease;
   }
   .btn-ghost-pill:hover {
-    background: oklch(0.28 0.07 240);
-    color: oklch(0.99 0.004 230);
+    border-color: var(--ink-primary);
+    color: var(--ink-primary);
   }
 
-  /* Glass card */
-  .glass-card {
-    background: rgba(244, 247, 250, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid oklch(0.875 0.022 230 / 0.6);
-    border-radius: 1.25rem;
-    box-shadow: 0 4px 32px oklch(0.115 0.025 240 / 0.06);
-  }
-
-  /* Section label */
+  /* Eyebrow / section label */
   .section-label {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.18em;
+    display: inline-block;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: oklch(0.52 0.14 240);
+    color: var(--accent);
   }
 
-  /* Marquee animation */
+  /* Surface card — paper feel: 1px ink-rule, 4px radius */
+  .surface-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--ink-rule);
+    border-radius: 4px;
+  }
+
+  /* Inline link — terracotta, underline on hover */
+  .link-accent {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .link-accent:hover {
+    text-decoration: underline;
+  }
+
+  /* Marquee animation (logos carousel) */
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -191,7 +242,7 @@
     animation-play-state: paused;
   }
 
-  /* Fade up animation */
+  /* Fade up entrance */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(28px); }
     to { opacity: 1; transform: translateY(0); }

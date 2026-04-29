@@ -1,4 +1,4 @@
-/* FAQSection — Jeremy Howard Web Design
+/* FAQSection — Aralo Studio
    AEO-optimized: questions mirror the JSON-LD FAQPage schema in index.html
    Uses semantic <details>/<summary> for native accessibility and crawler readability
    Design: clean accordion on off-white background */
@@ -7,7 +7,7 @@ import { useState, useRef, useEffect } from "react";
 const faqs = [
   {
     q: "How much does a website cost?",
-    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 6 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan. No surprise costs.",
+    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 5 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan. No surprise costs.",
   },
   {
     q: "How long does it take to build my website?",
@@ -65,8 +65,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
       <div
         className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
           open
-            ? "border-[#4A90D9]/40 bg-white shadow-md"
-            : "border-[#C8DCF0] bg-white/60 hover:bg-white hover:border-[#4A90D9]/30 hover:shadow-sm"
+            ? "border-[#b85433]/40 bg-white shadow-md"
+            : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30 hover:shadow-sm"
         }`}
       >
         <button
@@ -75,16 +75,16 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
           aria-expanded={open}
         >
           <span
-            className="text-base font-bold text-[#0D1B2A]"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className="text-base font-bold text-[#1f2a22]"
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             {faq.q}
           </span>
           <span
             className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
               open
-                ? "bg-[#4A90D9] rotate-45"
-                : "bg-[#EEF4FB]"
+                ? "bg-[#b85433] rotate-45"
+                : "bg-[#e7e2d6]"
             }`}
           >
             <svg
@@ -92,7 +92,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
               height="12"
               viewBox="0 0 12 12"
               fill="none"
-              stroke={open ? "white" : "#1E3A5F"}
+              stroke={open ? "white" : "#1f2a22"}
               strokeWidth="2"
               strokeLinecap="round"
             >
@@ -107,8 +107,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
           }`}
         >
           <p
-            className="px-6 pb-5 text-sm text-[#3D5A7A] leading-relaxed"
-            style={{ fontFamily: "Nunito Sans, sans-serif" }}
+            className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed"
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             {faq.a}
           </p>
@@ -128,16 +128,16 @@ export default function FAQSection() {
             <span className="section-label">Common Questions</span>
             <h2
               id="faq-heading"
-              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A] leading-tight"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Answers before you ask.
             </h2>
             <p
-              className="mt-4 text-base text-[#3D5A7A] max-w-lg mx-auto leading-relaxed"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="mt-4 text-base text-[#2f3b32] max-w-lg mx-auto leading-relaxed"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Everything you need to know about working with Jeremy Howard Web Design.
+              Everything you need to know about working with Aralo Studio.
             </p>
           </div>
 
@@ -151,8 +151,8 @@ export default function FAQSection() {
           {/* Bottom CTA */}
           <div className="mt-12 text-center">
             <p
-              className="text-sm text-[#6B8BAA] mb-4"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="text-sm text-[#8a857a] mb-4"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Still have questions? I'm happy to chat.
             </p>

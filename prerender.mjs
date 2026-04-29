@@ -24,8 +24,8 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = join(__dirname, 'dist/public');
-const SITE_ORIGIN = 'https://jeremyhowardwebdesign.com';
-const LOGO_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/jhwd-logo_27f82782.webp';
+const SITE_ORIGIN = 'https://aralostudio.com';
+const LOGO_URL = 'https://aralostudio.com/og-image.png';
 
 // ─── Static-route metadata ────────────────────────────────────────────────
 // Per-route head tags for the four hand-built routes. Landing pages (cities +
@@ -33,16 +33,16 @@ const LOGO_URL = 'https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGq
 // only requires a single edit in that data file.
 const ROUTE_META = {
   '/': {
-    title: 'Web Design Meridian Idaho | Jeremy Howard Web Design | Starting at $495',
+    title: 'Web Design Meridian Idaho | Aralo Studio | Starting at $495',
     description:
       'Professional web design in Meridian, Idaho for local businesses. Custom websites designed, built, hosted, and maintained by Jeremy Howard. Live in 5 days. Starting at $495. Serving Boise, Nampa, Caldwell, and the Treasure Valley.',
     canonical: `${SITE_ORIGIN}/`,
-    ogTitle: 'Professional Web Design for Local Businesses | Jeremy Howard Web Design',
+    ogTitle: 'Professional Web Design for Local Businesses | Aralo Studio',
     ogDescription:
       'Websites designed, built, hosted, and maintained for small businesses. Starting at $495. Live in 5 days.',
     ogUrl: `${SITE_ORIGIN}/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Professional Web Design for Local Businesses | Jeremy Howard Web Design',
+    twitterTitle: 'Professional Web Design for Local Businesses | Aralo Studio',
     twitterDescription:
       'Websites designed, built, hosted, and maintained for small businesses. Starting at $495. Live in 5 days.',
     twitterImage: LOGO_URL,
@@ -50,16 +50,16 @@ const ROUTE_META = {
     sitemapChangefreq: 'monthly',
   },
   '/seo-aeo': {
-    title: 'SEO & AEO Services for Small Businesses | Jeremy Howard Web Design | Meridian, Idaho',
+    title: 'SEO & AEO Services for Small Businesses | Aralo Studio | Meridian, Idaho',
     description:
       'On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.',
     canonical: `${SITE_ORIGIN}/seo-aeo/`,
-    ogTitle: 'SEO & AEO Services | Jeremy Howard Web Design',
+    ogTitle: 'SEO & AEO Services | Aralo Studio',
     ogDescription:
       'Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses.',
     ogUrl: `${SITE_ORIGIN}/seo-aeo/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'SEO & AEO Services | Jeremy Howard Web Design',
+    twitterTitle: 'SEO & AEO Services | Aralo Studio',
     twitterDescription:
       'Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses.',
     twitterImage: LOGO_URL,
@@ -67,45 +67,45 @@ const ROUTE_META = {
     sitemapChangefreq: 'monthly',
   },
   '/privacy': {
-    title: 'Privacy Policy | Jeremy Howard Web Design',
+    title: 'Privacy Policy | Aralo Studio',
     description:
-      'Privacy policy for Jeremy Howard Web Design — how we collect, use, and protect information on our website.',
+      'Privacy policy for Aralo Studio — how we collect, use, and protect information on our website.',
     canonical: `${SITE_ORIGIN}/privacy/`,
-    ogTitle: 'Privacy Policy | Jeremy Howard Web Design',
-    ogDescription: 'How Jeremy Howard Web Design handles information collected through this site.',
+    ogTitle: 'Privacy Policy | Aralo Studio',
+    ogDescription: 'How Aralo Studio handles information collected through this site.',
     ogUrl: `${SITE_ORIGIN}/privacy/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Privacy Policy | Jeremy Howard Web Design',
-    twitterDescription: 'How Jeremy Howard Web Design handles information collected through this site.',
+    twitterTitle: 'Privacy Policy | Aralo Studio',
+    twitterDescription: 'How Aralo Studio handles information collected through this site.',
     twitterImage: LOGO_URL,
     sitemapPriority: '0.3',
     sitemapChangefreq: 'yearly',
   },
   '/terms': {
-    title: 'Terms of Service | Jeremy Howard Web Design',
-    description: 'Terms of service for Jeremy Howard Web Design — the agreement governing use of our services.',
+    title: 'Terms of Service | Aralo Studio',
+    description: 'Terms of service for Aralo Studio — the agreement governing use of our services.',
     canonical: `${SITE_ORIGIN}/terms/`,
-    ogTitle: 'Terms of Service | Jeremy Howard Web Design',
-    ogDescription: 'The agreement governing engagement with Jeremy Howard Web Design.',
+    ogTitle: 'Terms of Service | Aralo Studio',
+    ogDescription: 'The agreement governing engagement with Aralo Studio.',
     ogUrl: `${SITE_ORIGIN}/terms/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Terms of Service | Jeremy Howard Web Design',
-    twitterDescription: 'The agreement governing engagement with Jeremy Howard Web Design.',
+    twitterTitle: 'Terms of Service | Aralo Studio',
+    twitterDescription: 'The agreement governing engagement with Aralo Studio.',
     twitterImage: LOGO_URL,
     sitemapPriority: '0.3',
     sitemapChangefreq: 'yearly',
   },
   '/active-seo': {
-    title: 'Active SEO Service | Monthly Done-For-You SEO & AEO | Jeremy Howard Web Design',
+    title: 'Active SEO Service | Monthly Done-For-You SEO & AEO | Aralo Studio',
     description:
       'Monthly SEO and AEO management for local businesses. Google Business Profile management, on-page SEO audits, schema tuning, and performance reports. $399/month. No contracts.',
     canonical: `${SITE_ORIGIN}/active-seo/`,
-    ogTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    ogTitle: 'Active SEO | Monthly Done-For-You SEO | Aralo Studio',
     ogDescription:
       'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
     ogUrl: `${SITE_ORIGIN}/active-seo/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Active SEO | Monthly Done-For-You SEO | Jeremy Howard Web Design',
+    twitterTitle: 'Active SEO | Monthly Done-For-You SEO | Aralo Studio',
     twitterDescription:
       'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
     twitterImage: LOGO_URL,
@@ -254,5 +254,42 @@ ${sitemapEntries}
 `;
 writeFileSync(join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
 console.log(`✓ Generated sitemap.xml with ${ROUTES.length} URLs`);
+
+// ─── Generate og-image.png (1200×630) for social previews ────────────────
+// Brand lockup + tagline on cream. Rasterized with @resvg/resvg-js using
+// bundled Inter fonts so the output is identical across build environments.
+{
+  const { Resvg } = await import('@resvg/resvg-js');
+  const interRegular = readFileSync(
+    join(__dirname, 'node_modules/@fontsource/inter/files/inter-latin-400-normal.woff')
+  );
+  const interSemibold = readFileSync(
+    join(__dirname, 'node_modules/@fontsource/inter/files/inter-latin-600-normal.woff')
+  );
+
+  // Mark at 240×224, centered horizontally at x=600 (so x_left = 480), y_top=120
+  // ARALO wordmark below at y=440, STUDIO tag at y=505, tagline at y=560
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+    <rect width="1200" height="630" fill="#f3efe6"/>
+    <rect x="40" y="40" width="1120" height="550" fill="none" stroke="rgba(31,42,34,0.14)" stroke-width="1"/>
+    <g transform="translate(480 120) scale(4 4)">
+      <path d="M2 50 L20 6 L38 50 Z" stroke="#1f2a22" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+      <path d="M22 50 L40 6 L58 50 Z" stroke="#b85433" stroke-width="2.6" stroke-linejoin="round" fill="none"/>
+    </g>
+    <text x="600" y="440" font-family="Inter" font-weight="600" font-size="84" letter-spacing="3.4" text-anchor="middle" fill="#1f2a22">ARALO</text>
+    <text x="600" y="478" font-family="Inter" font-weight="400" font-size="14" letter-spacing="3.1" text-anchor="middle" fill="#b85433">STUDIO</text>
+    <text x="600" y="558" font-family="Inter" font-weight="400" font-size="26" text-anchor="middle" fill="#2f3b32">Quiet, considered web design for small businesses.</text>
+  </svg>`;
+
+  const resvg = new Resvg(svg, {
+    font: {
+      fontBuffers: [interRegular, interSemibold],
+      loadSystemFonts: false,
+    },
+  });
+  const png = resvg.render().asPng();
+  writeFileSync(join(DIST_DIR, 'og-image.png'), png);
+  console.log(`✓ Generated og-image.png (1200×630, ${(png.length / 1024).toFixed(1)} KB)`);
+}
 
 console.log('Pre-rendering complete.');

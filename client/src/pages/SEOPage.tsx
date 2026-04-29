@@ -1,7 +1,7 @@
-/* SEOPage — Jeremy Howard Web Design
+/* SEOPage — Aralo Studio
    Dedicated SEO & AEO services page
    Honest, specific, no overpromising
-   Design: matches main site — navy/blue palette, Syne + Nunito Sans */
+   Design: matches main site — cream/forest palette, Inter + Fraunces */
 
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
@@ -76,14 +76,14 @@ const faqs = [
 
 function PlanBadge({ plan }: { plan: string }) {
   const colors: Record<string, string> = {
-    Minimum: "bg-[#EEF4FB] text-[#3D5A7A] border border-[#C8DCF0]",
-    Plus: "bg-[#1E3A5F] text-white",
-    Premium: "bg-[#4A90D9] text-white",
+    Minimum: "bg-[#e7e2d6] text-[#2f3b32] border border-[#d6d2c5]",
+    Plus: "bg-[#1f2a22] text-white",
+    Premium: "bg-[#b85433] text-white",
   };
   return (
     <span
       className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full ${colors[plan]}`}
-      style={{ fontFamily: "Syne, sans-serif" }}
+      style={{ fontFamily: "Inter, sans-serif" }}
     >
       {plan}
     </span>
@@ -93,13 +93,13 @@ function PlanBadge({ plan }: { plan: string }) {
 function ServiceCard({ item, index }: { item: typeof whatIsDone[0]; index: number }) {
   return (
     <div
-      className="bg-white rounded-2xl border border-[#C8DCF0] p-6 sm:p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+      className="bg-white rounded-2xl border border-[#d6d2c5] p-6 sm:p-7 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
       style={{ animationDelay: `${index * 0.05}s` }}
     >
       <div className="flex flex-col gap-2">
         <h3
-          className="text-lg font-bold text-[#0D1B2A]"
-          style={{ fontFamily: "Syne, sans-serif" }}
+          className="text-lg font-bold text-[#1f2a22]"
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
           {item.title}
         </h3>
@@ -110,8 +110,8 @@ function ServiceCard({ item, index }: { item: typeof whatIsDone[0]; index: numbe
         </div>
       </div>
       <p
-        className="text-sm text-[#3D5A7A] leading-relaxed"
-        style={{ fontFamily: "Nunito Sans, sans-serif" }}
+        className="text-sm text-[#2f3b32] leading-relaxed"
+        style={{ fontFamily: "Inter, sans-serif" }}
       >
         {item.description}
       </p>
@@ -126,8 +126,8 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
     <div
       className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
         open
-          ? "border-[#4A90D9]/40 bg-white shadow-md"
-          : "border-[#C8DCF0] bg-white/60 hover:bg-white hover:border-[#4A90D9]/30"
+          ? "border-[#b85433]/40 bg-white shadow-md"
+          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30"
       }`}
     >
       <button
@@ -136,19 +136,19 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
         aria-expanded={open}
       >
         <span
-          className="text-base font-bold text-[#0D1B2A]"
-          style={{ fontFamily: "Syne, sans-serif" }}
+          className="text-base font-bold text-[#1f2a22]"
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
           {faq.q}
         </span>
         <span
           className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
-            open ? "bg-[#4A90D9] rotate-45" : "bg-[#EEF4FB]"
+            open ? "bg-[#b85433] rotate-45" : "bg-[#e7e2d6]"
           }`}
         >
           <svg
             width="12" height="12" viewBox="0 0 12 12" fill="none"
-            stroke={open ? "white" : "#1E3A5F"} strokeWidth="2" strokeLinecap="round"
+            stroke={open ? "white" : "#1f2a22"} strokeWidth="2" strokeLinecap="round"
           >
             <path d="M6 1v10M1 6h10" />
           </svg>
@@ -156,8 +156,8 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
       </button>
       <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
         <p
-          className="px-6 pb-5 text-sm text-[#3D5A7A] leading-relaxed"
-          style={{ fontFamily: "Nunito Sans, sans-serif" }}
+          className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed"
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
           {faq.a}
         </p>
@@ -171,7 +171,7 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
 export default function SEOPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "SEO & AEO Services for Small Businesses | Jeremy Howard Web Design | Meridian, Idaho";
+    document.title = "SEO & AEO Services for Small Businesses | Aralo Studio | Meridian, Idaho";
 
     const setMeta = (selector: string, attr: string, value: string) => {
       let el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -189,14 +189,14 @@ export default function SEOPage() {
       "On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.";
 
     setMeta('meta[name="description"]', "content", description);
-    setMeta('meta[property="og:title"]', "content", "SEO & AEO Services | Jeremy Howard Web Design");
+    setMeta('meta[property="og:title"]', "content", "SEO & AEO Services | Aralo Studio");
     setMeta(
       'meta[property="og:description"]',
       "content",
       "Get found on Google and in AI search. On-page SEO, AEO, and Google Business Profile setup for local businesses."
     );
-    setMeta('meta[property="og:url"]', "content", "https://jeremyhowardwebdesign.com/seo-aeo/");
-    setMeta('meta[name="twitter:title"]', "content", "SEO & AEO Services | Jeremy Howard Web Design");
+    setMeta('meta[property="og:url"]', "content", "https://aralostudio.com/seo-aeo/");
+    setMeta('meta[name="twitter:title"]', "content", "SEO & AEO Services | Aralo Studio");
     setMeta(
       'meta[name="twitter:description"]',
       "content",
@@ -204,40 +204,40 @@ export default function SEOPage() {
     );
 
     const canonical = document.head.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (canonical) canonical.setAttribute("href", "https://jeremyhowardwebdesign.com/seo-aeo/");
+    if (canonical) canonical.setAttribute("href", "https://aralostudio.com/seo-aeo/");
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F4F7FA]">
+    <div className="min-h-screen bg-[#f3efe6]">
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-[#0D1B2A] pt-32 pb-16 sm:pt-40 sm:pb-20">
+      <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="container max-w-3xl mx-auto text-center">
           <span
-            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#7BB8E8] border border-[#4A90D9]/40 rounded-full px-3 py-1.5 mb-5"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#f3efe6] border border-[#b85433]/40 rounded-full px-3 py-1.5 mb-5"
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             SEO & AEO Services
           </span>
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             Get found on Google.<br />
-            <span className="text-[#4A90D9]">And in AI search.</span>
+            <span className="text-[#b85433]">And in AI search.</span>
           </h1>
           <p
             className="text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
-            style={{ fontFamily: "Nunito Sans, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             Every site I build includes foundational SEO. Plus and Premium plans go further, with structured data, Google Business setup, and ongoing optimization so your business shows up where your customers are looking.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#4A90D9] text-white text-sm font-bold hover:bg-[#3a7bc8] transition-colors"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               See Pricing Plans
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -247,7 +247,7 @@ export default function SEOPage() {
             <a
               href="/#contact"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white text-sm font-bold hover:bg-white/10 transition-colors"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Ask a Question
             </a>
@@ -261,14 +261,14 @@ export default function SEOPage() {
           <div className="text-center mb-10 sm:mb-14">
             <span className="section-label">What's Included</span>
             <h2
-              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               What I actually do.
             </h2>
             <p
-              className="mt-3 text-sm sm:text-base text-[#3D5A7A] max-w-lg mx-auto"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="mt-3 text-sm sm:text-base text-[#2f3b32] max-w-lg mx-auto"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               No vague promises. Here's exactly what each service involves and which plans include it.
             </p>
@@ -288,14 +288,14 @@ export default function SEOPage() {
           <div className="text-center mb-10">
             <span className="section-label">Honest Scope</span>
             <h2
-              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               What I don't do.
             </h2>
             <p
-              className="mt-3 text-sm sm:text-base text-[#3D5A7A] max-w-md mx-auto"
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className="mt-3 text-sm sm:text-base text-[#2f3b32] max-w-md mx-auto"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               I'd rather be upfront than overpromise. These services are outside my scope.
             </p>
@@ -305,18 +305,18 @@ export default function SEOPage() {
             {whatIDontDo.map((item, i) => (
               <li
                 key={i}
-                className="flex items-start gap-3 bg-[#F4F7FA] rounded-xl px-5 py-4 border border-[#E2EAF2]"
+                className="flex items-start gap-3 bg-[#f3efe6] rounded-xl px-5 py-4 border border-[#d6d2c5]"
               >
                 <svg
                   className="flex-shrink-0 mt-0.5"
                   width="16" height="16" viewBox="0 0 16 16" fill="none"
                 >
-                  <circle cx="8" cy="8" r="7.5" stroke="#9BB5CC" strokeOpacity="0.6"/>
-                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#9BB5CC" strokeWidth="1.6" strokeLinecap="round"/>
+                  <circle cx="8" cy="8" r="7.5" stroke="#8a857a" strokeOpacity="0.6"/>
+                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#8a857a" strokeWidth="1.6" strokeLinecap="round"/>
                 </svg>
                 <span
-                  className="text-sm text-[#3D5A7A] leading-relaxed"
-                  style={{ fontFamily: "Nunito Sans, sans-serif" }}
+                  className="text-sm text-[#2f3b32] leading-relaxed"
+                  style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {item}
                 </span>
@@ -332,8 +332,8 @@ export default function SEOPage() {
           <div className="text-center mb-10">
             <span className="section-label">Common Questions</span>
             <h2
-              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               SEO questions, answered.
             </h2>
@@ -347,25 +347,25 @@ export default function SEOPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-14 sm:py-20 bg-[#0D1B2A]">
+      <section className="py-14 sm:py-20 bg-[#1f2a22]">
         <div className="container max-w-2xl mx-auto text-center">
           <h2
             className="text-3xl sm:text-4xl font-extrabold text-white mb-4"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             Ready to get found?
           </h2>
           <p
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
-            style={{ fontFamily: "Nunito Sans, sans-serif" }}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             Start with a plan that includes SEO and AEO from day one. No add-ons, no surprises.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#4A90D9] text-white text-sm font-bold hover:bg-[#3a7bc8] transition-colors"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               View Pricing Plans
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -375,7 +375,7 @@ export default function SEOPage() {
             <a
               href="/#contact"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white text-sm font-bold hover:bg-white/10 transition-colors"
-              style={{ fontFamily: "Syne, sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               Contact Jeremy
             </a>

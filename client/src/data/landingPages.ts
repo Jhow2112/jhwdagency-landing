@@ -1,4 +1,4 @@
-/* Landing page data — Jeremy Howard Web Design
+/* Landing page data — Aralo Studio
    Single source of truth for city + industry landing pages.
    Used by:
      - App.tsx (Wouter routes)
@@ -35,7 +35,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-boise",
     label: "Boise",
-    metaTitle: "Web Design Boise Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Boise Idaho | Aralo Studio",
     metaDescription:
       "Professional web design for small businesses in Boise, Idaho. Designed, built, hosted, and maintained for you. Starting at $495. Live in 5 days.",
     heading: "Web Design in",
@@ -50,7 +50,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-meridian",
     label: "Meridian",
-    metaTitle: "Web Design Meridian Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Meridian Idaho | Aralo Studio",
     metaDescription:
       "Web design for Meridian, Idaho small businesses. Built and hosted locally. Starting at $495. Live in 5 days.",
     heading: "Web Design in",
@@ -65,7 +65,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-nampa",
     label: "Nampa",
-    metaTitle: "Web Design Nampa Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Nampa Idaho | Aralo Studio",
     metaDescription:
       "Affordable, professional web design for Nampa, Idaho small businesses. Hosting and support included. Starting at $495.",
     heading: "Web Design in",
@@ -80,7 +80,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-eagle",
     label: "Eagle",
-    metaTitle: "Web Design Eagle Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Eagle Idaho | Aralo Studio",
     metaDescription:
       "Custom web design for Eagle, Idaho small businesses. Designed, built, and hosted by one person. Starting at $495.",
     heading: "Web Design in",
@@ -95,7 +95,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-caldwell",
     label: "Caldwell",
-    metaTitle: "Web Design Caldwell Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Caldwell Idaho | Aralo Studio",
     metaDescription:
       "Web design for Caldwell, Idaho small businesses. Built, hosted, and maintained by Jeremy Howard. Starting at $495.",
     heading: "Web Design in",
@@ -110,7 +110,7 @@ export const CITIES: LandingPageData[] = [
   {
     slug: "/web-design-kuna",
     label: "Kuna",
-    metaTitle: "Web Design Kuna Idaho | Jeremy Howard Web Design",
+    metaTitle: "Web Design Kuna Idaho | Aralo Studio",
     metaDescription:
       "Professional web design for Kuna, Idaho small businesses. Hosting and support included. Starting at $495.",
     heading: "Web Design in",
@@ -128,7 +128,7 @@ export const INDUSTRIES: LandingPageData[] = [
   {
     slug: "/websites-for-contractors",
     label: "Contractors",
-    metaTitle: "Websites for Contractors | Jeremy Howard Web Design | Meridian, Idaho",
+    metaTitle: "Websites for Contractors | Aralo Studio | Meridian, Idaho",
     metaDescription:
       "Professional websites for contractors and trades. Show your work, win bigger jobs, and get found on Google. Starting at $495.",
     heading: "Websites for",
@@ -143,7 +143,7 @@ export const INDUSTRIES: LandingPageData[] = [
   {
     slug: "/websites-for-restaurants",
     label: "Restaurants",
-    metaTitle: "Websites for Restaurants | Jeremy Howard Web Design | Meridian, Idaho",
+    metaTitle: "Websites for Restaurants | Aralo Studio | Meridian, Idaho",
     metaDescription:
       "Restaurant websites that load fast, show your menu, and bring people in. Built and hosted for you. Starting at $495.",
     heading: "Websites for",
@@ -158,7 +158,7 @@ export const INDUSTRIES: LandingPageData[] = [
   {
     slug: "/websites-for-cleaning-services",
     label: "Cleaning Services",
-    metaTitle: "Websites for Cleaning Services | Jeremy Howard Web Design | Meridian, Idaho",
+    metaTitle: "Websites for Cleaning Services | Aralo Studio | Meridian, Idaho",
     metaDescription:
       "Cleaning service websites that build trust and book appointments. Fast, professional, mobile-friendly. Starting at $495.",
     heading: "Websites for",
@@ -173,7 +173,7 @@ export const INDUSTRIES: LandingPageData[] = [
   {
     slug: "/websites-for-counselors",
     label: "Counselors",
-    metaTitle: "Websites for Counselors | Jeremy Howard Web Design | Meridian, Idaho",
+    metaTitle: "Websites for Counselors | Aralo Studio | Meridian, Idaho",
     metaDescription:
       "Calm, professional websites for counselors, therapists, and mental health practices. Privacy-conscious and easy to update. Starting at $495.",
     heading: "Websites for",

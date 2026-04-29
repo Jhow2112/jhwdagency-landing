@@ -58,19 +58,19 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section className="py-14 sm:py-20 md:py-24 bg-[#F4F7FA]" ref={ref}>
+    <section className="py-14 sm:py-20 md:py-24 bg-[#f3efe6]" ref={ref}>
       <div className="container">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <span className="section-label">How It Works</span>
-          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
             From idea to live in{" "}
-            <span style={{ color: "#4A90D9" }}>4 simple steps</span>.
+            <span style={{ color: "#b85433" }}>4 simple steps</span>.
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Connector line (desktop only) */}
-          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#4A90D9]/40 to-transparent z-0" />
+          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-[rgba(31,42,34,0.14)] z-0" />
 
           {steps.map((step, i) => (
             <div
@@ -83,16 +83,16 @@ export default function ProcessSection() {
               }}
             >
               {/* Icon circle */}
-              <div className="w-20 h-20 rounded-2xl bg-white border border-[#C8DCF0] shadow-md flex items-center justify-center text-[#4A90D9] relative">
+              <div className="w-20 h-20 rounded-2xl bg-white border border-[#d6d2c5] shadow-md flex items-center justify-center text-[#b85433] relative">
                 {step.icon}
-                <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-gradient-to-br from-[#1E3A5F] to-[#4A90D9] flex items-center justify-center shadow-sm">
-                  <span className="text-white text-xs font-bold" style={{ fontFamily: "Syne, sans-serif" }}>{step.number}</span>
+                <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-[#b85433] flex items-center justify-center shadow-sm">
+                  <span className="text-white text-xs font-bold" style={{ fontFamily: "Inter, sans-serif" }}>{step.number}</span>
                 </div>
               </div>
-              <h3 className="text-lg font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+              <h3 className="text-lg font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
                 {step.title}
               </h3>
-              <p className="text-sm text-[#3D5A7A] leading-relaxed" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+              <p className="text-sm text-[#2f3b32] leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
                 {step.description}
               </p>
             </div>

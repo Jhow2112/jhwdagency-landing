@@ -1,4 +1,4 @@
-/* ComparisonSection — Jeremy Howard Web Design
+/* ComparisonSection — Aralo Studio
    Mobile: stacked cards per row, each showing Agency / DIY / Us values
    Desktop: traditional table layout with overflow-x-auto fallback */
 import { useEffect, useRef, useState } from "react";
@@ -29,7 +29,7 @@ export default function ComparisonSection() {
       <div className="container">
         <div className="text-center mb-10 sm:mb-12">
           <span className="section-label">How We Compare</span>
-          <h2 id="comparison-heading" className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 id="comparison-heading" className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
             The smarter choice for local businesses.
           </h2>
         </div>
@@ -45,10 +45,10 @@ export default function ComparisonSection() {
         >
           {/* Column header */}
           <div className="grid grid-cols-3 gap-2 px-3 pb-1">
-            <span className="text-xs sm:text-sm font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>Agency</span>
-            <span className="text-xs sm:text-sm font-bold text-[#6B8BAA] tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>DIY Builder</span>
-            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-center" style={{ fontFamily: "Syne, sans-serif" }}>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[#1E3A5F] to-[#4A90D9] text-white text-xs font-bold">
+            <span className="text-xs sm:text-sm font-bold text-[#8a857a] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>Agency</span>
+            <span className="text-xs sm:text-sm font-bold text-[#8a857a] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>DIY Builder</span>
+            <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#b85433] text-white text-xs font-bold">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="white"><path d="M4 0l.9 2.6H8L5.5 4.2l.9 2.6L4 5.2l-2.4 1.6.9-2.6L0 2.6h3.1z"/></svg>
                 Our Service
               </span>
@@ -56,23 +56,23 @@ export default function ComparisonSection() {
           </div>
 
           {rows.map((row) => (
-            <div key={row.label} className="rounded-xl border border-[#C8DCF0] overflow-hidden shadow-sm">
+            <div key={row.label} className="rounded-xl border border-[#d6d2c5] overflow-hidden shadow-sm">
               {/* Row label */}
-              <div className="bg-[#F4F7FA] px-4 sm:px-6 py-2 sm:py-3 border-b border-[#C8DCF0]">
-                <span className="text-xs sm:text-sm font-bold text-[#0D1B2A] uppercase tracking-wide" style={{ fontFamily: "Syne, sans-serif" }}>
+              <div className="bg-[#f3efe6] px-4 sm:px-6 py-2 sm:py-3 border-b border-[#d6d2c5]">
+                <span className="text-xs sm:text-sm font-bold text-[#1f2a22] uppercase tracking-wide" style={{ fontFamily: "Inter, sans-serif" }}>
                   {row.label}
                 </span>
               </div>
               {/* Values */}
-              <div className="grid grid-cols-3 divide-x divide-[#C8DCF0]">
+              <div className="grid grid-cols-3 divide-x divide-[#d6d2c5]">
                 <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
-                  <span className="text-xs sm:text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.agency}</span>
+                  <span className="text-xs sm:text-sm text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>{row.agency}</span>
                 </div>
                 <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
-                  <span className="text-xs sm:text-sm text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.diy}</span>
+                  <span className="text-xs sm:text-sm text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>{row.diy}</span>
                 </div>
-                <div className="px-3 sm:px-5 py-3 sm:py-4 text-center bg-[#EEF4FB]">
-                  <span className="text-xs sm:text-sm font-semibold text-[#1E3A5F]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>{row.us}</span>
+                <div className="px-3 sm:px-5 py-3 sm:py-4 text-center bg-[#e7e2d6]">
+                  <span className="text-xs sm:text-sm font-semibold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>{row.us}</span>
                 </div>
               </div>
             </div>

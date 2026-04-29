@@ -1,4 +1,4 @@
-/* PricingSection — Jeremy Howard Web Design
+/* PricingSection — Aralo Studio
    Mobile-first: cards stack single column on mobile, 3-col on md+
    Highlighted card does NOT scale on mobile (causes overflow) */
 import { useEffect, useRef, useState } from "react";
@@ -70,8 +70,8 @@ const plans = [
 
 const checkIcon = (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" stroke="#4A90D9" strokeOpacity="0.4"/>
-    <path d="M5 8l2 2 4-4" stroke="#4A90D9" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" stroke="#b85433" strokeOpacity="0.4"/>
+    <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -100,22 +100,20 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
       ref={ref}
       className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
-          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#4A90D9]/40"
-          : "border border-[#C8DCF0] bg-white shadow-md hover:shadow-xl"
+          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#b85433]/40"
+          : "border border-[#d6d2c5] bg-white shadow-md hover:shadow-xl"
       }`}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : "translateY(32px)",
         transition: `opacity 0.6s ease ${index * 0.12}s, transform 0.6s ease ${index * 0.12}s, box-shadow 0.3s ease`,
-        background: plan.highlight
-          ? "linear-gradient(160deg, #1E3A5F 0%, #1a3357 40%, #0f2240 100%)"
-          : undefined,
+        background: plan.highlight ? "#1f2a22" : undefined,
       }}
     >
       {/* Most Popular badge */}
       {plan.popular && (
         <div className="absolute top-0 left-0 right-0 flex justify-center">
-          <div className="bg-white text-[#1E3A5F] text-xs font-bold px-4 py-1.5 rounded-b-xl shadow-sm" style={{ fontFamily: "Syne, sans-serif" }}>
+          <div className="bg-white text-[#1f2a22] text-xs font-bold px-4 py-1.5 rounded-b-xl shadow-sm" style={{ fontFamily: "Inter, sans-serif" }}>
             MOST POPULAR
           </div>
         </div>
@@ -125,20 +123,20 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
         {/* Plan name + tagline + description */}
         <div>
           <h3
-            className={`text-xl font-bold ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className={`text-xl font-bold ${plan.highlight ? "text-white" : "text-[#1f2a22]"}`}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             {plan.name}
           </h3>
           <p
-            className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-[#B8D4F0]" : "text-[#4A90D9]"}`}
-            style={{ fontFamily: "Syne, sans-serif" }}
+            className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-[#f3efe6]" : "text-[#b85433]"}`}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             {plan.tagline}
           </p>
           <p
-            className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#6B8BAA]"}`}
-            style={{ fontFamily: "Nunito Sans, sans-serif" }}
+            className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#8a857a]"}`}
+            style={{ fontFamily: "Inter, sans-serif" }}
           >
             {plan.description}
           </p>
@@ -148,31 +146,31 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
         <div className="flex flex-col gap-1">
           <div className="flex items-end gap-2">
             <span
-              className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#0D1B2A]"}`}
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className={`text-4xl font-extrabold ${plan.highlight ? "text-white" : "text-[#1f2a22]"}`}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               {plan.oneTime}
             </span>
             <span
-              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/55" : "text-[#8a857a]"}`}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               one-time
             </span>
           </div>
           <div className="flex items-center gap-1.5">
             <span
-              className={`text-lg font-bold ${plan.highlight ? "text-[#B8D4F0]" : "text-[#4A90D9]"}`}
-              style={{ fontFamily: "Syne, sans-serif" }}
+              className={`text-lg font-bold ${plan.highlight ? "text-[#f3efe6]" : "text-[#b85433]"}`}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               {plan.monthly}
-              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#6B8BAA]"}`}>/mo hosting &amp; upkeep</span>
+              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#8a857a]"}`}>/mo hosting &amp; upkeep</span>
             </span>
           </div>
         </div>
 
         {/* Divider */}
-        <div className={`h-px ${plan.highlight ? "bg-white/15" : "bg-[#C8DCF0]"}`} />
+        <div className={`h-px ${plan.highlight ? "bg-white/15" : "bg-[#d6d2c5]"}`} />
 
         {/* Features */}
         <ul className="flex flex-col gap-3 flex-1">
@@ -180,8 +178,8 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
             <li key={f} className="flex items-start gap-2.5">
               {plan.highlight ? checkIconWhite : checkIcon}
               <span
-                className={`text-sm ${plan.highlight ? "text-white/80" : "text-[#3D5A7A]"}`}
-                style={{ fontFamily: "Nunito Sans, sans-serif" }}
+                className={`text-sm ${plan.highlight ? "text-white/80" : "text-[#2f3b32]"}`}
+                style={{ fontFamily: "Inter, sans-serif" }}
               >
                 {f}
               </span>
@@ -196,10 +194,10 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
           rel="noopener noreferrer"
           className={`inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-bold transition-all duration-200 ${
             plan.highlight
-              ? "bg-white text-[#1E3A5F] hover:bg-[#EEF4FB] shadow-lg"
+              ? "bg-white text-[#1f2a22] hover:bg-[#e7e2d6] shadow-lg"
               : "btn-terra"
           }`}
-          style={{ fontFamily: "Syne, sans-serif" }}
+          style={{ fontFamily: "Inter, sans-serif" }}
         >
           {/* Lock icon for trust */}
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -212,7 +210,7 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
           </svg>
         </a>
         {/* Stripe trust note */}
-        <p className={`text-center text-xs mt-1 ${plan.highlight ? "text-white/40" : "text-[#9BB5CC]"}`} style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+        <p className={`text-center text-xs mt-1 ${plan.highlight ? "text-white/40" : "text-[#8a857a]"}`} style={{ fontFamily: "Inter, sans-serif" }}>
           Secure checkout via Stripe
         </p>
       </div>
@@ -222,15 +220,15 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-16 sm:py-24 bg-[#F4F7FA]">
+    <section id="pricing" className="py-16 sm:py-24 bg-[#f3efe6]">
       <div className="container">
         {/* Header */}
         <div className="text-center mb-6">
           <span className="section-label">Pricing Plans</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>
+          <h2 className="mt-3 text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
             Simple, transparent pricing.
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-[#3D5A7A] max-w-md mx-auto" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+          <p className="mt-4 text-sm sm:text-base text-[#2f3b32] max-w-md mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             No long-term contracts. Cancel monthly plans anytime with 30 days notice.
           </p>
         </div>
@@ -246,10 +244,10 @@ export default function PricingSection() {
               key={item.label}
               className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm ${
                 item.highlight
-                  ? "bg-[#1E3A5F] text-white font-bold"
-                  : "bg-white border border-[#C8DCF0] text-[#3D5A7A]"
+                  ? "bg-[#1f2a22] text-white font-bold"
+                  : "bg-white border border-[#d6d2c5] text-[#2f3b32]"
               }`}
-              style={{ fontFamily: "Nunito Sans, sans-serif" }}
+              style={{ fontFamily: "Inter, sans-serif" }}
             >
               <span className="font-semibold">{item.label}:</span>
               <span>{item.value}</span>
@@ -266,10 +264,10 @@ export default function PricingSection() {
 
         {/* Custom build note */}
         <div className="mt-10 sm:mt-12 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 sm:px-6 py-4 rounded-2xl bg-white border border-[#C8DCF0] shadow-sm w-full sm:w-auto">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 sm:px-6 py-4 rounded-2xl bg-white border border-[#d6d2c5] shadow-sm w-full sm:w-auto">
             <div className="flex flex-col text-center sm:text-left">
-              <span className="text-sm font-bold text-[#0D1B2A]" style={{ fontFamily: "Syne, sans-serif" }}>Need a Fully Custom Build?</span>
-              <span className="text-xs text-[#6B8BAA]" style={{ fontFamily: "Nunito Sans, sans-serif" }}>
+              <span className="text-sm font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Need a Fully Custom Build?</span>
+              <span className="text-xs text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>
                 E-commerce, integrations, and advanced features. Contact us for a custom quote.
               </span>
             </div>
