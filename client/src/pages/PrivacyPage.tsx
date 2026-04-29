@@ -3,6 +3,7 @@
    Route: /privacy */
 
 import Navbar from "@/components/Navbar";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const LAST_UPDATED = "April 15, 2026";
 const EMAIL = "jeremy@aralostudio.com";
@@ -11,6 +12,12 @@ const DOMAIN = "aralostudio.com";
 export default function PrivacyPage() {
   return (
     <>
+      <BreadcrumbSchema
+        crumbs={[
+          { name: "Home", url: "https://aralostudio.com/" },
+          { name: "Privacy Policy", url: "https://aralostudio.com/privacy/" },
+        ]}
+      />
       <Navbar />
       <main className="bg-[#f3efe6] min-h-screen pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-6 sm:px-8">

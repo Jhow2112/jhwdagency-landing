@@ -6,6 +6,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -209,6 +210,13 @@ export default function SEOPage() {
 
   return (
     <div className="min-h-screen bg-[#f3efe6]">
+      <BreadcrumbSchema
+        crumbs={[
+          { name: "Home", url: "https://aralostudio.com/" },
+          { name: "Services", url: "https://aralostudio.com/" },
+          { name: "SEO & AEO", url: "https://aralostudio.com/seo-aeo/" },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}

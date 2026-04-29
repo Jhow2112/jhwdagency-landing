@@ -1,15 +1,19 @@
 /* LandingPageTemplate — Aralo Studio
    Single reusable template powering all city + industry landing pages.
    Adding a new city/industry is just a new entry in client/src/data/landingPages.ts —
-   the route in App.tsx and the SSR + prerender meta are wired up automatically. */
+   the route in App.tsx and the SSR + prerender meta are wired up automatically.
+   bodyParagraphs strings may contain [text](/url/) markdown-style inline links;
+   they are parsed at render time into accent-colored anchor elements. */
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PricingSection from "@/components/PricingSection";
 import ProcessSection from "@/components/ProcessSection";
+import BreadcrumbSchema, { type Crumb } from "@/components/BreadcrumbSchema";
 import type { LandingPageData } from "@/data/landingPages";
 
 const SITE_ORIGIN = "https://aralostudio.com";
+const INLINE_LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;
 
 function setMeta(selector: string, attr: string, value: string) {
   let el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -21,6 +25,35 @@ function setMeta(selector: string, attr: string, value: string) {
     document.head.appendChild(el);
   }
   el.setAttribute(attr, value);
+}
+
+/** Parses [text](href) markdown into a mix of strings + anchor elements. */
+function renderWithInlineLinks(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  const re = new RegExp(INLINE_LINK_RE);
+  while ((match = re.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+    parts.push(
+      <a key={`${match.index}-${match[2]}`} href={match[2]} className="link-accent">
+        {match[1]}
+      </a>
+    );
+    lastIndex = re.lastIndex;
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+  return parts;
+}
+
+function buildBreadcrumbs(data: LandingPageData): Crumb[] {
+  const home: Crumb = { name: "Home", url: `${SITE_ORIGIN}/` };
+  const middle: Crumb =
+    data.category === "city"
+      ? { name: "Service Areas", url: `${SITE_ORIGIN}/` }
+      : { name: "Industries", url: `${SITE_ORIGIN}/` };
+  const leaf: Crumb = { name: data.label, url: `${SITE_ORIGIN}${data.slug}/` };
+  return [home, middle, leaf];
 }
 
 export default function LandingPageTemplate({ data }: { data: LandingPageData }) {
@@ -41,6 +74,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
 
   return (
     <div className="min-h-screen bg-[#f3efe6]">
+      <BreadcrumbSchema crumbs={buildBreadcrumbs(data)} />
       <Navbar />
 
       {/* Hero */}
@@ -92,7 +126,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
         </div>
       </section>
 
-      {/* Body paragraph */}
+      {/* Body — one or more paragraphs with inline cross-links */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="container max-w-3xl mx-auto">
           <span className="section-label">{data.bodyEyebrow}</span>
@@ -102,12 +136,17 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
           >
             {data.bodyHeading}
           </h2>
-          <p
-            className="mt-5 text-base text-[#2f3b32] leading-relaxed"
-            style={{ fontFamily: "Inter, sans-serif" }}
-          >
-            {data.bodyParagraph}
-          </p>
+          <div className="mt-5 flex flex-col gap-4">
+            {data.bodyParagraphs.map((p, i) => (
+              <p
+                key={i}
+                className="text-base text-[#2f3b32] leading-relaxed"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                {renderWithInlineLinks(p)}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 

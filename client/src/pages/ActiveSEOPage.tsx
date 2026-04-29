@@ -4,6 +4,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const CheckIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
@@ -116,6 +117,13 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
 export default function ActiveSEOPage() {
   return (
     <div className="min-h-screen bg-white">
+      <BreadcrumbSchema
+        crumbs={[
+          { name: "Home", url: "https://aralostudio.com/" },
+          { name: "Services", url: "https://aralostudio.com/" },
+          { name: "Active SEO", url: "https://aralostudio.com/active-seo/" },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}
