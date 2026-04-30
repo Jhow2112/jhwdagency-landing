@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "Can you help my business show up on Google?",
-    a: "Yes. All packages include on-page SEO basics. The Plus and Premium packages also include Google Business Profile setup and optimization so your business appears in local search results and Google Maps when nearby customers search for your services.",
+    a: "Yes. All packages include on-page SEO basics. The Plus and Premium packages also include Google Business Profile setup so your business appears in local search results and Google Maps when nearby customers search for your services. For ongoing profile management, content updates, and citation monitoring, that's part of the separate SEO & Growth service.",
   },
   {
     q: "Do you work with businesses outside of Meridian, Idaho?",

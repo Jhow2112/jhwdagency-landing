@@ -17,7 +17,7 @@ export default function Navbar() {
   const links = [
     { label: "Services", href: "/#services" },
     { label: "SEO & AEO", href: "/seo-aeo/" },
-    { label: "Active SEO", href: "/active-seo/" },
+    { label: "SEO & Growth", href: "/active-seo/" },
     { label: "Work", href: "/#work" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "#contact" },

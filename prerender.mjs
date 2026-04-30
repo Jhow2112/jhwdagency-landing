@@ -96,18 +96,18 @@ const ROUTE_META = {
     sitemapChangefreq: 'yearly',
   },
   '/active-seo': {
-    title: 'Active SEO Service | Monthly Done-For-You SEO & AEO | Aralo Studio',
+    title: 'SEO & Growth Plans | Aralo Studio | Meridian, Idaho',
     description:
-      'Monthly SEO and AEO management for local businesses. Google Business Profile management, on-page SEO audits, schema tuning, and performance reports. $399/month. No contracts.',
+      'Monthly SEO and AEO management for local businesses. Three plans starting at $199/month: on-page SEO, schema tuning, Google Business Profile management, and SEO-optimized content. No contracts.',
     canonical: `${SITE_ORIGIN}/active-seo/`,
-    ogTitle: 'Active SEO | Monthly Done-For-You SEO | Aralo Studio',
+    ogTitle: 'SEO & Growth | Monthly SEO Plans | Aralo Studio',
     ogDescription:
-      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+      'Monthly SEO and AEO management. Three plans starting at $199/month. Google Business Profile, schema tuning, optimized content. No contracts.',
     ogUrl: `${SITE_ORIGIN}/active-seo/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Active SEO | Monthly Done-For-You SEO | Aralo Studio',
+    twitterTitle: 'SEO & Growth | Monthly SEO Plans | Aralo Studio',
     twitterDescription:
-      'Monthly SEO and AEO management. Google Business Profile, on-page audits, schema tuning. $399/month. No contracts.',
+      'Monthly SEO and AEO management. Three plans starting at $199/month. Google Business Profile, schema tuning, optimized content. No contracts.',
     twitterImage: LOGO_URL,
     sitemapPriority: '0.8',
     sitemapChangefreq: 'monthly',

@@ -34,22 +34,28 @@ const whatIsDone = [
     included: ["Plus", "Premium"],
   },
   {
-    title: "Monthly On-Page SEO Updates",
+    title: "Monthly SEO Audit",
     description:
-      "Search rankings shift over time. On the Premium plan, I review and update your page titles, descriptions, and keyword targeting monthly based on what's working and what's changed in your local market.",
-    included: ["Premium"],
+      "Every month I review your page titles, meta descriptions, and on-page structure for the changes that matter most. Premium hosting includes a monthly audit; SEO & Growth plans add active updates on top of the audit.",
+    included: ["Premium", "SEO & Growth"],
   },
   {
-    title: "Monthly AEO Content Tuning",
+    title: "Monthly AEO Schema Tuning",
     description:
-      "AI answer engines update their indexes regularly. On the Premium plan, I review and refine your FAQ content and schema markup monthly to keep your business well-represented in AI-generated answers.",
-    included: ["Premium"],
+      "AI answer engines update their indexes constantly. I refine your FAQ content and structured-data markup monthly so tools like ChatGPT, Perplexity, and Google's AI Overviews keep representing your business accurately. Available through SEO & Growth.",
+    included: ["SEO & Growth"],
   },
   {
     title: "Google Business Profile Management",
     description:
-      "On the Premium plan, I handle ongoing updates to your Google Business Profile, keeping your hours, photos, and service descriptions current. Consistent, active profiles rank better in local search.",
-    included: ["Premium"],
+      "Plus and Premium hosting plans include the initial Google Business Profile setup. Ongoing management — keeping hours, photos, posts, and service descriptions current — lives in the SEO & Growth (Growth tier and above) service so it doesn't go stale.",
+    included: ["SEO & Growth"],
+  },
+  {
+    title: "Local Citation Monitoring",
+    description:
+      "Inconsistent business listings across the web hurt local rankings. I monitor your NAP (Name, Address, Phone) consistency and flag or fix discrepancies as they appear. Available through SEO & Growth (Growth tier and above).",
+    included: ["SEO & Growth"],
   },
 ];
 
@@ -57,7 +63,7 @@ const whatIDontDo = [
   "I don't guarantee specific Google rankings. No one honestly can.",  "I don't run paid ad campaigns (Google Ads, Meta Ads).",
   "I don't do link-building outreach or backlink acquisition.",
   "I don't manage social media accounts.",
-  "I don't write blog posts or ongoing content (beyond the initial site copy on Premium).",
+  "I don't write blog posts or ongoing content unless it's part of an SEO & Growth plan (Growth tier and above).",
 ];
 
 const faqs = [
@@ -69,7 +75,7 @@ const faqs = [
     q: "What is AEO and why does it matter?",    a: "AEO stands for Answer Engine Optimization. It's the practice of structuring your content so that AI tools like ChatGPT, Perplexity, Google's AI Overviews, and Siri can accurately represent your business when someone asks a relevant question. As more people use AI to find local services, being well-represented in those answers matters more and more." },
   {
     q: "Will my site show up on Google Maps?",
-    a: "Google Maps results are driven primarily by your Google Business Profile, not your website. I set up and optimize your profile on Plus and Premium plans. Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
+    a: "Google Maps results are driven primarily by your Google Business Profile, not your website. Plus and Premium hosting plans include the initial profile setup. For ongoing management — keeping hours, photos, and posts current month over month — that's part of the SEO & Growth service (Growth tier and above). Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
   },
 ];
 
@@ -80,10 +86,11 @@ function PlanBadge({ plan }: { plan: string }) {
     Minimum: "bg-[#e7e2d6] text-[#2f3b32] border border-[#d6d2c5]",
     Plus: "bg-[#1f2a22] text-white",
     Premium: "bg-[#b85433] text-white",
+    "SEO & Growth": "bg-white text-[#1f2a22] border border-[#1f2a22]",
   };
   return (
     <span
-      className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full ${colors[plan]}`}
+      className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full ${colors[plan] ?? colors.Premium}`}
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       {plan}
@@ -239,7 +246,7 @@ export default function SEOPage() {
             className="text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Every site I build includes foundational SEO. Plus and Premium plans go further, with structured data, Google Business setup, and ongoing optimization so your business shows up where your customers are looking.
+            Every site I build includes foundational SEO. Plus and Premium plans go further with structured data, AEO setup, and Google Business Profile setup. For ongoing management and optimized content month over month, see the <a href="/active-seo/" className="link-accent underline-offset-2">SEO & Growth</a> service.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
