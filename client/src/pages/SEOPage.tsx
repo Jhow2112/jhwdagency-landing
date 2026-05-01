@@ -162,7 +162,7 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
           </svg>
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}>
         <p
           className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed"
           style={{ fontFamily: "Inter, sans-serif" }}

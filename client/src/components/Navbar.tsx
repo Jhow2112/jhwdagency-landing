@@ -90,7 +90,7 @@ export default function Navbar() {
       {/* Mobile dropdown */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         } bg-[#1f2a22] border-b border-[rgba(243,239,230,0.16)]`}
       >
         <nav className="container flex flex-col py-3">
