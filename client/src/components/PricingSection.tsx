@@ -68,8 +68,8 @@ const plans = [
 
 const checkIcon = (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" stroke="#b85433" strokeOpacity="0.4"/>
-    <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" stroke="#9a4528" strokeOpacity="0.4"/>
+    <path d="M5 8l2 2 4-4" stroke="#9a4528" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
@@ -98,7 +98,7 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
       ref={ref}
       className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
-          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#b85433]/40"
+          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#9a4528]/40"
           : "border border-[#d6d2c5] bg-white shadow-md hover:shadow-xl"
       }`}
       style={{
@@ -127,13 +127,13 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
             {plan.name}
           </h3>
           <p
-            className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-[#f3efe6]" : "text-[#b85433]"}`}
+            className={`text-sm font-semibold mb-2 ${plan.highlight ? "text-[#f3efe6]" : "text-[#9a4528]"}`}
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {plan.tagline}
           </p>
           <p
-            className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#8a857a]"}`}
+            className={`text-sm ${plan.highlight ? "text-white/65" : "text-[#6b6660]"}`}
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {plan.description}
@@ -150,7 +150,7 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
               {plan.oneTime}
             </span>
             <span
-              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/55" : "text-[#8a857a]"}`}
+              className={`text-sm pb-1.5 ${plan.highlight ? "text-white/55" : "text-[#6b6660]"}`}
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               one-time
@@ -158,11 +158,11 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
           </div>
           <div className="flex items-center gap-1.5">
             <span
-              className={`text-lg font-bold ${plan.highlight ? "text-[#f3efe6]" : "text-[#b85433]"}`}
+              className={`text-lg font-bold ${plan.highlight ? "text-[#f3efe6]" : "text-[#9a4528]"}`}
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               {plan.monthly}
-              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#8a857a]"}`}>/mo hosting &amp; upkeep</span>
+              <span className={`text-sm font-normal ${plan.highlight ? "text-white/55" : "text-[#6b6660]"}`}>/mo hosting &amp; upkeep</span>
             </span>
           </div>
         </div>
@@ -208,7 +208,7 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
           </svg>
         </a>
         {/* Stripe trust note */}
-        <p className={`text-center text-xs mt-1 ${plan.highlight ? "text-white/40" : "text-[#8a857a]"}`} style={{ fontFamily: "Inter, sans-serif" }}>
+        <p className={`text-center text-xs mt-1 ${plan.highlight ? "text-white/60" : "text-[#6b6660]"}`} style={{ fontFamily: "Inter, sans-serif" }}>
           Secure checkout via Stripe
         </p>
       </div>
@@ -265,7 +265,7 @@ export default function PricingSection() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 sm:px-6 py-4 rounded-2xl bg-white border border-[#d6d2c5] shadow-sm w-full sm:w-auto">
             <div className="flex flex-col text-center sm:text-left">
               <span className="text-sm font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Need a Fully Custom Build?</span>
-              <span className="text-xs text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>
+              <span className="text-xs text-[#6b6660]" style={{ fontFamily: "Inter, sans-serif" }}>
                 E-commerce, integrations, and advanced features. Contact us for a custom quote.
               </span>
             </div>

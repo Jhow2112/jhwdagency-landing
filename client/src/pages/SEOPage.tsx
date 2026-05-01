@@ -85,7 +85,7 @@ function PlanBadge({ plan }: { plan: string }) {
   const colors: Record<string, string> = {
     Minimum: "bg-[#e7e2d6] text-[#2f3b32] border border-[#d6d2c5]",
     Plus: "bg-[#1f2a22] text-white",
-    Premium: "bg-[#b85433] text-white",
+    Premium: "bg-[#9a4528] text-white",
     "SEO & Growth": "bg-white text-[#1f2a22] border border-[#1f2a22]",
   };
   return (
@@ -134,8 +134,8 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
     <div
       className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
         open
-          ? "border-[#b85433]/40 bg-white shadow-md"
-          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30"
+          ? "border-[#9a4528]/40 bg-white shadow-md"
+          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#9a4528]/30"
       }`}
     >
       <button
@@ -151,7 +151,7 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
         </span>
         <span
           className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
-            open ? "bg-[#b85433] rotate-45" : "bg-[#e7e2d6]"
+            open ? "bg-[#9a4528] rotate-45" : "bg-[#e7e2d6]"
           }`}
         >
           <svg
@@ -230,7 +230,7 @@ export default function SEOPage() {
       <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="container max-w-3xl mx-auto text-center">
           <span
-            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#f3efe6] border border-[#b85433]/40 rounded-full px-3 py-1.5 mb-5"
+            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#f3efe6] border border-[#9a4528]/40 rounded-full px-3 py-1.5 mb-5"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             SEO & AEO Services
@@ -240,7 +240,7 @@ export default function SEOPage() {
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             Get found on Google.<br />
-            <span className="text-[#b85433]">And in AI search.</span>
+            <span className="text-[#d97a55]">And in AI search.</span>
           </h1>
           <p
             className="text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
@@ -251,7 +251,7 @@ export default function SEOPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#9a4528] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               See Pricing Plans
@@ -326,8 +326,8 @@ export default function SEOPage() {
                   className="flex-shrink-0 mt-0.5"
                   width="16" height="16" viewBox="0 0 16 16" fill="none"
                 >
-                  <circle cx="8" cy="8" r="7.5" stroke="#8a857a" strokeOpacity="0.6"/>
-                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#8a857a" strokeWidth="1.6" strokeLinecap="round"/>
+                  <circle cx="8" cy="8" r="7.5" stroke="#6b6660" strokeOpacity="0.6"/>
+                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#6b6660" strokeWidth="1.6" strokeLinecap="round"/>
                 </svg>
                 <span
                   className="text-sm text-[#2f3b32] leading-relaxed"
@@ -379,7 +379,7 @@ export default function SEOPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#9a4528] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               View Pricing Plans

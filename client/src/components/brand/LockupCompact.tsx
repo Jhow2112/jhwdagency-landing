@@ -15,7 +15,7 @@ type LockupCompactProps = {
 export default function LockupCompact({
   markSize = 24,
   primary = "#1f2a22",
-  accent = "#b85433",
+  accent = "#9a4528",
   className,
 }: LockupCompactProps) {
   const wordmarkSize = Math.round(markSize * 0.78);

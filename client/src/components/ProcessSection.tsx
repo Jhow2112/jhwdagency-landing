@@ -64,7 +64,7 @@ export default function ProcessSection() {
           <span className="section-label">How It Works</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
             From idea to live in{" "}
-            <span style={{ color: "#b85433" }}>4 simple steps</span>.
+            <span style={{ color: "#9a4528" }}>4 simple steps</span>.
           </h2>
         </div>
 
@@ -83,9 +83,9 @@ export default function ProcessSection() {
               }}
             >
               {/* Icon circle */}
-              <div className="w-20 h-20 rounded-2xl bg-white border border-[#d6d2c5] shadow-md flex items-center justify-center text-[#b85433] relative">
+              <div className="w-20 h-20 rounded-2xl bg-white border border-[#d6d2c5] shadow-md flex items-center justify-center text-[#9a4528] relative">
                 {step.icon}
-                <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-[#b85433] flex items-center justify-center shadow-sm">
+                <div className="absolute -top-2.5 -right-2.5 w-6 h-6 rounded-full bg-[#9a4528] flex items-center justify-center shadow-sm">
                   <span className="text-white text-xs font-bold" style={{ fontFamily: "Inter, sans-serif" }}>{step.number}</span>
                 </div>
               </div>

@@ -19,7 +19,7 @@ type LockupProps = {
 export default function Lockup({
   markSize = 28,
   primary = "#1f2a22",
-  accent = "#b85433",
+  accent = "#9a4528",
   className,
 }: LockupProps) {
   // Wordmark sized roughly to mark cap-height

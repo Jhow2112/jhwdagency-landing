@@ -24,7 +24,7 @@ export default function PrivacyPage() {
 
           {/* Header */}
           <div className="mb-10">
-            <a href="/" className="inline-flex items-center gap-2 text-sm text-[#b85433] hover:text-[#1f2a22] transition-colors mb-6 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm text-[#9a4528] hover:text-[#1f2a22] transition-colors mb-6 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M10 12L6 8l4-4"/>
               </svg>
@@ -63,7 +63,7 @@ export default function PrivacyPage() {
               <h3 className="text-base font-bold text-[#1f2a22] mt-5 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Information Collected Automatically</h3>
               <p className="text-base">
                 We use Google Analytics to collect anonymized data about how visitors use this site, including pages visited, time spent on the site, general geographic region (city/country level), device type, and referring source. This data does not identify you personally. Google Analytics uses cookies to collect this information. You can opt out of Google Analytics tracking by installing the{" "}
-                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-[#b85433] hover:underline">Google Analytics Opt-out Browser Add-on</a>.
+                <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Google Analytics Opt-out Browser Add-on</a>.
               </p>
             </section>
 
@@ -90,15 +90,15 @@ export default function PrivacyPage() {
               <ul className="list-disc pl-6 mt-3 space-y-2 text-base">
                 <li>
                   <strong>Formspree</strong> processes contact form submissions.{" "}
-                  <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#b85433] hover:underline">Formspree Privacy Policy</a>
+                  <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Formspree Privacy Policy</a>
                 </li>
                 <li>
                   <strong>Stripe</strong> processes payments for service plans.{" "}
-                  <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#b85433] hover:underline">Stripe Privacy Policy</a>
+                  <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Stripe Privacy Policy</a>
                 </li>
                 <li>
                   <strong>Google Analytics</strong> collects anonymized site usage data.{" "}
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#b85433] hover:underline">Google Privacy Policy</a>
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Google Privacy Policy</a>
                 </li>
               </ul>
             </section>
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
               <h2 className="text-xl font-bold text-[#1f2a22] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>6. Your Rights</h2>
               <p className="text-base">
                 You have the right to request access to, correction of, or deletion of any personal information we hold about you. To make such a request, please contact us at{" "}
-                <a href={`mailto:${EMAIL}`} className="text-[#b85433] hover:underline">{EMAIL}</a>. We will respond within a reasonable timeframe.
+                <a href={`mailto:${EMAIL}`} className="text-[#9a4528] hover:underline">{EMAIL}</a>. We will respond within a reasonable timeframe.
               </p>
             </section>
 
@@ -147,7 +147,7 @@ export default function PrivacyPage() {
               <div className="mt-4 p-5 rounded-2xl bg-[#1f2a22]/5 border border-[#1f2a22]/10">
                 <p className="font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Aralo Studio</p>
                 <p className="text-sm mt-1">Meridian, Idaho</p>
-                <a href={`mailto:${EMAIL}`} className="text-sm text-[#b85433] hover:underline mt-1 block">{EMAIL}</a>
+                <a href={`mailto:${EMAIL}`} className="text-sm text-[#9a4528] hover:underline mt-1 block">{EMAIL}</a>
               </div>
             </section>
 

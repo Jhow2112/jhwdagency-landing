@@ -45,10 +45,10 @@ export default function ComparisonSection() {
         >
           {/* Column header */}
           <div className="grid grid-cols-3 gap-2 px-3 pb-1">
-            <span className="text-xs sm:text-sm font-bold text-[#8a857a] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>Agency</span>
-            <span className="text-xs sm:text-sm font-bold text-[#8a857a] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>DIY Builder</span>
+            <span className="text-xs sm:text-sm font-bold text-[#6b6660] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>Agency</span>
+            <span className="text-xs sm:text-sm font-bold text-[#6b6660] tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>DIY Builder</span>
             <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-center" style={{ fontFamily: "Inter, sans-serif" }}>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#b85433] text-white text-xs font-bold">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#9a4528] text-white text-xs font-bold">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="white"><path d="M4 0l.9 2.6H8L5.5 4.2l.9 2.6L4 5.2l-2.4 1.6.9-2.6L0 2.6h3.1z"/></svg>
                 Our Service
               </span>
@@ -66,10 +66,10 @@ export default function ComparisonSection() {
               {/* Values */}
               <div className="grid grid-cols-3 divide-x divide-[#d6d2c5]">
                 <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
-                  <span className="text-xs sm:text-sm text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>{row.agency}</span>
+                  <span className="text-xs sm:text-sm text-[#6b6660]" style={{ fontFamily: "Inter, sans-serif" }}>{row.agency}</span>
                 </div>
                 <div className="px-3 sm:px-5 py-3 sm:py-4 text-center">
-                  <span className="text-xs sm:text-sm text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>{row.diy}</span>
+                  <span className="text-xs sm:text-sm text-[#6b6660]" style={{ fontFamily: "Inter, sans-serif" }}>{row.diy}</span>
                 </div>
                 <div className="px-3 sm:px-5 py-3 sm:py-4 text-center bg-[#e7e2d6]">
                   <span className="text-xs sm:text-sm font-semibold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>{row.us}</span>

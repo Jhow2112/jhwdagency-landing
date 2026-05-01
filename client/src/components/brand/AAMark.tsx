@@ -23,7 +23,7 @@ export default function AAMark({
   size = 60,
   strokeWidth = 2.6,
   primary = "#1f2a22",
-  accent = "#b85433",
+  accent = "#9a4528",
   fill = false,
   gap = 20,
   className,

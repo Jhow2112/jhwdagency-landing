@@ -38,8 +38,11 @@ export default function AboutSection() {
             <img
               src="/jeremy.png"
               alt="Jeremy Howard, web designer based in Meridian, Idaho"
+              width="1120"
+              height="1068"
               className="w-full h-full object-cover"
               loading="lazy"
+              decoding="async"
             />
           </div>
 
@@ -66,13 +69,13 @@ export default function AboutSection() {
                 href={PHONE_HREF}
                 className="inline-flex items-center gap-3 group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#b85433] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3 2h3l1.5 3.5-1.75 1.25c.8 1.6 2 2.8 3.5 3.5L10.5 8.5 14 10v3a1 1 0 01-1 1C6.27 14 2 9.73 2 4a1 1 0 011-2z"/>
                   </svg>
                 </div>
                 <span
-                  className="text-sm font-semibold text-[#1f2a22] group-hover:text-[#b85433] transition-colors"
+                  className="text-sm font-semibold text-[#1f2a22] group-hover:text-[#9a4528] transition-colors"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {PHONE}
@@ -82,14 +85,14 @@ export default function AboutSection() {
                 href={`mailto:${EMAIL}`}
                 className="inline-flex items-center gap-3 group"
               >
-                <div className="w-10 h-10 rounded-xl bg-[#b85433] flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/>
                     <path d="M2 4l6 5 6-5"/>
                   </svg>
                 </div>
                 <span
-                  className="text-sm font-semibold text-[#1f2a22] group-hover:text-[#b85433] transition-colors break-all"
+                  className="text-sm font-semibold text-[#1f2a22] group-hover:text-[#9a4528] transition-colors break-all"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {EMAIL}

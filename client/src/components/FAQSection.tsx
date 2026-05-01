@@ -65,8 +65,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
       <div
         className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
           open
-            ? "border-[#b85433]/40 bg-white shadow-md"
-            : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30 hover:shadow-sm"
+            ? "border-[#9a4528]/40 bg-white shadow-md"
+            : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#9a4528]/30 hover:shadow-sm"
         }`}
       >
         <button
@@ -83,7 +83,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
           <span
             className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
               open
-                ? "bg-[#b85433] rotate-45"
+                ? "bg-[#9a4528] rotate-45"
                 : "bg-[#e7e2d6]"
             }`}
           >
@@ -151,7 +151,7 @@ export default function FAQSection() {
           {/* Bottom CTA */}
           <div className="mt-12 text-center">
             <p
-              className="text-sm text-[#8a857a] mb-4"
+              className="text-sm text-[#6b6660] mb-4"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Still have questions? I'm happy to chat.

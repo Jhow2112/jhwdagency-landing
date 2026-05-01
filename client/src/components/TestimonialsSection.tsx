@@ -51,12 +51,12 @@ export default function TestimonialsSection() {
             {/* Stars */}
             <div className="flex gap-1 items-center">
               {[1, 2, 3, 4, 5].map((i) => (
-                <svg key={i} width="18" height="18" viewBox="0 0 16 16" fill="#b85433">
+                <svg key={i} width="18" height="18" viewBox="0 0 16 16" fill="#9a4528">
                   <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z" />
                 </svg>
               ))}
               <span
-                className="ml-2 text-xs text-[#8a857a] self-center font-semibold"
+                className="ml-2 text-xs text-[#6b6660] self-center font-semibold"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 5-Star Google Review
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
 
             {/* Attribution */}
             <div className="flex items-center gap-4 pt-2 border-t border-[#d6d2c5]">
-              <div className="w-11 h-11 rounded-full bg-[#b85433] flex items-center justify-center flex-shrink-0">
+              <div className="w-11 h-11 rounded-full bg-[#9a4528] flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-sm font-bold" style={{ fontFamily: "Inter, sans-serif" }}>
                   AM
                 </span>
@@ -82,13 +82,13 @@ export default function TestimonialsSection() {
                 <p className="text-sm font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
                   Ann McGaver, LPC
                 </p>
-                <p className="text-xs text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>
+                <p className="text-xs text-[#6b6660]" style={{ fontFamily: "Inter, sans-serif" }}>
                   Owner,{" "}
                   <a
                     href="https://crisis2comfort.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#b85433] hover:underline"
+                    className="text-[#9a4528] hover:underline"
                   >
                     Crisis to Comfort Counseling
                   </a>{" "}
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
             transition: "opacity 0.7s ease 0.2s",
           }}
         >
-          <p className="text-sm text-[#8a857a] mb-4" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-sm text-[#6b6660] mb-4" style={{ fontFamily: "Inter, sans-serif" }}>
             Ready to be our next success story?
           </p>
           <a href="#contact" className="btn-terra inline-flex items-center gap-2 px-7 py-3.5 text-base">

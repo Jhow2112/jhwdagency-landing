@@ -9,15 +9,15 @@ import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
 const CheckIcon = () => (
   <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="flex-shrink-0">
-    <circle cx="8" cy="8" r="7.5" fill="#b85433" fillOpacity="0.15" stroke="#b85433" strokeOpacity="0.5"/>
-    <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" fill="#9a4528" fillOpacity="0.15" stroke="#9a4528" strokeOpacity="0.5"/>
+    <path d="M5 8l2 2 4-4" stroke="#9a4528" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const DashIcon = () => (
   <svg width="18" height="18" viewBox="0 0 16 16" fill="none" className="flex-shrink-0">
-    <circle cx="8" cy="8" r="7.5" fill="#8a857a" fillOpacity="0.10" stroke="#8a857a" strokeOpacity="0.3"/>
-    <path d="M5 8h6" stroke="#8a857a" strokeWidth="1.6" strokeLinecap="round"/>
+    <circle cx="8" cy="8" r="7.5" fill="#6b6660" fillOpacity="0.10" stroke="#6b6660" strokeOpacity="0.3"/>
+    <path d="M5 8h6" stroke="#6b6660" strokeWidth="1.6" strokeLinecap="round"/>
   </svg>
 );
 
@@ -125,8 +125,8 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
     <div
       className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
         open
-          ? "border-[#b85433]/40 bg-white shadow-md"
-          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#b85433]/30 hover:shadow-sm"
+          ? "border-[#9a4528]/40 bg-white shadow-md"
+          : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#9a4528]/30 hover:shadow-sm"
       }`}
       style={{ animationDelay: `${index * 0.07}s` }}
     >
@@ -138,7 +138,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
         <span className="text-base font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>
           {faq.q}
         </span>
-        <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${open ? "bg-[#b85433] rotate-45" : "bg-[#e7e2d6]"}`}>
+        <span className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${open ? "bg-[#9a4528] rotate-45" : "bg-[#e7e2d6]"}`}>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke={open ? "white" : "#1f2a22"} strokeWidth="2" strokeLinecap="round">
             <path d="M6 1v10M1 6h10" />
           </svg>
@@ -158,7 +158,7 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
     <div
       className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         tier.highlight
-          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#b85433]/40"
+          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#9a4528]/40"
           : "border border-[#d6d2c5] bg-white shadow-md hover:shadow-xl"
       }`}
       style={{ background: tier.highlight ? "#1f2a22" : undefined }}
@@ -180,7 +180,7 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
             {tier.name}
           </h3>
           <p
-            className={`mt-2 text-sm ${tier.highlight ? "text-white/65" : "text-[#8a857a]"}`}
+            className={`mt-2 text-sm ${tier.highlight ? "text-white/65" : "text-[#6b6660]"}`}
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {tier.description}
@@ -195,7 +195,7 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
             {tier.price}
           </span>
           <span
-            className={`text-sm pb-1.5 ${tier.highlight ? "text-white/55" : "text-[#8a857a]"}`}
+            className={`text-sm pb-1.5 ${tier.highlight ? "text-white/55" : "text-[#6b6660]"}`}
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {tier.cadence}
@@ -208,8 +208,8 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
           {tier.features.map((f) => (
             <li key={f} className="flex items-start gap-2.5">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-                <circle cx="8" cy="8" r="7.5" stroke={tier.highlight ? "white" : "#b85433"} strokeOpacity="0.4"/>
-                <path d="M5 8l2 2 4-4" stroke={tier.highlight ? "white" : "#b85433"} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="8" cy="8" r="7.5" stroke={tier.highlight ? "white" : "#9a4528"} strokeOpacity="0.4"/>
+                <path d="M5 8l2 2 4-4" stroke={tier.highlight ? "white" : "#9a4528"} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span
                 className={`text-sm ${tier.highlight ? "text-white/80" : "text-[#2f3b32]"}`}
@@ -226,7 +226,7 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
           className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm transition-colors ${
             tier.highlight
               ? "bg-white text-[#1f2a22] hover:bg-[#f3efe6]"
-              : "bg-[#1f2a22] text-[#f3efe6] hover:bg-[#b85433]"
+              : "bg-[#1f2a22] text-[#f3efe6] hover:bg-[#9a4528]"
           }`}
           style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, letterSpacing: "0.02em" }}
         >
@@ -280,7 +280,7 @@ export default function ActiveSEOPage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#plans"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#9a4528] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
                 style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: "13px", letterSpacing: "0.02em" }}
               >
                 See Plans
@@ -373,14 +373,14 @@ export default function ActiveSEOPage() {
                 <tr className="border-t border-[#e7e2d6]">
                   <td className="py-3.5 px-5 font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Monthly cost</td>
                   <td className="py-3.5 px-5 text-center font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>$199</td>
-                  <td className="py-3.5 px-5 text-center font-bold text-[#b85433] bg-[#e7e2d6]/60" style={{ fontFamily: "Inter, sans-serif" }}>$399</td>
+                  <td className="py-3.5 px-5 text-center font-bold text-[#9a4528] bg-[#e7e2d6]/60" style={{ fontFamily: "Inter, sans-serif" }}>$399</td>
                   <td className="py-3.5 px-5 text-center font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>$599</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <p className="text-center text-xs text-[#8a857a] mt-4 max-w-lg mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-center text-xs text-[#6b6660] mt-4 max-w-lg mx-auto" style={{ fontFamily: "Inter, sans-serif" }}>
             SEO & Growth is a standalone monthly service. It works with any existing website and does not include website hosting or design.
           </p>
         </div>
@@ -425,7 +425,7 @@ export default function ActiveSEOPage() {
           </p>
           <a
             href="/#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#b85433] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#9a4528] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
             style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: "13px", letterSpacing: "0.02em" }}
           >
             Get a Free SEO Audit

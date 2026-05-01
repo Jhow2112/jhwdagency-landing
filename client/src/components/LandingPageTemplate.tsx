@@ -81,7 +81,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
       <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
         <div className="container max-w-3xl mx-auto text-center">
           <span
-            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#f3efe6] border border-[#b85433]/40 rounded-full px-3 py-1.5 mb-5"
+            className="inline-block text-xs font-bold tracking-[0.18em] uppercase text-[#f3efe6] border border-[#9a4528]/40 rounded-full px-3 py-1.5 mb-5"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
             {data.bodyEyebrow}
@@ -94,7 +94,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
             {data.headingAccent && (
               <>
                 <br />
-                <span className="text-[#b85433]">{data.headingAccent}</span>
+                <span className="text-[#d97a55]">{data.headingAccent}</span>
               </>
             )}
           </h1>
@@ -107,7 +107,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#pricing"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#9a4528] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               See Pricing
@@ -174,7 +174,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href="/#contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#b85433] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#9a4528] text-white text-sm font-bold hover:bg-[#d97a55] transition-colors"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
               Contact Jeremy

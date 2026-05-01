@@ -17,13 +17,13 @@ const ArrowIcon = () => (
 
 const CheckIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-0.5">
-    <circle cx="8" cy="8" r="7.5" stroke="#b85433" strokeOpacity="0.5"/>
-    <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+    <circle cx="8" cy="8" r="7.5" stroke="#9a4528" strokeOpacity="0.5"/>
+    <path d="M5 8l2 2 4-4" stroke="#9a4528" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const StarIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 16 16" fill="#b85433">
+  <svg width="12" height="12" viewBox="0 0 16 16" fill="#9a4528">
     <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z"/>
   </svg>
 );
@@ -72,14 +72,19 @@ export default function WorkSection() {
           <div className="absolute inset-0">
             <img
               src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
-              alt="Crisis to Comfort counseling website designed by Aralo Studio"
+              alt=""
+              width="1338"
+              height="747"
               className="w-full h-full object-cover object-top opacity-20"
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
             />
             <div className="absolute inset-0 bg-[#1f2a22]/85" />
           </div>
 
           {/* Visit site banner — no emoji */}
-          <div className="relative z-10 flex items-center justify-center gap-2 py-3 bg-[#b85433]/20 border-b border-[#b85433]/30 group-hover:bg-[#b85433]/30 transition-colors">
+          <div className="relative z-10 flex items-center justify-center gap-2 py-3 bg-[#9a4528]/20 border-b border-[#9a4528]/30 group-hover:bg-[#9a4528]/30 transition-colors">
             <ExternalLinkIcon />
             <span className="text-xs font-bold text-[#f3efe6] tracking-wide" style={{ fontFamily: "Inter, sans-serif" }}>
               Click to visit crisis2comfort.com
@@ -95,13 +100,13 @@ export default function WorkSection() {
               {/* Tags — no emoji, clean text only */}
               <div className="flex flex-wrap items-center gap-2">
                 <span
-                  className="text-xs px-3 py-1 rounded-full bg-[#b85433]/20 text-[#f3efe6] font-semibold border border-[#b85433]/30"
+                  className="text-xs px-3 py-1 rounded-full bg-[#9a4528]/20 text-[#f3efe6] font-semibold border border-[#9a4528]/30"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   Counseling Practice
                 </span>
                 <span
-                  className="text-xs px-3 py-1 rounded-full bg-[#b85433]/20 text-[#f3efe6] font-semibold border border-[#b85433]/30"
+                  className="text-xs px-3 py-1 rounded-full bg-[#9a4528]/20 text-[#f3efe6] font-semibold border border-[#9a4528]/30"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   Service Business
@@ -154,7 +159,7 @@ export default function WorkSection() {
                 onClick={(e) => { e.preventDefault(); e.stopPropagation(); window.location.hash = "#contact"; }}
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-white rounded-full self-start cursor-pointer transition-all duration-200 hover:opacity-90"
                 style={{
-                  background: "#b85433",
+                  background: "#9a4528",
                   fontFamily: "Inter, sans-serif",
                 }}
                 role="link"
@@ -173,13 +178,17 @@ export default function WorkSection() {
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
-                  <span className="ml-2 text-xs text-white/40 font-mono truncate">crisis2comfort.com</span>
+                  <span className="ml-2 text-xs text-white/60 font-mono truncate">crisis2comfort.com</span>
                 </div>
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/crisis2comfort-hero_96f700ed.webp"
                   alt="Crisis to Comfort counseling website designed by Aralo Studio"
+                  width="1338"
+                  height="747"
                   className="w-full object-cover object-top"
                   style={{ maxHeight: "180px" }}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -191,7 +200,7 @@ export default function WorkSection() {
                 <p className="text-sm text-white/70 leading-relaxed italic" style={{ fontFamily: "Inter, sans-serif" }}>
                   "Jeremy built me a beautiful website that truly reflects my practice. He handled everything: the design, the writing, even setting up my Google listing. I had zero technical knowledge and he made the whole process easy and stress-free."
                 </p>
-                <p className="text-xs text-white/40 mt-3 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
+                <p className="text-xs text-white/60 mt-3 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
                   Ann McGaver, LPC · Crisis to Comfort Counseling
                 </p>
               </div>
@@ -201,9 +210,9 @@ export default function WorkSection() {
 
         {/* More work teaser */}
         <div className="mt-6 sm:mt-8 text-center">
-          <p className="text-sm text-[#8a857a]" style={{ fontFamily: "Inter, sans-serif" }}>
+          <p className="text-sm text-[#6b6660]" style={{ fontFamily: "Inter, sans-serif" }}>
             More case studies available on request.{" "}
-            <a href="#contact" className="text-[#b85433] font-semibold hover:underline">
+            <a href="#contact" className="text-[#9a4528] font-semibold hover:underline">
               Get in touch
             </a>
           </p>

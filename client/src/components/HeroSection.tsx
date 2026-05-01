@@ -56,7 +56,7 @@ export default function HeroSection() {
           <div className="fade-up fade-up-delay-4 flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-start">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#b85433] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#9a4528] text-[#f3efe6] hover:bg-[#d97a55] transition-colors"
               style={{
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 500,
@@ -94,7 +94,7 @@ export default function HeroSection() {
             ].map((claim, i) => (
               <div key={i} className="flex items-center gap-2">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M5 8l2 2 4-4" stroke="#b85433" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M5 8l2 2 4-4" stroke="#9a4528" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <span
                   className="text-sm text-[rgba(243,239,230,0.7)]"

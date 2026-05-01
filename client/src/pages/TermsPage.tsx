@@ -24,7 +24,7 @@ export default function TermsPage() {
 
           {/* Header */}
           <div className="mb-10">
-            <a href="/" className="inline-flex items-center gap-2 text-sm text-[#b85433] hover:text-[#1f2a22] transition-colors mb-6 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
+            <a href="/" className="inline-flex items-center gap-2 text-sm text-[#9a4528] hover:text-[#1f2a22] transition-colors mb-6 font-semibold" style={{ fontFamily: "Inter, sans-serif" }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M10 12L6 8l4-4"/>
               </svg>
@@ -71,7 +71,7 @@ export default function TermsPage() {
               </p>
               <p className="text-base mt-4">
                 Monthly plans may be cancelled with 30 days written notice sent to{" "}
-                <a href={`mailto:${EMAIL}`} className="text-[#b85433] hover:underline">{EMAIL}</a>. No refunds are issued for partial months already billed.
+                <a href={`mailto:${EMAIL}`} className="text-[#9a4528] hover:underline">{EMAIL}</a>. No refunds are issued for partial months already billed.
               </p>
             </section>
 
@@ -151,7 +151,7 @@ export default function TermsPage() {
               <div className="mt-4 p-5 rounded-2xl bg-[#1f2a22]/5 border border-[#1f2a22]/10">
                 <p className="font-bold text-[#1f2a22]" style={{ fontFamily: "Inter, sans-serif" }}>Aralo Studio</p>
                 <p className="text-sm mt-1">Meridian, Idaho</p>
-                <a href={`mailto:${EMAIL}`} className="text-sm text-[#b85433] hover:underline mt-1 block">{EMAIL}</a>
+                <a href={`mailto:${EMAIL}`} className="text-sm text-[#9a4528] hover:underline mt-1 block">{EMAIL}</a>
               </div>
             </section>
 

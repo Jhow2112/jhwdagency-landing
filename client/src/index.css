@@ -22,8 +22,8 @@
   --color-paper: #e7e2d6;
   --color-forest: #1f2a22;
   --color-ink-soft: #2f3b32;
-  --color-ink-mute: #8a857a;
-  --color-terracotta: #b85433;
+  --color-ink-mute: #6b6660;
+  --color-terracotta: #9a4528;
   --color-terracotta-soft: #d97a55;
 }
 
@@ -58,9 +58,9 @@
   --bg-paper: #e7e2d6;
   --ink-primary: #1f2a22;
   --ink-soft: #2f3b32;
-  --ink-mute: #8a857a;
+  --ink-mute: #6b6660;
   --ink-rule: rgba(31, 42, 34, 0.14);
-  --accent: #b85433;
+  --accent: #9a4528;
   --accent-soft: #d97a55;
   --on-forest: #f3efe6;
   --on-forest-soft: rgba(243, 239, 230, 0.72);
@@ -78,13 +78,13 @@
   --secondary: #e7e2d6;
   --secondary-foreground: #1f2a22;
   --muted: #e7e2d6;
-  --muted-foreground: #8a857a;
+  --muted-foreground: #6b6660;
   --accent-foreground: #ffffff;
-  --destructive: #b85433;
+  --destructive: #9a4528;
   --destructive-foreground: #f3efe6;
   --border: rgba(31, 42, 34, 0.14);
   --input: rgba(31, 42, 34, 0.14);
-  --ring: #b85433;
+  --ring: #9a4528;
 }
 
 @layer base {

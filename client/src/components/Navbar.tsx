@@ -34,7 +34,7 @@ export default function Navbar() {
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Lockup — cream + terracotta for dark contexts */}
         <a href="/" aria-label="Aralo Studio home" className="flex items-center flex-shrink-0 py-1">
-          <Lockup markSize={28} primary="#f3efe6" accent="#b85433" />
+          <Lockup markSize={28} primary="#f3efe6" accent="#9a4528" />
         </a>
 
         {/* Desktop nav links */}
@@ -108,7 +108,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 mb-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#b85433] text-[#f3efe6]"
+            className="mt-4 mb-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#9a4528] text-[#f3efe6]"
             style={{ fontFamily: "Inter, sans-serif", fontWeight: 500, fontSize: "13px", letterSpacing: "0.02em" }}
           >
             Get in touch

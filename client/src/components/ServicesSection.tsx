@@ -60,7 +60,11 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         <img
           src={service.image}
           alt={service.title}
+          width="1920"
+          height="1434"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
         />
         {/* Number badge */}
         <div className="absolute top-4 left-4 w-9 h-9 rounded-xl bg-white/85 backdrop-blur-sm flex items-center justify-center shadow-sm">
@@ -91,7 +95,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {/* Arrow link */}
         <a
           href="#contact"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#b85433] hover:gap-3 transition-all duration-200 mt-1"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#9a4528] hover:gap-3 transition-all duration-200 mt-1"
           style={{ fontFamily: "Inter, sans-serif" }}
         >
           Get started
@@ -114,7 +118,7 @@ export default function ServicesSection() {
             <span className="section-label">What I Do</span>
             <h2 id="services-heading" className="text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
               Everything your business needs to{" "}
-              <span style={{ color: "#b85433" }}>get found online</span>.
+              <span style={{ color: "#9a4528" }}>get found online</span>.
             </h2>
           </div>
           <p className="text-base text-[#2f3b32] max-w-xs leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
