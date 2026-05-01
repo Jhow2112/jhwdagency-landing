@@ -278,7 +278,7 @@ console.log(`✓ Generated sitemap.xml with ${ROUTES.length} URLs`);
     </g>
     <text x="600" y="440" font-family="Inter" font-weight="600" font-size="84" letter-spacing="3.4" text-anchor="middle" fill="#1f2a22">ARALO</text>
     <text x="600" y="478" font-family="Inter" font-weight="400" font-size="14" letter-spacing="3.1" text-anchor="middle" fill="#b85433">STUDIO</text>
-    <text x="600" y="558" font-family="Inter" font-weight="400" font-size="26" text-anchor="middle" fill="#2f3b32">Quiet, considered web design for small businesses.</text>
+    <text x="600" y="558" font-family="Inter" font-weight="400" font-size="26" text-anchor="middle" fill="#2f3b32">Built to last. Made to grow.</text>
   </svg>`;
 
   const resvg = new Resvg(svg, {
