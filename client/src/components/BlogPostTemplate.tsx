@@ -108,9 +108,10 @@ export default function BlogPostTemplate({ post }: { post: BlogPost }) {
       <BreadcrumbSchema crumbs={buildBreadcrumbs(post)} />
       <Navbar />
 
-      {/* Header image — full bleed under navbar */}
+      {/* Header image — full bleed under navbar, capped height so it
+           doesn't dominate the viewport on desktop. */}
       <header className="bg-[#1f2a22] pt-16 md:pt-20">
-        <div className="w-full aspect-[1200/630] sm:aspect-[1200/500] overflow-hidden">
+        <div className="w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] overflow-hidden">
           <img
             src={post.headerImage}
             alt={post.headerImageAlt ?? post.title}
