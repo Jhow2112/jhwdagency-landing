@@ -273,13 +273,18 @@ export default function Footer() {
               <div>
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Industries We Serve</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {INDUSTRIES.map((i) => (
+                  {INDUSTRIES.slice(0, 6).map((i) => (
                     <li key={i.slug}>
                       <a href={`${i.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
                         {i.label}
                       </a>
                     </li>
                   ))}
+                  <li>
+                    <a href="/industries/" className="text-sm font-semibold text-[#d97a55] hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                      See all industries →
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

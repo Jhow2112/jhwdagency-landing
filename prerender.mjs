@@ -50,7 +50,7 @@ const ROUTE_META = {
     sitemapChangefreq: 'monthly',
   },
   '/seo-aeo': {
-    title: 'SEO & AEO Services for Small Businesses | Aralo Studio | Meridian, Idaho',
+    title: 'SEO & AEO Services Meridian Idaho | Aralo Studio',
     description:
       'On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.',
     canonical: `${SITE_ORIGIN}/seo-aeo/`,
@@ -96,7 +96,7 @@ const ROUTE_META = {
     sitemapChangefreq: 'yearly',
   },
   '/active-seo': {
-    title: 'SEO & Growth Plans | Aralo Studio | Meridian, Idaho',
+    title: 'SEO & Growth Plans Meridian & Treasure Valley | Aralo Studio',
     description:
       'Monthly SEO and AEO management for local businesses. Three plans starting at $199/month: on-page SEO, schema tuning, Google Business Profile management, and SEO-optimized content. No contracts.',
     canonical: `${SITE_ORIGIN}/active-seo/`,
@@ -170,6 +170,26 @@ for (const lp of [...cities, ...industries]) {
     sitemapChangefreq: 'monthly',
   };
 }
+
+// Industries hub
+ROUTE_META['/industries'] = {
+  title:
+    'Industries We Serve | Small Business Web Design Meridian Idaho | Aralo Studio',
+  description:
+    'Professional websites for contractors, restaurants, HVAC companies, salons, and more. Aralo Studio builds affordable websites for small businesses across the Treasure Valley.',
+  canonical: `${SITE_ORIGIN}/industries/`,
+  ogTitle: 'Industries We Serve | Aralo Studio',
+  ogDescription:
+    'Websites for small businesses across the Treasure Valley. If you need a site that looks professional and gets found on Google, we can build it.',
+  ogUrl: `${SITE_ORIGIN}/industries/`,
+  ogImage: LOGO_URL,
+  twitterTitle: 'Industries We Serve | Aralo Studio',
+  twitterDescription:
+    'Websites for small businesses across the Treasure Valley. If you need a site that looks professional and gets found on Google, we can build it.',
+  twitterImage: LOGO_URL,
+  sitemapPriority: '0.8',
+  sitemapChangefreq: 'monthly',
+};
 
 // Blog index
 ROUTE_META['/blog'] = {

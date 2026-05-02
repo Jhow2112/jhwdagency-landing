@@ -51,7 +51,7 @@ function buildBreadcrumbs(data: LandingPageData): Crumb[] {
   const middle: Crumb =
     data.category === "city"
       ? { name: "Service Areas", url: `${SITE_ORIGIN}/` }
-      : { name: "Industries", url: `${SITE_ORIGIN}/` };
+      : { name: "Industries", url: `${SITE_ORIGIN}/industries/` };
   const leaf: Crumb = { name: data.label, url: `${SITE_ORIGIN}${data.slug}/` };
   return [home, middle, leaf];
 }

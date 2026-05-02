@@ -12,6 +12,7 @@ import TermsPage from "./pages/TermsPage";
 import ActiveSEOPage from "./pages/ActiveSEOPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostTemplate from "./components/BlogPostTemplate";
+import IndustriesHub from "./pages/IndustriesHub";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 import { getPostBySlug } from "./data/blogPosts";
@@ -23,6 +24,7 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/terms": TermsPage,
   "/active-seo": ActiveSEOPage,
   "/blog": BlogListPage,
+  "/industries": IndustriesHub,
 };
 
 export function render(url: string): string {

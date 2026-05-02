@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import LogosCarousel from "@/components/LogosCarousel";
 import ServicesSection from "@/components/ServicesSection";
+import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WorkSection from "@/components/WorkSection";
 import PricingSection from "@/components/PricingSection";
@@ -41,6 +42,9 @@ export default function Home() {
 
         {/* Services — what we offer */}
         <ServicesSection />
+
+        {/* Industries — who we serve */}
+        <IndustriesSection />
 
         {/* Process — how it works */}
         <ProcessSection />
