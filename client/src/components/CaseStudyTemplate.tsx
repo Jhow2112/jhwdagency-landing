@@ -85,15 +85,17 @@ export default function CaseStudyTemplate({ project }: { project: PortfolioProje
       <BreadcrumbSchema crumbs={buildBreadcrumbs(project)} />
       <Navbar />
 
-      {/* Hero image — capped height so it doesn't dominate */}
-      <header className="bg-[#1f2a22] pt-16 md:pt-20">
-        <div className="w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[460px] overflow-hidden">
+      {/* Hero screenshot — framed in the dark band at natural aspect
+           ratio so the whole site shot is visible (no cropping). Width
+           is capped so it doesn't dominate the viewport on desktop. */}
+      <header className="bg-[#1f2a22] pt-20 md:pt-28 pb-10 sm:pb-14 md:pb-16">
+        <div className="container max-w-5xl mx-auto">
           <img
             src={project.heroImage}
             alt={project.heroImageAlt ?? `${project.name} website screenshot`}
             width="1920"
             height="950"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl border border-white/10"
             decoding="async"
           />
         </div>
