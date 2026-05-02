@@ -12,6 +12,7 @@ import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
+import BlogTeaserSection from "@/components/BlogTeaserSection";
 import ReferralCallout from "@/components/ReferralCallout";
 import Footer from "@/components/Footer";
 
@@ -61,6 +62,9 @@ export default function Home() {
 
         {/* FAQ — AEO answer targeting, mirrors JSON-LD FAQPage schema */}
         <FAQSection />
+
+        {/* Blog teaser — drives homepage traffic to /blog */}
+        <BlogTeaserSection />
 
         {/* Referral callout — above footer */}
         <ReferralCallout />

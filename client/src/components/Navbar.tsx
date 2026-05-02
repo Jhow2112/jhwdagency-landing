@@ -19,6 +19,7 @@ export default function Navbar() {
     { label: "SEO & AEO", href: "/seo-aeo/" },
     { label: "SEO & Growth", href: "/active-seo/" },
     { label: "Work", href: "/#work" },
+    { label: "Blog", href: "/blog/" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "#contact" },
   ];

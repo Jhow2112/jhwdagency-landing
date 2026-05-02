@@ -114,14 +114,29 @@ const ROUTE_META = {
   },
 };
 
-// ─── Load landing page data from TS via tsx ──────────────────────────────
+// ─── Load landing page + blog data from TS via tsx ────────────────────────
 const dataHelper = join(__dirname, '.prerender-data.tsx');
 writeFileSync(
   dataHelper,
-  `import { CITIES, INDUSTRIES } from "./client/src/data/landingPages";\nprocess.stdout.write(JSON.stringify({ cities: CITIES, industries: INDUSTRIES }));\n`
+  `import { CITIES, INDUSTRIES } from "./client/src/data/landingPages";
+import { POSTS_BY_DATE, getExcerpt } from "./client/src/data/blogPosts";
+process.stdout.write(JSON.stringify({
+  cities: CITIES,
+  industries: INDUSTRIES,
+  posts: POSTS_BY_DATE.map(p => ({
+    slug: p.slug,
+    title: p.title,
+    date: p.date,
+    category: p.category,
+    headerImage: p.headerImage,
+    excerpt: getExcerpt(p),
+  })),
+}));
+`
 );
 let cities = [];
 let industries = [];
+let posts = [];
 try {
   const dataJson = execSync(
     `npx tsx --tsconfig tsconfig.ssr.json "${dataHelper}"`,
@@ -134,6 +149,7 @@ try {
   const parsed = JSON.parse(dataJson);
   cities = parsed.cities || [];
   industries = parsed.industries || [];
+  posts = parsed.posts || [];
 } finally {
   try { unlinkSync(dataHelper); } catch {}
 }
@@ -152,6 +168,48 @@ for (const lp of [...cities, ...industries]) {
     twitterImage: LOGO_URL,
     sitemapPriority: '0.7',
     sitemapChangefreq: 'monthly',
+  };
+}
+
+// Blog index
+ROUTE_META['/blog'] = {
+  title: 'Blog | Aralo Studio',
+  description:
+    'Plain-language writing on web design, local search, and getting found — from Aralo Studio in Meridian, Idaho.',
+  canonical: `${SITE_ORIGIN}/blog/`,
+  ogTitle: 'Aralo Studio Blog',
+  ogDescription:
+    'Notes on web design, local search, and getting found. For small business owners.',
+  ogUrl: `${SITE_ORIGIN}/blog/`,
+  ogImage: LOGO_URL,
+  twitterTitle: 'Aralo Studio Blog',
+  twitterDescription:
+    'Notes on web design, local search, and getting found. For small business owners.',
+  twitterImage: LOGO_URL,
+  sitemapPriority: '0.7',
+  sitemapChangefreq: 'weekly',
+};
+
+// Individual blog posts
+for (const p of posts) {
+  const route = `/blog/${p.slug}`;
+  const ogImage = `${SITE_ORIGIN}${p.headerImage}`;
+  ROUTE_META[route] = {
+    title: `${p.title} | Aralo Studio`,
+    description: p.excerpt,
+    canonical: `${SITE_ORIGIN}${route}/`,
+    ogTitle: p.title,
+    ogDescription: p.excerpt,
+    ogUrl: `${SITE_ORIGIN}${route}/`,
+    ogImage,
+    twitterTitle: p.title,
+    twitterDescription: p.excerpt,
+    twitterImage: ogImage,
+    sitemapPriority: '0.6',
+    sitemapChangefreq: 'monthly',
+    sitemapLastmod: p.date,
+    /** og:type override — articles get "article" instead of the default "website". */
+    ogType: 'article',
   };
 }
 
@@ -180,6 +238,9 @@ function applyRouteMeta(html, meta) {
   out = replaceMetaContent(out, /<meta name="twitter:title"[^>]*>/, meta.twitterTitle);
   out = replaceMetaContent(out, /<meta name="twitter:description"[^>]*>/, meta.twitterDescription);
   out = replaceMetaContent(out, /<meta name="twitter:image"[^>]*>/, meta.twitterImage);
+  if (meta.ogType) {
+    out = replaceMetaContent(out, /<meta property="og:type"[^>]*>/, meta.ogType);
+  }
   return out;
 }
 
@@ -238,9 +299,11 @@ const sitemapEntries = ROUTES.map((route) => {
   // Trailing slash matches canonicals + Netlify's pretty-URL normalization,
   // so Googlebot crawls the sitemap URL directly with no 301 redirect.
   const loc = route === '/' ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${route}/`;
+  // Per-route lastmod override (used by blog posts so date reflects publish).
+  const lastmod = m.sitemapLastmod || today;
   return `  <url>
     <loc>${loc}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${m.sitemapChangefreq}</changefreq>
     <priority>${m.sitemapPriority}</priority>
   </url>`;

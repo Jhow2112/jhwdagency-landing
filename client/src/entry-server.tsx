@@ -10,8 +10,11 @@ import SEOPage from "./pages/SEOPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
 import ActiveSEOPage from "./pages/ActiveSEOPage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostTemplate from "./components/BlogPostTemplate";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
+import { getPostBySlug } from "./data/blogPosts";
 
 const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/": Home,
@@ -19,11 +22,19 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/privacy": PrivacyPage,
   "/terms": TermsPage,
   "/active-seo": ActiveSEOPage,
+  "/blog": BlogListPage,
 };
 
 export function render(url: string): string {
   const Page = ROUTE_MAP[url];
   if (Page) return renderToString(<Page />);
+
+  // Blog post: /blog/{slug}
+  const blogMatch = url.match(/^\/blog\/([^/]+)$/);
+  if (blogMatch) {
+    const post = getPostBySlug(blogMatch[1]);
+    if (post) return renderToString(<BlogPostTemplate post={post} />);
+  }
 
   const data = [...CITIES, ...INDUSTRIES].find((d) => d.slug === url);
   if (data) return renderToString(<LandingPageTemplate data={data} />);
