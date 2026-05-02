@@ -32,7 +32,7 @@ export type BlogPost = {
 
 const POST_1_BODY = `Short answer: yes. But not for the reasons most web designers will tell you.
 
-The typical pitch goes something like this: "You need a website because everyone has one." That's lazy reasoning. Plenty of successful businesses in the Treasure Valley have operated for years without a website. Some of the best contractors in Boise have never touched a computer and they're booked solid through referrals.
+The typical pitch goes something like this: "You need a website because everyone has one." That's lazy reasoning. Plenty of successful businesses in the [Treasure Valley](/web-design-meridian/) have operated for years without a website. Some of the best contractors in Boise have never touched a computer and they're booked solid through referrals.
 
 So why bother?
 
@@ -54,7 +54,7 @@ Facebook also controls your page. They can change the layout, limit your reach, 
 
 ## What about Google Business Profile alone?
 
-A Google Business Profile is essential, and every local business should have one. But a GBP without a website is like a business card without a phone number. The profile gets people interested. The website closes the deal.
+A [Google Business Profile](/seo-aeo/) is essential, and every local business should have one. But a GBP without a website is like a business card without a phone number. The profile gets people interested. The website closes the deal.
 
 Google also favors businesses that have a website linked to their GBP. The website gives Google more information about what you do, where you serve, and why someone should choose you. That additional context helps you rank higher in local search results.
 
@@ -70,7 +70,7 @@ That's it. You don't need a blog, an online store, an appointment scheduler, or 
 
 A professional website for a small business in Boise doesn't need to cost $5,000 or take two months. That's agency pricing for agency-sized businesses. A solo plumber, a two-person cleaning crew, or a landscaper with a truck doesn't need an agency. They need a straightforward site that works, built fast, at a price that makes sense for their business.
 
-At Aralo Studio, we build sites like this starting at $495, live in 5-10 business days, with hosting and maintenance included. But regardless of who builds it, the important thing is that it exists and that it looks professional enough to not lose you the customer who just Googled your name.
+At Aralo Studio, we build sites like this [starting at $495](/#pricing), live in 5-10 business days, with hosting and maintenance included. But regardless of who builds it, the important thing is that it exists and that it looks professional enough to not lose you the customer who just Googled your name.
 
 ## The bottom line
 
@@ -84,19 +84,19 @@ This isn't random. Google doesn't pick favorites. It follows a set of rules, and
 
 ## They have a Google Business Profile that's actually filled out
 
-Most businesses in the Treasure Valley have claimed their Google Business Profile. But claiming it and completing it are two different things. Your competitor probably filled out every field: business hours, service list, service area, photos, business description, and categories. Google treats a complete profile as more trustworthy than a bare one.
+Most [businesses in the Treasure Valley](/web-design-boise/) have claimed their [Google Business Profile](/seo-aeo/). But claiming it and completing it are two different things. Your competitor probably filled out every field: business hours, service list, service area, photos, business description, and categories. Google treats a complete profile as more trustworthy than a bare one.
 
 Check yours right now. Go to business.google.com and look at your profile. Is your service area set correctly? Do you have more than one or two photos? Have you selected the right primary and secondary categories? Is your phone number correct? These details matter more than most people realize.
 
 ## They have a real website
 
-A real website, even a simple one, gives Google something to connect to your Business Profile. When Google sees a GBP listing linked to a website that mentions the same services, same phone number, and same location, it gains confidence that your business is legitimate and relevant.
+A [real website](/#services), even a simple one, gives Google something to connect to your Business Profile. When Google sees a GBP listing linked to a website that mentions the same services, same phone number, and same location, it gains confidence that your business is legitimate and relevant.
 
 If you don't have a website, or your website is a broken WordPress page from 2017, Google has less information to work with. Less information means less confidence. Less confidence means lower ranking.
 
 ## They have reviews (and they respond to them)
 
-Reviews are one of the strongest ranking signals for local search. A business with 30 reviews and a 4.7 rating will almost always outrank a business with 3 reviews and a 5.0 rating. Volume matters more than perfection.
+Reviews are one of the strongest ranking signals for [local search](/active-seo/). A business with 30 reviews and a 4.7 rating will almost always outrank a business with 3 reviews and a 5.0 rating. Volume matters more than perfection.
 
 Your competitors are probably asking for reviews. After every job, they send a text or an email: "Thanks for choosing us. If you have a minute, a Google review would mean a lot." That's it. No gimmick, no incentive, just a simple ask.
 
@@ -130,7 +130,7 @@ Check your business info on Yelp, Facebook, and Apple Maps. Make sure the name, 
 
 None of this is complicated. Your competitors aren't doing anything clever. They're just doing the basics consistently, and that's enough to outrank a business that hasn't done them at all.`;
 
-const POST_3_BODY = `You fix furnaces for a living. You're not thinking about websites. But here's what happens every day in the Treasure Valley: someone's heat goes out at 9pm, they grab their phone, search "HVAC repair near me," and they call the first company that looks professional and has a phone number they can tap.
+const POST_3_BODY = `You fix furnaces for a living. You're not thinking about websites. But here's what happens every day in the [Treasure Valley](/web-design-meridian/): someone's heat goes out at 9pm, they grab their phone, search "HVAC repair near me," and they call the first company that looks professional and has a phone number they can tap.
 
 If that's not you, it's someone else. And that someone else isn't necessarily better at HVAC work. They just have a better website.
 
@@ -158,7 +158,7 @@ If your website answers all three within 10 seconds, they call. If it doesn't, t
 
 ## What you don't need
 
-**A blog.** Unless you're going to consistently write and post (which you're not, because you're running an HVAC business), an empty blog section with one post from 2022 looks worse than no blog at all.
+**A blog.** Unless you're going to consistently write and post (which you're not, because you're [running an HVAC business](/websites-for-contractors/)), an empty blog section with one post from 2022 looks worse than no blog at all.
 
 **An "About Us" page with your company history.** Nobody looking for emergency HVAC repair cares that you founded the company in 2008 because of your passion for heating and cooling. Save the story for in-person conversations.
 
@@ -176,7 +176,7 @@ Pull out your phone right now and load your own website. If anything is hard to 
 
 ## What it costs
 
-A professional HVAC website doesn't need to be expensive. You're not building an e-commerce platform. You need a clean, fast site with your info, your services, your service area, and your phone number. That's a 3-5 page site that should cost somewhere in the $500-$1,500 range to build, with hosting running $30-$100 per month.
+A professional HVAC website doesn't need to be expensive. You're not building an e-commerce platform. You need a clean, fast site with your info, your services, your service area, and your phone number. That's a 3-5 page site that should cost somewhere in the [$500-$1,500 range](/#pricing) to build, with hosting running $30-$100 per month.
 
 Compare that to the value of even one HVAC job. A furnace installation is $3,000-$8,000. A single customer you would have lost to a competitor with a better website pays for the entire site several times over.
 
@@ -184,7 +184,7 @@ Compare that to the value of even one HVAC job. A furnace installation is $3,000
 
 Your HVAC website has one job: make the phone ring. Everything on the page should serve that goal. Big phone number, clear services, service area listed, fast load time, works on mobile. If your current site doesn't do these things, it's costing you money every week.
 
-The companies at the top of Google in your market aren't there because they're better at HVAC work. They're there because their online presence does the basics right. The good news is that the basics aren't hard or expensive. They just need to get done.`;
+The companies at the [top of Google](/seo-aeo/) in your market aren't there because they're better at HVAC work. They're there because their online presence does the basics right. The good news is that the basics aren't hard or expensive. They just need to get done.`;
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -192,9 +192,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Does Your Boise Small Business Actually Need a Website in 2026?",
     date: "2026-05-02",
     category: "Local Business",
-    headerImage: "/blog/blog-header-01.png",
-    headerImageAlt:
-      "Downtown Boise storefronts at street level — small businesses that depend on local search.",
+    headerImage: "/blog/blog-photo-01-storefront.jpg",
+    headerImageAlt: "Open sign hanging in a small business storefront window",
     body: POST_1_BODY,
   },
   {
@@ -203,9 +202,8 @@ export const BLOG_POSTS: BlogPost[] = [
       "Why Your Treasure Valley Competitors Are Showing Up on Google and You're Not",
     date: "2026-05-02",
     category: "Local SEO",
-    headerImage: "/blog/blog-header-02.png",
-    headerImageAlt:
-      "A laptop showing Google Maps local search results for a Treasure Valley business.",
+    headerImage: "/blog/blog-photo-02-google.jpg",
+    headerImageAlt: "Google search homepage displayed on a tablet screen",
     body: POST_2_BODY,
   },
   {
@@ -213,9 +211,8 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "What Every HVAC Company's Website Needs to Convert Calls",
     date: "2026-05-02",
     category: "Industry Guide",
-    headerImage: "/blog/blog-header-03.png",
-    headerImageAlt:
-      "An HVAC technician working on an outdoor unit on a residential job site.",
+    headerImage: "/blog/blog-photo-03-hvac.jpg",
+    headerImageAlt: "HVAC technician servicing an outdoor air conditioning unit",
     body: POST_3_BODY,
   },
 ];
