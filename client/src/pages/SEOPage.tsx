@@ -59,13 +59,6 @@ const whatIsDone = [
   },
 ];
 
-const whatIDontDo = [
-  "I don't guarantee specific Google rankings. No one honestly can.",  "I don't run paid ad campaigns (Google Ads, Meta Ads).",
-  "I don't do link-building outreach or backlink acquisition.",
-  "I don't manage social media accounts.",
-  "I don't write blog posts or ongoing content unless it's part of an SEO & Growth plan (Growth tier and above).",
-];
-
 const faqs = [
   {
     q: "How long does it take to see results from SEO?",
@@ -294,50 +287,6 @@ export default function SEOPage() {
               <ServiceCard key={item.title} item={item} index={i} />
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* What I don't do */}
-      <section className="py-14 sm:py-20 bg-white">
-        <div className="container max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="section-label">Honest Scope</span>
-            <h2
-              className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              What I don't do.
-            </h2>
-            <p
-              className="mt-3 text-sm sm:text-base text-[#2f3b32] max-w-md mx-auto"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              I'd rather be upfront than overpromise. These services are outside my scope.
-            </p>
-          </div>
-
-          <ul className="flex flex-col gap-3">
-            {whatIDontDo.map((item, i) => (
-              <li
-                key={i}
-                className="flex items-start gap-3 bg-[#f3efe6] rounded-xl px-5 py-4 border border-[#d6d2c5]"
-              >
-                <svg
-                  className="flex-shrink-0 mt-0.5"
-                  width="16" height="16" viewBox="0 0 16 16" fill="none"
-                >
-                  <circle cx="8" cy="8" r="7.5" stroke="#6b6660" strokeOpacity="0.6"/>
-                  <path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#6b6660" strokeWidth="1.6" strokeLinecap="round"/>
-                </svg>
-                <span
-                  className="text-sm text-[#2f3b32] leading-relaxed"
-                  style={{ fontFamily: "Inter, sans-serif" }}
-                >
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 

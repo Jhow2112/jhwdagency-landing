@@ -116,19 +116,20 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     liveUrl: "https://crisis2comfort.com",
     shortDescription:
       "A calm, approachable counseling website that lowers the barrier to reach out.",
-    services: ["Web Design", "Copywriting", "SEO", "Hosting"],
+    services: ["Web Design", "Copywriting", "SEO", "E-commerce Integration", "Hosting"],
     heroImage: "/portfolio/crisis2comfort-hero.png",
     heroImageAlt:
       "Crisis to Comfort Counseling homepage — a warm, professional presence for a Treasure Valley counseling practice.",
     challenge:
-      "A counseling practice needed a website that felt calm and approachable, not clinical. Potential clients searching for therapy are already anxious, and the site needed to lower the barrier to reaching out — not add to it with sales-heavy copy or a cluttered layout.",
+      "A counseling practice needed a website that felt calm and approachable, not clinical. Potential clients searching for therapy are already anxious, and the site needed to lower the barrier to reaching out — not add to it with sales-heavy copy or a cluttered layout. The practice also wanted to sell related products directly from the site without bolting on a separate platform that broke the design.",
     solution:
-      "Clean, warm design with clear service descriptions, easy-to-find contact information, and a layout that feels reassuring rather than overwhelming. Built with on-page SEO so the practice ranks for local counseling searches across the Treasure Valley.",
+      "Clean, warm design with clear service descriptions, easy-to-find contact information, and a layout that feels reassuring rather than overwhelming. Built with on-page SEO so the practice ranks for local counseling searches across the Treasure Valley. Ecwid was integrated for the product side so the client can manage inventory, take orders, and process payments without leaving the site or compromising the brand.",
     keyFeatures: [
       "Mobile-responsive design",
       "Contact form built for low-friction first contact",
       "Clear service and modality descriptions",
       "Calming visual design — warm tones, generous whitespace",
+      "Ecwid e-commerce integration for selling products directly from the site",
       "On-page SEO targeting local counseling keywords",
       "Fast load times across mobile and desktop",
     ],
