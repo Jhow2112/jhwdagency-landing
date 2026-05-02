@@ -13,9 +13,12 @@ import ActiveSEOPage from "./pages/ActiveSEOPage";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostTemplate from "./components/BlogPostTemplate";
 import IndustriesHub from "./pages/IndustriesHub";
+import PortfolioHub from "./pages/PortfolioHub";
+import CaseStudyTemplate from "./components/CaseStudyTemplate";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 import { getPostBySlug } from "./data/blogPosts";
+import { getProjectBySlug } from "./data/portfolioProjects";
 
 const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/": Home,
@@ -25,6 +28,7 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/active-seo": ActiveSEOPage,
   "/blog": BlogListPage,
   "/industries": IndustriesHub,
+  "/portfolio": PortfolioHub,
 };
 
 export function render(url: string): string {
@@ -36,6 +40,13 @@ export function render(url: string): string {
   if (blogMatch) {
     const post = getPostBySlug(blogMatch[1]);
     if (post) return renderToString(<BlogPostTemplate post={post} />);
+  }
+
+  // Case study: /portfolio/{slug}
+  const portfolioMatch = url.match(/^\/portfolio\/([^/]+)$/);
+  if (portfolioMatch) {
+    const project = getProjectBySlug(portfolioMatch[1]);
+    if (project) return renderToString(<CaseStudyTemplate project={project} />);
   }
 
   const data = [...CITIES, ...INDUSTRIES].find((d) => d.slug === url);

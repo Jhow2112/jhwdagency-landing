@@ -15,11 +15,11 @@ export default function Navbar() {
   }, []);
 
   const links = [
+    { label: "Home", href: "/" },
     { label: "Services", href: "/#services" },
-    { label: "Industries", href: "/industries/" },
     { label: "SEO & AEO", href: "/seo-aeo/" },
     { label: "SEO & Growth", href: "/active-seo/" },
-    { label: "Work", href: "/#work" },
+    { label: "Work", href: "/portfolio/" },
     { label: "Blog", href: "/blog/" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "#contact" },

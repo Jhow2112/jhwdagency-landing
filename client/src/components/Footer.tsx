@@ -245,7 +245,8 @@ export default function Footer() {
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Quick Links</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {[
-                    { label: "Our Work", href: "/#work" },
+                    { label: "Portfolio", href: "/portfolio/" },
+                    { label: "Blog", href: "/blog/" },
                     { label: "Pricing", href: "/#pricing" },
                     { label: "How It Works", href: "/#services" },
                     { label: "FAQ", href: "/#faq" },

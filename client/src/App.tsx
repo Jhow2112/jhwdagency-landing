@@ -14,6 +14,8 @@ import { CITIES, INDUSTRIES } from "./data/landingPages";
 import BlogListPage from "./pages/BlogListPage";
 import BlogPostPage from "./pages/BlogPostPage";
 import IndustriesHub from "./pages/IndustriesHub";
+import PortfolioHub from "./pages/PortfolioHub";
+import CaseStudyPage from "./pages/CaseStudyPage";
 
 function Router() {
   return (
@@ -24,6 +26,8 @@ function Router() {
       <Route path={"/terms"} component={TermsPage} />
       <Route path={"/active-seo"} component={ActiveSEOPage} />
       <Route path={"/industries"} component={IndustriesHub} />
+      <Route path={"/portfolio"} component={PortfolioHub} />
+      <Route path={"/portfolio/:slug"} component={CaseStudyPage} />
       <Route path={"/blog"} component={BlogListPage} />
       <Route path={"/blog/:slug"} component={BlogPostPage} />
       {[...CITIES, ...INDUSTRIES].map((d) => (

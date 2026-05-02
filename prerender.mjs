@@ -120,6 +120,7 @@ writeFileSync(
   dataHelper,
   `import { CITIES, INDUSTRIES } from "./client/src/data/landingPages";
 import { POSTS_BY_DATE, getExcerpt } from "./client/src/data/blogPosts";
+import { PORTFOLIO_PROJECTS } from "./client/src/data/portfolioProjects";
 process.stdout.write(JSON.stringify({
   cities: CITIES,
   industries: INDUSTRIES,
@@ -131,12 +132,20 @@ process.stdout.write(JSON.stringify({
     headerImage: p.headerImage,
     excerpt: getExcerpt(p),
   })),
+  projects: PORTFOLIO_PROJECTS.map(p => ({
+    slug: p.slug,
+    name: p.name,
+    metaTitle: p.metaTitle,
+    metaDescription: p.metaDescription,
+    heroImage: p.heroImage,
+  })),
 }));
 `
 );
 let cities = [];
 let industries = [];
 let posts = [];
+let projects = [];
 try {
   const dataJson = execSync(
     `npx tsx --tsconfig tsconfig.ssr.json "${dataHelper}"`,
@@ -150,6 +159,7 @@ try {
   cities = parsed.cities || [];
   industries = parsed.industries || [];
   posts = parsed.posts || [];
+  projects = parsed.projects || [];
 } finally {
   try { unlinkSync(dataHelper); } catch {}
 }
@@ -166,6 +176,45 @@ for (const lp of [...cities, ...industries]) {
     twitterTitle: lp.metaTitle,
     twitterDescription: lp.metaDescription,
     twitterImage: LOGO_URL,
+    sitemapPriority: '0.7',
+    sitemapChangefreq: 'monthly',
+  };
+}
+
+// Portfolio hub
+ROUTE_META['/portfolio'] = {
+  title: 'Web Design Portfolio | Aralo Studio | Meridian, Idaho',
+  description:
+    'See real websites built by Aralo Studio for small businesses. Custom web design for mortgage, construction, counseling, and more.',
+  canonical: `${SITE_ORIGIN}/portfolio/`,
+  ogTitle: 'Web Design Portfolio | Aralo Studio',
+  ogDescription:
+    'Real websites built for real businesses. Each project is designed, built, and hosted by Aralo Studio.',
+  ogUrl: `${SITE_ORIGIN}/portfolio/`,
+  ogImage: LOGO_URL,
+  twitterTitle: 'Web Design Portfolio | Aralo Studio',
+  twitterDescription:
+    'Real websites built for real businesses. Each project is designed, built, and hosted by Aralo Studio.',
+  twitterImage: LOGO_URL,
+  sitemapPriority: '0.8',
+  sitemapChangefreq: 'monthly',
+};
+
+// Individual case studies
+for (const p of projects) {
+  const route = `/portfolio/${p.slug}`;
+  const ogImage = `${SITE_ORIGIN}${p.heroImage}`;
+  ROUTE_META[route] = {
+    title: p.metaTitle,
+    description: p.metaDescription,
+    canonical: `${SITE_ORIGIN}${route}/`,
+    ogTitle: p.metaTitle,
+    ogDescription: p.metaDescription,
+    ogUrl: `${SITE_ORIGIN}${route}/`,
+    ogImage,
+    twitterTitle: p.metaTitle,
+    twitterDescription: p.metaDescription,
+    twitterImage: ogImage,
     sitemapPriority: '0.7',
     sitemapChangefreq: 'monthly',
   };
