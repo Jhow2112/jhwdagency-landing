@@ -48,18 +48,31 @@ export default function TestimonialsSection() {
               "
             </div>
 
-            {/* Stars */}
-            <div className="flex gap-1 items-center">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <svg key={i} width="18" height="18" viewBox="0 0 16 16" fill="#9a4528">
-                  <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z" />
-                </svg>
-              ))}
+            {/* Stars + verified badge */}
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex gap-1 items-center">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <svg key={i} width="18" height="18" viewBox="0 0 16 16" fill="#9a4528">
+                    <path d="M8 1l1.85 3.75L14 5.5l-3 2.92.71 4.13L8 10.5l-3.71 1.95.71-4.13L2 5.5l4.15-.75L8 1z" />
+                  </svg>
+                ))}
+              </div>
               <span
-                className="ml-2 text-xs text-[#6b6660] self-center font-semibold"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#e7e2d6] border border-[#d6d2c5] text-xs font-bold text-[#1f2a22]"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                5-Star Google Review
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" fill="#9a4528" />
+                  <path
+                    d="M5 8.2l2.2 2L11 6"
+                    stroke="white"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
+                </svg>
+                Verified Google Review
               </span>
             </div>
 
