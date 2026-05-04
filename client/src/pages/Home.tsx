@@ -9,6 +9,7 @@ import IndustriesSection from "@/components/IndustriesSection";
 import ProcessSection from "@/components/ProcessSection";
 import WorkSection from "@/components/WorkSection";
 import PricingSection from "@/components/PricingSection";
+import FreePreviewCallout from "@/components/FreePreviewCallout";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import AboutSection from "@/components/AboutSection";
@@ -54,6 +55,9 @@ export default function Home() {
 
         {/* Pricing — transparent pricing signals */}
         <PricingSection />
+
+        {/* Secondary CTA — soft alternative for price-shy visitors */}
+        <FreePreviewCallout />
 
         {/* Comparison — agency vs DIY vs us */}
         <ComparisonSection />

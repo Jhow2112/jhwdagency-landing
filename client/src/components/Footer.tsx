@@ -250,6 +250,7 @@ export default function Footer() {
                     { label: "Pricing", href: "/#pricing" },
                     { label: "How It Works", href: "/#services" },
                     { label: "FAQ", href: "/#faq" },
+                    { label: "Free Preview", href: "/free-preview/" },
                   ].map((s) => (
                     <li key={s.label}>
                       <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>

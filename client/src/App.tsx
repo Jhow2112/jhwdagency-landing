@@ -16,6 +16,7 @@ import BlogPostPage from "./pages/BlogPostPage";
 import IndustriesHub from "./pages/IndustriesHub";
 import PortfolioHub from "./pages/PortfolioHub";
 import CaseStudyPage from "./pages/CaseStudyPage";
+import FreePreviewPage from "./pages/FreePreviewPage";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path={"/industries"} component={IndustriesHub} />
       <Route path={"/portfolio"} component={PortfolioHub} />
       <Route path={"/portfolio/:slug"} component={CaseStudyPage} />
+      <Route path={"/free-preview"} component={FreePreviewPage} />
       <Route path={"/blog"} component={BlogListPage} />
       <Route path={"/blog/:slug"} component={BlogPostPage} />
       {[...CITIES, ...INDUSTRIES].map((d) => (

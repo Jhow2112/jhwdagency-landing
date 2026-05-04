@@ -181,6 +181,26 @@ for (const lp of [...cities, ...industries]) {
   };
 }
 
+// Free preview landing page (Meta ad target)
+ROUTE_META['/free-preview'] = {
+  title:
+    'Free Website Preview | See Your New Site Before You Pay | Aralo Studio',
+  description:
+    'Get a free custom homepage preview for your business. No cost, no commitment. Built by Aralo Studio in Meridian, Idaho. Ready in 48 hours.',
+  canonical: `${SITE_ORIGIN}/free-preview/`,
+  ogTitle: 'Free Website Preview | Aralo Studio',
+  ogDescription:
+    'Get a free custom homepage preview for your business. No cost, no commitment. Ready in 48 hours.',
+  ogUrl: `${SITE_ORIGIN}/free-preview/`,
+  ogImage: `${SITE_ORIGIN}/aralo-mark.png`,
+  twitterTitle: 'Free Website Preview | Aralo Studio',
+  twitterDescription:
+    'Get a free custom homepage preview for your business. No cost, no commitment. Ready in 48 hours.',
+  twitterImage: `${SITE_ORIGIN}/aralo-mark.png`,
+  sitemapPriority: '0.9',
+  sitemapChangefreq: 'monthly',
+};
+
 // Portfolio hub
 ROUTE_META['/portfolio'] = {
   title: 'Web Design Portfolio | Aralo Studio | Meridian, Idaho',
