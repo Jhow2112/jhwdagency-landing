@@ -15,8 +15,7 @@ import Lockup from "@/components/brand/Lockup";
 
 const SITE_ORIGIN = "https://aralostudio.com";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
-// Placeholder — replace with the real Aralo Studio Calendly URL.
-const CALENDLY_URL = "https://calendly.com/aralostudio/15min";
+const CALENDLY_URL = "https://calendly.com/jeremyhowardwebdesign-info/30min";
 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -229,6 +228,28 @@ export default function FreePreviewPage() {
         </div>
       </section>
 
+      {/* ── Outcomes pause — no heading, no decoration. Three quiet lines
+           sitting between How It Works and Social Proof. ── */}
+      <section className="py-12 sm:py-16 bg-white" aria-label="Why a website matters">
+        <div className="container max-w-2xl mx-auto">
+          <div className="flex flex-col gap-6 sm:gap-7 text-center">
+            {[
+              "Customers who can't find you online call your competitor instead.",
+              "One new customer from your website pays for it many times over.",
+              "A professional site doesn't just look good. It makes the phone ring.",
+            ].map((line) => (
+              <p
+                key={line}
+                className="text-lg sm:text-xl text-[#2f3b32] leading-relaxed"
+                style={{ fontFamily: "Inter, sans-serif", fontWeight: 400 }}
+              >
+                {line}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── 3. SOCIAL PROOF ── */}
       <section className="py-14 sm:py-20 bg-[#f3efe6]">
         <div className="container max-w-5xl mx-auto">
@@ -346,7 +367,7 @@ export default function FreePreviewPage() {
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#1f2a22] text-white text-sm font-bold hover:bg-[#9a4528] transition-colors"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Book a 15-minute call
+                Book a 30-minute call
                 <ExternalIcon />
               </a>
             </div>
