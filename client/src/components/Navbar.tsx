@@ -2,7 +2,8 @@
    Lockup over dark hero (transparent) or solid forest (scrolled).
    On both, the lockup uses cream + terracotta (on-forest contrast).
    Desktop: 6 nav items + CTA, with a Services dropdown that consolidates
-   Web Design / SEO & AEO / SEO & Growth so the row fits at 1024px+.
+   Web Design / SEO Plans so the row fits at 1024px+. The /seo-aeo/
+   educational page is reached from the footer + cross-links on /active-seo/.
    Mobile: hamburger menu with the dropdown's children rendered as
    flat indented entries (no nested interaction). */
 import { useState, useEffect, useRef } from "react";
@@ -17,8 +18,7 @@ const LINKS: NavItem[] = [
     label: "Services",
     children: [
       { label: "Web Design", href: "/#services" },
-      { label: "SEO & AEO", href: "/seo-aeo/" },
-      { label: "SEO & Growth", href: "/active-seo/" },
+      { label: "SEO Plans", href: "/active-seo/" },
     ],
   },
   { label: "Industries", href: "/industries/" },

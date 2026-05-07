@@ -232,10 +232,16 @@ export default function Footer() {
               <div>
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Services</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {["Web Design", "Visual Identity", "SEO & Local Search", "Custom Builds"].map((s) => (
-                    <li key={s}>
-                      <a href="/#services" className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                        {s}
+                  {[
+                    { label: "Web Design", href: "/#services" },
+                    { label: "Visual Identity", href: "/#services" },
+                    { label: "SEO & AEO", href: "/seo-aeo/" },
+                    { label: "SEO Plans", href: "/active-seo/" },
+                    { label: "Custom Builds", href: "/#services" },
+                  ].map((s) => (
+                    <li key={s.label}>
+                      <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                        {s.label}
                       </a>
                     </li>
                   ))}
