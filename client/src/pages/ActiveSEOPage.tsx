@@ -36,6 +36,7 @@ const tiers = [
       "No contracts, cancel anytime",
     ],
     cta: "Start with Essentials",
+    href: "https://buy.stripe.com/5kQ7sLayu0S14xn9d4cMM03",
     popular: false,
     highlight: false,
   },
@@ -54,6 +55,7 @@ const tiers = [
       "No contracts, cancel anytime",
     ],
     cta: "Choose Growth",
+    href: "https://buy.stripe.com/6oU6oHeOKgQZ8ND2OGcMM04",
     popular: true,
     highlight: true,
   },
@@ -70,6 +72,7 @@ const tiers = [
       "No contracts, cancel anytime",
     ],
     cta: "Go Full Service",
+    href: "https://buy.stripe.com/cNi4gz5eaeIR5Br1KCcMM05",
     popular: false,
     highlight: false,
   },
@@ -222,7 +225,9 @@ function TierCard({ tier }: { tier: typeof tiers[0] }) {
         </ul>
 
         <a
-          href="/#contact"
+          href={tier.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm transition-colors ${
             tier.highlight
               ? "bg-white text-[#1f2a22] hover:bg-[#f3efe6]"
