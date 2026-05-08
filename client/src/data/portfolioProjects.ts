@@ -82,7 +82,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     industry: "Painting & Construction",
     filterCategory: "Painting & Construction",
     location: "North Idaho (Idaho Panhandle & Western Montana)",
-    liveUrl: "https://silvervalleypainting.netlify.app/",
+    liveUrl: "https://silvervalleypainting.com/",
     shortDescription:
       "A full-featured site for a growing painting and construction company with commercial clients.",
     services: ["Web Design", "Copywriting", "SEO", "Hosting"],

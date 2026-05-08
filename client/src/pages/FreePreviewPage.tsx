@@ -271,7 +271,7 @@ export default function FreePreviewPage() {
               {
                 name: "Silver Valley Painting",
                 industry: "Painting & Construction",
-                liveUrl: "https://silvervalleypainting.netlify.app/",
+                liveUrl: "https://silvervalleypainting.com/",
                 image: "/portfolio/silver-valley-hero.png",
                 alt: "Silver Valley Painting homepage screenshot",
               },
