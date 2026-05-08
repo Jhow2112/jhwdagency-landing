@@ -1,1 +1,13 @@
-/* /index.html 200
+# Force www to apex (avoids duplicate-content split) — 301 permanent.
+https://www.aralostudio.com/*  https://aralostudio.com/:splat  301!
+http://www.aralostudio.com/*   https://aralostudio.com/:splat  301!
+
+# Old domain → new domain — 301 permanent. Only fires when the legacy
+# host is routed to this Netlify deploy.
+https://jeremyhowardwebdesign.com/*  https://aralostudio.com/:splat  301!
+http://jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
+https://www.jeremyhowardwebdesign.com/*  https://aralostudio.com/:splat  301!
+http://www.jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
+
+# SPA fallback — every other path serves index.html so client-side routing works.
+/*  /index.html  200

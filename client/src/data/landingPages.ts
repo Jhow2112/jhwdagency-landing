@@ -43,7 +43,7 @@ export const CITIES: LandingPageData[] = [
     label: "Boise",
     metaTitle: "Web Design Boise Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Boise small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Hand-built websites for Boise small businesses. Fast on mobile, sharp on desktop, with the local SEO that gets your shop found in Google.",
     heading: "Web Design in",
     headingAccent: "Boise, Idaho",
     subheading:
@@ -52,6 +52,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Boise businesses.",
     bodyParagraphs: [
       "Boise is a competitive market for local search. Whether you run a shop downtown, a service business in the North End, or work out of a home office in the foothills, your customers are checking Google before they call. I build sites for [contractors](/websites-for-contractors/), [restaurants](/websites-for-restaurants/), and [counselors](/websites-for-counselors/) across Boise that load fast, look professional, and tell Google exactly where you are and what you do — so the people searching nearby actually find you. I serve clients across Boise and the wider Treasure Valley, with local meetings available when you want them.",
+      "Boise's mix of legacy businesses and new arrivals means search competition is high. The bakery in the North End, the contractor in Garden City, and the law office downtown are all competing for attention from people scrolling on their phones. A site that loads in under two seconds, shows up correctly in Google's local pack, and answers the question your customer actually came to ask is worth more than a fancy template that takes ten seconds to render. I focus on the basics: speed, mobile usability, structured data, and clear calls to action. The result is a site that does the work for you even when you're not looking at it.",
     ],
   },
   {
@@ -60,7 +61,7 @@ export const CITIES: LandingPageData[] = [
     label: "Meridian",
     metaTitle: "Web Design Meridian Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Meridian small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Meridian's local web designer. Custom small-business websites built and hosted by hand, with proper local SEO included from day one.",
     heading: "Web Design in",
     headingAccent: "Meridian, Idaho",
     subheading:
@@ -69,6 +70,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Your neighbor in web design.",
     bodyParagraphs: [
       "I live and work in Meridian, which means I can meet you in person — at your shop, at a coffee place near The Village, or wherever's easy. I build websites for Meridian businesses across every part of town, including [contractors](/websites-for-contractors/), [restaurants](/websites-for-restaurants/), and [cleaning services](/websites-for-cleaning-services/). Every site is designed, hosted, and supported by me, so you always know who to call.",
+      "Meridian has grown from a quiet farming town into one of the fastest-growing cities in the country, and the local business landscape has changed with it. Long-time owners are competing for the same searches as new arrivals from Boise and out of state. The advantage goes to whoever's website is the easiest to use on a phone — clear hours, quick contact, photos that match the actual business. I keep things simple: one page or ten, every site I build for Meridian is structured around the questions a real customer asks, not the buzzwords a template assumes.",
     ],
   },
   {
@@ -77,7 +79,7 @@ export const CITIES: LandingPageData[] = [
     label: "Nampa",
     metaTitle: "Web Design Nampa Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Nampa small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Custom websites for Nampa businesses serving Canyon County. Mobile-first, fast, and built to convert searches into customer calls.",
     heading: "Web Design in",
     headingAccent: "Nampa, Idaho",
     subheading:
@@ -86,6 +88,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Nampa businesses.",
     bodyParagraphs: [
       "Nampa has grown fast, and the businesses growing with it need websites that keep up. I build clean, fast sites for Nampa [contractors](/websites-for-contractors/), [cleaning services](/websites-for-cleaning-services/), and [counselors](/websites-for-counselors/) that show up in Google for searches like \"plumber Nampa\" or \"counselor near me\" — and that actually convert visitors into calls and bookings. I work with Nampa businesses across the city, from shops along 12th Avenue to service businesses serving the wider Canyon County area.",
+      "Most Nampa customers reach a website through a phone screen, often while standing in a yard, a kitchen, or a parking lot. That changes how a site needs to work. Big tappable buttons, hours and address visible without scrolling, page loads measured in seconds rather than tens of seconds. I build with mobile-first design as the default, not as an afterthought. The same site has to look right on a desktop monitor at the office and on a five-year-old phone with a cracked screen. Get that part right and the rest of the site does its job.",
     ],
   },
   {
@@ -94,7 +97,7 @@ export const CITIES: LandingPageData[] = [
     label: "Eagle",
     metaTitle: "Web Design Eagle Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Eagle small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Polished small-business websites for Eagle, Idaho. Hand-built, hosted, and supported by one designer who actually picks up the phone.",
     heading: "Web Design in",
     headingAccent: "Eagle, Idaho",
     subheading:
@@ -103,6 +106,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Eagle businesses.",
     bodyParagraphs: [
       "Eagle's customer base expects polish. A website that looks dated or loads slowly costs you the click. I build sites that match the quality of the businesses I work with — including [contractors](/websites-for-contractors/), [restaurants](/websites-for-restaurants/), and [counselors](/websites-for-counselors/) — whether that's a boutique downtown, a real estate practice, or a professional service firm. Every site is hand-built, hosted, and supported, so you get a real website without the agency price tag.",
+      "Eagle's customer base is decisive about quality. A site that looks dated, loads slowly, or feels generic costs you the click before the visitor reads a single word. The same applies to professional services where the website is doing the verification work before the first call. I take time on the typography, photo selection, and color treatment so the site signals the same quality your business delivers. No template that looks like a hundred other Eagle businesses, no stock-photo model in a hard hat. Real photos and a thoughtful design read as legitimate from the first scroll.",
     ],
   },
   {
@@ -111,7 +115,7 @@ export const CITIES: LandingPageData[] = [
     label: "Caldwell",
     metaTitle: "Web Design Caldwell Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Caldwell small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Honest, professional small-business websites for Caldwell. Designed locally, hosted by hand, no agency markup or DIY headaches.",
     heading: "Web Design in",
     headingAccent: "Caldwell, Idaho",
     subheading:
@@ -120,6 +124,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Caldwell businesses.",
     bodyParagraphs: [
       "Caldwell businesses serve customers across Canyon County and beyond. Whether you're a [contractor](/websites-for-contractors/), a [cleaning service](/websites-for-cleaning-services/), a [counselor](/websites-for-counselors/), or a downtown shop, your website needs to do two things well: tell people what you do, and make it easy to get in touch. That's the kind of site I build — no fluff, no gimmicks, just a clean professional presence that earns calls.",
+      "Caldwell businesses often serve customers across Canyon County and into Boise, which means your site has to work for both local foot traffic and people driving in from elsewhere. That's a different problem than just ranking for one neighborhood. I build sites that list service areas clearly, include directions and parking notes when it matters, and signal trust with real photos, real reviews, and real contact info. The goal isn't to look like a national chain. It's to look like the established local business you actually are: competent, reachable, and worth the drive.",
     ],
   },
   {
@@ -128,7 +133,7 @@ export const CITIES: LandingPageData[] = [
     label: "Kuna",
     metaTitle: "Web Design Kuna Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Kuna small businesses. Designed, built, and hosted by Aralo Studio. Starting at $495. Live in 5 days.",
+      "Web design for Kuna small businesses ready to compete with bigger players in Boise and Meridian. Local SEO included from day one.",
     heading: "Web Design in",
     headingAccent: "Kuna, Idaho",
     subheading:
@@ -137,6 +142,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Kuna businesses.",
     bodyParagraphs: [
       "Kuna's small-town feel is part of what makes it great — but you still need a website that holds up against the bigger players nearby. I build clean, fast, professional sites for Kuna [contractors](/websites-for-contractors/), [cleaning services](/websites-for-cleaning-services/), and [restaurants](/websites-for-restaurants/), with proper local SEO so you show up when nearby customers search. Every site is designed, hosted, and supported by me personally, so you never get bounced between departments.",
+      "Kuna sits between bigger Treasure Valley markets, which can be either a problem or an advantage depending on how your website is set up. Search engines are happy to send Kuna customers to a Meridian or Nampa business if the local Kuna site doesn't do the basics right. Get the Google Business Profile complete, the on-page SEO clean, and the site fast on mobile, and Google will start sending the local searches your way. Pair that with photos of recent work or your storefront and the visit-then-call rate goes up.",
     ],
   },
 ];
@@ -146,9 +152,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-contractors",
     category: "industry",
     label: "Contractors",
-    metaTitle: "Contractor Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Contractor Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Professional websites for contractors and trades in Meridian and across the Treasure Valley. Show your work, win bigger jobs, get found on Google. Starting at $495.",
+      "Mobile-first websites for contractors and trades in Meridian and the Treasure Valley. Show your work, win bigger jobs, get found on Google.",
     heading: "Websites for",
     headingAccent: "Contractors",
     subheading:
@@ -165,9 +171,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-restaurants",
     category: "industry",
     label: "Restaurants",
-    metaTitle: "Restaurant Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Restaurant Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Restaurant websites for Meridian and Treasure Valley spots that load fast, show your menu, and bring people in. Built and hosted by Aralo Studio. Starting at $495.",
+      "Restaurant websites for Meridian and the Treasure Valley. Fast menus, current hours, and photos that bring hungry customers through the door.",
     heading: "Websites for",
     headingAccent: "Restaurants",
     subheading:
@@ -184,9 +190,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-cleaning-services",
     category: "industry",
     label: "Cleaning Services",
-    metaTitle: "Cleaning Service Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Cleaning Service Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Cleaning service websites for Meridian and Treasure Valley businesses that build trust and book appointments. Fast, professional, mobile-friendly. Starting at $495.",
+      "Cleaning service websites for Meridian and the Treasure Valley. Build trust, show service area, book more appointments. Fast and mobile-first.",
     heading: "Websites for",
     headingAccent: "Cleaning Services",
     subheading:
@@ -203,9 +209,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-counselors",
     category: "industry",
     label: "Counselors",
-    metaTitle: "Counselor & Therapist Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Counselor Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Calm, professional websites for counselors and therapists in Meridian and across the Treasure Valley. Privacy-conscious and easy to update. Starting at $495.",
+      "Calm, professional websites for counselors and therapists in Meridian and the Treasure Valley. Privacy-conscious, warm in tone, easy to update.",
     heading: "Websites for",
     headingAccent: "Counselors",
     subheading:
@@ -222,9 +228,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-hvac",
     category: "industry",
     label: "HVAC Companies",
-    metaTitle: "HVAC Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "HVAC Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for HVAC companies in Meridian and across the Treasure Valley. Tappable phone numbers, 24/7 callouts, real photos. Built to convert calls. Starting at $495.",
+      "Websites for HVAC companies in Meridian and the Treasure Valley. Tappable phone numbers, 24/7 callouts, real photos. Built to convert calls.",
     heading: "Websites for",
     headingAccent: "HVAC Companies in the Treasure Valley",
     subheading:
@@ -242,9 +248,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-landscapers",
     category: "industry",
     label: "Landscapers",
-    metaTitle: "Landscaping Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Landscaping Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for landscaping and lawn care businesses in Meridian and across the Treasure Valley. Photo galleries, clear services, year-round visibility. Starting at $495.",
+      "Websites for landscaping and lawn care businesses in Meridian and the Treasure Valley. Photo galleries, clear services, local SEO included.",
     heading: "Websites for",
     headingAccent: "Landscapers in the Treasure Valley",
     subheading:
@@ -262,9 +268,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-plumbers",
     category: "industry",
     label: "Plumbers",
-    metaTitle: "Plumber Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Plumber Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for plumbers in Meridian and across the Treasure Valley. Click-to-call on every page, emergency callouts, license info visible. Built to convert calls. Starting at $495.",
+      "Websites for plumbers in Meridian and the Treasure Valley. Click-to-call on every page, emergency callouts, visible license info. Built to convert.",
     heading: "Websites for",
     headingAccent: "Plumbers in the Treasure Valley",
     subheading:
@@ -282,9 +288,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-electricians",
     category: "industry",
     label: "Electricians",
-    metaTitle: "Electrician Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Electrician Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for electricians in Meridian and across the Treasure Valley. License info visible, residential and commercial sections, emergency callouts. Starting at $495.",
+      "Websites for electricians in Meridian and the Treasure Valley. License info visible, residential and commercial sections, emergency callouts.",
     heading: "Websites for",
     headingAccent: "Electricians in the Treasure Valley",
     subheading:
@@ -302,9 +308,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-painters",
     category: "industry",
     label: "Painters",
-    metaTitle: "Painter Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Painter Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for interior and exterior painters in Meridian and across the Treasure Valley. Before-and-after galleries, clear service descriptions, real testimonials. Starting at $495.",
+      "Websites for interior and exterior painters in Meridian and the Treasure Valley. Before-and-after galleries and real customer testimonials.",
     heading: "Websites for",
     headingAccent: "Painters in the Treasure Valley",
     subheading:
@@ -322,9 +328,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-salons",
     category: "industry",
     label: "Salons & Barbershops",
-    metaTitle: "Salon & Barbershop Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Salon & Barbershop Web Design Meridian | Aralo Studio",
     metaDescription:
-      "Websites for hair salons and barbershops in Meridian and across the Treasure Valley. Real photos, current service menus, easy booking. Starting at $495.",
+      "Websites for hair salons and barbershops in Meridian and the Treasure Valley. Real photos, current service menus, easy online booking.",
     heading: "Websites for",
     headingAccent: "Salons & Barbershops in the Treasure Valley",
     subheading:
@@ -342,9 +348,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-auto-detailers",
     category: "industry",
     label: "Auto Detailers",
-    metaTitle: "Auto Detailer Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Auto Detailer Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Websites for mobile auto detailers in Meridian and across the Treasure Valley. Before-and-after photos, package pricing, service area maps. Starting at $495.",
+      "Websites for mobile auto detailers in Meridian and the Treasure Valley. Before-and-after photos, package pricing, service area maps.",
     heading: "Websites for",
     headingAccent: "Auto Detailers in the Treasure Valley",
     subheading:
@@ -362,9 +368,9 @@ export const INDUSTRIES: LandingPageData[] = [
     slug: "/websites-for-real-estate",
     category: "industry",
     label: "Real Estate Agents",
-    metaTitle: "Real Estate Agent Web Design Meridian & Treasure Valley | Aralo Studio",
+    metaTitle: "Real Estate Agent Web Design Meridian, Idaho | Aralo Studio",
     metaDescription:
-      "Personal websites for real estate agents in Meridian and across the Treasure Valley. Stand out from cookie-cutter brokerage sites. Real bios, area expertise, real testimonials. Starting at $495.",
+      "Personal websites for real estate agents in Meridian and the Treasure Valley. Stand out from brokerage templates with real bios and area expertise.",
     heading: "Websites for",
     headingAccent: "Real Estate Agents in the Treasure Valley",
     subheading:

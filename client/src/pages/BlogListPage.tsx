@@ -14,7 +14,7 @@ export default function BlogListPage() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     window.scrollTo(0, 0);
-    document.title = "Blog | Aralo Studio";
+    document.title = "Web Design & Local SEO Blog | Aralo Studio";
   }, []);
 
   return (

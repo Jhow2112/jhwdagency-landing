@@ -7,8 +7,8 @@
     <!-- ═══════════════════════════════════════════════
          PRIMARY SEO META TAGS
     ═══════════════════════════════════════════════ -->
-    <title>Web Design Meridian Idaho | Aralo Studio | Starting at $495</title>
-    <meta name="description" content="Aralo Studio designs websites for local businesses in Meridian, Idaho. Custom sites built, hosted, and maintained for you. Live in 5 days. Starting at $495. Serving Boise, Nampa, Caldwell, and the Treasure Valley." />
+    <title>Web Design Meridian Idaho | Aralo Studio | From $495</title>
+    <meta name="description" content="Custom small-business websites in Meridian, Idaho. Designed, built, hosted, and maintained by Jeremy Howard. Live in 5 days. Starting at $495." />
     <meta name="keywords" content="Aralo Studio, web design Meridian Idaho, web designer Meridian ID, small business website Boise Idaho, affordable web design Treasure Valley, local business website design Idaho, website designer near me Meridian, web design Boise, custom website design Idaho, web design Nampa Idaho, professional website design Caldwell Idaho, web design for small business, web design starting at $495" />
     <meta name="author" content="Aralo Studio" />
     <meta name="robots" content="index, follow" />
@@ -50,8 +50,10 @@
     <meta name="ICBM" content="43.6121, -116.3915" />
 
     <!-- ═══════════════════════════════════════════════
-         JSON-LD STRUCTURED DATA
-         Covers: LocalBusiness, Service (x3), FAQPage, Review
+         JSON-LD STRUCTURED DATA (sitewide shell)
+         Covers: LocalBusiness (with offer catalog + review) and WebSite.
+         FAQPage schema lives in FAQSection.tsx so it only emits on the
+         home page where the FAQ accordion is visible.
     ═══════════════════════════════════════════════ -->
     <script type="application/ld+json">
     {
@@ -64,7 +66,7 @@
           "description": "Aralo Studio is a one-person web design practice in Meridian, Idaho. We build professional, affordable websites for local businesses across the Treasure Valley and nationwide. Services include custom web design, visual identity, SEO, hosting, and ongoing support.",
           "url": "https://aralostudio.com/",
           "telephone": "+12086152884",
-          "email": "jeremy@aralostudio.com",
+          "email": "info@aralostudio.com",
           "founder": {
             "@type": "Person",
             "name": "Jeremy Howard",
@@ -190,84 +192,6 @@
             "reviewCount": "1",
             "bestRating": "5"
           }
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://aralostudio.com/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "How much does a website cost from Aralo Studio?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 5 pages), and $1,295 for the Premium package (up to 10 pages). All packages include a one-time setup fee plus a low monthly hosting and support fee starting at $29/month."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How long does it take to build a website?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Most websites are live within 5 business days of receiving your content and approval. The exact timeline depends on how quickly feedback and content are provided."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I own my website?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. You own your website and all its content. The monthly fee covers hosting, maintenance, and support, not ownership. You can take your site elsewhere at any time."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Is hosting included in the price?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. All packages include managed hosting, SSL certificate, and ongoing support for a low monthly fee starting at $29/month. There are no surprise fees or hidden costs."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can you help my business show up on Google?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. All packages include basic on-page SEO. The Plus and Premium packages include Google Business Profile setup to help your business appear in local search results and Google Maps. For ongoing Google Business Profile management and optimized content month over month, see the SEO & Growth service."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do you serve businesses outside of Meridian, Idaho?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes. While Aralo Studio is based in Meridian, Idaho, we serve clients anywhere in the United States via Zoom and remote collaboration. We work with local businesses across the Treasure Valley and beyond."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Are there long-term contracts?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "No. There are no long-term contracts. Monthly hosting and support plans can be cancelled with 30 days notice at any time."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What types of businesses do you build websites for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aralo Studio works with a wide range of local businesses including counselors, therapists, contractors, restaurants, retail shops, real estate agents, coaches, consultants, and service-based businesses of all kinds. If you need a professional website that attracts local customers, we can help."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Who is the best web designer in Meridian Idaho?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aralo Studio is a highly-rated web design studio based in Meridian, Idaho, run by Jeremy Howard. Aralo specializes in building professional, affordable websites for local businesses across the Treasure Valley including Boise, Nampa, Caldwell, and Eagle. Clients praise the fast turnaround, personal service, and results-driven designs."
-              }
-            }
-          ]
         },
         {
           "@type": "WebSite",

@@ -133,7 +133,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       "On-page SEO targeting local counseling keywords",
       "Fast load times across mobile and desktop",
     ],
-    metaTitle: "Crisis to Comfort Counseling Website | Aralo Studio Portfolio",
+    metaTitle: "Crisis to Comfort Counseling | Aralo Studio Portfolio",
     metaDescription:
       "Case study: a calm, approachable website for a Treasure Valley, Idaho counseling practice. Designed and built by Aralo Studio.",
   },

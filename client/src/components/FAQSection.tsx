@@ -1,6 +1,8 @@
 /* FAQSection — Aralo Studio
-   AEO-optimized: questions mirror the JSON-LD FAQPage schema in index.html
-   Uses semantic <details>/<summary> for native accessibility and crawler readability
+   AEO-optimized. Emits the FAQPage JSON-LD inline (derived from the same
+   `faqs` array as the visible accordion) so the schema and visible content
+   never drift, and the schema only ships on pages that actually render this
+   section (the home page).
    Design: clean accordion on off-white background */
 import { useState, useRef, useEffect } from "react";
 
@@ -118,9 +120,29 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
   );
 }
 
+function FAQSchema() {
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://aralostudio.com/#faq",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
+
 export default function FAQSection() {
   return (
     <section id="faq" className="py-14 sm:py-20 md:py-24 bg-white" aria-labelledby="faq-heading">
+      <FAQSchema />
       <div className="container">
         <div className="max-w-3xl mx-auto">
           {/* Header */}

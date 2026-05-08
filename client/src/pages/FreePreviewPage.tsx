@@ -95,8 +95,7 @@ export default function FreePreviewPage() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     window.scrollTo(0, 0);
-    document.title =
-      "Free Website Preview | See Your New Site Before You Pay | Aralo Studio";
+    document.title = "Free Website Preview | Aralo Studio | Meridian Idaho";
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -490,10 +489,10 @@ export default function FreePreviewPage() {
                   Something went wrong submitting the form. Please try again,
                   or email{" "}
                   <a
-                    href="mailto:jeremy@aralostudio.com"
+                    href="mailto:info@aralostudio.com"
                     className="underline font-semibold"
                   >
-                    jeremy@aralostudio.com
+                    info@aralostudio.com
                   </a>
                   .
                 </p>

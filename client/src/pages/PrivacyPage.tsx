@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const LAST_UPDATED = "April 15, 2026";
-const EMAIL = "jeremy@aralostudio.com";
+const EMAIL = "info@aralostudio.com";
 const DOMAIN = "aralostudio.com";
 
 export default function PrivacyPage() {

@@ -6,7 +6,7 @@ import { CITIES, INDUSTRIES } from "@/data/landingPages";
 import LockupCompact from "./brand/LockupCompact";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
-const EMAIL = "jeremy@aralostudio.com";
+const EMAIL = "info@aralostudio.com";
 const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
 
@@ -310,6 +310,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Aralo Studio. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
+            <a href="/" className="text-xs text-white/50 hover:text-white/65 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>Designed by Aralo Studio</a>
             <a href="/privacy/" className="text-xs text-white/50 hover:text-white/65 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>Privacy</a>
             <a href="/terms/" className="text-xs text-white/50 hover:text-white/65 transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>Terms</a>
           </div>

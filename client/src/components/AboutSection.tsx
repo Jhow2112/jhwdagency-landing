@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
-const EMAIL = "jeremy@aralostudio.com";
+const EMAIL = "info@aralostudio.com";
 
 export default function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);

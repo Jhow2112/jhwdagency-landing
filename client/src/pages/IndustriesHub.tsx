@@ -42,8 +42,7 @@ export default function IndustriesHub() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     window.scrollTo(0, 0);
-    document.title =
-      "Industries We Serve | Small Business Web Design Meridian Idaho | Aralo Studio";
+    document.title = "Industries We Serve | Aralo Studio | Meridian, Idaho";
   }, []);
 
   return (

@@ -10,6 +10,7 @@ const services = [
       "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days, not months. Hosting, updates, and support are all included.",
     tags: ["Custom Design", "Mobile-First", "Hosting Included"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-contractor-bgXiBQZvn3CX4CGsizQjKp.webp",
+    imageAlt: "Custom contractor website built by Aralo Studio",
     color: "bg-[#e7e2d6]",
   },
   {
@@ -19,6 +20,7 @@ const services = [
       "Your website should look like it belongs to you. I create cohesive visual styles in color, typography, and layout that reflect your brand and build trust with visitors.",
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-restaurant-aREJ6AvRtneKLgdTb2u3gm.webp",
+    imageAlt: "Restaurant website with custom visual identity by Aralo Studio",
     color: "bg-[#e7e2d6]",
   },
   {
@@ -28,6 +30,7 @@ const services = [
       "Get found by the customers who are already searching for you. I set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
     tags: ["Google Business", "Local SEO", "Page Speed"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-counseling-nG9Npw57ZJtcFSmQsfdxd9.webp",
+    imageAlt: "Counseling website optimized for local search by Aralo Studio",
     color: "bg-[#e7e2d6]",
   },
 ];
@@ -59,7 +62,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
       <div className={`relative h-48 overflow-hidden ${service.color}`}>
         <img
           src={service.image}
-          alt={service.title}
+          alt={service.imageAlt}
           width="1920"
           height="1434"
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

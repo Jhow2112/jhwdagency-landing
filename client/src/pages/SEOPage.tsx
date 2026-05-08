@@ -172,7 +172,7 @@ function FAQItem({ faq }: { faq: typeof faqs[0] }) {
 export default function SEOPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "SEO & AEO Services for Small Businesses | Aralo Studio | Meridian, Idaho";
+    document.title = "SEO & AEO Services Meridian Idaho | Aralo Studio";
 
     const setMeta = (selector: string, attr: string, value: string) => {
       let el = document.head.querySelector(selector) as HTMLMetaElement | null;
@@ -187,7 +187,7 @@ export default function SEOPage() {
     };
 
     const description =
-      "On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.";
+      "On-page SEO, Answer Engine Optimization, and Google Business Profile setup for Meridian and Treasure Valley businesses. Included in Plus and Premium plans.";
 
     setMeta('meta[name="description"]', "content", description);
     setMeta('meta[property="og:title"]', "content", "SEO & AEO Services | Aralo Studio");

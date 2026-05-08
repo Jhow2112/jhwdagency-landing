@@ -33,18 +33,18 @@ const LOGO_URL = 'https://aralostudio.com/og-image.png';
 // only requires a single edit in that data file.
 const ROUTE_META = {
   '/': {
-    title: 'Web Design Meridian Idaho | Aralo Studio | Starting at $495',
+    title: 'Web Design Meridian Idaho | Aralo Studio | From $495',
     description:
-      'Professional web design in Meridian, Idaho for local businesses. Custom websites designed, built, hosted, and maintained by Jeremy Howard. Live in 5 days. Starting at $495. Serving Boise, Nampa, Caldwell, and the Treasure Valley.',
+      'Custom small-business websites in Meridian, Idaho. Designed, built, hosted, and maintained by Jeremy Howard. Live in 5 days. Starting at $495.',
     canonical: `${SITE_ORIGIN}/`,
-    ogTitle: 'Professional Web Design for Local Businesses | Aralo Studio',
+    ogTitle: 'Web Design for Local Businesses | Aralo Studio',
     ogDescription:
-      'Websites designed, built, hosted, and maintained for small businesses. Starting at $495. Live in 5 days.',
+      'Websites designed, built, hosted, and maintained for small businesses. From $495. Live in 5 days.',
     ogUrl: `${SITE_ORIGIN}/`,
     ogImage: LOGO_URL,
-    twitterTitle: 'Professional Web Design for Local Businesses | Aralo Studio',
+    twitterTitle: 'Web Design for Local Businesses | Aralo Studio',
     twitterDescription:
-      'Websites designed, built, hosted, and maintained for small businesses. Starting at $495. Live in 5 days.',
+      'Websites designed, built, hosted, and maintained for small businesses. From $495. Live in 5 days.',
     twitterImage: LOGO_URL,
     sitemapPriority: '1.0',
     sitemapChangefreq: 'monthly',
@@ -52,7 +52,7 @@ const ROUTE_META = {
   '/seo-aeo': {
     title: 'SEO & AEO Services Meridian Idaho | Aralo Studio',
     description:
-      'On-page SEO, Answer Engine Optimization, and Google Business Profile setup for local businesses. Included in Plus and Premium web design plans. Meridian, Idaho.',
+      'On-page SEO, Answer Engine Optimization, and Google Business Profile setup for Meridian and Treasure Valley businesses. Included in Plus and Premium plans.',
     canonical: `${SITE_ORIGIN}/seo-aeo/`,
     ogTitle: 'SEO & AEO Services | Aralo Studio',
     ogDescription:
@@ -69,7 +69,7 @@ const ROUTE_META = {
   '/privacy': {
     title: 'Privacy Policy | Aralo Studio',
     description:
-      'Privacy policy for Aralo Studio — how we collect, use, and protect information on our website.',
+      'Privacy policy for Aralo Studio: what we collect, why, and how we protect your information when you use this website or send a contact form.',
     canonical: `${SITE_ORIGIN}/privacy/`,
     ogTitle: 'Privacy Policy | Aralo Studio',
     ogDescription: 'How Aralo Studio handles information collected through this site.',
@@ -83,7 +83,7 @@ const ROUTE_META = {
   },
   '/terms': {
     title: 'Terms of Service | Aralo Studio',
-    description: 'Terms of service for Aralo Studio — the agreement governing use of our services.',
+    description: 'Terms of service for Aralo Studio: the agreement governing engagement with our web design, hosting, and ongoing support services.',
     canonical: `${SITE_ORIGIN}/terms/`,
     ogTitle: 'Terms of Service | Aralo Studio',
     ogDescription: 'The agreement governing engagement with Aralo Studio.',
@@ -98,7 +98,7 @@ const ROUTE_META = {
   '/active-seo': {
     title: 'SEO & Growth Plans Meridian & Treasure Valley | Aralo Studio',
     description:
-      'Monthly SEO and AEO management for local businesses. Three plans starting at $199/month: on-page SEO, schema tuning, Google Business Profile management, and SEO-optimized content. No contracts.',
+      'Monthly SEO and AEO management for local businesses. Three plans from $199/month: schema tuning, Google Business Profile, optimized content.',
     canonical: `${SITE_ORIGIN}/active-seo/`,
     ogTitle: 'SEO & Growth | Monthly SEO Plans | Aralo Studio',
     ogDescription:
@@ -183,8 +183,7 @@ for (const lp of [...cities, ...industries]) {
 
 // Free preview landing page (Meta ad target)
 ROUTE_META['/free-preview'] = {
-  title:
-    'Free Website Preview | See Your New Site Before You Pay | Aralo Studio',
+  title: 'Free Website Preview | Aralo Studio | Meridian Idaho',
   description:
     'Get a free custom homepage preview for your business. No cost, no commitment. Built by Aralo Studio in Meridian, Idaho. Ready in 48 hours.',
   canonical: `${SITE_ORIGIN}/free-preview/`,
@@ -242,10 +241,9 @@ for (const p of projects) {
 
 // Industries hub
 ROUTE_META['/industries'] = {
-  title:
-    'Industries We Serve | Small Business Web Design Meridian Idaho | Aralo Studio',
+  title: 'Industries We Serve | Aralo Studio | Meridian, Idaho',
   description:
-    'Professional websites for contractors, restaurants, HVAC companies, salons, and more. Aralo Studio builds affordable websites for small businesses across the Treasure Valley.',
+    'Websites for contractors, restaurants, HVAC, salons, and more across the Treasure Valley. Aralo Studio builds affordable sites for small businesses.',
   canonical: `${SITE_ORIGIN}/industries/`,
   ogTitle: 'Industries We Serve | Aralo Studio',
   ogDescription:
@@ -262,9 +260,9 @@ ROUTE_META['/industries'] = {
 
 // Blog index
 ROUTE_META['/blog'] = {
-  title: 'Blog | Aralo Studio',
+  title: 'Web Design & Local SEO Blog | Aralo Studio',
   description:
-    'Plain-language writing on web design, local search, and getting found — from Aralo Studio in Meridian, Idaho.',
+    'Plain-language writing on web design, local search, and getting found on Google. For small business owners, from Aralo Studio in Meridian, Idaho.',
   canonical: `${SITE_ORIGIN}/blog/`,
   ogTitle: 'Aralo Studio Blog',
   ogDescription:

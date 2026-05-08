@@ -189,7 +189,7 @@ The companies at the [top of Google](/seo-aeo/) in your market aren't there beca
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "does-your-boise-business-need-a-website",
-    title: "Does Your Boise Small Business Actually Need a Website in 2026?",
+    title: "Does Your Boise Business Need a Website?",
     date: "2026-05-02",
     category: "Local Business",
     headerImage: "/blog/blog-photo-01-storefront.jpg",
@@ -198,8 +198,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "why-competitors-show-up-on-google",
-    title:
-      "Why Your Treasure Valley Competitors Are Showing Up on Google and You're Not",
+    title: "Why Your Competitors Outrank You on Google",
     date: "2026-05-02",
     category: "Local SEO",
     headerImage: "/blog/blog-photo-02-google.jpg",
@@ -208,7 +207,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "hvac-website-convert-calls",
-    title: "What Every HVAC Company's Website Needs to Convert Calls",
+    title: "What HVAC Websites Need to Convert Calls",
     date: "2026-05-02",
     category: "Industry Guide",
     headerImage: "/blog/blog-photo-03-hvac.jpg",
