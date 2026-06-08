@@ -105,7 +105,7 @@ export default function TestimonialsSection() {
                   >
                     Crisis to Comfort Counseling
                   </a>{" "}
-                  Meridian, ID
+                  Coeur d'Alene, ID
                 </p>
               </div>
             </div>
