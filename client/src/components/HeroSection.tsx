@@ -34,12 +34,15 @@ export default function HeroSection() {
           <h1
             className="fade-up fade-up-delay-2 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#f3efe6] leading-[1.02]"
           >
-            Websites that{" "}
+            Built to get{" "}
             <em className="not-italic" style={{ color: "#d97a55", fontStyle: "normal" }}>
-              actually
+              found.
             </em>
             <br />
-            work.
+            Made to{" "}
+            <em className="not-italic" style={{ color: "#d97a55", fontStyle: "normal" }}>
+              last.
+            </em>
           </h1>
 
           {/* Subtext */}
