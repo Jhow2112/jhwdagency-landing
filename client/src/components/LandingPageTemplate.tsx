@@ -169,7 +169,7 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Tell me about your business — I'll get back to you within one business day.
+            Tell us about your business — we'll get back to you within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

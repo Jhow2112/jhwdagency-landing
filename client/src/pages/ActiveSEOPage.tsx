@@ -98,11 +98,11 @@ const compareRows: { feature: string; cells: [CellValue, CellValue, CellValue] }
 const faqs = [
   {
     q: "What's the difference between SEO & Growth and the SEO included in my website plan?",
-    a: "Every website I build includes foundational on-page SEO: proper titles, descriptions, schema markup, and a Google Business Profile setup on Plus and Premium plans. The Premium plan also includes a monthly SEO audit. SEO & Growth is a separate, ongoing monthly service that goes further: active Google Business Profile management, monthly AEO schema tuning, citation monitoring, and SEO-optimized blog content on the Growth and Full Service tiers. Think of the website plan as the foundation and SEO & Growth as the marketing engine that keeps it visible.",
+    a: "Every website we build includes foundational on-page SEO: proper titles, descriptions, schema markup, and a Google Business Profile setup on Plus and Premium plans. The Premium plan also includes a monthly SEO audit. SEO & Growth is a separate, ongoing monthly service that goes further: active Google Business Profile management, monthly AEO schema tuning, citation monitoring, and SEO-optimized blog content on the Growth and Full Service tiers. Think of the website plan as the foundation and SEO & Growth as the marketing engine that keeps it visible.",
   },
   {
     q: "Do I need to already have a website with you to sign up?",
-    a: "No. SEO & Growth works with any existing website, whether I built it or someone else did. I'll do an initial audit of your current setup and let you know what's in good shape and what needs work before we start.",
+    a: "No. SEO & Growth works with any existing website, whether we built it or someone else did. We'll do an initial audit of your current setup and let you know what's in good shape and what needs work before we start.",
   },
   {
     q: "Which plan should I start with?",
@@ -110,7 +110,7 @@ const faqs = [
   },
   {
     q: "How long does it take to see results?",
-    a: "Honest answer: it varies. For local searches with low competition, some clients see movement in 4 to 8 weeks. For more competitive markets, it can take 3 to 6 months. SEO is a long-term investment. What I can promise is that your site will be set up correctly and kept current every single month.",
+    a: "Honest answer: it varies. For local searches with low competition, some clients see movement in 4 to 8 weeks. For more competitive markets, it can take 3 to 6 months. SEO is a long-term investment. What we can promise is that your site will be set up correctly and kept current every single month.",
   },
   {
     q: "Can I cancel at any time?",
@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     q: "Will you guarantee I rank number one on Google?",
-    a: "No. No one can honestly make that guarantee. What I can guarantee is that your site will be technically sound, your Google Business Profile will be active and accurate, and your content will be structured correctly for both search engines and AI tools. That gives you the best possible foundation.",
+    a: "No. No one can honestly make that guarantee. What we can guarantee is that your site will be technically sound, your Google Business Profile will be active and accurate, and your content will be structured correctly for both search engines and AI tools. That gives you the best possible foundation.",
   },
 ];
 
@@ -426,7 +426,7 @@ export default function ActiveSEOPage() {
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Tell me about your business and I'll start with a free audit of your current SEO setup. From there we'll pick the plan that fits.
+            Tell us about your business and we'll start with a free audit of your current SEO setup. From there we'll pick the plan that fits.
           </p>
           <a
             href="/#contact"

@@ -19,12 +19,12 @@ const whatIsDone = [
   },
   {
     title: "AEO: Answer Engine Optimization",
-    description:      "More people are using AI tools like ChatGPT and Google's AI search to find local businesses. I make sure your site is set up so those tools can accurately describe your business: what you do, where you are, and what customers say about you.",
+    description:      "More people are using AI tools like ChatGPT and Google's AI search to find local businesses. We make sure your site is set up so those tools can accurately describe your business: what you do, where you are, and what customers say about you.",
     included: ["Plus", "Premium"],
   },
   {
     title: "Google Business Profile Setup",
-    description:      "A complete, accurate Google Business Profile is one of the most impactful things a local business can have. I set up or clean up your profile (business category, service areas, hours, photos, and description) so you show up correctly in Maps and local search.",
+    description:      "A complete, accurate Google Business Profile is one of the most impactful things a local business can have. We set up or clean up your profile (business category, service areas, hours, photos, and description) so you show up correctly in Maps and local search.",
     included: ["Plus", "Premium"],
   },
   {
@@ -36,13 +36,13 @@ const whatIsDone = [
   {
     title: "Monthly SEO Audit",
     description:
-      "Every month I review your page titles, meta descriptions, and on-page structure for the changes that matter most. Premium hosting includes a monthly audit; SEO & Growth plans add active updates on top of the audit.",
+      "Every month we review your page titles, meta descriptions, and on-page structure for the changes that matter most. Premium hosting includes a monthly audit; SEO & Growth plans add active updates on top of the audit.",
     included: ["Premium", "SEO & Growth"],
   },
   {
     title: "Monthly AEO Schema Tuning",
     description:
-      "AI answer engines update their indexes constantly. I refine your FAQ content and structured-data markup monthly so tools like ChatGPT, Perplexity, and Google's AI Overviews keep representing your business accurately. Available through SEO & Growth.",
+      "AI answer engines update their indexes constantly. We refine your FAQ content and structured-data markup monthly so tools like ChatGPT, Perplexity, and Google's AI Overviews keep representing your business accurately. Available through SEO & Growth.",
     included: ["SEO & Growth"],
   },
   {
@@ -54,7 +54,7 @@ const whatIsDone = [
   {
     title: "Local Citation Monitoring",
     description:
-      "Inconsistent business listings across the web hurt local rankings. I monitor your NAP (Name, Address, Phone) consistency and flag or fix discrepancies as they appear. Available through SEO & Growth (Growth tier and above).",
+      "Inconsistent business listings across the web hurt local rankings. We monitor your NAP (Name, Address, Phone) consistency and flag or fix discrepancies as they appear. Available through SEO & Growth (Growth tier and above).",
     included: ["SEO & Growth"],
   },
 ];
@@ -62,7 +62,7 @@ const whatIsDone = [
 const faqs = [
   {
     q: "How long does it take to see results from SEO?",
-    a: "Honest answer: it varies. For local searches with low competition, some clients see movement in 4–8 weeks. For more competitive markets, it can take 3–6 months. SEO is a long-term investment, not a quick fix. What I can do is make sure your site is set up correctly from day one so you're not starting from behind.",
+    a: "Honest answer: it varies. For local searches with low competition, some clients see movement in 4–8 weeks. For more competitive markets, it can take 3–6 months. SEO is a long-term investment, not a quick fix. What we can do is make sure your site is set up correctly from day one so you're not starting from behind.",
   },
   {
     q: "What is AEO and why does it matter?",    a: "AEO stands for Answer Engine Optimization. It's the practice of structuring your content so that AI tools like ChatGPT, Perplexity, Google's AI Overviews, and Siri can accurately represent your business when someone asks a relevant question. As more people use AI to find local services, being well-represented in those answers matters more and more." },
@@ -239,7 +239,7 @@ export default function SEOPage() {
             className="text-base sm:text-lg text-white/65 max-w-xl mx-auto leading-relaxed"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Every site I build includes foundational SEO. Plus and Premium plans go further with structured data, AEO setup, and Google Business Profile setup. For ongoing management and optimized content month over month, see the <a href="/active-seo/" className="link-accent underline-offset-2">SEO & Growth</a> service.
+            Every site we build includes foundational SEO. Plus and Premium plans go further with structured data, AEO setup, and Google Business Profile setup. For ongoing management and optimized content month over month, see the <a href="/active-seo/" className="link-accent underline-offset-2">SEO & Growth</a> service.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -272,7 +272,7 @@ export default function SEOPage() {
               className="mt-3 text-3xl sm:text-4xl font-extrabold text-[#1f2a22]"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              What I actually do.
+              What we actually do.
             </h2>
             <p
               className="mt-3 text-sm sm:text-base text-[#2f3b32] max-w-lg mx-auto"

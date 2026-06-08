@@ -60,7 +60,7 @@ export default function Footer() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Message Received!</h3>
                 <p className="text-sm text-white/55" style={{ fontFamily: "Inter, sans-serif" }}>
-                  I'll be in touch within one business day to schedule a free consultation.
+                  We'll be in touch within one business day to schedule a free consultation.
                 </p>
               </div>
             ) : (
@@ -121,7 +121,7 @@ export default function Footer() {
 
                 <div>
                   <label htmlFor="contact-message" className="block text-xs font-semibold text-white/60 mb-1.5 tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>
-                    Tell me about your business
+                    Tell us about your business
                   </label>
                   <textarea
                     id="contact-message"
@@ -136,7 +136,7 @@ export default function Footer() {
 
                 {status === "error" && (
                   <p className="text-sm text-red-400" style={{ fontFamily: "Inter, sans-serif" }}>
-                    Something went wrong. Please try again or email me at{" "}
+                    Something went wrong. Please try again or email us at{" "}
                     <a href={`mailto:${EMAIL}`} className="underline hover:text-red-300">{EMAIL}</a>.
                   </p>
                 )}

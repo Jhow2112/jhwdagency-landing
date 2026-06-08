@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "How long does it take to build my website?",
-    a: "Most websites are live within 5 business days of receiving your content and approval. The exact timeline depends on how quickly you can provide feedback and any written content you'd like on the site. I'll guide you through exactly what I need.",
+    a: "Most websites are live within 5 business days of receiving your content and approval. The exact timeline depends on how quickly you can provide feedback and any written content you'd like on the site. We'll guide you through exactly what we need.",
   },
   {
     q: "Do I own my website?",
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Do you work with businesses outside of Meridian, Idaho?",
-    a: "Absolutely. While I'm based in Meridian, Idaho, I work with clients anywhere in the U.S. via Zoom and remote collaboration. If you're in the Treasure Valley, we can also meet in person.",
+    a: "Absolutely. While we're based in Meridian, Idaho, we work with clients anywhere in the U.S. via Zoom and remote collaboration. If you're in the Treasure Valley, we can also meet in person.",
   },
   {
     q: "Are there long-term contracts?",
@@ -37,7 +37,7 @@ const faqs = [
   },
   {
     q: "What types of businesses do you build websites for?",
-    a: "I work with a wide range of local businesses: counselors, therapists, contractors, restaurants, retail shops, real estate agents, coaches, consultants, and service businesses of all kinds. If you need a professional website that attracts local customers, I can help.",
+    a: "We work with a wide range of local businesses: counselors, therapists, contractors, restaurants, retail shops, real estate agents, coaches, consultants, and service businesses of all kinds. If you need a professional website that attracts local customers, we can help.",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function FAQSection() {
               className="text-sm text-[#6b6660] mb-4"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              Still have questions? I'm happy to chat.
+              Still have questions? We're happy to chat.
             </p>
             <a
               href="#contact"

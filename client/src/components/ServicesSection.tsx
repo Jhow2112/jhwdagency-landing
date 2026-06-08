@@ -17,7 +17,7 @@ const services = [
     number: "02",
     title: "Visual Identity",
     description:
-      "Your website should look like it belongs to you. I create cohesive visual styles in color, typography, and layout that reflect your brand and build trust with visitors.",
+      "Your website should look like it belongs to you. We create cohesive visual styles in color, typography, and layout that reflect your brand and build trust with visitors.",
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-restaurant-aREJ6AvRtneKLgdTb2u3gm.webp",
     imageAlt: "Restaurant website with custom visual identity by Aralo Studio",
@@ -27,7 +27,7 @@ const services = [
     number: "03",
     title: "SEO & Local Search",
     description:
-      "Get found by the customers who are already searching for you. I set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
+      "Get found by the customers who are already searching for you. We set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
     tags: ["Google Business", "Local SEO", "Page Speed"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-counseling-nG9Npw57ZJtcFSmQsfdxd9.webp",
     imageAlt: "Counseling website optimized for local search by Aralo Studio",
@@ -118,14 +118,14 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-8 sm:mb-12 md:mb-14">
           <div className="flex flex-col gap-3 max-w-xl">
-            <span className="section-label">What I Do</span>
+            <span className="section-label">What We Do</span>
             <h2 id="services-heading" className="text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight" style={{ fontFamily: "Inter, sans-serif" }}>
               Everything your business needs to{" "}
               <span style={{ color: "#9a4528" }}>get found online</span>.
             </h2>
           </div>
           <p className="text-base text-[#2f3b32] max-w-xs leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
-            From design to launch to ongoing support, I handle it all so you can focus on your business.
+            From design to launch to ongoing support, we handle it all so you can focus on your business.
           </p>
         </div>
 
