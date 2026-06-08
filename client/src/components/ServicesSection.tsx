@@ -11,6 +11,7 @@ const services = [
     tags: ["Custom Design", "Mobile-First", "Hosting Included"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-contractor-bgXiBQZvn3CX4CGsizQjKp.webp",
     imageAlt: "Custom contractor website built by Aralo Studio",
+    imagePosition: "object-center",
     color: "bg-[#e7e2d6]",
   },
   {
@@ -21,6 +22,7 @@ const services = [
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-restaurant-aREJ6AvRtneKLgdTb2u3gm.webp",
     imageAlt: "Restaurant website with custom visual identity by Aralo Studio",
+    imagePosition: "object-center",
     color: "bg-[#e7e2d6]",
   },
   {
@@ -29,8 +31,9 @@ const services = [
     description:
       "Get found by the customers who are already searching for you. We set up Google Business profiles, optimize your pages for local search, and make sure your site loads fast.",
     tags: ["Google Business", "Local SEO", "Page Speed"],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-counseling-nG9Npw57ZJtcFSmQsfdxd9.webp",
-    imageAlt: "Counseling website optimized for local search by Aralo Studio",
+    image: "/services/seo-filtercare.jpg",
+    imageAlt: "FilterCare air-filter subscription website built by Aralo Studio",
+    imagePosition: "object-top",
     color: "bg-[#e7e2d6]",
   },
 ];
@@ -65,7 +68,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
           alt={service.imageAlt}
           width="1920"
           height="1434"
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className={`w-full h-full object-cover ${service.imagePosition} group-hover:scale-105 transition-transform duration-500`}
           loading="lazy"
           decoding="async"
         />
