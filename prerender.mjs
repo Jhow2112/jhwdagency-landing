@@ -200,6 +200,25 @@ ROUTE_META['/free-preview'] = {
   sitemapChangefreq: 'monthly',
 };
 
+// About page
+ROUTE_META['/about'] = {
+  title: 'About Aralo Studio | Web Design in Meridian, Idaho & Nationwide',
+  description:
+    'Aralo Studio is a hands-on web studio for small businesses — based in Meridian, Idaho and working with clients across the U.S. Designed, built, hosted, and supported by Jeremy Howard.',
+  canonical: `${SITE_ORIGIN}/about/`,
+  ogTitle: 'About Aralo Studio',
+  ogDescription:
+    'A hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S.',
+  ogUrl: `${SITE_ORIGIN}/about/`,
+  ogImage: `${SITE_ORIGIN}/jeremy.jpg`,
+  twitterTitle: 'About Aralo Studio',
+  twitterDescription:
+    'A hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S.',
+  twitterImage: `${SITE_ORIGIN}/jeremy.jpg`,
+  sitemapPriority: '0.7',
+  sitemapChangefreq: 'monthly',
+};
+
 // Portfolio hub
 ROUTE_META['/portfolio'] = {
   title: 'Web Design Portfolio | Aralo Studio | Meridian, Idaho',

@@ -17,11 +17,13 @@ import IndustriesHub from "./pages/IndustriesHub";
 import PortfolioHub from "./pages/PortfolioHub";
 import CaseStudyPage from "./pages/CaseStudyPage";
 import FreePreviewPage from "./pages/FreePreviewPage";
+import AboutPage from "./pages/AboutPage";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/about"} component={AboutPage} />
       <Route path={"/seo-aeo"} component={SEOPage} />
       <Route path={"/privacy"} component={PrivacyPage} />
       <Route path={"/terms"} component={TermsPage} />

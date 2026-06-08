@@ -1,7 +1,6 @@
 /* AboutSection — Aralo Studio
-   Personal "Who's Building Your Website" intro
-   Photo placeholder — swap in real image when ready
-   Currently hidden on Home (see Home.tsx) until enabled */
+   Personal "Who's Building Your Website" intro: photo, first-person bio,
+   and direct contact. Rendered on the standalone /about page (AboutPage). */
 import { useEffect, useRef, useState } from "react";
 
 const PHONE = "(208) 615-2884";
@@ -60,7 +59,7 @@ export default function AboutSection() {
               className="text-base text-[#2f3b32] leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              I'm Jeremy, a web designer based in Meridian, Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site I build is designed, coded, hosted, and maintained by me personally. When you call, you get me. Not a sales rep, not a project manager, not a ticket system. I work with local businesses across the Treasure Valley and remote clients nationwide.
+              I'm Jeremy, a web designer based in Meridian, Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site is handled by me personally, from the first sketch to ongoing updates. When you call, you get me — not a sales rep, not a project manager, not a ticket system. Whether you're down the street in Meridian or across the country, you work with me directly, and I take on clients anywhere in the U.S.
             </p>
 
             {/* Direct contact */}

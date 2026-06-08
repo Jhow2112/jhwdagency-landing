@@ -16,6 +16,7 @@ import IndustriesHub from "./pages/IndustriesHub";
 import PortfolioHub from "./pages/PortfolioHub";
 import CaseStudyTemplate from "./components/CaseStudyTemplate";
 import FreePreviewPage from "./pages/FreePreviewPage";
+import AboutPage from "./pages/AboutPage";
 import LandingPageTemplate from "./components/LandingPageTemplate";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 import { getPostBySlug } from "./data/blogPosts";
@@ -31,6 +32,7 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/industries": IndustriesHub,
   "/portfolio": PortfolioHub,
   "/free-preview": FreePreviewPage,
+  "/about": AboutPage,
 };
 
 export function render(url: string): string {
