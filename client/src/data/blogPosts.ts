@@ -186,6 +186,139 @@ Your HVAC website has one job: make the phone ring. Everything on the page shoul
 
 The companies at the [top of Google](/seo-aeo/) in your market aren't there because they're better at HVAC work. They're there because their online presence does the basics right. The good news is that the basics aren't hard or expensive. They just need to get done.`;
 
+const POST_4_BODY = `Landscaping is a visual business. Your work speaks for itself, but only if people can see it.
+
+The problem is that most landscaping companies in the [Treasure Valley](/web-design-meridian/) don't have a website, or they have one that hasn't been updated since the Obama administration. Their best work is sitting in their phone's camera roll where no customer will ever see it.
+
+Meanwhile, the landscaper down the road who put up a clean site with 10 photos of finished yards is getting the calls. Not because they do better work. Because they look like they do better work.
+
+## The customer's decision process
+
+Here's how most people hire a landscaper: their neighbor's yard looks great, they ask who did it, they get a name, and then they Google that name before calling.
+
+If they find a website with photos, a service list, and a phone number, they call. If they find nothing, or they find a Facebook page with the last post from 2023, they hesitate. They might still call, but the seed of doubt is planted. "Are these guys still in business?"
+
+Now imagine the same person didn't get a referral. They just searched "landscaper near me" or "lawn care Meridian Idaho." Google shows them a map with 3-4 businesses. The ones with websites, reviews, and complete Google Business Profiles show up first. Everyone else is invisible.
+
+## What a landscaping website actually needs
+
+This isn't complicated. You don't need 20 pages or a blog or an online store. You need a few things done well:
+
+**Photos of your work.** This is the single most important element. Before and after shots of yards you've transformed. Photos of patios, retaining walls, irrigation systems, seasonal cleanups. Real photos from your phone, not stock images. A homeowner looking at a photo of a yard that looks like their neighborhood is already imagining you doing their property.
+
+**A clear list of services.** Mowing, edging, fertilization, aeration, leaf removal, spring/fall cleanup, hardscaping, irrigation, landscape design. List what you do so Google can match you to what people search for. If someone searches "irrigation repair Meridian" and your website doesn't mention irrigation, you won't show up.
+
+**Your service area.** List the cities you work in. Meridian, Boise, Eagle, Star, Nampa, Caldwell. Each city name on your site is a keyword Google can match to local searches.
+
+**A phone number you can tap.** On mobile, your phone number should be one tap to call. Not buried on a contact page. Visible at the top of every page.
+
+**Seasonal relevance.** Landscaping is seasonal in Idaho. Your website should reflect what you're doing right now. Spring cleanups in March, weekly mowing in summer, leaf removal in fall, snow removal in winter. A site that mentions snow removal in July looks like nobody's paying attention.
+
+## The before and after advantage
+
+Landscapers have something most businesses don't: dramatic visual proof of their work. A plumber can't easily show a before and after of a pipe repair. But a landscaper can show a dirt patch turned into a patio, or an overgrown yard transformed into a clean property.
+
+These photos do more selling than any copy you could write. A gallery of 10-15 before and after shots is the most persuasive thing you can put on a landscaping website. Period.
+
+## What it costs and why it pays for itself
+
+A professional landscaping website costs somewhere between $500 and $1,500. That's one mid-size landscaping job. Two at most.
+
+If your website brings in even one new client per month that you wouldn't have gotten otherwise, it pays for itself within the first month and keeps generating returns for years.
+
+The landscapers who dominate local search in the Treasure Valley aren't doing anything complicated. They have a website with real photos, a clear service list, and a Google Business Profile with reviews. That's the whole playbook. The ones without those things are fighting over whatever's left.
+
+---
+
+*Aralo Studio builds websites for landscaping companies and service businesses across the [Treasure Valley](/web-design-meridian/). If your business needs a professional online presence, [get in touch](/#contact).*`;
+
+const POST_5_BODY = `You know reviews matter. You've probably Googled a business yourself and skipped the one with 2 reviews in favor of the one with 47. Everyone does this. But actually getting your own customers to leave reviews feels awkward, pushy, or like something you never get around to.
+
+Here's the thing: most happy customers will leave a review if you make it easy. They're not avoiding it because they don't want to help. They're avoiding it because they forget, or it takes too many steps, or they don't know where to go.
+
+The businesses with 50+ Google reviews didn't get there by accident. They have a system. Here's how to build one.
+
+## Step 1: Get your direct review link
+
+Google makes this harder to find than it should be. Here's the fast way:
+
+Search your business name on Google. Click on your Google Business Profile. Click "Ask for reviews." Google gives you a short link you can copy and share. Save this link somewhere you can grab it anytime, your phone's notes app, a bookmark, whatever.
+
+When someone clicks this link, it opens Google Maps with the review form already loaded and the stars ready to tap. One link, one tap, done. That's the entire trick.
+
+If you don't have a Google Business Profile yet, stop reading and go set one up first. Reviews without a profile have nowhere to live.
+
+## Step 2: Ask at the right moment
+
+Timing matters more than the words you use. The best time to ask for a review is immediately after you've delivered a great result and the customer is happy.
+
+For a contractor: right after the final walkthrough when they're looking at the finished work and smiling.
+
+For a service business: right after the job is done and they've said "looks great" or "thank you."
+
+For a restaurant: when the customer compliments the food or the server.
+
+Don't wait three days and send a formal email. The enthusiasm fades fast. Ask while they're still feeling good about the experience.
+
+## Step 3: Make it stupidly easy
+
+The number one reason people don't leave reviews is friction. Every extra step you add loses half your potential reviewers.
+
+**Best method: text the link.** Right after the job, pull out your phone and say "Hey, would you mind leaving us a quick Google review? I'll text you the link right now so it's easy." Then text them the direct review link. They tap it, leave 5 stars and a sentence, done. Total time for them: 30 seconds.
+
+**Second best: a QR code on your invoice or receipt.** Print a small QR code that links directly to your Google review page. Add a line: "Happy with our work? Scan this to leave a quick review." The customer can do it while they're still holding the invoice.
+
+**Third best: email follow-up.** Send a short email within 24 hours. Keep it simple: "Thanks for choosing us. If you have 30 seconds, a Google review helps other people find us. Here's the link: [link]." No long email, no paragraphs of gratitude, just the ask and the link.
+
+## Step 4: Don't overthink the ask
+
+Most business owners make this way too formal or too apologetic. You don't need a speech. You need one sentence:
+
+"Would you mind leaving us a quick Google review? It really helps."
+
+That's it. No "if you have time" or "only if you feel comfortable" or "I know it's a lot to ask." It's not a lot to ask. You did a good job and they're happy. A 30-second review is the smallest possible favor.
+
+## Step 5: Respond to every review
+
+When someone leaves a review, respond to it. Every single one. Good reviews, okay reviews, even bad ones.
+
+For a 5-star review: "Thanks [name], it was great working with you. Glad you're happy with the results."
+
+For a 3-star review: "Thanks for the feedback [name]. We'd love to make it right, give us a call at [number]."
+
+Google notices when businesses respond to reviews. It signals that the business is active and engaged. And it shows future customers that you actually care about the feedback, which makes them more likely to trust you.
+
+## The numbers that matter
+
+You don't need 500 reviews. For most local businesses in the [Treasure Valley](/web-design-meridian/), here's the reality:
+
+0-5 reviews: You're invisible or look unestablished.
+5-15 reviews: You're credible. People will consider you.
+15-30 reviews: You look established. You'll outrank most local competitors.
+30+: You're a local authority. Google gives you priority.
+
+Going from 0 to 15 reviews is the highest-impact jump. That's 15 happy customers you need to ask. If you do two jobs a week and ask every customer, you're there in two months.
+
+## What not to do
+
+Don't buy reviews. Google catches fake reviews and will suspend your profile. Not worth the risk.
+
+Don't offer incentives for reviews. "Leave a review and get 10% off" violates Google's policies. Just ask genuinely.
+
+Don't review-gate. Some businesses only send the review link to customers who said they had a great experience, and send unhappy customers to a private feedback form instead. Google specifically prohibits this.
+
+Don't panic about the occasional bad review. One 3-star review among twenty 5-star reviews actually makes your profile look more authentic. A perfect 5.0 with 50 reviews looks suspicious. A 4.8 looks real.
+
+## Start today
+
+Here's your homework: after your next completed job, text the customer your Google review link. That's one review. Do it again tomorrow. And the day after that.
+
+In 30 days you'll have 10-15 new reviews and your Google ranking will be measurably different. No [SEO service](/active-seo/), no ad spend, no website changes. Just asking.
+
+---
+
+*Aralo Studio helps small businesses across the Treasure Valley get found on [Google through web design, SEO, and Google Business Profile optimization](/seo-aeo/). If you need help with your online presence, [get in touch](/#contact).*`;
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "does-your-boise-business-need-a-website",
@@ -213,6 +346,24 @@ export const BLOG_POSTS: BlogPost[] = [
     headerImage: "/blog/blog-photo-03-hvac.jpg",
     headerImageAlt: "HVAC technician servicing an outdoor air conditioning unit",
     body: POST_3_BODY,
+  },
+  {
+    slug: "landscaper-website",
+    title: "Why Landscapers Lose Jobs to Competitors With Better Websites",
+    date: "2026-05-19",
+    category: "Industry Guide",
+    headerImage: "/blog/blog-photo-04-landscaping.jpg",
+    headerImageAlt: "Lawn mower cutting grass on a residential property",
+    body: POST_4_BODY,
+  },
+  {
+    slug: "how-to-get-google-reviews",
+    title: "How to Get More Google Reviews Without Being Annoying About It",
+    date: "2026-05-19",
+    category: "Local SEO",
+    headerImage: "/blog/blog-photo-05-reviews.jpg",
+    headerImageAlt: "Business owner shaking hands with a satisfied client",
+    body: POST_5_BODY,
   },
 ];
 
