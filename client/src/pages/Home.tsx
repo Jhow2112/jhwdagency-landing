@@ -19,7 +19,7 @@ import ReferralCallout from "@/components/ReferralCallout";
 import Footer from "@/components/Footer";
 
 // Toggle to true when the About Jeremy section is ready to go public.
-const SHOW_ABOUT = false;
+const SHOW_ABOUT = true;
 
 export default function Home() {
   return (

@@ -36,10 +36,10 @@ export default function AboutSection() {
           {/* Photo */}
           <div className="w-full aspect-square md:w-[260px] md:h-[260px] rounded-2xl overflow-hidden border border-[#d6d2c5] shadow-sm mx-auto">
             <img
-              src="/jeremy.png"
-              alt="Jeremy Howard, web designer based in Meridian, Idaho"
-              width="1120"
-              height="1068"
+              src="/jeremy.jpg"
+              alt="Jeremy, web designer based in Meridian, Idaho"
+              width="800"
+              height="800"
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
@@ -60,7 +60,7 @@ export default function AboutSection() {
               className="text-base text-[#2f3b32] leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              I'm Jeremy Howard, a web designer based in Meridian, Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site I build is designed, coded, hosted, and maintained by me personally. When you call, you get me. Not a sales rep, not a project manager, not a ticket system. I work with local businesses across the Treasure Valley and remote clients nationwide.
+              I'm Jeremy, a web designer based in Meridian, Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site I build is designed, coded, hosted, and maintained by me personally. When you call, you get me. Not a sales rep, not a project manager, not a ticket system. I work with local businesses across the Treasure Valley and remote clients nationwide.
             </p>
 
             {/* Direct contact */}
