@@ -26,8 +26,13 @@ export type PortfolioProject = {
   shortDescription: string;
   /** Services delivered, shown in the case study metadata strip */
   services: string[];
-  /** Path to hero screenshot in /public, e.g. "/portfolio/foo-hero.png" */
+  /** Path to the hero screenshot in /public. Points at the 1440w variant;
+      smaller responsive widths (480/960) are derived by heroSrcSet(). */
   heroImage: string;
+  /** Intrinsic width/height of heroImage, used to reserve layout space and
+      avoid CLS where the image renders at its natural aspect (case study hero). */
+  heroWidth?: number;
+  heroHeight?: number;
   /** Optional alt text override. Defaults to "{name} website screenshot". */
   heroImageAlt?: string;
   /** Optional gallery images shown after the Key Features section. */
@@ -55,7 +60,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     shortDescription:
       "A multi-page mortgage site for jumbo, construction, and complex-borrower specialists.",
     services: ["Web Design", "Copywriting", "SEO", "Hosting"],
-    heroImage: "/portfolio/crystal-howard-hero.png",
+    heroImage: "/portfolio/crystal-howard-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 775,
     heroImageAlt:
       "Crystal Howard Mortgage homepage — luxury and new construction lending in Garden City, Idaho.",
     challenge:
@@ -86,7 +93,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     shortDescription:
       "A full-featured site for a growing painting and construction company with commercial clients.",
     services: ["Web Design", "Copywriting", "SEO", "Hosting"],
-    heroImage: "/portfolio/silver-valley-hero.png",
+    heroImage: "/portfolio/silver-valley-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 723,
     heroImageAlt:
       "Silver Valley Painting & Construction homepage — interior, exterior, and commercial work across North Idaho.",
     challenge:
@@ -117,7 +126,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     shortDescription:
       "A calm, approachable counseling website that lowers the barrier to reach out.",
     services: ["Web Design", "Copywriting", "SEO", "E-commerce Integration", "Hosting"],
-    heroImage: "/portfolio/crisis2comfort-hero.png",
+    heroImage: "/portfolio/crisis2comfort-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 710,
     heroImageAlt:
       "Crisis to Comfort Counseling homepage — a warm, professional presence for a Treasure Valley counseling practice.",
     challenge:
@@ -138,6 +149,18 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
       "Case study: a calm, approachable website for a Treasure Valley, Idaho counseling practice. Designed and built by Aralo Studio.",
   },
 ];
+
+/** Responsive widths pre-generated for every hero image (see
+    /public/portfolio/*-{480,960,1440}.jpg, produced with sips). */
+const HERO_SRCSET_WIDTHS = [480, 960, 1440];
+
+/** Build a srcset string from a heroImage path. heroImage points at the
+    1440w variant (e.g. "/portfolio/foo-hero-1440.jpg"); this swaps in the
+    smaller widths so the browser downloads the size it actually needs. */
+export function heroSrcSet(heroImage: string): string {
+  const stem = heroImage.replace(/-1440\.jpg$/, "");
+  return HERO_SRCSET_WIDTHS.map((w) => `${stem}-${w}.jpg ${w}w`).join(", ");
+}
 
 /** Find a project by slug. */
 export function getProjectBySlug(slug: string): PortfolioProject | undefined {

@@ -12,6 +12,7 @@
 
 import { useEffect, useState } from "react";
 import Lockup from "@/components/brand/Lockup";
+import { heroSrcSet } from "@/data/portfolioProjects";
 
 const SITE_ORIGIN = "https://aralostudio.com";
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
@@ -264,14 +265,14 @@ export default function FreePreviewPage() {
                 name: "Crystal Howard Mortgage",
                 industry: "Mortgage & Finance",
                 liveUrl: "https://crystalhowardmortgage.com",
-                image: "/portfolio/crystal-howard-hero.png",
+                image: "/portfolio/crystal-howard-hero-1440.jpg",
                 alt: "Crystal Howard Mortgage homepage screenshot",
               },
               {
                 name: "Silver Valley Painting",
                 industry: "Painting & Construction",
                 liveUrl: "https://silvervalleypainting.com/",
-                image: "/portfolio/silver-valley-hero.png",
+                image: "/portfolio/silver-valley-hero-1440.jpg",
                 alt: "Silver Valley Painting homepage screenshot",
               },
             ].map((p) => (
@@ -282,6 +283,8 @@ export default function FreePreviewPage() {
                 <div className="aspect-[1920/950] overflow-hidden bg-[#e7e2d6]">
                   <img
                     src={p.image}
+                    srcSet={heroSrcSet(p.image)}
+                    sizes="(min-width: 640px) 480px, 92vw"
                     alt={p.alt}
                     width="1920"
                     height="950"

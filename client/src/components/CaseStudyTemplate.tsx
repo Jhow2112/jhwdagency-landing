@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BreadcrumbSchema, { type Crumb } from "@/components/BreadcrumbSchema";
-import type { PortfolioProject } from "@/data/portfolioProjects";
+import { heroSrcSet, type PortfolioProject } from "@/data/portfolioProjects";
 
 const SITE_ORIGIN = "https://aralostudio.com";
 
@@ -92,9 +92,11 @@ export default function CaseStudyTemplate({ project }: { project: PortfolioProje
         <div className="container max-w-5xl mx-auto">
           <img
             src={project.heroImage}
+            srcSet={heroSrcSet(project.heroImage)}
+            sizes="(min-width: 1024px) 1024px, 100vw"
             alt={project.heroImageAlt ?? `${project.name} website screenshot`}
-            width="1920"
-            height="950"
+            width={project.heroWidth ?? 1920}
+            height={project.heroHeight ?? 950}
             className="w-full h-auto rounded-xl sm:rounded-2xl shadow-2xl border border-white/10"
             decoding="async"
           />
@@ -206,7 +208,7 @@ export default function CaseStudyTemplate({ project }: { project: PortfolioProje
             className="text-base text-white/60 mb-8 max-w-md mx-auto"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Tell me about your business — I'll get back to you within one business day.
+            Tell us about your business — we'll get back to you within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a

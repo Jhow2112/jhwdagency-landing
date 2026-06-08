@@ -10,6 +10,7 @@ import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   PORTFOLIO_PROJECTS,
   getFilterCategories,
+  heroSrcSet,
 } from "@/data/portfolioProjects";
 
 const SITE_ORIGIN = "https://aralostudio.com";
@@ -119,6 +120,8 @@ export default function PortfolioHub() {
                 >
                   <img
                     src={p.heroImage}
+                    srcSet={heroSrcSet(p.heroImage)}
+                    sizes="(min-width: 768px) 560px, 92vw"
                     alt={p.heroImageAlt ?? `${p.name} website screenshot`}
                     width="1920"
                     height="950"

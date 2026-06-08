@@ -4,7 +4,7 @@
    portfolio" link sends visitors to /portfolio/. Keeps id="work" so
    existing in-page anchors continue to scroll here. */
 
-import { PORTFOLIO_PROJECTS } from "@/data/portfolioProjects";
+import { PORTFOLIO_PROJECTS, heroSrcSet } from "@/data/portfolioProjects";
 
 const ArrowIcon = () => (
   <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
@@ -66,6 +66,8 @@ export default function WorkSection() {
                 >
                   <img
                     src={p.heroImage}
+                    srcSet={heroSrcSet(p.heroImage)}
+                    sizes="(min-width: 768px) 360px, 90vw"
                     alt={p.heroImageAlt ?? `${p.name} website screenshot`}
                     width="1920"
                     height="950"
