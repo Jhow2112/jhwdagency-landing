@@ -156,30 +156,30 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     location: "Online · SaaS",
     liveUrl: "https://pertch.app/",
     shortDescription:
-      "A real-time AI sales-coaching web app with a neo-brutalist control-room interface.",
-    services: ["Product & UI Design", "Web App", "Brand Identity", "Copywriting", "SEO"],
+      "A conversion-focused marketing site for a real-time AI sales-coaching tool, in a neo-brutalist control-room style.",
+    services: ["Web Design", "Brand Identity", "Copywriting", "SEO"],
     heroImage: "/portfolio/pertch-hero-1440.jpg",
     heroWidth: 1440,
-    heroHeight: 760,
+    heroHeight: 789,
     heroImageAlt:
-      "Pertch real-time AI sales-coaching app interface, designed and built by Aralo Studio.",
+      "Pertch website homepage, designed and built by Aralo Studio.",
     challenge:
-      "Pertch is a genuinely new kind of product: an AI sales coach that listens to a live call and surfaces one short, tactical prompt only when the rep is missing a move. Explaining real-time, in-call coaching to skeptical sales professionals is hard — it has to feel powerful without being gimmicky, make a complex live workflow obvious at a glance, and stay honest about what an early product can and can't do.",
+      "Pertch is a brand-new kind of product — an AI sales coach that listens to live calls and surfaces a single tactical prompt at just the right moment. The website had to make an unfamiliar, abstract tool instantly understandable to skeptical sales professionals: powerful but not gimmicky, clear at a glance, and honest about what an early product actually does.",
     solution:
-      "A dark \"control room\" interface and marketing site that make the live-coaching idea tangible. A neo-brutalist visual language — matte surfaces, cyan live-signal accents, terminal-style labels — frames the product as a precise instrument rather than a flashy gadget. The HUD keeps its state legible (silent when the call is on track, a single glanceable prompt when it isn't), the coaching styles are explained plainly, and the copy stays commercially credible. The marketing site is a fast Astro build with full SEO, Open Graph, and structured data.",
+      "A neo-brutalist \"control room\" website that makes the live-coaching idea tangible. Dark matte surfaces, cyan live-signal accents, and terminal-style labels frame the product as a precise instrument rather than a flashy gadget. A sharp hero message, a how-it-works walkthrough, custom product mockups, and commercially credible copy carry a skeptical visitor from confusion to a free trial. Built on Astro for near-instant loads, with full SEO, Open Graph, and structured data.",
     keyFeatures: [
-      "Neo-brutalist control-room UI: dark matte surfaces, cyan live-signal accents, terminal-style labels",
-      "Real-time coaching HUD — silent when the call is on track, one glanceable prompt when it isn't",
-      "Three selectable coaching styles: Decisive, Qualify, and Screen",
-      "Browser-based audio capture in Chrome and Edge — no install, extension, or virtual audio device",
-      "Individual-first: sessions stay private to the user, with no manager dashboard or team analytics",
-      "Magic-link sign-in and Stripe billing with a 14-day free trial",
-      "Fast Astro marketing site with SEO, Open Graph, and structured data",
+      "Neo-brutalist \"control room\" design system: dark matte surfaces, cyan live-signal accents, terminal-style labels",
+      "Conversion-focused hero with a single clear message and primary call to action",
+      "How-it-works, features, pricing, and FAQ sections that explain an unfamiliar product",
+      "Custom product mockups that make an abstract real-time tool tangible",
+      "Commercially credible copywriting tuned for skeptical sales professionals",
+      "Custom brand identity: logo, wordmark, and visual language",
+      "Fast static Astro build with full SEO, Open Graph, and structured data",
       "Fully responsive across desktop and mobile",
     ],
-    metaTitle: "Pertch — AI Sales Coaching App | Aralo Studio Portfolio",
+    metaTitle: "Pertch SaaS Website | Aralo Studio Portfolio",
     metaDescription:
-      "Case study: Pertch, a real-time AI sales-coaching web app with a neo-brutalist control-room interface. Product design and build by Aralo Studio.",
+      "Case study: a neo-brutalist marketing website for Pertch, a real-time AI sales-coaching tool. Designed and built by Aralo Studio.",
   },
 ];
 
