@@ -9,6 +9,7 @@ const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
 const EMAIL = "info@aralostudio.com";
 const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
+const HOURS = "Mon–Fri, 9 AM–6 PM Mountain Time";
 
 export default function Footer() {
   const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
@@ -185,6 +186,17 @@ export default function Footer() {
                     {PHONE}
                   </span>
                 </a>
+                <div className="inline-flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="8" cy="8" r="6.5"/>
+                      <path d="M8 4.5V8l2.5 1.5"/>
+                    </svg>
+                  </div>
+                  <span className="text-sm font-semibold text-white/70" style={{ fontFamily: "Inter, sans-serif" }}>
+                    {HOURS}
+                  </span>
+                </div>
               </div>
             </div>
 
