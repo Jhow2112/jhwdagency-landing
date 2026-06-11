@@ -37,8 +37,8 @@ export default function Home() {
         {/* Logos placeholder — currently null */}
         <LogosCarousel />
 
-        {/* Services — what we offer */}
-        <ServicesSection />
+        {/* Work — case studies / portfolio */}
+        <WorkSection />
 
         {/* Industries — who we serve */}
         <IndustriesSection />
@@ -46,8 +46,8 @@ export default function Home() {
         {/* Process — how it works */}
         <ProcessSection />
 
-        {/* Work — case studies / portfolio */}
-        <WorkSection />
+        {/* Services — what we offer */}
+        <ServicesSection />
 
         {/* Pricing — transparent pricing signals */}
         <PricingSection />
