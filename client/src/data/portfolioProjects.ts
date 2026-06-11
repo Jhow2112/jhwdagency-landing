@@ -181,6 +181,41 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     metaDescription:
       "Case study: a neo-brutalist marketing website for Pertch, a real-time AI sales-coaching tool. Designed and built by Aralo Studio.",
   },
+  {
+    slug: "ice-ice-shavey",
+    name: "Ice Ice Shavey",
+    industry: "Food & Beverage",
+    filterCategory: "Food & Beverage",
+    location: "North Idaho & Eastern Washington",
+    liveUrl: "https://iceiceshavey.net",
+    shortDescription:
+      "A bright, booking-focused site for a mobile Hawaiian shave ice business serving events across North Idaho and Eastern WA.",
+    services: ["Web Design", "Copywriting", "SEO", "Hosting"],
+    heroImage: "/portfolio/iceiceshavey-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 791,
+    heroImageAlt:
+      "Ice Ice Shavey homepage — Hawaiian-style shave ice for events across North Idaho and Eastern Washington.",
+    challenge:
+      "Ice Ice Shavey is a mobile Hawaiian shave ice business that lives or dies by event bookings — fairs, festivals, and weddings across North Idaho and Eastern Washington. Founded in 2024, it needed a website that captured the fun, summery energy of the brand while making two things effortless: browsing the flavor lineup and booking the truck for an event.",
+    solution:
+      "A bright, playful single-page site built around the booking goal. A bold hero states exactly what they do and where, a scrolling banner reinforces the key selling points (20+ flavors, available for events, est. 2024), and prominent \"See Our Flavors\" and \"Book Us for an Event\" calls to action send visitors straight to what they came for. A tap-to-call number, social links, and an events section round it out — all tuned for the phones most customers browse on.",
+    keyFeatures: [
+      "Playful, summery design that matches the brand's energy",
+      "Dual primary CTAs: browse flavors and book the truck for an event",
+      "Flavors showcase highlighting 20+ flavors",
+      "Menu section",
+      "Events section for fairs, festivals, and weddings",
+      "Tap-to-call phone number in the header",
+      "Instagram and social media integration",
+      "Animated selling-point marquee",
+      "Mobile-first, fast-loading build",
+      "On-page SEO targeting North Idaho and Eastern Washington event searches",
+    ],
+    metaTitle: "Ice Ice Shavey Website | Aralo Studio Portfolio",
+    metaDescription:
+      "Case study: a playful, booking-focused website for a Hawaiian shave ice business serving events across North Idaho and Eastern Washington. Designed and built by Aralo Studio.",
+  },
 ];
 
 /** Responsive widths pre-generated for every hero image (see
