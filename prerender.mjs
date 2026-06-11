@@ -204,7 +204,7 @@ ROUTE_META['/free-preview'] = {
 ROUTE_META['/about'] = {
   title: 'About Aralo Studio | Web Design in Meridian, Idaho & Nationwide',
   description:
-    'Aralo Studio is a hands-on web studio for small businesses — based in Meridian, Idaho and working with clients across the U.S. Designed, built, hosted, and supported by Jeremy Howard.',
+    'Aralo Studio is a hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S. Designed, built, hosted, and supported by Jeremy Howard.',
   canonical: `${SITE_ORIGIN}/about/`,
   ogTitle: 'About Aralo Studio',
   ogDescription:

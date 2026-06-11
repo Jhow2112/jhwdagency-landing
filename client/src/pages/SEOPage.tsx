@@ -48,7 +48,7 @@ const whatIsDone = [
   {
     title: "Google Business Profile Management",
     description:
-      "Plus and Premium hosting plans include the initial Google Business Profile setup. Ongoing management — keeping hours, photos, posts, and service descriptions current — lives in the SEO & Growth (Growth tier and above) service so it doesn't go stale.",
+      "Plus and Premium hosting plans include the initial Google Business Profile setup. Ongoing management, which keeps hours, photos, posts, and service descriptions current, lives in the SEO & Growth (Growth tier and above) service so it doesn't go stale.",
     included: ["SEO & Growth"],
   },
   {
@@ -68,7 +68,7 @@ const faqs = [
     q: "What is AEO and why does it matter?",    a: "AEO stands for Answer Engine Optimization. It's the practice of structuring your content so that AI tools like ChatGPT, Perplexity, Google's AI Overviews, and Siri can accurately represent your business when someone asks a relevant question. As more people use AI to find local services, being well-represented in those answers matters more and more." },
   {
     q: "Will my site show up on Google Maps?",
-    a: "Google Maps results are driven primarily by your Google Business Profile, not your website. Plus and Premium hosting plans include the initial profile setup. For ongoing management — keeping hours, photos, and posts current month over month — that's part of the SEO & Growth service (Growth tier and above). Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
+    a: "Google Maps results are driven primarily by your Google Business Profile, not your website. Plus and Premium hosting plans include the initial profile setup. For ongoing management that keeps hours, photos, and posts current month over month, that's part of the SEO & Growth service (Growth tier and above). Your website supports this by providing consistent NAP (Name, Address, Phone) information and local schema markup.",
   },
 ];
 

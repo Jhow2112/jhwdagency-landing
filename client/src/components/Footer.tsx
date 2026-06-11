@@ -281,7 +281,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Service Areas</p>
-                <p className="text-sm font-semibold text-white/85 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>Nationwide — remote</p>
+                <p className="text-sm font-semibold text-white/85 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>Nationwide, remote</p>
                 <p className="text-xs text-white/45 mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>In person across the Treasure Valley:</p>
                 <ul className="flex flex-col gap-2 sm:gap-2.5">
                   {CITIES.map((c) => (

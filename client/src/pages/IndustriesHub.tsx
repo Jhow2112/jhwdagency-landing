@@ -15,13 +15,13 @@ const SHORT_DESCRIPTIONS: Record<string, string> = {
   "/websites-for-contractors":
     "Sites that show your work, win bigger jobs, and earn the call.",
   "/websites-for-restaurants":
-    "Hours, menu, location — exactly what hungry customers came to find.",
+    "Hours, menu, location: exactly what hungry customers came to find.",
   "/websites-for-cleaning-services":
     "Trust signals and easy booking for a cleaning business.",
   "/websites-for-counselors":
     "A calm, professional presence that lowers the barrier to reach out.",
   "/websites-for-hvac":
-    "Built to convert calls — emergency-ready and phone-first.",
+    "Built to convert calls: emergency-ready and phone-first.",
   "/websites-for-landscapers":
     "Photo-forward portfolios that pre-sell quality work.",
   "/websites-for-plumbers":
@@ -31,7 +31,7 @@ const SHORT_DESCRIPTIONS: Record<string, string> = {
   "/websites-for-painters":
     "Before-and-after galleries that do the selling for you.",
   "/websites-for-salons":
-    "Real photos, current menus, easy booking — what new clients expect.",
+    "Real photos, current menus, easy booking: what new clients expect.",
   "/websites-for-auto-detailers":
     "When you don't have a shop, your website is the storefront.",
   "/websites-for-real-estate":

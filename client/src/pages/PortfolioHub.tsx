@@ -68,7 +68,7 @@ export default function PortfolioHub() {
             className="text-base sm:text-lg text-[#2f3b32] leading-relaxed"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Every project here started with the same conversation: a small business owner who needed a website that does actual work — earns calls, books appointments, signals trust on the first scroll. Not a brochure, not a portfolio piece for a designer's reel. The case studies below cover mortgage and finance, painting and construction, and counseling. Different industries, different audiences, but the same approach: clear positioning, fast load times, real photos, and copy that sounds like the person who runs the business. Browse the work, then if your business needs the same kind of attention, get in touch.
+            Every project here started with the same conversation: a small business owner who needed a website that does actual work: earns calls, books appointments, signals trust on the first scroll. Not a brochure, not a portfolio piece for a designer's reel. The case studies below cover mortgage and finance, painting and construction, and counseling. Different industries, different audiences, but the same approach: clear positioning, fast load times, real photos, and copy that sounds like the person who runs the business. Browse the work, then if your business needs the same kind of attention, get in touch.
           </p>
         </div>
       </section>

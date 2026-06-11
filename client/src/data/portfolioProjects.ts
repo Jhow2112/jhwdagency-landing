@@ -64,9 +64,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     heroWidth: 1440,
     heroHeight: 775,
     heroImageAlt:
-      "Crystal Howard Mortgage homepage — luxury and new construction lending in Garden City, Idaho.",
+      "Crystal Howard Mortgage homepage: luxury and new construction lending in Garden City, Idaho.",
     challenge:
-      "A luxury and new construction mortgage specialist needed a site that positioned her as a high-end expert, not a generic loan officer. The site had to speak to jumbo loan buyers, builders, and self-employed borrowers with complex financial situations — audiences that won't engage with template-driven, brokerage-issued sites.",
+      "A luxury and new construction mortgage specialist needed a site that positioned her as a high-end expert, not a generic loan officer. The site had to speak to jumbo loan buyers, builders, and self-employed borrowers with complex financial situations, audiences that won't engage with template-driven, brokerage-issued sites.",
     solution:
       "A multi-page site with dedicated landing pages for each specialty: jumbo loans, construction financing, builder programs, renovation loans, and bank statement loans. Professional copywriting tailored to high-value borrowers, paired with a clean visual identity that communicates competence and trust before the first scroll.",
     keyFeatures: [
@@ -97,9 +97,9 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     heroWidth: 1440,
     heroHeight: 723,
     heroImageAlt:
-      "Silver Valley Painting & Construction homepage — interior, exterior, and commercial work across North Idaho.",
+      "Silver Valley Painting & Construction homepage: interior, exterior, and commercial work across North Idaho.",
     challenge:
-      "A growing painting and construction company needed a professional website to match their growing reputation. They had commercial clients like Best Buy, Idaho Fish & Game, and NexGen Building Group — but no online presence to show for it, which was costing them credibility on bigger-ticket bids.",
+      "A growing painting and construction company needed a professional website to match their growing reputation. They had commercial clients like Best Buy, Idaho Fish & Game, and NexGen Building Group, but no online presence to show for it, which was costing them credibility on bigger-ticket bids.",
     solution:
       "A full-featured site with a project gallery, testimonials section, detailed service pages, and a commercial client logo strip that immediately communicates credibility. Service area pages targeting specific cities across North Idaho and Western Montana so the site ranks for the searches that actually generate work.",
     keyFeatures: [
@@ -130,16 +130,16 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     heroWidth: 1440,
     heroHeight: 710,
     heroImageAlt:
-      "Crisis to Comfort Counseling homepage — a warm, professional presence for a Treasure Valley counseling practice.",
+      "Crisis to Comfort Counseling homepage: a warm, professional presence for a Treasure Valley counseling practice.",
     challenge:
-      "A counseling practice needed a website that felt calm and approachable, not clinical. Potential clients searching for therapy are already anxious, and the site needed to lower the barrier to reaching out — not add to it with sales-heavy copy or a cluttered layout. The practice also wanted to sell related products directly from the site without bolting on a separate platform that broke the design.",
+      "A counseling practice needed a website that felt calm and approachable, not clinical. Potential clients searching for therapy are already anxious, and the site needed to lower the barrier to reaching out, not add to it with sales-heavy copy or a cluttered layout. The practice also wanted to sell related products directly from the site without bolting on a separate platform that broke the design.",
     solution:
       "Clean, warm design with clear service descriptions, easy-to-find contact information, and a layout that feels reassuring rather than overwhelming. Built with on-page SEO so the practice ranks for local counseling searches across the Treasure Valley. Ecwid was integrated for the product side so the client can manage inventory, take orders, and process payments without leaving the site or compromising the brand.",
     keyFeatures: [
       "Mobile-responsive design",
       "Contact form built for low-friction first contact",
       "Clear service and modality descriptions",
-      "Calming visual design — warm tones, generous whitespace",
+      "Calming visual design: warm tones, generous whitespace",
       "Ecwid e-commerce integration for selling products directly from the site",
       "On-page SEO targeting local counseling keywords",
       "Fast load times across mobile and desktop",
@@ -195,11 +195,11 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     heroWidth: 1440,
     heroHeight: 791,
     heroImageAlt:
-      "Ice Ice Shavey homepage — Hawaiian-style shave ice for events across North Idaho and Eastern Washington.",
+      "Ice Ice Shavey homepage: Hawaiian-style shave ice for events across North Idaho and Eastern Washington.",
     challenge:
-      "Ice Ice Shavey is a mobile Hawaiian shave ice business that lives or dies by event bookings — fairs, festivals, and weddings across North Idaho and Eastern Washington. Founded in 2024, it needed a website that captured the fun, summery energy of the brand while making two things effortless: browsing the flavor lineup and booking the truck for an event.",
+      "Ice Ice Shavey is a mobile Hawaiian shave ice business that lives or dies by event bookings: fairs, festivals, and weddings across North Idaho and Eastern Washington. Founded in 2024, it needed a website that captured the fun, summery energy of the brand while making two things effortless: browsing the flavor lineup and booking the truck for an event.",
     solution:
-      "A bright, playful single-page site built around the booking goal. A bold hero states exactly what they do and where, a scrolling banner reinforces the key selling points (20+ flavors, available for events, est. 2024), and prominent \"See Our Flavors\" and \"Book Us for an Event\" calls to action send visitors straight to what they came for. A tap-to-call number, social links, and an events section round it out — all tuned for the phones most customers browse on.",
+      "A bright, playful single-page site built around the booking goal. A bold hero states exactly what they do and where, a scrolling banner reinforces the key selling points (20+ flavors, available for events, est. 2024), and prominent \"See Our Flavors\" and \"Book Us for an Event\" calls to action send visitors straight to what they came for. A tap-to-call number, social links, and an events section round it out, all tuned for the phones most customers browse on.",
     keyFeatures: [
       "Playful, summery design that matches the brand's energy",
       "Dual primary CTAs: browse flavors and book the truck for an event",

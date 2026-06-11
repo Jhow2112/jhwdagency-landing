@@ -50,7 +50,7 @@ export default function HeroSection() {
             className="fade-up fade-up-delay-3 text-base sm:text-lg text-[rgba(243,239,230,0.75)] leading-relaxed max-w-lg"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            Designed, built, hosted, and maintained for small businesses anywhere — so you can focus on running yours. Live in as little as{" "}
+            Designed, built, hosted, and maintained for small businesses anywhere, so you can focus on running yours. Live in as little as{" "}
             <strong className="text-[#f3efe6] font-semibold">5 days</strong>, starting at{" "}
             <strong className="text-[#f3efe6] font-semibold">$495</strong>.
           </p>
