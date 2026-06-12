@@ -239,85 +239,91 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick links — 2x2 grid: Services, Quick Links, Service Areas, Industries */}
-            <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:gap-x-8">
-              <div>
-                <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Services</p>
-                <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {[
-                    { label: "Web Design", href: "/#services" },
-                    { label: "Visual Identity", href: "/#services" },
-                    { label: "SEO & AEO", href: "/seo-aeo/" },
-                    { label: "SEO Plans", href: "/active-seo/" },
-                    { label: "Custom Builds", href: "/#services" },
-                  ].map((s) => (
-                    <li key={s.label}>
-                      <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                        {s.label}
+            {/* Quick links — three short columns + full-width Service Areas band */}
+            <div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-8 sm:gap-x-8">
+                <div>
+                  <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Services</p>
+                  <ul className="flex flex-col gap-2 sm:gap-2.5">
+                    {[
+                      { label: "Web Design", href: "/#services" },
+                      { label: "Visual Identity", href: "/#services" },
+                      { label: "SEO & AEO", href: "/seo-aeo/" },
+                      { label: "SEO Plans", href: "/active-seo/" },
+                      { label: "Custom Builds", href: "/#services" },
+                    ].map((s) => (
+                      <li key={s.label}>
+                        <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                          {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Company</p>
+                  <ul className="flex flex-col gap-2 sm:gap-2.5">
+                    {[
+                      { label: "About", href: "/about/" },
+                      { label: "Portfolio", href: "/portfolio/" },
+                      { label: "Blog", href: "/blog/" },
+                      { label: "Pricing", href: "/#pricing" },
+                      { label: "How It Works", href: "/#services" },
+                      { label: "FAQ", href: "/#faq" },
+                      { label: "Free Preview", href: "/free-preview/" },
+                    ].map((s) => (
+                      <li key={s.label}>
+                        <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                          {s.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Industries</p>
+                  <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 sm:gap-2.5">
+                    {INDUSTRIES.slice(0, 6).map((i) => (
+                      <li key={i.slug}>
+                        <a href={`${i.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                    <li>
+                      <a href="/industries/" className="text-sm font-semibold text-[#d97a55] hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                        See all industries →
                       </a>
                     </li>
-                  ))}
-                </ul>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Quick Links</p>
-                <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {[
-                    { label: "About", href: "/about/" },
-                    { label: "Portfolio", href: "/portfolio/" },
-                    { label: "Blog", href: "/blog/" },
-                    { label: "Pricing", href: "/#pricing" },
-                    { label: "How It Works", href: "/#services" },
-                    { label: "FAQ", href: "/#faq" },
-                    { label: "Free Preview", href: "/free-preview/" },
-                  ].map((s) => (
-                    <li key={s.label}>
-                      <a href={s.href} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                        {s.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Service Areas</p>
-                <p className="text-sm font-semibold text-white/85 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>Nationwide, remote</p>
-                <p className="text-xs text-white/45 mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>In person across Idaho:</p>
-                {(["Treasure Valley", "North Idaho"] as const).map((region) => {
-                  const inRegion = CITIES.filter((c) => c.region === region);
-                  if (inRegion.length === 0) return null;
-                  return (
-                    <div key={region} className="mb-3 sm:mb-4 last:mb-0">
-                      <p className="text-[0.7rem] font-semibold text-[#d97a55] uppercase tracking-wider mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>{region}</p>
-                      <ul className="flex flex-col gap-2 sm:gap-2.5">
-                        {inRegion.map((c) => (
-                          <li key={c.slug}>
-                            <a href={`${c.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                              {c.label}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
-              <div>
-                <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Industries We Serve</p>
-                <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {INDUSTRIES.slice(0, 6).map((i) => (
-                    <li key={i.slug}>
-                      <a href={`${i.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                        {i.label}
-                      </a>
-                    </li>
-                  ))}
-                  <li>
-                    <a href="/industries/" className="text-sm font-semibold text-[#d97a55] hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                      See all industries →
-                    </a>
-                  </li>
-                </ul>
+
+              {/* Service Areas — full-width inline band grouped by region */}
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <div className="flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1 mb-3">
+                  <p className="text-xs font-bold text-white/60 tracking-widest uppercase" style={{ fontFamily: "Inter, sans-serif" }}>Service Areas</p>
+                  <p className="text-xs text-white/45" style={{ fontFamily: "Inter, sans-serif" }}>Nationwide, remote · in person across Idaho</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  {(["Treasure Valley", "North Idaho"] as const).map((region) => {
+                    const inRegion = CITIES.filter((c) => c.region === region);
+                    if (inRegion.length === 0) return null;
+                    return (
+                      <div key={region} className="flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1">
+                        <span className="text-[0.7rem] font-semibold text-[#d97a55] uppercase tracking-wider shrink-0 sm:w-28" style={{ fontFamily: "Inter, sans-serif" }}>{region}</span>
+                        <p className="text-sm text-white/55 leading-relaxed" style={{ fontFamily: "Inter, sans-serif" }}>
+                          {inRegion.map((c, idx) => (
+                            <span key={c.slug}>
+                              <a href={`${c.slug}/`} className="hover:text-white transition-colors">{c.label}</a>
+                              {idx < inRegion.length - 1 && <span className="text-white/25"> · </span>}
+                            </span>
+                          ))}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
