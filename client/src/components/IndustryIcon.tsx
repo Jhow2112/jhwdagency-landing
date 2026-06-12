@@ -108,6 +108,16 @@ const PATHS: Record<string, ReactElement> = {
       <path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4v-9z" />
     </>
   ),
+  // Mortgage Brokers — bank / columns (finance)
+  "/websites-for-mortgage-brokers": (
+    <>
+      <path d="M3 9l9-5 9 5" />
+      <path d="M4 9h16" />
+      <path d="M6 10v7M10 10v7M14 10v7M18 10v7" />
+      <path d="M5 17h14" />
+      <path d="M4 20h16" />
+    </>
+  ),
 };
 
 export default function IndustryIcon({ slug, size = 24, className }: Props) {
