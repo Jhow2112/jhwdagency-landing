@@ -282,16 +282,25 @@ export default function Footer() {
               <div>
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Service Areas</p>
                 <p className="text-sm font-semibold text-white/85 mb-1" style={{ fontFamily: "Inter, sans-serif" }}>Nationwide, remote</p>
-                <p className="text-xs text-white/45 mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>In person across the Treasure Valley:</p>
-                <ul className="flex flex-col gap-2 sm:gap-2.5">
-                  {CITIES.map((c) => (
-                    <li key={c.slug}>
-                      <a href={`${c.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
-                        {c.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-xs text-white/45 mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>In person across Idaho:</p>
+                {(["Treasure Valley", "North Idaho"] as const).map((region) => {
+                  const inRegion = CITIES.filter((c) => c.region === region);
+                  if (inRegion.length === 0) return null;
+                  return (
+                    <div key={region} className="mb-3 sm:mb-4 last:mb-0">
+                      <p className="text-[0.7rem] font-semibold text-[#d97a55] uppercase tracking-wider mb-1.5" style={{ fontFamily: "Inter, sans-serif" }}>{region}</p>
+                      <ul className="flex flex-col gap-2 sm:gap-2.5">
+                        {inRegion.map((c) => (
+                          <li key={c.slug}>
+                            <a href={`${c.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
+                              {c.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
               </div>
               <div>
                 <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Industries We Serve</p>

@@ -9,5 +9,13 @@ http://jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 https://www.jeremyhowardwebdesign.com/*  https://aralostudio.com/:splat  301!
 http://www.jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 
+# Consolidated thin city pages → stronger neighbor page — 301 permanent.
+# Caldwell folded into Nampa (Canyon County), Kuna folded into Meridian.
+# Must precede the SPA fallback below.
+/web-design-caldwell      /web-design-nampa/     301!
+/web-design-caldwell/*    /web-design-nampa/     301!
+/web-design-kuna          /web-design-meridian/  301!
+/web-design-kuna/*        /web-design-meridian/  301!
+
 # SPA fallback — every other path serves index.html so client-side routing works.
 /*  /index.html  200

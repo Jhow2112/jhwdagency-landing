@@ -147,6 +147,29 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
               </p>
             ))}
           </div>
+
+          {/* Deeper sections — each an H2 with its own paragraphs */}
+          {data.bodySections?.map((section, si) => (
+            <div key={si} className="mt-10">
+              <h2
+                className="text-2xl sm:text-3xl font-extrabold text-[#1f2a22] leading-tight"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                {section.heading}
+              </h2>
+              <div className="mt-4 flex flex-col gap-4">
+                {section.paragraphs.map((p, pi) => (
+                  <p
+                    key={pi}
+                    className="text-base text-[#2f3b32] leading-relaxed"
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  >
+                    {renderWithInlineLinks(p)}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
