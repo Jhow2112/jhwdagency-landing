@@ -66,7 +66,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Boise businesses.",
     bodyParagraphs: [
       "Boise is the most competitive local search market in Idaho. Downtown, the North End, the Bench, Garden City, the foothills: every one of those areas has businesses fighting for the same Google results, and most of the people searching are doing it from a phone before they ever pick up the call. A site that loads fast, shows up correctly in Google's local pack, and answers the question your customer actually came to ask is worth more than a slow template that looks busy and ranks nowhere.",
-      "We build sites for Boise [contractors](/websites-for-contractors/), [restaurants](/websites-for-restaurants/), [counselors](/websites-for-counselors/), [HVAC companies](/websites-for-hvac/), and [real estate agents](/websites-for-real-estate/) that get the basics right: speed, mobile usability, structured data, and a clear path to contact you. Every site is designed, built, hosted, and maintained by one person, so there is no agency markup and no DIY headache. When something needs changing, you talk to the person who built it.",
+      "We build sites for Boise [contractors](/websites-for-contractors/), [restaurants](/websites-for-restaurants/), [counselors](/websites-for-counselors/), [HVAC companies](/websites-for-hvac/), [real estate agents](/websites-for-real-estate/), and [mortgage brokers](/websites-for-mortgage-brokers/) that get the basics right: speed, mobile usability, structured data, and a clear path to contact you. Every site is designed, built, hosted, and maintained by one person, so there is no agency markup and no DIY headache. When something needs changing, you talk to the person who built it.",
     ],
     bodySections: [
       {
@@ -191,7 +191,7 @@ export const CITIES: LandingPageData[] = [
     bodyEyebrow: "Serving Eagle",
     bodyHeading: "Built for Eagle businesses.",
     bodyParagraphs: [
-      "Eagle's customer base expects polish. A website that looks dated or loads slowly costs you the click before the visitor reads a single word. We build sites that match the quality of the businesses we work with, from [counselors](/websites-for-counselors/) and [real estate agents](/websites-for-real-estate/) to [landscapers](/websites-for-landscapers/), [painters](/websites-for-painters/), and [salons](/websites-for-salons/), whether that's a boutique downtown, a real estate practice, or a professional service firm.",
+      "Eagle's customer base expects polish. A website that looks dated or loads slowly costs you the click before the visitor reads a single word. We build sites that match the quality of the businesses we work with, from [counselors](/websites-for-counselors/), [real estate agents](/websites-for-real-estate/), and [mortgage brokers](/websites-for-mortgage-brokers/) to [landscapers](/websites-for-landscapers/), [painters](/websites-for-painters/), and [salons](/websites-for-salons/), whether that's a boutique downtown, a real estate practice, or a professional service firm.",
       "The same standard applies to professional services, where the website does the verification work before the first call. We take time on typography, photo selection, and color so the site signals the same quality your business delivers. No template that looks like a hundred other Eagle businesses, no stock-photo model in a hard hat.",
     ],
     bodySections: [
@@ -919,6 +919,47 @@ export const INDUSTRIES: LandingPageData[] = [
         paragraphs: [
           "Aralo Studio is one person, Jeremy, and you work with the designer directly. We build high-end, personal sites for people whose business depends on credibility, including [Crystal Howard Mortgage](/portfolio/crystal-howard-mortgage/), a multi-page site built to position a lending specialist as a genuine expert. The same approach works for an agent who wants to stand out from the brokerage template.",
           "Sites are hand-coded to be fast and pass Core Web Vitals, with SEO included from day one. If you want a real estate site that shows prospects who you actually are, that's what we build.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "/websites-for-mortgage-brokers",
+    category: "industry",
+    label: "Mortgage Brokers",
+    metaTitle: "Mortgage Broker Web Design Idaho | Aralo Studio",
+    metaDescription:
+      "Websites for mortgage brokers and loan officers in Idaho. Specialty loan pages, application integration, NMLS-compliant, built to win borrowers and referral partners.",
+    heading: "Websites for",
+    headingAccent: "Mortgage Brokers",
+    subheading:
+      "The lender hands you a generic, locked-down template. Borrowers and referral partners need to see why they should pick you.",
+    bodyEyebrow: "For Mortgage Brokers",
+    bodyHeading: "Built for loan officers and mortgage brokers.",
+    bodyParagraphs: [
+      "Most loan officers work off a corporate site that looks identical to every other officer at the lender: same template, same stock photo, same compliance-locked layout you can't really change. The broker who stands out has a personal site that shows their specialties, their market, and why a borrower or a referral partner in [Boise](/web-design-boise/), [Eagle](/web-design-eagle/), or [Coeur d'Alene](/web-design-coeur-dalene/) should call them instead of defaulting to a rate-shopping app.",
+      "A mortgage site has two audiences, and both matter. Borrowers are checking whether you understand their situation, whether that's a jumbo purchase, new construction, a self-employed borrower with complex income, or a first-time buyer who needs the process explained in plain language. The realtors and builders who send you deals are deciding whether handing a client your name makes them look good. A weak, generic site costs you on both sides.",
+    ],
+    bodySections: [
+      {
+        heading: "What a mortgage broker website includes",
+        paragraphs: [
+          "The highest-leverage thing on a mortgage site is a dedicated page for each loan type you actually want to win. A jumbo page, a construction-financing page, a bank-statement-loan page, a renovation page, a first-time-buyer page: each one ranks on its own and tells a specific borrower you handle exactly their situation, instead of burying everything under a generic \"loan programs\" list. We pair those with an application or pre-approval start that connects to your point-of-sale system, a referral-partner section for the realtors and builders you work with, and the trust signals borrowers look for before they hand over their financials: real reviews, a real photo, and clear NMLS, licensing, and equal-housing disclosures handled properly in the footer and on every page.",
+          "This is work we've done at the top end of the market. We built and maintain [Crystal Howard Mortgage](/portfolio/crystal-howard-mortgage/) in Garden City, a multi-page site for a jumbo and construction lending specialist, with dedicated landing pages for jumbo, construction, builder programs, renovation, and bank statement loans, a Fairway application integration, a builder partner section, an Idaho relocation guide, and NMLS compliance built into the disclosures. Every build includes mobile-first design, on-page SEO and AEO targeting Idaho mortgage keywords, Google Business Profile setup, and structured data.",
+        ],
+      },
+      {
+        heading: "What drives the cost",
+        paragraphs: [
+          "Pricing is published below, from $495 plus $29 a month to $1,295 plus $99 a month. For mortgage brokers, the cost is driven mostly by how many specialty loan-type pages you want, since each one is a separate ranking opportunity, whether you need application or point-of-sale integration, and whether you want the copy written for you, which matters in a field where the writing has to be both persuasive and compliant.",
+          "No long-term contracts. The monthly covers hosting, maintenance, and edits, cancellable with thirty days notice. A multi-page specialist site like Crystal Howard's sits at the upper tier because the specialty pages and professional copywriting are exactly what position you as an expert rather than an order-taker. A single-focus loan officer can start smaller and add specialty pages as the business grows.",
+        ],
+      },
+      {
+        heading: "Why work with Aralo Studio",
+        paragraphs: [
+          "Aralo Studio is one person, Jeremy, and you work with him directly. Compliance and disclosures change, rates and programs shift, and referral partners come and go, so you want a site maintained by someone you can actually reach, not a ticket queue at the lender's marketing department.",
+          "We've already built a high-end, ranking mortgage site for a real Idaho lender, so this isn't theory. SEO is included from day one rather than sold later, and the site is hand-coded to load fast and pass Core Web Vitals. If you trade referrals back and forth with [real estate agents](/websites-for-real-estate/), a site that makes both of you look professional is worth more than any rate sheet. That's what we build.",
         ],
       },
     ],
