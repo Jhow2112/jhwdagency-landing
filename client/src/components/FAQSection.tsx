@@ -4,9 +4,11 @@
    never drift, and the schema only ships on pages that actually render this
    section (the home page).
    Design: clean accordion on off-white background */
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, type ReactNode } from "react";
 
-const faqs = [
+type Faq = { q: string; a: string; aNode?: ReactNode };
+
+const faqs: Faq[] = [
   {
     q: "How much does a website cost?",
     a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 5 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan. No surprise costs.",
@@ -29,7 +31,19 @@ const faqs = [
   },
   {
     q: "Do you work with businesses outside of Meridian, Idaho?",
-    a: "Absolutely. While we're based in Meridian, Idaho, we work with clients anywhere in the U.S. via Zoom and remote collaboration. If you're in the Treasure Valley, we can also meet in person.",
+    a: "Absolutely. While we're based in Meridian, Idaho, we work with clients anywhere in the U.S. via Zoom and remote collaboration. If you're in the Treasure Valley, we can also meet in person. We also actively serve North Idaho, with dedicated pages for cities like Coeur d'Alene, Post Falls, and Hayden.",
+    aNode: (
+      <>
+        Absolutely. While we're based in Meridian, Idaho, we work with clients
+        anywhere in the U.S. via Zoom and remote collaboration. If you're in the{" "}
+        <a href="/web-design-boise/" className="link-accent">Treasure Valley</a>,
+        we can also meet in person. We also actively serve North Idaho, with
+        dedicated pages for cities like{" "}
+        <a href="/web-design-coeur-dalene/" className="link-accent">Coeur d'Alene</a>,{" "}
+        <a href="/web-design-post-falls/" className="link-accent">Post Falls</a>, and{" "}
+        <a href="/web-design-hayden/" className="link-accent">Hayden</a>.
+      </>
+    ),
   },
   {
     q: "Are there long-term contracts?",
@@ -41,7 +55,7 @@ const faqs = [
   },
 ];
 
-function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
+function FAQItem({ faq, index }: { faq: Faq; index: number }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -112,7 +126,7 @@ function FAQItem({ faq, index }: { faq: typeof faqs[0]; index: number }) {
             className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed"
             style={{ fontFamily: "Inter, sans-serif" }}
           >
-            {faq.a}
+            {faq.aNode ?? faq.a}
           </p>
         </div>
       </div>

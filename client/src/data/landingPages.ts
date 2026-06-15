@@ -88,6 +88,7 @@ export const CITIES: LandingPageData[] = [
         paragraphs: [
           "Aralo Studio is one person, Jeremy, based in nearby Meridian. You work with the designer directly from the first sketch to ongoing updates, not a sales rep or a ticket queue. That matters most after launch, the point where small businesses usually get abandoned by whoever built the site.",
           "The work is real and it's local. We built and maintain [Crystal Howard Mortgage](/portfolio/crystal-howard-mortgage/) in Garden City, a multi-page site for a jumbo and construction lending specialist, and [Crisis to Comfort Counseling](/portfolio/crisis-to-comfort/) here in the Treasure Valley. SEO is built into every page from the start instead of sold as an upsell later, and the sites are hand-coded to load fast and pass Core Web Vitals rather than assembled from a heavy page-builder template. If you run a business in Boise and want a site that earns calls instead of just existing, that's the work we do.",
+          "Boise is home base, but the work goes statewide. Up north we build and maintain sites across North Idaho, from [Coeur d'Alene](/web-design-coeur-dalene/) and [Post Falls](/web-design-post-falls/) to [Hayden](/web-design-hayden/), [Rathdrum](/web-design-rathdrum/), and [Sandpoint](/web-design-sandpoint/), anchored by our Panhandle client [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/). Same designer, same hand-built quality, whether your business is in the Treasure Valley or Kootenai County.",
         ],
       },
     ],
