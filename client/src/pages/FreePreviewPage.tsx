@@ -362,6 +362,15 @@ export default function FreePreviewPage() {
                 We'll start on your preview and have it in your inbox within
                 48 hours. If you'd like to chat sooner, book a quick call below.
               </p>
+              <p
+                className="text-sm text-[#6b6660] leading-relaxed mb-7 max-w-md mx-auto -mt-4"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                Don't see it? Check your spam or Promotions folder, or email us at{" "}
+                <a href="mailto:info@aralostudio.com" className="underline hover:text-[#9a4528]">
+                  info@aralostudio.com
+                </a>.
+              </p>
               <a
                 href={CALENDLY_URL}
                 target="_blank"

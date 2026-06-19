@@ -12,7 +12,7 @@ const PHONE_HREF = "tel:+12086152884";
 const HOURS = "Mon–Fri, 9 AM–6 PM Mountain Time";
 
 export default function Footer() {
-  const [form, setForm] = useState({ name: "", email: "", message: "", plan: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", plan: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -63,6 +63,10 @@ export default function Footer() {
                 <p className="text-sm text-white/55" style={{ fontFamily: "Inter, sans-serif" }}>
                   We'll be in touch within one business day to schedule a free consultation.
                 </p>
+                <p className="text-xs text-white/40 mt-3" style={{ fontFamily: "Inter, sans-serif" }}>
+                  Don't see our reply? Check your spam or Promotions folder, or email us directly at{" "}
+                  <a href={`mailto:${EMAIL}`} className="underline hover:text-white/70">{EMAIL}</a>.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -98,6 +102,21 @@ export default function Footer() {
                       style={{ fontFamily: "Inter, sans-serif" }}
                     />
                   </div>
+                </div>
+
+                <div>
+                  <label htmlFor="contact-phone" className="block text-xs font-semibold text-white/60 mb-1.5 tracking-wide uppercase" style={{ fontFamily: "Inter, sans-serif" }}>
+                    Phone <span className="text-white/35 normal-case font-medium tracking-normal">(optional)</span>
+                  </label>
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    placeholder="(208) 555-0100"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    className={inputClass}
+                    style={{ fontFamily: "Inter, sans-serif" }}
+                  />
                 </div>
 
                 <div>

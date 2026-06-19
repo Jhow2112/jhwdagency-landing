@@ -58,7 +58,7 @@ export default function PrivacyPage() {
               </p>
               <h3 className="text-base font-bold text-[#1f2a22] mt-5 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Information You Provide</h3>
               <p className="text-base">
-                When you submit the contact form on this site, we collect your name, email address, and any message or details you choose to include. This information is transmitted to us via Formspree, a third-party form service, and is used solely to respond to your inquiry.
+                When you submit the contact form on this site, we collect your name, email address, phone number (if you choose to provide it), and any message or details you choose to include. This information is transmitted to us via Formspree, a third-party form service, and is used solely to respond to your inquiry.
               </p>
               <h3 className="text-base font-bold text-[#1f2a22] mt-5 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Information Collected Automatically</h3>
               <p className="text-base">
