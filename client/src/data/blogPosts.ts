@@ -230,7 +230,7 @@ The landscapers who dominate local search in the Treasure Valley aren't doing an
 
 ---
 
-*Aralo Studio builds websites for landscaping companies and service businesses across the [Treasure Valley](/web-design-meridian/). If your business needs a professional online presence, [get in touch](/#contact).*`;
+*Aralo Studio builds websites for landscaping companies and service businesses in the [Treasure Valley](/web-design-meridian/) and anywhere else. If your business needs a professional online presence, [get in touch](/#contact).*`;
 
 const POST_5_BODY = `You know reviews matter. You've probably Googled a business yourself and skipped the one with 2 reviews in favor of the one with 47. Everyone does this. But actually getting your own customers to leave reviews feels awkward, pushy, or like something you never get around to.
 
@@ -317,7 +317,7 @@ In 30 days you'll have 10-15 new reviews and your Google ranking will be measura
 
 ---
 
-*Aralo Studio helps small businesses across the Treasure Valley get found on [Google through web design, SEO, and Google Business Profile optimization](/seo-aeo/). If you need help with your online presence, [get in touch](/#contact).*`;
+*Aralo Studio helps small businesses get found on [Google through web design, SEO, and Google Business Profile optimization](/seo-aeo/), in the Treasure Valley and wherever you are. If you need help with your online presence, [get in touch](/#contact).*`;
 
 const POST_6_BODY = `Restaurants are different from most small businesses. People don't research you for weeks before deciding. They check your website while they're already hungry, already in the car, or already arguing with their partner about where to eat. You have about 15 seconds to answer their questions or they're picking the next spot on Google.
 
@@ -389,11 +389,11 @@ The best restaurant websites aren't the prettiest. They're the ones that answer 
 
 ---
 
-*Aralo Studio builds websites for restaurants and small businesses across the [Treasure Valley](/web-design-meridian/). If your restaurant needs a professional online presence, [get in touch](/#contact).*`;
+*Aralo Studio builds websites for restaurants and small businesses in the [Treasure Valley](/web-design-meridian/) and well beyond it. Wherever your restaurant is, if it needs a professional online presence, [get in touch](/#contact).*`;
 
 const POST_7_BODY = `Something changed in the last two years that most small business owners haven't caught up to yet. People aren't just Googling anymore. They're asking ChatGPT, Gemini, Claude, and Perplexity. They're using voice assistants. They're getting answers without ever clicking a website.
 
-This shift has a name: Answer Engine Optimization, or AEO. It's not replacing SEO. It's running alongside it. And if you're a small business owner in the Treasure Valley, ignoring it now means losing customers to competitors who figured it out first.
+This shift has a name: Answer Engine Optimization, or AEO. It's not replacing SEO. It's running alongside it. And if you're a small business owner, here in the Treasure Valley or anywhere else, ignoring it now means losing customers to competitors who figured it out first.
 
 ## What's the actual difference
 
@@ -466,110 +466,70 @@ The fastest path to AEO visibility for a small business: a verified [Google Busi
 
 ---
 
-*Aralo Studio helps small businesses across the Treasure Valley get found in both traditional search and AI tools through [web design, SEO, and AEO services](/seo-aeo/). If you need help with your online presence, [get in touch](/#contact).*`;
+*Aralo Studio helps small businesses get found in both traditional search and AI tools through [web design, SEO, and AEO services](/seo-aeo/), in the Treasure Valley and wherever you are. If you need help with your online presence, [get in touch](/#contact).*`;
 
-const POST_8_BODY = `If you've ever looked into getting a website for your business, you've run into the same question: should you just build it yourself on Wix or Squarespace, or pay someone to do it?
+const POST_8_BODY = `If you're looking into getting a website for your business, your first instinct is probably to just build it yourself. Wix, Squarespace, GoDaddy. The ads make it look like an afternoon of work and twenty bucks a month, so why pay someone hundreds of dollars for something you could do on your own?
 
-Most articles on this topic are written by people trying to sell you one or the other. This isn't that. Here's the honest version, written by someone who builds websites for a living but will tell you when DIY actually makes more sense.
+It's a fair question. So let's actually run the numbers, because once you do, the answer comes out differently than most people expect.
 
-## When DIY actually works
+## The pitch vs the reality
 
-DIY website builders are great for some situations. If you fit any of these, you probably don't need to hire anyone:
+The pitch is always the same: "build a beautiful website in minutes." The reality is 20 to 40 hours for someone who's never done it before. Picking a template takes longer than you think. Writing the copy is harder than you think. And you'll lose a whole evening figuring out why the mobile version looks broken when the desktop one looked fine.
 
-**You're testing an idea that might not stick.** If you're not sure whether your side business will become real, don't spend $500-1,500 on a site for it. Build something cheap and ugly on Wix. If the business takes off, replace it later with something professional.
+That's not because you're not capable. It's because website builders are easy to start and hard to finish. The first screen takes five minutes. The last ten percent takes the other thirty hours.
 
-**You have time and you enjoy fiddling with this stuff.** If you actually like learning new tools, picking templates, and tweaking layouts, you'll probably be fine on Squarespace. The tools have gotten much better in the last few years.
+## What DIY actually costs
 
-**You only need a one-page site with basic info.** If all you need is your name, what you do, your phone number, and a contact form, you can build that on Squarespace in a weekend. It won't be amazing, but it'll work.
+Here's the comparison almost nobody runs honestly.
 
-**Your budget genuinely doesn't allow for hiring.** If you're scraping together every dollar to launch your business, $20/month for Squarespace is better than no website at all.
+Building it yourself on Squarespace runs about $16 to $23 a month, plus a domain. Call it $250 for the first year. But that number isn't the real cost. The real cost is your time: roughly 30 hours of fighting templates instead of running your business. If your time is worth even $25 an hour, that's $750 you just spent. At $50 an hour it's $1,500.
 
-## When DIY breaks down
+So the "$250 DIY site" is really a $1,000-plus project once you count the part that never shows up on an invoice. And it's still yours to maintain forever. Every update, every broken plugin, every "why did the layout suddenly change" lands on you.
 
-The pitch from DIY builders is always the same: "Build a beautiful website in minutes!" The reality is messier. Here's where most DIY projects fall apart:
+Now line that up against hiring out the lower end of the market. We build sites starting at $495, live in 5 to 10 business days, with hosting and edits bundled into a low monthly plan. You spend zero hours building it, and what you get is set up to actually show up on Google instead of just existing.
 
-**Time. So much time.** The marketing says "minutes." The reality is 20-40 hours for someone who's never done it before. Picking a template takes longer than you think. Writing copy is harder than you think. Figuring out why the mobile view looks different from the desktop view is harder than you think. Your time is worth something. If you make $50/hour in your business, spending 30 hours on a website is a $1,500 project. The math stops favoring DIY pretty quick.
+Put the two paths side by side:
 
-**It looks like a template.** People can tell when a site was built from a Squarespace template. Same hero layouts, same fonts, same generic stock photos. It's not bad, but it doesn't stand out either. For some businesses that's fine. For others (especially anything where trust or premium positioning matters) it actively works against you.
+- **DIY on Squarespace:** about $250 the first year, plus 30-plus hours of your time, and you maintain it forever.
+- **Our starter tier:** $495 to build, hosting and edits included, live in a week or two, none of your time, and built to rank.
 
-**SEO is harder than it looks.** Modern builders all claim to be "SEO-friendly." That doesn't mean your site will rank. Showing up on Google requires actual SEO work: proper page structure, keyword research, location signals, schema markup, fast load times, internal linking. The builder makes it possible. It doesn't do it for you.
+When the gap between "do it all yourself" and "have it done for you" is a couple hundred dollars, the couple hundred dollars wins almost every time. You're not really saving money by going DIY. You're spending your nights and weekends to save an amount you'd earn back in a job or two.
 
-**You're stuck maintaining it forever.** Templates change. Plugins update. Domain settings need adjusting. Content needs refreshing. Six months from now when something breaks, you're back in the builder trying to remember how everything works. That recurring time cost rarely gets counted up front.
+## Where DIY genuinely makes sense
 
-**You can't easily move it.** Squarespace and Wix are walled gardens. If you outgrow them, exporting your site to a different platform is painful at best. You're locked in.
+This isn't a blanket "never build your own site." There are real situations where DIY is the right call, and it'd be dishonest to pretend otherwise:
 
-## When hiring someone makes sense
+**You're testing an idea you're not sure about.** If you don't even know whether the business is going to be real yet, don't pay anyone. Throw something cheap up and replace it later if it takes off.
 
-Hiring out the work makes sense when:
+**You actually enjoy this stuff.** Some people like learning the tools and tinkering with layouts. If that's you and you've got the evenings to spend, go for it.
 
-**Time matters more than money.** If you're already busy running your business, the 30 hours you'd spend learning a website builder is 30 hours not spent on actual revenue-generating work.
+**You need one page and nothing else.** Name, what you do, phone number, contact form. You can manage that in a weekend.
 
-**Trust and credibility matter to your customers.** Industries where people Google you before calling (counselors, contractors, mortgage brokers, lawyers, anyone selling a high-trust service) need a site that looks more professional than a template.
+If you're in one of those buckets, DIY is fine. Nobody needs to hire out a placeholder.
 
-**You want SEO that actually works.** A web designer who understands local SEO will set up your site to actually rank. A DIY site might never make it past page 5 of Google.
+## Where DIY quietly costs you
 
-**You're not interested in learning the technical stuff.** Domain registrars, hosting, DNS, plugins, updates. If reading those words makes you tired, hire someone.
+For an actual business that wants to get found and get the phone ringing, DIY tends to fall short in three ways you don't notice until later:
 
-## The pricing breakdown
+**It looks like a template.** People can tell. Same hero layout, same fonts, same stock photos as every other Squarespace site. For some businesses that's fine. For anything where trust matters (contractors, counselors, brokers, anyone people look up before calling) looking generic quietly works against you.
 
-Here's the honest cost comparison:
+**It doesn't rank on its own.** Every builder claims to be "SEO-friendly." That only means ranking is possible, not that it'll happen. Actually showing up takes page structure, location signals, schema markup, fast load times, and internal links. The builder makes it possible. It doesn't do it for you.
 
-**DIY (Squarespace, Wix):**
-- $15-30/month subscription
-- $15-50/year for a domain
-- 20-40 hours of your time to build it
-- Ongoing time to update and maintain
-- Total first-year cost: $200-400 plus 30+ hours of your time
+**You're stuck maintaining it.** Six months from now when something breaks, you're back in the builder trying to remember how it all worked, instead of doing your actual job.
 
-**Freelancer (a real one, not Fiverr):**
-- $500-1,500 to build
-- $20-50/month for hosting (if separate)
-- Their time to make changes (usually hourly after launch)
-- Total first-year cost: $750-2,100
+## The honest bottom line
 
-**Small studio (like us):**
-- $495-1,295 to build
-- $29-99/month bundled hosting and maintenance
-- Edits included in monthly plan
-- Total first-year cost: $843-2,483
+DIY website builders aren't bad. They're just rarely the cheapest option once you count your time honestly, and almost never the best option when getting found actually matters to your bottom line.
 
-**Agency:**
-- $5,000-15,000 to build
-- $100-500/month for ongoing services
-- Detailed contracts, multiple meetings
-- Total first-year cost: $6,200-21,000
+If the choice were DIY for free versus hiring for thousands, it'd be a real debate. But that's not the choice. The choice is usually DIY for a few hundred dollars and 30 hours of your time, versus done-for-you for a few hundred dollars and none of it. Put that way, "I'll just build it myself" stops being the obvious money-saver it sounds like.
 
-For most small businesses in the Treasure Valley, the small studio range hits the sweet spot. Professional work without agency overhead, and someone who actually answers when you need a change made.
+And it doesn't matter where you are. We build for businesses anywhere, not just here in Idaho, so being outside our backyard isn't a reason to settle for a template you'll be fighting all year.
 
-## The middle option nobody talks about
-
-There's a third option most people miss: build it yourself on a DIY platform, then pay someone for a few hours to polish it.
-
-If you're handy with technology, you can absolutely set up the basic Squarespace site, write your copy, and add your photos. Then hire a designer for 2-3 hours to fix the things that look off, optimize it for SEO, and set up your Google Business Profile properly. Total cost: maybe $300-500 plus the monthly subscription. You get most of the benefit of hiring help at a fraction of the cost.
-
-This works best for businesses with simple needs and someone who's comfortable enough with technology to do the basics.
-
-## How to decide
-
-Ask yourself three questions:
-
-1. How much is your time worth per hour? Multiply by 30 (the hours DIY will actually take). If that number is bigger than hiring someone, hire someone.
-
-2. Do your customers Google you before calling? If yes, the professional polish matters and DIY probably isn't enough.
-
-3. Do you actually enjoy this kind of work? If yes, DIY can be rewarding. If no, hiring saves you a lot of frustration.
-
-There's no universal right answer. There's only the right answer for your specific business, budget, and patience level.
-
-## The bottom line
-
-DIY website builders aren't bad. They're just not always the cheapest option once you count your time. And they're rarely the best option if professional credibility matters to your customers.
-
-If you've already tried building your own site and abandoned it halfway through (or finished it and quietly hate how it looks), that's your answer. [Get help](/#contact). The opportunity cost of a bad website is higher than the cost of paying someone to build a good one.
+If you've already started a DIY site and stalled out halfway, or finished one and quietly don't love how it looks, that's your answer. [Get in touch](/#contact) and we'll build you something that does the job, for about what you'd spend on a year of Squarespace and your weekends.
 
 ---
 
-*Aralo Studio builds professional websites for small businesses across the Treasure Valley starting at $495. If you're tired of fighting your DIY site, [get in touch](/#contact).*`;
+*Aralo Studio builds professional websites for small businesses, wherever you're located, starting at $495. If you're tired of fighting your DIY site, [get in touch](/#contact).*`;
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -605,7 +565,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2026-05-19",
     category: "Industry Guide",
     headerImage: "/blog/blog-photo-04-landscaping.jpg",
-    headerImageAlt: "Lawn mower cutting grass on a residential property",
+    headerImageAlt: "Landscaper mowing a green yard with a red walk-behind mower",
     body: POST_4_BODY,
   },
   {
