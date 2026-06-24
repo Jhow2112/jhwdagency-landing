@@ -580,7 +580,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "restaurant-website-essentials",
     title: "What Every Restaurant Website Actually Needs (and What to Skip)",
-    date: "2026-06-24",
+    date: "2026-06-22",
     category: "Industry Guide",
     headerImage: "/blog/blog-photo-06-restaurant.jpg",
     headerImageAlt:
@@ -590,7 +590,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "seo-vs-aeo-small-business",
     title: "SEO vs AEO: What Small Businesses Need to Know in 2026",
-    date: "2026-06-24",
+    date: "2026-06-23",
     category: "Local SEO",
     headerImage: "/blog/blog-photo-07-aeo.jpg",
     headerImageAlt: "Woman sitting on a bed using a laptop to search online",
