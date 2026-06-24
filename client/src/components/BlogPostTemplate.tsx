@@ -108,18 +108,22 @@ export default function BlogPostTemplate({ post }: { post: BlogPost }) {
       <BreadcrumbSchema crumbs={buildBreadcrumbs(post)} />
       <Navbar />
 
-      {/* Header image — full bleed under navbar, capped height so it
-           doesn't dominate the viewport on desktop. */}
-      <header className="bg-[#1f2a22] pt-16 md:pt-20">
-        <div className="w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] overflow-hidden">
-          <img
-            src={post.headerImage}
-            alt={post.headerImageAlt ?? post.title}
-            width="1200"
-            height="630"
-            className="w-full h-full object-cover"
-            decoding="async"
-          />
+      {/* Header image — contained to ~the content width and shown at the
+           image's native 1200×630 ratio, so the whole photo is visible.
+           A short full-bleed band would crop ~40% off the top and bottom
+           of a 1.9:1 image on desktop. */}
+      <header className="bg-[#1f2a22] pt-24 md:pt-28 pb-8 md:pb-12">
+        <div className="container">
+          <div className="max-w-4xl mx-auto aspect-[1200/630] overflow-hidden rounded-2xl bg-[#0f1611]">
+            <img
+              src={post.headerImage}
+              alt={post.headerImageAlt ?? post.title}
+              width="1200"
+              height="630"
+              className="w-full h-full object-cover"
+              decoding="async"
+            />
+          </div>
         </div>
       </header>
 
