@@ -319,6 +319,258 @@ In 30 days you'll have 10-15 new reviews and your Google ranking will be measura
 
 *Aralo Studio helps small businesses across the Treasure Valley get found on [Google through web design, SEO, and Google Business Profile optimization](/seo-aeo/). If you need help with your online presence, [get in touch](/#contact).*`;
 
+const POST_6_BODY = `Restaurants are different from most small businesses. People don't research you for weeks before deciding. They check your website while they're already hungry, already in the car, or already arguing with their partner about where to eat. You have about 15 seconds to answer their questions or they're picking the next spot on Google.
+
+The mistake most restaurant websites make is trying to be a magazine. Big photo carousels, elaborate animations, autoplay videos, paragraphs of chef bios. None of that matters when someone just wants to know if you're open and what's on the menu.
+
+Here's what actually needs to be on a restaurant website, and what's wasting space.
+
+## What every restaurant site needs
+
+**The menu, easy to find.** This is the #1 reason people visit a restaurant website. Make it impossible to miss. Either a clean HTML menu on its own page or a PDF that opens in one tap. Don't bury it under "Dine" or "Experience." Just call it "Menu" and put it in the top nav.
+
+**Hours and address, visible without scrolling.** Someone on their phone deciding where to go in the next 30 minutes needs to see your hours and location immediately. Top of the page, no clicks required.
+
+**A tap-to-call phone number.** Half of restaurant traffic is mobile. If your phone number isn't a clickable link on mobile, you're losing calls.
+
+**Reservation link if you take them.** OpenTable, Resy, Tock, whatever you use. The button should be prominent and clearly labeled. Don't make people hunt for it.
+
+**Online ordering or delivery link.** If you offer takeout, the order link should be as obvious as the reservation link. Link directly to your ordering platform (DoorDash, Toast, your own system).
+
+**Real photos of the food and the space.** Not stock images of generic burgers. Photos of your actual dishes from your actual kitchen. A few interior shots that show the vibe of the room. People want to know what they're walking into.
+
+**A way to find you.** Embedded Google Map, address with a "Get Directions" link, and the neighborhood you're in.
+
+## What to skip
+
+**Long chef bios and origin stories.** Save these for your About page if you must have them. Nobody chose a restaurant based on your founder's grandmother's recipes.
+
+**Massive hero videos that take 8 seconds to load.** Cool on a desktop, brutal on mobile. Half your visitors will be gone before the video starts.
+
+**Image carousels of plates rotating every 3 seconds.** Just show one good food photo and move on.
+
+**A blog you'll never update.** An empty blog or one with three posts from 2022 looks worse than no blog at all. Skip it unless you'll commit to posting monthly.
+
+**Press mentions from 2018.** If you're a brand new restaurant, you don't have press yet, and that's fine. If you're established, only feature recent and relevant press.
+
+**An email signup form for your newsletter.** Almost nobody signs up. The space is better used for something practical.
+
+## The mobile reality
+
+Over 80% of restaurant searches happen on phones. Your website lives or dies based on how it works on mobile. Pull out your phone right now and load your site. Then ask yourself:
+
+Can I see your hours without scrolling? Can I tap your phone number to call? Can I find the menu in one tap? Can I make a reservation in two taps? Does the page load in under 3 seconds?
+
+If the answer to any of these is no, your website is costing you customers every single day.
+
+## The about page nobody reads
+
+A lot of restaurants pour effort into their About page. Hours of writing about the family history, the inspiration, the journey. Almost nobody reads it.
+
+What actually works for restaurants: one paragraph about the concept, where you're located, what you serve, and what makes you different. Then move on. The food and the experience tell the story better than any wall of text ever will.
+
+## Reservations and online ordering matter more than design
+
+A beautifully designed restaurant website that doesn't connect to OpenTable or Toast is less useful than an ugly one that does. The infrastructure matters more than the aesthetics.
+
+Make sure your reservation system is integrated, your online ordering link goes to a working order page, and any forms (private events, catering inquiries, contact) actually deliver to an inbox you check.
+
+## What it costs
+
+A professional restaurant website should run somewhere between $800 and $2,000 depending on complexity. Most restaurants don't need anything more than a 5-7 page site with the menu, hours, location, reservations, online ordering, and contact info. Anything more is usually overengineering.
+
+Compare that to the value of even one booked table per week that you would have lost to a competitor with a better website. The site pays for itself in the first month.
+
+## The bottom line
+
+Your restaurant website has two jobs: tell people what you serve and make it easy for them to decide to come. Everything on the page should serve one of those two goals. If something doesn't, cut it.
+
+The best restaurant websites aren't the prettiest. They're the ones that answer every question a potential customer might have before they think to ask it.
+
+---
+
+*Aralo Studio builds websites for restaurants and small businesses across the [Treasure Valley](/web-design-meridian/). If your restaurant needs a professional online presence, [get in touch](/#contact).*`;
+
+const POST_7_BODY = `Something changed in the last two years that most small business owners haven't caught up to yet. People aren't just Googling anymore. They're asking ChatGPT, Gemini, Claude, and Perplexity. They're using voice assistants. They're getting answers without ever clicking a website.
+
+This shift has a name: Answer Engine Optimization, or AEO. It's not replacing SEO. It's running alongside it. And if you're a small business owner in the Treasure Valley, ignoring it now means losing customers to competitors who figured it out first.
+
+## What's the actual difference
+
+**SEO (Search Engine Optimization)** is about getting your website to show up when someone types a search into Google. The goal is a click. You optimize your site so Google ranks you high enough that people see you and click through.
+
+**AEO (Answer Engine Optimization)** is about getting your business mentioned when someone asks an AI tool a question. The goal isn't always a click. It's being the answer. When someone asks ChatGPT "what's a good plumber in Meridian, Idaho," AEO is what determines whether you get named or your competitor does.
+
+The two overlap, but they're not the same. A site optimized for SEO might rank #1 on Google but never get mentioned by Gemini. A site optimized for AEO might get cited by ChatGPT but rank lower on Google. The businesses winning in 2026 are doing both.
+
+## Why this matters now
+
+Search behavior is changing fast. ChatGPT has hundreds of millions of weekly users. Google added AI Overviews to search results, which means many searches now end without anyone clicking a link. People ask their phone, get an answer, and move on.
+
+For a local business, this is both a threat and an opportunity. The threat: if AI tools don't know about you, you're invisible to a growing share of potential customers. The opportunity: most of your competitors aren't doing anything about this yet. The bar to stand out is low.
+
+## What AI tools actually look at
+
+When an AI model decides which businesses to recommend, it doesn't have a magic algorithm. It pulls from sources it trusts. Here's what it looks for:
+
+**A Google Business Profile.** This is the foundation. AI tools heavily reference Google's own data. No GBP means you don't exist in most AI responses about local businesses.
+
+**Consistent citations across the web.** Your business name, address, and phone number need to match exactly on Yelp, Bing Places, Apple Maps, BBB, Facebook, and other directories. AI tools cross-reference these to confirm you're real.
+
+**Reviews.** AI models use reviews as social proof signals. A business with 30 Google reviews is far more likely to be mentioned than one with 2.
+
+**Clear, structured information on your website.** Pages that directly answer common questions ("what services do you offer," "what's your service area," "how much do you charge") give AI tools something to pull from. Buried information doesn't help.
+
+**Structured data (schema markup).** This is code that tells search engines and AI tools what your page is about. Adding LocalBusiness schema, FAQ schema, and Service schema makes your content machine-readable.
+
+**Mentions on other websites.** When other sites link to or mention your business by name, AI tools take notice. Even small mentions in local directories, partner sites, or news articles build credibility.
+
+## What this looks like in practice
+
+Let's say someone asks ChatGPT: "Can you recommend an affordable web designer in Meridian, Idaho who works with small businesses?"
+
+For ChatGPT to mention you, it needs to know:
+- You exist (GBP, citations, web presence)
+- You're in Meridian (consistent location data)
+- You work with small businesses (clear messaging on your site)
+- You're affordable (pricing visible, or mentions of starting at $495)
+- You're a web designer (clear service category)
+
+If your website buries half of this information or it's inconsistent across platforms, the AI moves on to the next business that's easier to summarize.
+
+## The new on-page SEO checklist
+
+If you want to show up in AI responses, your website needs to be set up to answer questions directly. Here's what to do:
+
+**Write content that answers questions.** Instead of clever marketing copy, use direct statements. "We serve customers in Meridian, Boise, Eagle, and the surrounding Treasure Valley" is better than "Operating throughout the gem state."
+
+**Use FAQ sections.** A list of common questions and direct answers gives AI tools easy content to reference. Add an FAQ to your service pages.
+
+**Add LocalBusiness schema.** This tells search engines exactly what your business is, where you're located, what hours you're open, and what services you offer. It's invisible to visitors but critical for AI tools.
+
+**Be specific about location and services.** "We're a web design studio in Meridian, Idaho serving the Treasure Valley" is better than "We help businesses go online." Specificity wins.
+
+**Show your pricing or pricing range.** AI tools often filter recommendations by budget. If your pricing is anywhere on your site, you become a candidate for budget-based queries.
+
+## What's not changing
+
+SEO isn't dead. People still use Google. Local search is still huge. Getting reviews, building citations, and optimizing your Google Business Profile still matters as much as ever.
+
+What's changing is that all of those things now serve double duty. They feed both traditional search and AI search. The work you do for one usually benefits the other.
+
+## The bottom line
+
+You don't need to learn a new discipline. You need to understand that the rules for visibility online have expanded. Google search isn't the only place customers find businesses anymore.
+
+The fastest path to AEO visibility for a small business: a verified [Google Business Profile](/seo-aeo/), consistent citations across major directories, a clean website with clear answers to common questions, and 15+ Google reviews. Do those four things and you'll show up in both Google and AI search results, while most of your competitors are still optimizing for keywords from 2018.
+
+---
+
+*Aralo Studio helps small businesses across the Treasure Valley get found in both traditional search and AI tools through [web design, SEO, and AEO services](/seo-aeo/). If you need help with your online presence, [get in touch](/#contact).*`;
+
+const POST_8_BODY = `If you've ever looked into getting a website for your business, you've run into the same question: should you just build it yourself on Wix or Squarespace, or pay someone to do it?
+
+Most articles on this topic are written by people trying to sell you one or the other. This isn't that. Here's the honest version, written by someone who builds websites for a living but will tell you when DIY actually makes more sense.
+
+## When DIY actually works
+
+DIY website builders are great for some situations. If you fit any of these, you probably don't need to hire anyone:
+
+**You're testing an idea that might not stick.** If you're not sure whether your side business will become real, don't spend $500-1,500 on a site for it. Build something cheap and ugly on Wix. If the business takes off, replace it later with something professional.
+
+**You have time and you enjoy fiddling with this stuff.** If you actually like learning new tools, picking templates, and tweaking layouts, you'll probably be fine on Squarespace. The tools have gotten much better in the last few years.
+
+**You only need a one-page site with basic info.** If all you need is your name, what you do, your phone number, and a contact form, you can build that on Squarespace in a weekend. It won't be amazing, but it'll work.
+
+**Your budget genuinely doesn't allow for hiring.** If you're scraping together every dollar to launch your business, $20/month for Squarespace is better than no website at all.
+
+## When DIY breaks down
+
+The pitch from DIY builders is always the same: "Build a beautiful website in minutes!" The reality is messier. Here's where most DIY projects fall apart:
+
+**Time. So much time.** The marketing says "minutes." The reality is 20-40 hours for someone who's never done it before. Picking a template takes longer than you think. Writing copy is harder than you think. Figuring out why the mobile view looks different from the desktop view is harder than you think. Your time is worth something. If you make $50/hour in your business, spending 30 hours on a website is a $1,500 project. The math stops favoring DIY pretty quick.
+
+**It looks like a template.** People can tell when a site was built from a Squarespace template. Same hero layouts, same fonts, same generic stock photos. It's not bad, but it doesn't stand out either. For some businesses that's fine. For others (especially anything where trust or premium positioning matters) it actively works against you.
+
+**SEO is harder than it looks.** Modern builders all claim to be "SEO-friendly." That doesn't mean your site will rank. Showing up on Google requires actual SEO work: proper page structure, keyword research, location signals, schema markup, fast load times, internal linking. The builder makes it possible. It doesn't do it for you.
+
+**You're stuck maintaining it forever.** Templates change. Plugins update. Domain settings need adjusting. Content needs refreshing. Six months from now when something breaks, you're back in the builder trying to remember how everything works. That recurring time cost rarely gets counted up front.
+
+**You can't easily move it.** Squarespace and Wix are walled gardens. If you outgrow them, exporting your site to a different platform is painful at best. You're locked in.
+
+## When hiring someone makes sense
+
+Hiring out the work makes sense when:
+
+**Time matters more than money.** If you're already busy running your business, the 30 hours you'd spend learning a website builder is 30 hours not spent on actual revenue-generating work.
+
+**Trust and credibility matter to your customers.** Industries where people Google you before calling (counselors, contractors, mortgage brokers, lawyers, anyone selling a high-trust service) need a site that looks more professional than a template.
+
+**You want SEO that actually works.** A web designer who understands local SEO will set up your site to actually rank. A DIY site might never make it past page 5 of Google.
+
+**You're not interested in learning the technical stuff.** Domain registrars, hosting, DNS, plugins, updates. If reading those words makes you tired, hire someone.
+
+## The pricing breakdown
+
+Here's the honest cost comparison:
+
+**DIY (Squarespace, Wix):**
+- $15-30/month subscription
+- $15-50/year for a domain
+- 20-40 hours of your time to build it
+- Ongoing time to update and maintain
+- Total first-year cost: $200-400 plus 30+ hours of your time
+
+**Freelancer (a real one, not Fiverr):**
+- $500-1,500 to build
+- $20-50/month for hosting (if separate)
+- Their time to make changes (usually hourly after launch)
+- Total first-year cost: $750-2,100
+
+**Small studio (like us):**
+- $495-1,295 to build
+- $29-99/month bundled hosting and maintenance
+- Edits included in monthly plan
+- Total first-year cost: $843-2,483
+
+**Agency:**
+- $5,000-15,000 to build
+- $100-500/month for ongoing services
+- Detailed contracts, multiple meetings
+- Total first-year cost: $6,200-21,000
+
+For most small businesses in the Treasure Valley, the small studio range hits the sweet spot. Professional work without agency overhead, and someone who actually answers when you need a change made.
+
+## The middle option nobody talks about
+
+There's a third option most people miss: build it yourself on a DIY platform, then pay someone for a few hours to polish it.
+
+If you're handy with technology, you can absolutely set up the basic Squarespace site, write your copy, and add your photos. Then hire a designer for 2-3 hours to fix the things that look off, optimize it for SEO, and set up your Google Business Profile properly. Total cost: maybe $300-500 plus the monthly subscription. You get most of the benefit of hiring help at a fraction of the cost.
+
+This works best for businesses with simple needs and someone who's comfortable enough with technology to do the basics.
+
+## How to decide
+
+Ask yourself three questions:
+
+1. How much is your time worth per hour? Multiply by 30 (the hours DIY will actually take). If that number is bigger than hiring someone, hire someone.
+
+2. Do your customers Google you before calling? If yes, the professional polish matters and DIY probably isn't enough.
+
+3. Do you actually enjoy this kind of work? If yes, DIY can be rewarding. If no, hiring saves you a lot of frustration.
+
+There's no universal right answer. There's only the right answer for your specific business, budget, and patience level.
+
+## The bottom line
+
+DIY website builders aren't bad. They're just not always the cheapest option once you count your time. And they're rarely the best option if professional credibility matters to your customers.
+
+If you've already tried building your own site and abandoned it halfway through (or finished it and quietly hate how it looks), that's your answer. [Get help](/#contact). The opportunity cost of a bad website is higher than the cost of paying someone to build a good one.
+
+---
+
+*Aralo Studio builds professional websites for small businesses across the Treasure Valley starting at $495. If you're tired of fighting your DIY site, [get in touch](/#contact).*`;
+
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "does-your-boise-business-need-a-website",
@@ -364,6 +616,35 @@ export const BLOG_POSTS: BlogPost[] = [
     headerImage: "/blog/blog-photo-05-reviews.jpg",
     headerImageAlt: "Business owner shaking hands with a satisfied client",
     body: POST_5_BODY,
+  },
+  {
+    slug: "restaurant-website-essentials",
+    title: "What Every Restaurant Website Actually Needs (and What to Skip)",
+    date: "2026-06-24",
+    category: "Industry Guide",
+    headerImage: "/blog/blog-photo-06-restaurant.jpg",
+    headerImageAlt:
+      "Inside of a warm, inviting restaurant with set tables and natural lighting",
+    body: POST_6_BODY,
+  },
+  {
+    slug: "seo-vs-aeo-small-business",
+    title: "SEO vs AEO: What Small Businesses Need to Know in 2026",
+    date: "2026-06-24",
+    category: "Local SEO",
+    headerImage: "/blog/blog-photo-07-aeo.jpg",
+    headerImageAlt: "Woman sitting on a bed using a laptop to search online",
+    body: POST_7_BODY,
+  },
+  {
+    slug: "diy-vs-hiring-web-designer",
+    title: "DIY Website Builders vs Hiring Someone: An Honest Comparison",
+    date: "2026-06-24",
+    category: "Comparison",
+    headerImage: "/blog/blog-photo-08-diy.jpg",
+    headerImageAlt:
+      "A clean website displayed on a desktop monitor in a workspace",
+    body: POST_8_BODY,
   },
 ];
 
