@@ -1,6 +1,6 @@
 /* AboutPage — Aralo Studio
    Standalone /about page. A dark intro header gives the transparent navbar
-   contrast and carries the page H1 (local roots + nationwide reach),
+   contrast and carries the page H1 (Idaho roots + nationwide reach),
    followed by the personal bio section (photo, first-person intro, and
    direct contact details) reused from AboutSection. */
 
@@ -31,7 +31,7 @@ export default function AboutPage() {
                 About
               </span>
               <h1 className="font-display text-4xl sm:text-5xl md:text-6xl text-[#f3efe6] leading-[1.05]">
-                Built in Meridian.{" "}
+                Built in Idaho.{" "}
                 <em
                   className="not-italic"
                   style={{ color: "#d97a55", fontStyle: "normal" }}
@@ -43,8 +43,8 @@ export default function AboutPage() {
                 className="text-base sm:text-lg text-[rgba(243,239,230,0.75)] leading-relaxed max-w-xl mx-auto"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Aralo Studio builds websites for small businesses across the
-                Treasure Valley and all over the U.S. Wherever you are, the work
+                Aralo Studio builds websites for small businesses across Idaho
+                and all over the U.S. Wherever you are, the work
                 is the same: designed, built, hosted, and supported by hand.
               </p>
             </div>

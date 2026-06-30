@@ -30,18 +30,19 @@ const faqs: Faq[] = [
     a: "Yes. All packages include on-page SEO basics. The Plus and Premium packages also include Google Business Profile setup so your business appears in local search results and Google Maps when nearby customers search for your services. For ongoing profile management, content updates, and citation monitoring, that's part of the separate SEO & Growth service.",
   },
   {
-    q: "Do you work with businesses outside of Meridian, Idaho?",
-    a: "Absolutely. While we're based in Meridian, Idaho, we work with clients anywhere in the U.S. via Zoom and remote collaboration. If you're in the Treasure Valley, we can also meet in person. We also actively serve North Idaho, with dedicated pages for cities like Coeur d'Alene, Post Falls, and Hayden.",
+    q: "What areas do you serve?",
+    a: "We build for businesses across Idaho and work with clients anywhere in the U.S. via Zoom and remote collaboration. In North Idaho we have dedicated pages for cities like Coeur d'Alene, Post Falls, and Hayden, and we also serve the Treasure Valley. Wherever you are in Idaho, we can meet in person.",
     aNode: (
       <>
-        Absolutely. While we're based in Meridian, Idaho, we work with clients
-        anywhere in the U.S. via Zoom and remote collaboration. If you're in the{" "}
-        <a href="/web-design-boise/" className="link-accent">Treasure Valley</a>,
-        we can also meet in person. We also actively serve North Idaho, with
+        We build for businesses across Idaho and work with clients anywhere in
+        the U.S. via Zoom and remote collaboration. In North Idaho we have
         dedicated pages for cities like{" "}
         <a href="/web-design-coeur-dalene/" className="link-accent">Coeur d'Alene</a>,{" "}
         <a href="/web-design-post-falls/" className="link-accent">Post Falls</a>, and{" "}
-        <a href="/web-design-hayden/" className="link-accent">Hayden</a>.
+        <a href="/web-design-hayden/" className="link-accent">Hayden</a>, and we
+        also serve the{" "}
+        <a href="/web-design-boise/" className="link-accent">Treasure Valley</a>.
+        Wherever you are in Idaho, we can meet in person.
       </>
     ),
   },

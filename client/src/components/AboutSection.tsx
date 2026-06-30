@@ -36,7 +36,7 @@ export default function AboutSection() {
           <div className="w-full aspect-square md:w-[260px] md:h-[260px] rounded-2xl overflow-hidden border border-[#d6d2c5] shadow-sm mx-auto">
             <img
               src="/jeremy.jpg"
-              alt="Jeremy, web designer based in Meridian, Idaho"
+              alt="Jeremy, web designer based in Idaho"
               width="800"
               height="800"
               className="w-full h-full object-cover"
@@ -59,9 +59,10 @@ export default function AboutSection() {
               className="text-base text-[#2f3b32] leading-relaxed"
               style={{ fontFamily: "Inter, sans-serif" }}
             >
-              I'm Jeremy, a web designer based in Meridian, Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site is handled by me personally, from the first sketch to ongoing updates. When you call, you get me, not a sales rep, not a project manager, not a ticket system. Whether you're down the street in Meridian or across the country, you work with me directly, and I take on clients anywhere in the U.S. My work spans the{" "}
-              <a href="/web-design-boise/" className="link-accent">Treasure Valley</a> and North
+              I'm Jeremy, a web designer based in Idaho. I build websites for small businesses that need to look professional online without paying agency prices or dealing with DIY headaches. Every site is handled by me personally, from the first sketch to ongoing updates. When you call, you get me, not a sales rep, not a project manager, not a ticket system. Whether you're across town or across the country, you work with me directly, and I take on clients anywhere in the U.S. My work spans the Treasure Valley and North
               Idaho, from{" "}
+              <a href="/web-design-boise/" className="link-accent">Boise</a> and{" "}
+              <a href="/web-design-meridian/" className="link-accent">Meridian</a> to{" "}
               <a href="/web-design-coeur-dalene/" className="link-accent">Coeur d'Alene</a>,{" "}
               <a href="/web-design-post-falls/" className="link-accent">Post Falls</a>, and{" "}
               <a href="/web-design-hayden/" className="link-accent">Hayden</a>.
