@@ -3,6 +3,7 @@
    Contact form powered by Formspree */
 import { useState } from "react";
 import { CITIES, INDUSTRIES } from "@/data/landingPages";
+import { trackConversion } from "@/lib/analytics";
 import LockupCompact from "./brand/LockupCompact";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgpdyqn";
@@ -25,6 +26,9 @@ export default function Footer() {
         body: JSON.stringify(form),
       });
       setStatus(res.ok ? "success" : "error");
+      /* Only a confirmed 2xx counts. Firing on click would count abandoned and
+         failed submissions as conversions. */
+      if (res.ok) trackConversion("form_submit", { form: "footer_contact" });
     } catch {
       setStatus("error");
     }
@@ -65,7 +69,7 @@ export default function Footer() {
                 </p>
                 <p className="text-xs text-white/40 mt-3" style={{ fontFamily: "Inter, sans-serif" }}>
                   Don't see our reply? Check your spam or Promotions folder, or email us directly at{" "}
-                  <a href={`mailto:${EMAIL}`} className="underline hover:text-white/70">{EMAIL}</a>.
+                  <a href={`mailto:${EMAIL}`} onClick={() => trackConversion("email_click")} className="underline hover:text-white/70">{EMAIL}</a>.
                 </p>
               </div>
             ) : (
@@ -157,7 +161,7 @@ export default function Footer() {
                 {status === "error" && (
                   <p className="text-sm text-red-400" style={{ fontFamily: "Inter, sans-serif" }}>
                     Something went wrong. Please try again or email us at{" "}
-                    <a href={`mailto:${EMAIL}`} className="underline hover:text-red-300">{EMAIL}</a>.
+                    <a href={`mailto:${EMAIL}`} onClick={() => trackConversion("email_click")} className="underline hover:text-red-300">{EMAIL}</a>.
                   </p>
                 )}
 
@@ -184,7 +188,11 @@ export default function Footer() {
             <div>
               <span className="section-label" style={{ color: "#f3efe6" }}>Direct Contact</span>
               <div className="mt-4 flex flex-col gap-3">
-                <a href={`mailto:${EMAIL}`} className="inline-flex items-center gap-3 group">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  onClick={() => trackConversion("email_click")}
+                  className="inline-flex items-center gap-3 group"
+                >
                   <div className="w-9 h-9 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/>
@@ -195,7 +203,11 @@ export default function Footer() {
                     {EMAIL}
                   </span>
                 </a>
-                <a href={PHONE_HREF} className="inline-flex items-center gap-3 group">
+                <a
+                  href={PHONE_HREF}
+                  onClick={() => trackConversion("phone_click")}
+                  className="inline-flex items-center gap-3 group"
+                >
                   <div className="w-9 h-9 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M3 2h3l1.5 3.5-1.75 1.25c.8 1.6 2 2.8 3.5 3.5L10.5 8.5 14 10v3a1 1 0 01-1 1C6.27 14 2 9.73 2 4a1 1 0 011-2z"/>

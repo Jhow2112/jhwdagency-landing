@@ -2,6 +2,7 @@
    Personal "Who's Building Your Website" intro: photo, first-person bio,
    and direct contact. Rendered on the standalone /about page (AboutPage). */
 import { useEffect, useRef, useState } from "react";
+import { trackConversion } from "@/lib/analytics";
 
 const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
@@ -72,6 +73,7 @@ export default function AboutSection() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 pt-1">
               <a
                 href={PHONE_HREF}
+                onClick={() => trackConversion("phone_click")}
                 className="inline-flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
@@ -88,6 +90,7 @@ export default function AboutSection() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
+                onClick={() => trackConversion("email_click")}
                 className="inline-flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
