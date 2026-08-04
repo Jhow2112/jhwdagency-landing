@@ -17,5 +17,22 @@ http://www.jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 /web-design-kuna          /web-design-meridian/  301!
 /web-design-kuna/*        /web-design-meridian/  301!
 
+# First-party analytics proxy. Both lines must precede the SPA fallback, or
+# /index.html swallows them.
+#
+# Why proxy instead of loading the script cross-origin: self-hosting alone does
+# not beat uBlock Origin or Brave, because their filter lists match the
+# /script.js path, not just the hostname. The upstream image is prebuilt, and
+# TRACKER_SCRIPT_NAME is baked in at build time, so the renamed script is not
+# served upstream and /site-utils.js 404s there. Proxying solves both: the
+# browser only ever sees a same-origin request to an innocuous path, and the
+# upstream host never appears in the page at all.
+#
+# The tracker derives its collect URL from its own script src directory, so a
+# script served at /site-utils.js posts to /api/su on this same origin, which
+# the second rule forwards. Renaming one without the other breaks collection.
+/site-utils.js  https://assets.aralostudio.com/script.js  200
+/api/su         https://assets.aralostudio.com/api/su     200
+
 # SPA fallback — every other path serves index.html so client-side routing works.
 /*  /index.html  200

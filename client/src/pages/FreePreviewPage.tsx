@@ -12,6 +12,7 @@
 
 import { useEffect, useState } from "react";
 import Lockup from "@/components/brand/Lockup";
+import { trackConversion } from "@/lib/analytics";
 import { heroSrcSet } from "@/data/portfolioProjects";
 
 const SITE_ORIGIN = "https://aralostudio.com";
@@ -87,6 +88,8 @@ function fireConversionEvents() {
   if (typeof w.fbq === "function") {
     w.fbq("track", "Lead");
   }
+  // First-party analytics — this is the one seo-dash reads.
+  trackConversion("form_submit", { form: "free_preview" });
 }
 
 export default function FreePreviewPage() {
@@ -367,7 +370,7 @@ export default function FreePreviewPage() {
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
                 Don't see it? Check your spam or Promotions folder, or email us at{" "}
-                <a href="mailto:info@aralostudio.com" className="underline hover:text-[#9a4528]">
+                <a href="mailto:info@aralostudio.com" onClick={() => trackConversion("email_click")} className="underline hover:text-[#9a4528]">
                   info@aralostudio.com
                 </a>.
               </p>
@@ -502,6 +505,7 @@ export default function FreePreviewPage() {
                   or email{" "}
                   <a
                     href="mailto:info@aralostudio.com"
+                    onClick={() => trackConversion("email_click")}
                     className="underline font-semibold"
                   >
                     info@aralostudio.com
