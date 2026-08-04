@@ -62,8 +62,15 @@ export default function PrivacyPage() {
               </p>
               <h3 className="text-base font-bold text-[#1f2a22] mt-5 mb-2" style={{ fontFamily: "Inter, sans-serif" }}>Information Collected Automatically</h3>
               <p className="text-base">
-                We use Google Analytics to collect anonymized data about how visitors use this site, including pages visited, time spent on the site, general geographic region (city/country level), device type, and referring source. This data does not identify you personally. Google Analytics uses cookies to collect this information. You can opt out of Google Analytics tracking by installing the{" "}
+                We use our own analytics software, self-hosted on our own infrastructure and served from this domain rather than by an analytics company. It sets no cookies. It records the pages you view, the site you arrived from, your approximate location, and your browser, device type, screen size and language, along with whether a visitor tapped our phone number or email address or successfully sent a form. It does not identify you personally and does not follow you to other websites.
+              </p>
+              <p className="text-base mt-3">
+                We also use Google Analytics, which collects anonymized data about how visitors use this site, including pages visited, time spent on the site, general geographic region (city/country level), device type, and referring source. Google Analytics uses cookies to collect this information. You can opt out by installing the{" "}
                 <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Google Analytics Opt-out Browser Add-on</a>.
+              </p>
+              <p className="text-base mt-3">
+                This site loads the Meta (Facebook) Pixel, which records page views and enquiries so we can measure how well our advertising performs. It sets cookies, and Meta may combine what it collects here with information it already holds about you. You can control this through your{" "}
+                <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Meta ad preferences</a>.
               </p>
             </section>
 
@@ -100,13 +107,20 @@ export default function PrivacyPage() {
                   <strong>Google Analytics</strong> collects anonymized site usage data.{" "}
                   <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Google Privacy Policy</a>
                 </li>
+                <li>
+                  <strong>Meta (Facebook)</strong> receives page views and enquiry events through the Meta Pixel, for advertising measurement.{" "}
+                  <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#9a4528] hover:underline">Meta Privacy Policy</a>
+                </li>
               </ul>
+              <p className="text-base mt-3">
+                Our own analytics is deliberately absent from this list. It runs on our infrastructure and is served from this domain, so your visit is not disclosed to a third party and there is no external privacy policy to point you at.
+              </p>
             </section>
 
             <section>
               <h2 className="text-xl font-bold text-[#1f2a22] mb-3" style={{ fontFamily: "Inter, sans-serif" }}>4. Cookies</h2>
               <p className="text-base">
-                This site uses cookies placed by Google Analytics to collect anonymized usage data as described above. We do not use cookies for advertising, tracking across other websites, or storing personal information. You can disable cookies in your browser settings at any time, though doing so may affect how some parts of the site function.
+                This site uses cookies placed by Google Analytics and by the Meta Pixel, as described above. Our own analytics sets none. The Meta Pixel's cookies are used for advertising measurement and can be controlled through your Meta ad preferences. You can disable cookies in your browser settings at any time, though doing so may affect how some parts of the site function.
               </p>
             </section>
 
