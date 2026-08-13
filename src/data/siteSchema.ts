@@ -37,10 +37,19 @@ export const localBusiness = {
     longitude: GEO.lng,
   },
 
-  // NOTE: `sameAs` (social/GBP profile URLs) is deliberately absent. The audit
-  // flagged it as missing, but the site links to no profiles anywhere, and
-  // guessing URLs would assert unverifiable identity claims to Google. Add the
-  // real Google Business Profile / Facebook / Instagram URLs here when known.
+  // Profiles that identify this same business elsewhere. These tie the site to
+  // the Google Business Profile and Facebook page as one entity rather than
+  // three unrelated ones.
+  //
+  // The Google entry is the canonical ?cid= permalink, resolved from the
+  // share.google shortlink that was supplied: shortlinks are regenerable and
+  // carry campaign parameters, whereas the CID is the profile's stable
+  // identifier. Derived from the Maps place URL's hex pair
+  // (0xc9d2d032ad462f98) and confirmed to load the Aralo Studio listing.
+  sameAs: [
+    "https://maps.google.com/?cid=14542915062806753176",
+    "https://www.facebook.com/profile.php?id=61588879543196",
+  ],
 
   founder: {
     "@type": "Person",
