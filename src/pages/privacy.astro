@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PrivacyPage from "@/page-components/PrivacyPage";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/privacy");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <PrivacyPage />
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+/* Case study pages — /portfolio/{slug}/
+   Replaces CaseStudyPage.tsx, the wouter wrapper that read the slug from the
+   router at runtime. getStaticPaths resolves it at build time instead, so the
+   wrapper is gone entirely and CaseStudyTemplate is rendered directly. */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import CaseStudyTemplate from "@/components/CaseStudyTemplate";
+import { PORTFOLIO_PROJECTS } from "@/data/portfolioProjects";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+export function getStaticPaths() {
+  return PORTFOLIO_PROJECTS.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const m = metaFor(`/portfolio/${project.slug}`);
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <CaseStudyTemplate project={project} />
+</BaseLayout>

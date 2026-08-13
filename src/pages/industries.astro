@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import IndustriesHub from "@/page-components/IndustriesHub";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/industries");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <IndustriesHub />
+</BaseLayout>

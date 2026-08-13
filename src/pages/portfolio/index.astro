@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PortfolioHub from "@/page-components/PortfolioHub";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/portfolio");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <PortfolioHub />
+</BaseLayout>

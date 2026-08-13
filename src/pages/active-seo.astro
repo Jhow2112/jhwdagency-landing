@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ActiveSEOPage from "@/page-components/ActiveSEOPage";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/active-seo");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <ActiveSEOPage />
+</BaseLayout>

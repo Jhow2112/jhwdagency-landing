@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import TermsPage from "@/page-components/TermsPage";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/terms");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <TermsPage />
+</BaseLayout>
