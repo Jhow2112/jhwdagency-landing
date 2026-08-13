@@ -4,8 +4,6 @@
    project with a new category auto-extends the filter row. */
 
 import { useEffect, useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import {
   PORTFOLIO_PROJECTS,
@@ -38,7 +36,6 @@ export default function PortfolioHub() {
           { name: "Portfolio", url: `${SITE_ORIGIN}/portfolio/` },
         ]}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="bg-[#1f2a22] pt-32 pb-14 sm:pt-40 sm:pb-16">
@@ -191,7 +188,6 @@ export default function PortfolioHub() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

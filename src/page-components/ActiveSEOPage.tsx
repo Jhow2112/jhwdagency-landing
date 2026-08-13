@@ -255,7 +255,6 @@ export default function ActiveSEOPage() {
           { name: "SEO & Growth", url: "https://aralostudio.com/active-seo/" },
         ]}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="relative bg-[#1f2a22] pt-36 pb-20 sm:pt-44 sm:pb-28">
@@ -441,7 +440,6 @@ export default function ActiveSEOPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

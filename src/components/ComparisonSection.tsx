@@ -1,7 +1,7 @@
 /* ComparisonSection — Aralo Studio
    Mobile: stacked cards per row, each showing Agency / DIY / Us values
    Desktop: traditional table layout with overflow-x-auto fallback */
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const rows = [
   { label: "Build cost", agency: "$3,000–$10,000+", diy: "$20–$200+", us: "$495–$1,295" },
@@ -13,16 +13,6 @@ const rows = [
 
 export default function ComparisonSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section className="py-16 sm:py-20 bg-white" ref={ref} aria-labelledby="comparison-heading">
@@ -36,12 +26,7 @@ export default function ComparisonSection() {
 
         {/* Styled comparison — card-per-row layout */}
         <div
-          className="flex flex-col gap-3 max-w-4xl mx-auto"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}
+          className="reveal flex flex-col gap-3 max-w-4xl mx-auto"
         >
           {/* Column header */}
           <div className="grid grid-cols-3 gap-2 px-3 pb-1">

@@ -3,8 +3,6 @@
    then a "Don't see your industry?" callout linking to the contact form. */
 
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import IndustryIcon from "@/components/IndustryIcon";
 import { INDUSTRIES } from "@/data/landingPages";
@@ -53,7 +51,6 @@ export default function IndustriesHub() {
           { name: "Industries", url: `${SITE_ORIGIN}/industries/` },
         ]}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
@@ -165,7 +162,6 @@ export default function IndustriesHub() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

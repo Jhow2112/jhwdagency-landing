@@ -9,8 +9,6 @@
 
 import { useEffect } from "react";
 import { marked } from "marked";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema, { type Crumb } from "@/components/BreadcrumbSchema";
 import {
   type BlogPost,
@@ -106,7 +104,6 @@ export default function BlogPostTemplate({ post }: { post: BlogPost }) {
     <div className="min-h-screen bg-[#f3efe6]">
       <ArticleSchema post={post} />
       <BreadcrumbSchema crumbs={buildBreadcrumbs(post)} />
-      <Navbar />
 
       {/* Header image — contained to ~the content width and shown at the
            image's native 1200×630 ratio, so the whole photo is visible.
@@ -190,7 +187,6 @@ export default function BlogPostTemplate({ post }: { post: BlogPost }) {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

@@ -2,7 +2,6 @@
    Slim secondary-CTA bar on the homepage that points price-curious
    visitors at the standalone /free-preview/ landing page. Outline
    styling so it doesn't compete with the primary pricing CTAs above. */
-import { trackConversion } from "@/lib/analytics";
 
 export default function FreePreviewCallout() {
   return (
@@ -28,7 +27,7 @@ export default function FreePreviewCallout() {
           </div>
           <a
             href="/free-preview/"
-            onClick={() => trackConversion("quote_cta_click")}
+            data-conversion="quote_cta_click"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-[#1f2a22] text-[#1f2a22] text-sm font-bold hover:bg-[#1f2a22] hover:text-white transition-colors flex-shrink-0"
             style={{ fontFamily: "Inter, sans-serif" }}
           >

@@ -13,6 +13,8 @@ const m = metaFor("/free-preview");
   ogTitle={m.ogTitle}
   ogDescription={m.ogDescription}
   ogImage={m.ogImage}
+  navbar={false}
+  footer={false}
 >
-  <FreePreviewPage />
+  <FreePreviewPage client:load />
 </BaseLayout>

@@ -4,8 +4,6 @@
    Design: matches main site — cream/forest palette, Inter + Fraunces */
 
 import { useEffect, useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
@@ -217,7 +215,6 @@ export default function SEOPage() {
           { name: "SEO & AEO", url: "https://aralostudio.com/seo-aeo/" },
         ]}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
@@ -347,7 +344,6 @@ export default function SEOPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

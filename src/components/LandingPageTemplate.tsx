@@ -5,8 +5,6 @@
    bodyParagraphs strings may contain [text](/url/) markdown-style inline links;
    they are parsed at render time into accent-colored anchor elements. */
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import PricingSection from "@/components/PricingSection";
 import ProcessSection from "@/components/ProcessSection";
 import BreadcrumbSchema, { type Crumb } from "@/components/BreadcrumbSchema";
@@ -75,7 +73,6 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
   return (
     <div className="min-h-screen bg-[#f3efe6]">
       <BreadcrumbSchema crumbs={buildBreadcrumbs(data)} />
-      <Navbar />
 
       {/* Hero */}
       <section className="bg-[#1f2a22] pt-32 pb-16 sm:pt-40 sm:pb-20">
@@ -216,7 +213,6 @@ export default function LandingPageTemplate({ data }: { data: LandingPageData })
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

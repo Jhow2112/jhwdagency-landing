@@ -3,8 +3,6 @@
    Card layout: header image, category tag + date eyebrow, title, excerpt, "Read more". */
 
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import { POSTS_BY_DATE, getExcerpt, formatPostDate } from "@/data/blogPosts";
 
@@ -25,7 +23,6 @@ export default function BlogListPage() {
           { name: "Blog", url: `${SITE_ORIGIN}/blog/` },
         ]}
       />
-      <Navbar />
 
       {/* Hero */}
       <section className="bg-[#1f2a22] pt-32 pb-14 sm:pt-40 sm:pb-16">
@@ -110,7 +107,6 @@ export default function BlogListPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

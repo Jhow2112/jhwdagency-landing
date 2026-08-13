@@ -2,7 +2,12 @@
    Mobile-first: single column on mobile, 2-col on lg+
    Contact form powered by Formspree */
 import { useState } from "react";
-import { CITIES, INDUSTRIES } from "@/data/landingPages";
+/* Link lists arrive as props rather than being imported.
+   This is a hydrated island, and importing CITIES/INDUSTRIES pulled all 87 KB
+   of landing-page copy into the client bundle to render fourteen links —
+   roughly two thirds of the Footer chunk. BaseLayout derives the minimal
+   {slug,label,region} list at build time, so the data stays on the server. */
+export type NavLink = { slug: string; label: string; region?: string };
 import { trackConversion } from "@/lib/analytics";
 import LockupCompact from "./brand/LockupCompact";
 
@@ -12,7 +17,13 @@ const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
 const HOURS = "Mon–Fri, 9 AM–6 PM Mountain Time";
 
-export default function Footer() {
+export default function Footer({
+  cities = [],
+  industries = [],
+}: {
+  cities?: NavLink[];
+  industries?: NavLink[];
+}) {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "", plan: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -314,7 +325,7 @@ export default function Footer() {
                 <div className="col-span-2 sm:col-span-1">
                   <p className="text-xs font-bold text-white/60 tracking-widest uppercase mb-3 sm:mb-4" style={{ fontFamily: "Inter, sans-serif" }}>Industries</p>
                   <ul className="grid grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-2 sm:gap-2.5">
-                    {INDUSTRIES.slice(0, 6).map((i) => (
+                    {industries.slice(0, 6).map((i) => (
                       <li key={i.slug}>
                         <a href={`${i.slug}/`} className="text-sm text-white/55 hover:text-white transition-colors" style={{ fontFamily: "Inter, sans-serif" }}>
                           {i.label}
@@ -338,7 +349,7 @@ export default function Footer() {
                 </div>
                 <div className="flex flex-col gap-2">
                   {(["Treasure Valley", "North Idaho"] as const).map((region) => {
-                    const inRegion = CITIES.filter((c) => c.region === region);
+                    const inRegion = cities.filter((c) => c.region === region);
                     if (inRegion.length === 0) return null;
                     return (
                       <div key={region} className="flex flex-col sm:flex-row sm:items-baseline gap-x-3 gap-y-1">

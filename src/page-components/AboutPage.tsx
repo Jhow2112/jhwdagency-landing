@@ -4,8 +4,6 @@
    followed by the personal bio section (photo, first-person intro, and
    direct contact details) reused from AboutSection. */
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AboutSection from "@/components/AboutSection";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
@@ -20,7 +18,6 @@ export default function AboutPage() {
           { name: "About", url: `${SITE_ORIGIN}/about/` },
         ]}
       />
-      <Navbar />
 
       <main id="main-content">
         {/* Intro header — dark band so the transparent navbar stays legible */}
@@ -82,7 +79,6 @@ export default function AboutPage() {
         </section>
       </main>
 
-      <Footer />
     </div>
   );
 }

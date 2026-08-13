@@ -4,7 +4,7 @@
    never drift, and the schema only ships on pages that actually render this
    section (the home page).
    Design: clean accordion on off-white background */
-import { useState, useRef, useEffect, type ReactNode } from "react";
+import { useState, useRef, type ReactNode } from "react";
 
 type Faq = { q: string; a: string; aNode?: ReactNode };
 
@@ -59,25 +59,10 @@ const faqs: Faq[] = [
 function FAQItem({ faq, index }: { faq: Faq; index: number }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div
-      ref={ref}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(20px)",
-        transition: `opacity 0.5s ease ${index * 0.07}s, transform 0.5s ease ${index * 0.07}s`,
-      }}
+      className="reveal [--reveal-y:20px]"
     >
       <div
         className={`rounded-2xl border transition-all duration-300 overflow-hidden ${

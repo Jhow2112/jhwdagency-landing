@@ -1,31 +1,11 @@
 /* ReferralCallout — Aralo Studio
    Above-footer referral CTA: free month of hosting per signed-up referral */
-import { useEffect, useRef, useState } from "react";
-
 export default function ReferralCallout() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="py-14 sm:py-20 bg-[#f3efe6]">
       <div className="container">
         <div
-          ref={ref}
-          className="max-w-3xl mx-auto rounded border border-[rgba(31,42,34,0.14)] bg-white px-6 sm:px-10 py-10 sm:py-14 text-center"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}
+          className="reveal max-w-3xl mx-auto rounded border border-[rgba(31,42,34,0.14)] bg-white px-6 sm:px-10 py-10 sm:py-14 text-center"
         >
           <span className="section-label">Referral Program</span>
           <h2

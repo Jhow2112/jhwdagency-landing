@@ -6,8 +6,6 @@
    side; SSR side handled by prerender.mjs). */
 
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import BreadcrumbSchema, { type Crumb } from "@/components/BreadcrumbSchema";
 import { heroSrcSet, type PortfolioProject } from "@/data/portfolioProjects";
 
@@ -83,7 +81,6 @@ export default function CaseStudyTemplate({ project }: { project: PortfolioProje
   return (
     <div className="min-h-screen bg-[#f3efe6]">
       <BreadcrumbSchema crumbs={buildBreadcrumbs(project)} />
-      <Navbar />
 
       {/* Hero screenshot — framed in the dark band at natural aspect
            ratio so the whole site shot is visible (no cropping). Width
@@ -230,7 +227,6 @@ export default function CaseStudyTemplate({ project }: { project: PortfolioProje
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }

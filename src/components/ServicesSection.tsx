@@ -1,6 +1,6 @@
 /* ServicesSection — Aralo Studio
    Services: Web Design & Development, Visual Identity, SEO & Local Search */
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const services = [
   {
@@ -40,26 +40,10 @@ const services = [
 
 function ServiceCard({ service, index }: { service: typeof services[0]; index: number }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.15 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div
-      ref={ref}
-      className="group relative flex flex-col rounded-2xl overflow-hidden border border-[#d6d2c5] bg-white/70 hover:shadow-xl transition-all duration-400 hover:-translate-y-1"
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(32px)",
-        transition: `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${index * 0.12}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${index * 0.12}s, box-shadow 0.3s ease`,
-      }}
+      className="reveal [--reveal-y:32px] group relative flex flex-col rounded-2xl overflow-hidden border border-[#d6d2c5] bg-white/70 hover:shadow-xl transition-all duration-400 hover:-translate-y-1"
     >
       {/* Image area */}
       <div className={`relative h-48 overflow-hidden ${service.color}`}>

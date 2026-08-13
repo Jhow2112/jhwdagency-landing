@@ -1,5 +1,5 @@
 /* ProcessSection — Contemporary Studio, Cool Blue */
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const steps = [
   {
@@ -46,16 +46,6 @@ const steps = [
 
 export default function ProcessSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section className="py-14 sm:py-20 md:py-24 bg-[#f3efe6]" ref={ref}>
@@ -75,12 +65,7 @@ export default function ProcessSection() {
           {steps.map((step, i) => (
             <div
               key={step.number}
-              className="relative flex flex-col items-center text-center gap-4 z-10"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(24px)",
-                transition: `opacity 0.6s ease ${i * 0.15}s, transform 0.6s ease ${i * 0.15}s`,
-              }}
+              className="reveal relative flex flex-col items-center text-center gap-4 z-10"
             >
               {/* Icon circle */}
               <div className="w-20 h-20 rounded-2xl bg-white border border-[#d6d2c5] shadow-md flex items-center justify-center text-[#9a4528] relative">

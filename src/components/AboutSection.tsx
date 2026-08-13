@@ -1,8 +1,7 @@
 /* AboutSection — Aralo Studio
    Personal "Who's Building Your Website" intro: photo, first-person bio,
    and direct contact. Rendered on the standalone /about page (AboutPage). */
-import { useEffect, useRef, useState } from "react";
-import { trackConversion } from "@/lib/analytics";
+import { useRef } from "react";
 
 const PHONE = "(208) 615-2884";
 const PHONE_HREF = "tel:+12086152884";
@@ -10,28 +9,12 @@ const EMAIL = "info@aralostudio.com";
 
 export default function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section id="about" className="py-14 sm:py-20 md:py-24 bg-[#f3efe6]" aria-labelledby="about-heading">
       <div className="container">
         <div
-          ref={ref}
-          className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 md:gap-12 items-center"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
-          }}
+          className="reveal max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8 md:gap-12 items-center"
         >
           {/* Photo */}
           <div className="w-full aspect-square md:w-[260px] md:h-[260px] rounded-2xl overflow-hidden border border-[#d6d2c5] shadow-sm mx-auto">
@@ -73,7 +56,7 @@ export default function AboutSection() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 pt-1">
               <a
                 href={PHONE_HREF}
-                onClick={() => trackConversion("phone_click")}
+                data-conversion="phone_click"
                 className="inline-flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">
@@ -90,7 +73,7 @@ export default function AboutSection() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                onClick={() => trackConversion("email_click")}
+                data-conversion="email_click"
                 className="inline-flex items-center gap-3 group"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#9a4528] flex items-center justify-center flex-shrink-0">

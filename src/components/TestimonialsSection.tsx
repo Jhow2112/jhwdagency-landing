@@ -3,7 +3,7 @@
    review from Ann McGaver (Crisis to Comfort Counseling) and a Facebook review
    from Ice Ice Shavey. Each card carries its source platform's branding so the
    reviews read as genuine, verifiable third-party endorsements. */
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 /* Official platform marks, rendered in their real brand colors so the
    "Verified" badges are recognizable at a glance. */
@@ -93,21 +93,10 @@ function PlatformBadge({ platform }: { platform: Testimonial["platform"] }) {
 
 export default function TestimonialsSection() {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
       className="py-16 sm:py-24 md:py-28 bg-[#f3efe6] border-y border-[#e2ddd0]"
-      ref={ref}
       aria-label="Client endorsements"
     >
       <div className="container">
@@ -115,12 +104,7 @@ export default function TestimonialsSection() {
           {TESTIMONIALS.map((t, i) => (
             <figure
               key={t.name}
-              className="flex flex-col gap-5 bg-white rounded-2xl border border-[#e2ddd0] p-7 sm:p-8 shadow-sm"
-              style={{
-                opacity: visible ? 1 : 0,
-                transform: visible ? "translateY(0)" : "translateY(28px)",
-                transition: `opacity 0.7s ease ${i * 0.1}s, transform 0.7s ease ${i * 0.1}s`,
-              }}
+              className="reveal [--reveal-y:28px] flex flex-col gap-5 bg-white rounded-2xl border border-[#e2ddd0] p-7 sm:p-8 shadow-sm"
             >
               {/* Stars + platform badge */}
               <div className="flex flex-wrap items-center gap-3">

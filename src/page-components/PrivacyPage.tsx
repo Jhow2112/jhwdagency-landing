@@ -2,7 +2,6 @@
    Design: Cream/forest palette, Inter sans + Fraunces display
    Route: /privacy */
 
-import Navbar from "@/components/Navbar";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 
 const LAST_UPDATED = "April 15, 2026";
@@ -18,7 +17,6 @@ export default function PrivacyPage() {
           { name: "Privacy Policy", url: "https://aralostudio.com/privacy/" },
         ]}
       />
-      <Navbar />
       <main className="bg-[#f3efe6] min-h-screen pt-28 pb-20">
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
 

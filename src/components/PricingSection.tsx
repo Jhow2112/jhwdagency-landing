@@ -1,7 +1,6 @@
 /* PricingSection — Aralo Studio
    Mobile-first: cards stack single column on mobile, 3-col on md+
    Highlighted card does NOT scale on mobile (causes overflow) */
-import { useEffect, useRef, useState } from "react";
 
 const plans = [
   {
@@ -81,32 +80,14 @@ const checkIconWhite = (
 );
 
 function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
-      { threshold: 0.1 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div
-      ref={ref}
-      className={`relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
+      className={`reveal [--reveal-y:32px] relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
           ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#9a4528]/40"
           : "border border-[#d6d2c5] bg-white shadow-md hover:shadow-xl"
       }`}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(32px)",
-        transition: `opacity 0.6s ease ${index * 0.12}s, transform 0.6s ease ${index * 0.12}s, box-shadow 0.3s ease`,
-        background: plan.highlight ? "#1f2a22" : undefined,
-      }}
     >
       {/* Most Popular badge */}
       {plan.popular && (
