@@ -1,0 +1,197 @@
+---
+/* BaseLayout — Aralo Studio
+   Replaces the head template in client/index.html plus the string-substitution
+   meta injection in prerender.mjs. Each page passes its own meta as props
+   instead of the build rewriting placeholder tags after the fact.
+
+   Tag order and content are kept deliberately close to the pre-Astro output:
+   scripts/seo-parity.mjs diffs this against the React baseline, and gratuitous
+   differences would bury real drift in noise. */
+import { siteGraph, SITE_ORIGIN } from "@/data/siteSchema";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { CITIES, INDUSTRIES } from "@/data/landingPages";
+import "@/styles/global.css";
+
+/* Derived here so the Footer island receives only what it renders. Importing
+   the full CITIES/INDUSTRIES arrays inside the component shipped 87 KB of
+   landing-page copy to the browser to draw fourteen links. */
+const cityLinks = CITIES.map((c) => ({ slug: c.slug, label: c.label, region: c.region }));
+const industryLinks = INDUSTRIES.map((i) => ({ slug: i.slug, label: i.label }));
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Route path with leading and trailing slash, e.g. "/portfolio/". */
+  path: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+  /** Extra JSON-LD nodes (BreadcrumbList, Article, FAQPage). */
+  schemas?: unknown[];
+  /** Error pages opt out of indexing and of claiming a canonical. */
+  noindex?: boolean;
+  /** Chrome. Both were previously rendered inside each page component; they
+      live here now so they can hydrate as islands without dragging the whole
+      page tree into the client bundle. Defaults match what each page rendered
+      before the migration — /free-preview and /404 have no chrome at all, and
+      /privacy and /terms carry the nav but no footer. */
+  navbar?: boolean;
+  footer?: boolean;
+}
+
+const {
+  title,
+  description,
+  path,
+  ogTitle = title,
+  ogDescription = description,
+  ogImage = `${SITE_ORIGIN}/og-image.png`,
+  ogType = "website",
+  schemas = [],
+  noindex = false,
+  navbar = true,
+  footer = true,
+} = Astro.props;
+
+const canonical = `${SITE_ORIGIN}${path}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Aralo Studio" />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
+    {/* A 404 is served at every unknown URL, so it must not claim to be a page. */}
+    {!noindex && <link rel="canonical" href={canonical} />}
+
+    <link rel="icon" type="image/png" href="/aralo-mark.png" />
+    <link rel="apple-touch-icon" href="/aralo-mark.png" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={ogImage} />
+    {/* Dimensions and alt were missing pre-migration; without them some
+        scrapers skip the card or reserve the wrong space. */}
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogTitle} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Aralo Studio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <meta name="geo.region" content="US-ID" />
+    <meta name="geo.placename" content="Meridian, Idaho" />
+    <meta name="geo.position" content="43.6121;-116.3915" />
+    <meta name="ICBM" content="43.6121, -116.3915" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(siteGraph)} />
+    {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    {/* Google Analytics */}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-83ZQQMVXPB"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-83ZQQMVXPB");
+    </script>
+
+    {/* Meta Pixel. The matching <noscript> beacon lives at the top of <body>,
+        not here: content inside <noscript> in <head> is invalid HTML, and the
+        parser relocated it on every page (parse5 flagged it on all 48). */}
+    <script is:inline>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "1482683553353491");
+      fbq("track", "PageView");
+    </script>
+
+    {/* Conversion tracking for links in sections that are NOT hydrated.
+        AboutSection and FreePreviewCallout are static, so their phone/email/CTA
+        clicks previously lost their React onClick handlers — and hydrating a
+        whole section just to record a click is a bad trade. A delegated
+        listener covers any [data-conversion] element site-wide instead.
+        Path normalisation mirrors normalizeEventPath() in lib/analytics.ts;
+        the two must agree or the join against Search Console drops rows. */}
+    <script is:inline>
+      document.addEventListener(
+        "click",
+        function (e) {
+          var el = e.target && e.target.closest && e.target.closest("[data-conversion]");
+          if (!el) return;
+          try {
+            var p = ("/" + location.pathname).replace(/\/+/g, "/");
+            window.umami &&
+              window.umami.track(el.getAttribute("data-conversion"), {
+                page: (p.endsWith("/") ? p : p + "/").toLowerCase(),
+              });
+          } catch (_) {
+            /* Analytics must never break the interaction it measures. */
+          }
+        },
+        true
+      );
+    </script>
+
+    {/* First-party analytics, proxied same-origin via _redirects. */}
+    <script
+      defer
+      src="/site-utils.js"
+      data-website-id="9fd0ac63-aa37-4476-a64e-69056a98dd9f"></script>
+  </head>
+
+  <body>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display:none"
+        alt=""
+        src="https://www.facebook.com/tr?id=1482683553353491&ev=PageView&noscript=1"
+      /></noscript
+    >
+    {/* client:load — the mobile menu toggle is above the fold and is the only
+        way to navigate on a phone, so it must not wait for idle. */}
+    {navbar && <Navbar client:load />}
+    <slot />
+    {/* client:visible — the footer holds the primary contact form, but it sits
+        below the fold on every page, so its JS is deferred until scrolled to. */}
+    {footer && <Footer client:visible cities={cityLinks} industries={industryLinks} />}
+  </body>
+</html>

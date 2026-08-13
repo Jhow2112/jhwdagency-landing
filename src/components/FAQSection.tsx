@@ -1,0 +1,201 @@
+/* FAQSection — Aralo Studio
+   AEO-optimized. Emits the FAQPage JSON-LD inline (derived from the same
+   `faqs` array as the visible accordion) so the schema and visible content
+   never drift, and the schema only ships on pages that actually render this
+   section (the home page).
+   Design: clean accordion on off-white background */
+import { useState, useRef, type ReactNode } from "react";
+
+type Faq = { q: string; a: string; aNode?: ReactNode };
+
+const faqs: Faq[] = [
+  {
+    q: "How much does a website cost?",
+    a: "Websites start at $495 for the Minimum package (up to 3 pages), $895 for the Plus package (up to 5 pages), and $1,295 for the Premium package (up to 10 pages). Every package includes a one-time setup fee plus a low monthly hosting and support fee of $29–$99/month depending on your plan. No surprise costs.",
+  },
+  {
+    q: "How long does it take to build my website?",
+    a: "Most websites are live within 5 business days of receiving your content and approval. The exact timeline depends on how quickly you can provide feedback and any written content you'd like on the site. We'll guide you through exactly what we need.",
+  },
+  {
+    q: "Do I own my website?",
+    a: "Yes, you own your website and all its content outright. The monthly fee of $29–$99/month covers hosting, maintenance, and support, not ownership. You can take your site to another host at any time.",
+  },
+  {
+    q: "Is hosting included in the price?",
+    a: "Yes. All packages include managed hosting, an SSL certificate (the padlock in your browser), and ongoing support for $29–$99/month depending on your plan. There are no hidden fees.",
+  },
+  {
+    q: "Can you help my business show up on Google?",
+    a: "Yes. All packages include on-page SEO basics. The Plus and Premium packages also include Google Business Profile setup so your business appears in local search results and Google Maps when nearby customers search for your services. For ongoing profile management, content updates, and citation monitoring, that's part of the separate SEO & Growth service.",
+  },
+  {
+    q: "What areas do you serve?",
+    a: "We build for businesses across Idaho and work with clients anywhere in the U.S. via Zoom and remote collaboration. In North Idaho we have dedicated pages for cities like Coeur d'Alene, Post Falls, and Hayden, and we also serve the Treasure Valley. Wherever you are in Idaho, we can meet in person.",
+    aNode: (
+      <>
+        We build for businesses across Idaho and work with clients anywhere in
+        the U.S. via Zoom and remote collaboration. In North Idaho we have
+        dedicated pages for cities like{" "}
+        <a href="/web-design-coeur-dalene/" className="link-accent">Coeur d'Alene</a>,{" "}
+        <a href="/web-design-post-falls/" className="link-accent">Post Falls</a>, and{" "}
+        <a href="/web-design-hayden/" className="link-accent">Hayden</a>, and we
+        also serve the{" "}
+        <a href="/web-design-boise/" className="link-accent">Treasure Valley</a>.
+        Wherever you are in Idaho, we can meet in person.
+      </>
+    ),
+  },
+  {
+    q: "Are there long-term contracts?",
+    a: "No. There are no long-term contracts. Monthly hosting and support plans can be cancelled with 30 days notice at any time. No penalties, no hassle.",
+  },
+  {
+    q: "What types of businesses do you build websites for?",
+    a: "We work with a wide range of local businesses: counselors, therapists, contractors, restaurants, retail shops, real estate agents, coaches, consultants, and service businesses of all kinds. If you need a professional website that attracts local customers, we can help.",
+  },
+];
+
+function FAQItem({ faq, index }: { faq: Faq; index: number }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  return (
+    <div
+      className="reveal [--reveal-y:20px]"
+    >
+      <div
+        className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+          open
+            ? "border-[#9a4528]/40 bg-white shadow-md"
+            : "border-[#d6d2c5] bg-white/60 hover:bg-white hover:border-[#9a4528]/30 hover:shadow-sm"
+        }`}
+      >
+        <button
+          onClick={() => setOpen(!open)}
+          className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+          aria-expanded={open}
+        >
+          <span
+            className="text-base font-bold text-[#1f2a22]"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            {faq.q}
+          </span>
+          <span
+            className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-all duration-300 ${
+              open
+                ? "bg-[#9a4528] rotate-45"
+                : "bg-[#e7e2d6]"
+            }`}
+          >
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              stroke={open ? "white" : "#1f2a22"}
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
+              <path d="M6 1v10M1 6h10" />
+            </svg>
+          </span>
+        </button>
+
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <p
+            className="px-6 pb-5 text-sm text-[#2f3b32] leading-relaxed"
+            style={{ fontFamily: "Inter, sans-serif" }}
+          >
+            {faq.aNode ?? faq.a}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FAQSchema() {
+  const json = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://aralostudio.com/#faq",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(json) }}
+    />
+  );
+}
+
+export default function FAQSection() {
+  return (
+    <section id="faq" className="py-14 sm:py-20 md:py-24 bg-white" aria-labelledby="faq-heading">
+      <FAQSchema />
+      <div className="container">
+        <div className="max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <span className="section-label">Common Questions</span>
+            <h2
+              id="faq-heading"
+              className="mt-3 text-4xl md:text-5xl font-extrabold text-[#1f2a22] leading-tight"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              Answers before you ask.
+            </h2>
+            <p
+              className="mt-4 text-base text-[#2f3b32] max-w-lg mx-auto leading-relaxed"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              Everything you need to know about working with Aralo Studio.
+            </p>
+          </div>
+
+          {/* FAQ items */}
+          <div className="flex flex-col gap-3">
+            {faqs.map((faq, i) => (
+              <FAQItem key={i} faq={faq} index={i} />
+            ))}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-12 text-center">
+            <p
+              className="text-sm text-[#6b6660] mb-4"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              Still have questions? We're happy to chat.
+            </p>
+            <a
+              href="#contact"
+              className="btn-terra inline-flex items-center gap-2 px-7 py-3.5 text-base"
+            >
+              Get in Touch
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

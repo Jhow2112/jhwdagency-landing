@@ -1,0 +1,18 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogListPage from "@/page-components/BlogListPage";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/blog");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+>
+  <BlogListPage />
+</BaseLayout>

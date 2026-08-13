@@ -1,0 +1,20 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FreePreviewPage from "@/page-components/FreePreviewPage";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+const m = metaFor("/free-preview");
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+  navbar={false}
+  footer={false}
+>
+  <FreePreviewPage client:load />
+</BaseLayout>

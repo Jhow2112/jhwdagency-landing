@@ -1,0 +1,20 @@
+---
+/* 404 — emitted to dist/404.html and served by the `/*  /404.html  404` rule
+   in _redirects, so an unknown path returns a real 404 rather than 200 with
+   home page content. noindex, and no canonical: this one file answers every
+   unknown URL, so it cannot claim to be any particular page. Kept out of
+   routeMeta.ts for the same reason — it must not enter the sitemap. */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NotFound from "@/page-components/NotFound";
+---
+
+<BaseLayout
+  title="Page Not Found | Aralo Studio"
+  description="That page does not exist. Browse our web design work, services, and blog instead."
+  path="/404/"
+  noindex
+  navbar={false}
+  footer={false}
+>
+  <NotFound />
+</BaseLayout>

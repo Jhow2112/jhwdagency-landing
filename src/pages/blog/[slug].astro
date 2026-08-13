@@ -1,0 +1,32 @@
+---
+/* Blog posts — /blog/{slug}/
+   Replaces BlogPostPage.tsx (the wouter slug wrapper). og:type is "article"
+   here rather than the sitewide "website" default, matching the pre-Astro
+   build's per-route override. */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlogPostTemplate from "@/components/BlogPostTemplate";
+import { BLOG_POSTS } from "@/data/blogPosts";
+import { metaFor, pathFor } from "@/data/routeMeta";
+
+export function getStaticPaths() {
+  return BLOG_POSTS.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const m = metaFor(`/blog/${post.slug}`);
+---
+
+<BaseLayout
+  title={m.title}
+  description={m.description}
+  path={pathFor(m.route)}
+  ogTitle={m.ogTitle}
+  ogDescription={m.ogDescription}
+  ogImage={m.ogImage}
+  ogType={m.ogType}
+>
+  <BlogPostTemplate post={post} />
+</BaseLayout>
