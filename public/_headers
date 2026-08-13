@@ -3,14 +3,19 @@
 # revalidation round-trip on every repeat visit — including for build output
 # whose filename already changes whenever its content does.
 #
-# Vite emits content-hashed filenames into /assets (index-<hash>.js,
-# index-<hash>.css), so a changed file is always a changed URL and there is no
-# staleness risk in caching them permanently. This is the whole JS and CSS
-# payload: ~157 KB brotli on first load, 0 bytes on every repeat visit after.
-/assets/*
+# Astro emits content-hashed filenames into /_astro (BaseLayout.<hash>.css,
+# Navbar.<hash>.js), so a changed file is always a changed URL and there is no
+# staleness risk in caching them permanently.
+#
+# The path matters: this rule read /assets/* before the Astro migration, which
+# is where Vite emitted. Astro uses /_astro, so the old rule silently matched
+# nothing and every asset fell back to Netlify's must-revalidate default —
+# invisible in a build, and only caught by checking response headers against
+# the deployed site.
+/_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Scoped to /assets on purpose. Rules here match by path prefix, and page HTML
+# Scoped to /_astro on purpose. Rules here match by path prefix, and page HTML
 # sits alongside images under /portfolio/ and /blog/ (e.g. both
 # /portfolio/nexgen-hero-1440.jpg and /portfolio/cda-structures/index.html), so
 # a directory-wide rule would also freeze pages and stop deploys from showing
