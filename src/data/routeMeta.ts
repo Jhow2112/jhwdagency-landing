@@ -104,9 +104,9 @@ const STANDALONE: RouteMeta[] = [
   },
   {
     route: "/about",
-    title: "About Aralo Studio | Web Design in Meridian, Idaho & Nationwide",
+    title: "About Aralo Studio | Web Design in Meridian, Idaho",
     description:
-      "Aralo Studio is a hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S. Designed, built, hosted, and supported by Jeremy Howard.",
+      "A hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S. Built and supported by Jeremy Howard.",
     ogTitle: "About Aralo Studio",
     ogDescription:
       "A hands-on web studio for small businesses, based in Meridian, Idaho and working with clients across the U.S.",
@@ -175,9 +175,19 @@ const CASE_STUDIES: RouteMeta[] = PORTFOLIO_PROJECTS.map((p) => ({
   sitemapChangefreq: "monthly",
 }));
 
+/* Google truncates SERP titles around 60 characters. Five post titles blew
+   past that once " | Aralo Studio" was appended, which spent the visible line
+   on the brand and cut the headline. Append the suffix only when it fits; the
+   post's own title always survives intact, and the on-page H1 is untouched
+   either way since it renders from p.title directly. */
+const BRAND_SUFFIX = " | Aralo Studio";
+const TITLE_BUDGET = 60;
+const brandedTitle = (title: string) =>
+  title.length + BRAND_SUFFIX.length <= TITLE_BUDGET ? `${title}${BRAND_SUFFIX}` : title;
+
 const BLOG: RouteMeta[] = POSTS_BY_DATE.map((p) => ({
   route: `/blog/${p.slug}`,
-  title: `${p.title} | Aralo Studio`,
+  title: brandedTitle(p.title),
   // Matches the pre-Astro build, which called getExcerpt(p) with its default
   // 150-char cap rather than reading the optional `excerpt` field directly.
   description: getExcerpt(p),

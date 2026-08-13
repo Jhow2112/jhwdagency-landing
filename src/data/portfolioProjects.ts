@@ -214,7 +214,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     metaTitle: "Ice Ice Shavey Website | Aralo Studio Portfolio",
     metaDescription:
-      "Case study: a playful, booking-focused website for a Hawaiian shave ice business serving events across North Idaho and Eastern Washington. Designed and built by Aralo Studio.",
+      "Case study: a playful, booking-focused website for a Hawaiian shave ice business serving events across North Idaho and Eastern Washington.",
   },
   {
     slug: "nexgen-building-group",
@@ -247,7 +247,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     metaTitle: "NEXGEN Building Group Website | Aralo Studio Portfolio",
     metaDescription:
-      "Case study: a multi-service construction website for a Cataldo, Idaho builder covering custom homes, commercial, barndominiums, and pole buildings. Designed and built by Aralo Studio.",
+      "Case study: a multi-service website for a Cataldo, Idaho builder covering custom homes, commercial construction, barndominiums, and pole buildings.",
   },
   {
     slug: "cda-structures",
@@ -280,7 +280,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     metaTitle: "CDA Structures Website | Aralo Studio Portfolio",
     metaDescription:
-      "Case study: a WordPress-to-custom website rebuild for a Hayden, Idaho pole building and steel structure contractor serving ID, WA, and MT. Designed and built by Aralo Studio.",
+      "Case study: a WordPress-to-custom rebuild for a Hayden, Idaho pole building and steel structure contractor serving Idaho, Washington, and Montana.",
   },
   {
     slug: "dirty-ducts-done-right",
@@ -313,7 +313,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     ],
     metaTitle: "Dirty Ducts Done Right Website | Aralo Studio Portfolio",
     metaDescription:
-      "Case study: a clean, owner-forward website for an air duct and dryer vent cleaning business serving Whidbey Island and Snohomish County, Washington. Designed and built by Aralo Studio.",
+      "Case study: an owner-forward website for an air duct and dryer vent cleaning business on Whidbey Island and across Snohomish County, Washington.",
   },
 ];
 

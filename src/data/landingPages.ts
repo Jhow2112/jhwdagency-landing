@@ -226,7 +226,7 @@ export const CITIES: LandingPageData[] = [
     label: "Coeur d'Alene",
     metaTitle: "Web Design Coeur d'Alene Idaho | Aralo Studio",
     metaDescription:
-      "Custom websites for Coeur d'Alene small businesses. Fast, mobile-first, with local SEO built in. Aralo Studio already builds and maintains sites across North Idaho.",
+      "Custom websites for Coeur d'Alene small businesses. Fast, mobile-first, with local SEO built in. Built and maintained by Aralo Studio in North Idaho.",
     heading: "Web Design in",
     headingAccent: "Coeur d'Alene, Idaho",
     subheading:
@@ -930,7 +930,7 @@ export const INDUSTRIES: LandingPageData[] = [
     label: "Mortgage Brokers",
     metaTitle: "Mortgage Broker Web Design Idaho | Aralo Studio",
     metaDescription:
-      "Websites for mortgage brokers and loan officers in Idaho. Specialty loan pages, application integration, NMLS-compliant, built to win borrowers and referral partners.",
+      "Websites for mortgage brokers and loan officers in Idaho. Specialty loan pages, application integration, and NMLS-compliant disclosures.",
     heading: "Websites for",
     headingAccent: "Mortgage Brokers",
     subheading:

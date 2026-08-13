@@ -1,0 +1,24 @@
+# Netlify build configuration.
+#
+# Added during the Astro migration because the publish directory MOVED: the old
+# Vite build emitted to dist/public, Astro emits to dist. That setting lived
+# only in the Netlify UI, where it is invisible to code review and easy to miss
+# during a cutover — a deploy with the stale path publishes an empty directory
+# and takes the site down. Declaring it here makes the build reproducible from
+# the repo and lets the change land in the same commit as the migration.
+#
+# Note: settings configured in the Netlify UI take precedence for some fields.
+# If a deploy publishes the wrong directory, clear the UI override so this file
+# is authoritative.
+
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  # Astro 7 and the sitemap endpoint's git lookup both expect a modern Node.
+  NODE_VERSION = "22"
+
+# _redirects and _headers are committed under public/ and copied into dist by
+# Astro, so redirect and caching rules stay in their existing files rather than
+# being split across two mechanisms.
