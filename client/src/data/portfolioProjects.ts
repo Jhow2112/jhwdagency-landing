@@ -87,7 +87,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     slug: "silver-valley-painting",
     name: "Silver Valley Painting & Construction",
     industry: "Painting & Construction",
-    filterCategory: "Painting & Construction",
+    filterCategory: "Construction",
     location: "North Idaho (Idaho Panhandle & Western Montana)",
     liveUrl: "https://silvervalleypainting.com/",
     shortDescription:
@@ -215,6 +215,105 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     metaTitle: "Ice Ice Shavey Website | Aralo Studio Portfolio",
     metaDescription:
       "Case study: a playful, booking-focused website for a Hawaiian shave ice business serving events across North Idaho and Eastern Washington. Designed and built by Aralo Studio.",
+  },
+  {
+    slug: "nexgen-building-group",
+    name: "NEXGEN Building Group",
+    industry: "Construction & Custom Homes",
+    filterCategory: "Construction",
+    location: "Cataldo, Idaho",
+    liveUrl: "https://nexgenbuilt.net",
+    shortDescription:
+      "A dark, high-contrast site for a North Idaho builder covering custom homes, commercial, barndominiums, and pole buildings.",
+    services: ["Web Design", "Copywriting", "SEO", "Hosting"],
+    heroImage: "/portfolio/nexgen-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 762,
+    heroImageAlt:
+      "NEXGEN Building Group homepage: custom homes, commercial construction, and pole buildings across North Idaho.",
+    challenge:
+      "NEXGEN Building Group builds four very different things — custom homes, commercial buildings, barndominiums, and pole buildings — for four very different buyers. A homeowner planning a custom build and a developer scoping a tenant improvement need to see themselves on the page within seconds, without wading through the other three. The company also had real differentiators that were invisible online: 45+ years of combined hands-on experience and a lifetime structural warranty on every build.",
+    solution:
+      "A dark, high-contrast site that leads with the work itself — full-bleed build photography behind a headline that names what they do and where. Each of the four service lines gets its own dedicated page so every audience lands somewhere written for them, and the lifetime warranty is stated in the hero rather than buried in fine print. An eight-step process page answers the \"what does this actually look like\" question that stalls most construction inquiries, and the Faith • Family • Build line carries the family-owned positioning without turning it into a sermon.",
+    keyFeatures: [
+      "Dedicated service pages for custom homes, commercial construction, barndominiums, and pole buildings",
+      "Lifetime structural warranty surfaced in the hero, not the footer",
+      "Eight-step build process page from consultation to final walkthrough",
+      "Full-bleed build photography as the primary visual language",
+      "Google review testimonials section",
+      "Service area pages for North Idaho and Western Montana",
+      "Tap-to-call header number plus a project inquiry form",
+      "SEO-optimized for regional construction and custom home searches",
+    ],
+    metaTitle: "NEXGEN Building Group Website | Aralo Studio Portfolio",
+    metaDescription:
+      "Case study: a multi-service construction website for a Cataldo, Idaho builder covering custom homes, commercial, barndominiums, and pole buildings. Designed and built by Aralo Studio.",
+  },
+  {
+    slug: "cda-structures",
+    name: "CDA Structures, Inc.",
+    industry: "Post-Frame & Steel Construction",
+    filterCategory: "Construction",
+    location: "Hayden, Idaho",
+    liveUrl: "https://cdastructures.com",
+    shortDescription:
+      "A WordPress-to-custom rebuild for a three-state pole building and steel structure contractor.",
+    services: ["Web Design", "Copywriting", "SEO", "Hosting"],
+    heroImage: "/portfolio/cdastructures-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 762,
+    heroImageAlt:
+      "CDA Structures homepage: pole buildings, shops, garages, and steel structures across Idaho, Washington, and Montana.",
+    challenge:
+      "CDA Structures had hundreds of completed builds across Idaho, Washington, and Montana, a public works license, and projects for the City of Coeur d'Alene, Idaho Parks and Recreation, and the North Idaho Armory. None of that came across on an aging WordPress site that had fallen behind the business. Slow, dated, and hard to update, it made an established contractor look smaller than the work it had actually done — a real problem when the goal is winning quote requests against competitors with sharper sites.",
+    solution:
+      "A ground-up custom rebuild off WordPress. The new site is fast, mobile-first, and organized around how buyers actually shop: by building type. A structured Buildings directory covers shops and garages, barndominiums, agricultural and equestrian, and commercial, while a project gallery and projects map turn decades of completed work into visible proof. \"Get a Free Quote\" is the single, repeated call to action throughout, and the public works credential and municipal client list are given the prominence they earn.",
+    keyFeatures: [
+      "Full rebuild off an outdated WordPress site onto a fast custom build",
+      "Buildings directory organized by type: shops and garages, barndominiums, agricultural and equestrian, commercial",
+      "Project gallery and projects map showing completed work across three states",
+      "Post frame, all steel, and conventional construction methods explained side by side",
+      "Free quote request form as the primary conversion path",
+      "Municipal and public works credentials given prominent placement",
+      "FAQ section handling common pole building questions before the sales call",
+      "SEO-optimized for pole building and steel structure searches across ID, WA, and MT",
+    ],
+    metaTitle: "CDA Structures Website | Aralo Studio Portfolio",
+    metaDescription:
+      "Case study: a WordPress-to-custom website rebuild for a Hayden, Idaho pole building and steel structure contractor serving ID, WA, and MT. Designed and built by Aralo Studio.",
+  },
+  {
+    slug: "dirty-ducts-done-right",
+    name: "Dirty Ducts Done Right",
+    industry: "Home Services",
+    filterCategory: "Home Services",
+    location: "Whidbey Island & Snohomish County, Washington",
+    liveUrl: "https://dirtyductsdoneright.com",
+    shortDescription:
+      "A clean, owner-forward site for a one-man duct cleaning business competing against call-center franchises.",
+    services: ["Web Design", "Copywriting", "SEO", "Hosting"],
+    heroImage: "/portfolio/dirtyducts-hero-1440.jpg",
+    heroWidth: 1440,
+    heroHeight: 762,
+    heroImageAlt:
+      "Dirty Ducts Done Right homepage: air duct, dryer vent, and mini-split cleaning across Whidbey Island and Snohomish County.",
+    challenge:
+      "Duct cleaning is a category crowded with call centers, bait-and-switch pricing, and franchises that dispatch whoever is available. Nate started Dirty Ducts Done Right at 53 after a career in sales and leadership and 2,300 wood stove installations, and his advantage is precisely that he shows up himself. The site had to make that single fact impossible to miss, while still looking credible enough that a homeowner trusts a one-man operation with their house.",
+    solution:
+      "A clean, bright site built around one line: done by the owner, not a subcontractor. The brand's rubber-duck logo keeps it approachable while generous whitespace and restrained typography keep it professional — the balance a solo operator needs to look established without looking corporate. Bonded, insured, same-day service, and free estimates sit directly under the hero calls to action, and a tap-to-call number stays fixed in the header because this is a phone-call business. An About Nate page does the trust work, and a Guides section builds organic search presence around the questions homeowners ask before they book.",
+    keyFeatures: [
+      "Owner-not-subcontractor positioning as the central message",
+      "Tap-to-call and text-first CTAs throughout, matched to how customers actually book",
+      "Trust signals — bonded, insured, same-day service, free estimates — directly under the hero",
+      "Service pages for air duct, dryer vent, and mini-split cleaning",
+      "Before-and-after photography showing real results",
+      "About Nate page carrying the personal credibility a solo operation depends on",
+      "Guides section targeting homeowner research searches",
+      "Service area coverage for Whidbey Island, Mukilteo, Everett, Camano Island, and Snohomish County",
+    ],
+    metaTitle: "Dirty Ducts Done Right Website | Aralo Studio Portfolio",
+    metaDescription:
+      "Case study: a clean, owner-forward website for an air duct and dryer vent cleaning business serving Whidbey Island and Snohomish County, Washington. Designed and built by Aralo Studio.",
   },
 ];
 
