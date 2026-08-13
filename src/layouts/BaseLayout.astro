@@ -190,8 +190,18 @@ const canonical = `${SITE_ORIGIN}${path}`;
         way to navigate on a phone, so it must not wait for idle. */}
     {navbar && <Navbar client:load />}
     <slot />
-    {/* client:visible — the footer holds the primary contact form, but it sits
-        below the fold on every page, so its JS is deferred until scrolled to. */}
-    {footer && <Footer client:visible cities={cityLinks} industries={industryLinks} />}
+    {/* client:idle, NOT client:visible.
+        client:visible observes the <astro-island> element itself, and that
+        element is an inline custom element wrapping block children, so it
+        measures 0x0 and its IntersectionObserver never fires — the island
+        stayed un-hydrated no matter how far the page was scrolled. Verified
+        against production: every client:visible island reported ssr="" and
+        zero React fibers, while client:load ones hydrated fine.
+
+        This footer holds the primary contact form, so it must not depend on
+        that. client:idle has no geometry dependency and still defers past
+        first paint. React itself is already loaded for the Navbar above, so
+        the marginal cost here is just this component's chunk. */}
+    {footer && <Footer client:idle cities={cityLinks} industries={industryLinks} />}
   </body>
 </html>

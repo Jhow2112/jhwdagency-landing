@@ -52,8 +52,9 @@ const m = metaFor("/");
       <TestimonialsSection />
       {/* The only interactive section on the page: an accordion, plus the
           FAQPage JSON-LD it derives from the same array it renders. Sits far
-          below the fold, so it hydrates on scroll rather than at load. */}
-      <FAQSection client:visible />
+          not visibility-gated: see the note in BaseLayout on why client:visible
+          never fires for these islands. */}
+      <FAQSection client:idle />
       <BlogTeaserSection />
       <ReferralCallout />
     </main>
