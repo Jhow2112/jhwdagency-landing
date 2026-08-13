@@ -85,7 +85,12 @@ function PlanCard({ plan, index }: { plan: (typeof plans)[0]; index: number }) {
     <div
       className={`reveal [--reveal-y:32px] relative flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 ${
         plan.highlight
-          ? "shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#9a4528]/40"
+          ? // The highlighted card sets every child to white text, so this dark
+            // background is load-bearing, not decorative — without it the card
+            // renders white-on-cream and is unreadable. It lived in the inline
+            // style block alongside the scroll-reveal properties until that
+            // block was removed; it belongs with bg-white on the sibling branch.
+            "bg-[#1f2a22] shadow-2xl md:scale-105 md:z-10 ring-2 ring-[#9a4528]/40"
           : "border border-[#d6d2c5] bg-white shadow-md hover:shadow-xl"
       }`}
     >
