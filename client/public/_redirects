@@ -34,5 +34,15 @@ http://www.jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 /site-utils.js  https://assets.aralostudio.com/script.js  200
 /api/su         https://assets.aralostudio.com/api/su     200
 
-# SPA fallback — every other path serves index.html so client-side routing works.
-/*  /index.html  200
+# Unknown paths serve the pre-rendered 404 page with a real 404 status.
+#
+# This was previously `/*  /index.html  200`, which returned the full home page
+# for every typo'd or stale URL. Google treats that as a soft 404: it wastes
+# crawl budget and reports as an error in Search Console.
+#
+# Safe because every route in the app is pre-rendered to its own index.html and
+# is served before this rule is reached — the only route that is not
+# pre-rendered is /404 itself. A route added to App.tsx but not to ROUTE_META
+# in prerender.mjs will 404 here, which is the correct signal: an unrendered
+# route has no indexable content anyway.
+/*  /404.html  404

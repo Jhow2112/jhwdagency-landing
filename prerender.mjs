@@ -396,6 +396,60 @@ for (const route of ROUTES) {
   }
 }
 
+// ─── Pre-render the 404 page to dist/public/404.html ─────────────────────
+// Netlify serves this for the `/*  /404.html  404` rule in _redirects, so an
+// unknown path returns a real 404 instead of 200-with-homepage-content (a
+// soft 404, which burns crawl budget and shows up as an error in Search
+// Console). Every real route is pre-rendered to its own index.html and is
+// matched before that rule, so nothing legitimate lands here.
+//
+// Deliberately NOT part of ROUTE_META: this file must stay out of the
+// sitemap and out of the indexable route list.
+try {
+  const renderedBody = execSync(
+    `npx tsx --tsconfig tsconfig.ssr.json "${helperScript}" "/404"`,
+    {
+      cwd: __dirname,
+      env: { ...process.env, NODE_ENV: 'production', VITE_SSR: 'true' },
+      maxBuffer: 10 * 1024 * 1024,
+    }
+  ).toString();
+
+  const notFoundTitle = 'Page Not Found | Aralo Studio';
+  const notFoundDesc =
+    'That page does not exist. Browse our web design work, services, and blog instead.';
+  let html = applyRouteMeta(indexHtml, {
+    title: notFoundTitle,
+    description: notFoundDesc,
+    canonical: `${SITE_ORIGIN}/404`,
+    ogUrl: `${SITE_ORIGIN}/404`,
+    ogTitle: notFoundTitle,
+    ogDescription: notFoundDesc,
+    ogImage: `${SITE_ORIGIN}/og-image.png`,
+    twitterTitle: notFoundTitle,
+    twitterDescription: notFoundDesc,
+    twitterImage: `${SITE_ORIGIN}/og-image.png`,
+  });
+
+  // Never index an error page, and give it no canonical at all: this one file
+  // is served at every unknown URL, so any self-referential canonical it
+  // carried would be a claim about a page that does not exist.
+  html = html.replace(
+    /<meta name="robots"[^>]*>/,
+    '<meta name="robots" content="noindex, follow" />'
+  );
+  html = html.replace(/\s*<link rel="canonical"[^>]*>/, '');
+  html = html.replace('<div id="root"></div>', `<div id="root">${renderedBody}</div>`);
+
+  writeFileSync(join(DIST_DIR, '404.html'), html, 'utf-8');
+  console.log('✓ Pre-rendered /404 → dist/public/404.html (noindex, no canonical)');
+} catch (err) {
+  // A missing 404.html silently reintroduces soft 404s, so fail the build
+  // rather than shipping a deploy whose error handling is broken.
+  console.error('✗ Failed to pre-render 404 page:', err.message?.slice(0, 300));
+  process.exitCode = 1;
+}
+
 try { unlinkSync(helperScript); } catch {}
 
 // ─── Generate sitemap.xml from the same route list ───────────────────────

@@ -1,0 +1,21 @@
+# Netlify serves every asset as `public, max-age=0, must-revalidate` unless
+# told otherwise, and there was no _headers file here at all. That forces a
+# revalidation round-trip on every repeat visit — including for build output
+# whose filename already changes whenever its content does.
+#
+# Vite emits content-hashed filenames into /assets (index-<hash>.js,
+# index-<hash>.css), so a changed file is always a changed URL and there is no
+# staleness risk in caching them permanently. This is the whole JS and CSS
+# payload: ~157 KB brotli on first load, 0 bytes on every repeat visit after.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Scoped to /assets on purpose. Rules here match by path prefix, and page HTML
+# sits alongside images under /portfolio/ and /blog/ (e.g. both
+# /portfolio/nexgen-hero-1440.jpg and /portfolio/cda-structures/index.html), so
+# a directory-wide rule would also freeze pages and stop deploys from showing
+# up for the length of the TTL.
+#
+# Un-hashed images therefore still revalidate on each visit. Caching them
+# properly needs content-hashed filenames rather than an extension glob — an
+# asset pipeline that hashes images gets it for free under the rule above.

@@ -18,6 +18,7 @@ import CaseStudyTemplate from "./components/CaseStudyTemplate";
 import FreePreviewPage from "./pages/FreePreviewPage";
 import AboutPage from "./pages/AboutPage";
 import LandingPageTemplate from "./components/LandingPageTemplate";
+import NotFound from "./pages/NotFound";
 import { CITIES, INDUSTRIES } from "./data/landingPages";
 import { getPostBySlug } from "./data/blogPosts";
 import { getProjectBySlug } from "./data/portfolioProjects";
@@ -33,6 +34,9 @@ const ROUTE_MAP: Record<string, React.ComponentType> = {
   "/portfolio": PortfolioHub,
   "/free-preview": FreePreviewPage,
   "/about": AboutPage,
+  // Rendered to dist/public/404.html, not to /404/index.html — it is served
+  // for every unknown path, so it stays out of ROUTE_META and the sitemap.
+  "/404": NotFound,
 };
 
 export function render(url: string): string {
