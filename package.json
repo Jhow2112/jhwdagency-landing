@@ -5,12 +5,13 @@
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/check-images.mjs dist",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
     "format": "prettier --write .",
     "seo:snapshot": "node scripts/seo-snapshot.mjs dist .seo-baseline/astro-latest.json",
-    "seo:parity": "node scripts/seo-snapshot.mjs dist /tmp/astro-candidate.json && node scripts/seo-parity.mjs .seo-baseline/react-baseline.json /tmp/astro-candidate.json"
+    "seo:parity": "node scripts/seo-snapshot.mjs dist /tmp/astro-candidate.json && node scripts/seo-parity.mjs .seo-baseline/react-baseline.json /tmp/astro-candidate.json",
+    "check:images": "node scripts/check-images.mjs dist"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",
@@ -70,6 +71,7 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
     "@builder.io/vite-plugin-jsx-loc": "^0.1.1",
     "@fontsource/inter": "^5.2.8",
     "@resvg/resvg-js": "^2.6.2",

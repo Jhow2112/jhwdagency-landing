@@ -2,7 +2,11 @@
    Full-bleed hero photo with solid forest scrim (no gradients).
    Display heading uses Fraunces 300 + tight tracking. */
 
-const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/hero-fullbleed-BhXgiyH2FfTzqVDBwK9NU8.webp";
+/* Served from /public, not a third-party CDN. The previous URL pointed at a
+   generated-asset bucket that started returning 403 and silently emptied the
+   hero behind its scrim; scripts/check-images.mjs now fails the build on any
+   remote image reference so that cannot recur. */
+const HERO_BG = "/hero-storefront.jpg";
 
 export default function HeroSection() {
   return (

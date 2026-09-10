@@ -9,9 +9,12 @@ const services = [
     description:
       "Fast, beautiful websites built for real businesses. Custom-designed on proven templates and live in days, not months. Hosting, updates, and support are all included.",
     tags: ["Custom Design", "Mobile-First", "Hosting Included"],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-contractor-bgXiBQZvn3CX4CGsizQjKp.webp",
-    imageAlt: "Custom contractor website built by Aralo Studio",
-    imagePosition: "object-center",
+    image: "/services/web-design-nexgen.jpg",
+    imageAlt: "NEXGEN Building Group website built by Aralo Studio",
+    /* Left-anchored, not centred: the card is narrower than the screenshot's
+       aspect ratio, so object-cover crops the sides, and this site's logo and
+       headline both sit hard against the left edge. */
+    imagePosition: "object-left-top",
     color: "bg-[#e7e2d6]",
   },
   {
@@ -20,9 +23,9 @@ const services = [
     description:
       "Your website should look like it belongs to you. We create cohesive visual styles in color, typography, and layout that reflect your brand and build trust with visitors.",
     tags: ["Color & Typography", "Consistent Branding", "Professional Look"],
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663460467706/iZSGqPDN3DQvDbvL5mKtyB/portfolio-restaurant-aREJ6AvRtneKLgdTb2u3gm.webp",
-    imageAlt: "Restaurant website with custom visual identity by Aralo Studio",
-    imagePosition: "object-center",
+    image: "/services/visual-identity-iceiceshavey.jpg",
+    imageAlt: "Ice Ice Shavey website and brand identity built by Aralo Studio",
+    imagePosition: "object-top",
     color: "bg-[#e7e2d6]",
   },
   {
