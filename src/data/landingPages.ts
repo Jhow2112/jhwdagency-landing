@@ -88,7 +88,7 @@ export const CITIES: LandingPageData[] = [
         paragraphs: [
           "Aralo Studio is one person, Jeremy, based in nearby Meridian. You work with the designer directly from the first sketch to ongoing updates, not a sales rep or a ticket queue. That matters most after launch, the point where small businesses usually get abandoned by whoever built the site.",
           "The work is real and it's local. We built and maintain [Crystal Howard Mortgage](/portfolio/crystal-howard-mortgage/) in Garden City, a multi-page site for a jumbo and construction lending specialist, and [Crisis to Comfort Counseling](/portfolio/crisis-to-comfort/) here in the Treasure Valley. SEO is built into every page from the start instead of sold as an upsell later, and the sites are hand-coded to load fast and pass Core Web Vitals rather than assembled from a heavy page-builder template. If you run a business in Boise and want a site that earns calls instead of just existing, that's the work we do.",
-          "Boise is home base, but the work goes statewide. Up north we build and maintain sites across North Idaho, from [Coeur d'Alene](/web-design-coeur-dalene/) and [Post Falls](/web-design-post-falls/) to [Hayden](/web-design-hayden/), [Rathdrum](/web-design-rathdrum/), and [Sandpoint](/web-design-sandpoint/), anchored by our Panhandle client [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/). Same designer, same hand-built quality, whether your business is in the Treasure Valley or Kootenai County.",
+          "Boise is home base, but the work goes statewide. Up north we build and maintain sites across North Idaho, from [Coeur d'Alene](/web-design-coeur-dalene/) and [Post Falls](/web-design-post-falls/) to [Hayden](/web-design-hayden/), [Rathdrum](/web-design-rathdrum/), and [Sandpoint](/web-design-sandpoint/), including [CDA Structures](/portfolio/cda-structures/) in Hayden and [NEXGEN Building Group](/portfolio/nexgen-building-group/) in Cataldo. Same designer, same hand-built quality, whether your business is in the Treasure Valley or Kootenai County.",
         ],
       },
     ],
@@ -130,7 +130,7 @@ export const CITIES: LandingPageData[] = [
         heading: "Why work with a local designer",
         paragraphs: [
           "When you call Aralo Studio, you get Jeremy, the person who designs and builds your site, not a project manager passing notes. Being based in Meridian means real local meetings when you want them and a designer who actually knows the market you're selling into.",
-          "The work speaks for itself. We build and maintain real production sites across Idaho, from [Crisis to Comfort Counseling](/portfolio/crisis-to-comfort/) in the Treasure Valley to [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/) up north. SEO is included from day one rather than bolted on, and every site is hand-coded to be fast on the five-year-old phones your customers actually use. If you want a website built by your neighbor instead of a faceless agency, that's exactly what this is.",
+          "The work speaks for itself. We build and maintain real production sites across Idaho, from [Crisis to Comfort Counseling](/portfolio/crisis-to-comfort/) in the Treasure Valley to [CDA Structures](/portfolio/cda-structures/) up north. SEO is included from day one rather than bolted on, and every site is hand-coded to be fast on the five-year-old phones your customers actually use. If you want a website built by your neighbor instead of a faceless agency, that's exactly what this is.",
         ],
       },
     ],
@@ -235,7 +235,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Coeur d'Alene businesses.",
     bodyParagraphs: [
       "Coeur d'Alene has become one of the most competitive small markets in the Northwest. Out-of-state arrivals, a strong tourism season around the lake and Sherman Avenue, and a steady flow of new businesses mean the search results are crowded year-round. A fast, professional website that shows up in Google's local pack is no longer optional here. We build sites for Coeur d'Alene [contractors](/websites-for-contractors/), [painters](/websites-for-painters/), [restaurants](/websites-for-restaurants/), [real estate agents](/websites-for-real-estate/), and [salons](/websites-for-salons/) that load fast, look the part, and turn local searches into calls.",
-      "Aralo Studio is not new to North Idaho. We already build and maintain [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/), a Panhandle company with commercial clients including Best Buy and Idaho Fish & Game, with service-area pages targeting cities across the region. We know what it takes to rank up here.",
+      "Aralo Studio is not new to North Idaho. We build and maintain [CDA Structures](/portfolio/cda-structures/), a Hayden contractor whose clients include the City of Coeur d'Alene and Idaho Parks and Recreation, and [NEXGEN Building Group](/portfolio/nexgen-building-group/), a custom home and commercial builder in Cataldo. We know what it takes to rank up here.",
     ],
     bodySections: [
       {
@@ -256,7 +256,7 @@ export const CITIES: LandingPageData[] = [
         heading: "Why work with Aralo Studio",
         paragraphs: [
           "Aralo Studio is one person, Jeremy. You work with the designer directly from first sketch to ongoing updates, by phone, email, or video, with the same responsiveness whether you're across town or across the state. North Idaho clients are not an afterthought here; the region is a focus.",
-          "The proof is already on the ground: a maintained, ranking North Idaho site in [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/), plus a portfolio of Idaho businesses in mortgage, counseling, and the trades. SEO is built into every page from the start, and sites are hand-coded to load fast and pass Core Web Vitals. If you run a Coeur d'Alene business and want a site that competes, this is built for exactly that.",
+          "The proof is already on the ground: maintained North Idaho sites for [CDA Structures](/portfolio/cda-structures/) and [NEXGEN Building Group](/portfolio/nexgen-building-group/), plus a portfolio of Idaho businesses in mortgage, counseling, and the trades. SEO is built into every page from the start, and sites are hand-coded to load fast and pass Core Web Vitals. If you run a Coeur d'Alene business and want a site that competes, this is built for exactly that.",
         ],
       },
     ],
@@ -277,7 +277,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Post Falls businesses.",
     bodyParagraphs: [
       "Post Falls sits in the growth corridor between Coeur d'Alene and Spokane, which is both an opportunity and a problem. The customer base is expanding fast, but so is the competition, and a Post Falls business with a weak website loses searches to the next town in either direction. We build clean, fast sites for Post Falls [contractors](/websites-for-contractors/), [HVAC companies](/websites-for-hvac/), [plumbers](/websites-for-plumbers/), and [electricians](/websites-for-electricians/) that hold their own in that corridor.",
-      "Aralo Studio already works across North Idaho. We build and maintain [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/), a regional Panhandle company, so we understand how local search works in Kootenai County and what it takes to keep a trades business booked.",
+      "Aralo Studio already works across North Idaho. We build and maintain [CDA Structures](/portfolio/cda-structures/) in neighboring Hayden and [NEXGEN Building Group](/portfolio/nexgen-building-group/) in Cataldo, so we understand how local search works in Kootenai County and what it takes to keep a trades business booked.",
     ],
     bodySections: [
       {
@@ -319,7 +319,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Hayden businesses.",
     bodyParagraphs: [
       "Hayden's customer base, anchored around Hayden Lake and the established neighborhoods north of Coeur d'Alene, tends to expect quality. A dated or slow website undercuts that expectation before a visitor reads a word. We build polished, fast sites for Hayden [landscapers](/websites-for-landscapers/), [painters](/websites-for-painters/), [real estate agents](/websites-for-real-estate/), and [cleaning services](/websites-for-cleaning-services/) that match the standard their customers are looking for.",
-      "Aralo Studio already builds and maintains sites across North Idaho, including [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/) in the Panhandle. We know the Kootenai County market and how to rank in it.",
+      "Aralo Studio already builds and maintains sites across North Idaho, including [CDA Structures](/portfolio/cda-structures/) right here in Hayden. We know the Kootenai County market and how to rank in it.",
     ],
     bodySections: [
       {
@@ -361,7 +361,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Sandpoint businesses.",
     bodyParagraphs: [
       "Sandpoint is a distinct market from the rest of the Panhandle: a resort town shaped by Lake Pend Oreille, Schweitzer, and a tourism season that swings demand hard through the year. A business here needs a website that works for both locals and the visitors planning a trip from out of town. We build fast, professional sites for Sandpoint [contractors](/websites-for-contractors/), [painters](/websites-for-painters/), [restaurants](/websites-for-restaurants/), and [auto detailers](/websites-for-auto-detailers/) that handle both audiences.",
-      "Aralo Studio already builds and maintains [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/) and other sites across North Idaho, so we understand how seasonal Panhandle markets search and book.",
+      "Aralo Studio already builds and maintains [CDA Structures](/portfolio/cda-structures/), [NEXGEN Building Group](/portfolio/nexgen-building-group/), and other sites across North Idaho, so we understand how seasonal Panhandle markets search and book.",
     ],
     bodySections: [
       {
@@ -403,7 +403,7 @@ export const CITIES: LandingPageData[] = [
     bodyHeading: "Built for Rathdrum businesses.",
     bodyParagraphs: [
       "Rathdrum is one of the fastest-growing parts of Kootenai County, a bedroom community filling in across the Rathdrum Prairie with new families and the service businesses that follow them. That growth brings customers and competition at the same time. We build clean, fast sites for Rathdrum [contractors](/websites-for-contractors/), [cleaning services](/websites-for-cleaning-services/), [HVAC companies](/websites-for-hvac/), and [electricians](/websites-for-electricians/) that get found as the area grows.",
-      "Aralo Studio already builds and maintains sites across North Idaho, including [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/) in the Panhandle, so we know how search works in this county.",
+      "Aralo Studio already builds and maintains sites across North Idaho, including [CDA Structures](/portfolio/cda-structures/) in nearby Hayden, so we know how search works in this county.",
     ],
     bodySections: [
       {
@@ -454,7 +454,7 @@ export const INDUSTRIES: LandingPageData[] = [
         heading: "What a contractor website includes",
         paragraphs: [
           "A working contractor site is built around a few jobs: show your best work clearly, make the service area obvious, prove you're licensed and real, and make it dead-simple to call or request a quote. A standard build covers a homepage, a services breakdown, a project gallery, an about page, and a contact path, with a tappable phone number on every page.",
-          "Every site includes mobile-first design, on-page SEO and AEO so you rank for the trades-and-city searches that generate work, Google Business Profile setup, and structured data that lists your service area by city. We've done exactly this for [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/), a North Idaho contractor with commercial clients like Best Buy and Idaho Fish & Game, including service-area pages targeting specific cities so the site ranks where the jobs are.",
+          "Every site includes mobile-first design, on-page SEO and AEO so you rank for the trades-and-city searches that generate work, Google Business Profile setup, and structured data that lists your service area by city. We've done exactly this for North Idaho builders like [CDA Structures](/portfolio/cda-structures/), a three-state pole building contractor with municipal clients, and [NEXGEN Building Group](/portfolio/nexgen-building-group/), a custom home and commercial builder.",
         ],
       },
       {
@@ -782,7 +782,7 @@ export const INDUSTRIES: LandingPageData[] = [
         heading: "What a painting website includes",
         paragraphs: [
           "We build painting sites around the gallery, with clear service descriptions (interior, exterior, commercial, residential, cabinet refinishing, decks and fences, color consulting) so the customer with a 3,000-square-foot exterior and the one with a single accent wall both know you're for them. Testimonials carry a lot of weight in a price-sensitive trade, so we feature short, specific quotes from past customers by name and neighborhood.",
-          "This is proven work for us. We build and maintain [Silver Valley Painting & Construction](/portfolio/silver-valley-painting/), a North Idaho painting and construction company with commercial clients like Best Buy and Idaho Fish & Game, complete with a project gallery, a commercial client logo strip, and service-area pages that rank for regional painting searches. Every build includes mobile-first design, on-page SEO and AEO, Google Business Profile setup, and structured data.",
+          "This is proven work for us. We build and maintain sites for North Idaho trades businesses like [CDA Structures](/portfolio/cda-structures/) and [NEXGEN Building Group](/portfolio/nexgen-building-group/), with project galleries that turn completed work into visible proof and a single, repeated quote call to action. Every build includes mobile-first design, on-page SEO and AEO, Google Business Profile setup, and structured data.",
         ],
       },
       {

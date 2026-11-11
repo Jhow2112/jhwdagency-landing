@@ -47,9 +47,13 @@ export type PortfolioProject = {
   metaTitle: string;
   /** <meta name="description"> for the case study page */
   metaDescription: string;
+  /** Temporarily pull a project off the site without deleting its data.
+      Hidden projects get no case study page, no hub/home card, and no
+      sitemap entry. Also add a redirect for its URL in public/_redirects. */
+  hidden?: boolean;
 };
 
-export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
+const ALL_PROJECTS: PortfolioProject[] = [
   {
     slug: "crystal-howard-mortgage",
     name: "Crystal Howard Mortgage",
@@ -85,6 +89,7 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   },
   {
     slug: "silver-valley-painting",
+    hidden: true,
     name: "Silver Valley Painting & Construction",
     industry: "Painting & Construction",
     filterCategory: "Construction",
@@ -328,6 +333,12 @@ export function heroSrcSet(heroImage: string): string {
   const stem = heroImage.replace(/-1440\.jpg$/, "");
   return HERO_SRCSET_WIDTHS.map((w) => `${stem}-${w}.jpg ${w}w`).join(", ");
 }
+
+/** Every published (non-hidden) project. Consumers must use this, never
+    ALL_PROJECTS, so a hidden project can't leak onto a page. */
+export const PORTFOLIO_PROJECTS: PortfolioProject[] = ALL_PROJECTS.filter(
+  (p) => !p.hidden,
+);
 
 /** Find a project by slug. */
 export function getProjectBySlug(slug: string): PortfolioProject | undefined {

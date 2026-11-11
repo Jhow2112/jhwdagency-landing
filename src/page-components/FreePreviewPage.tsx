@@ -272,11 +272,11 @@ export default function FreePreviewPage() {
                 alt: "Crystal Howard Mortgage homepage screenshot",
               },
               {
-                name: "Silver Valley Painting",
-                industry: "Painting & Construction",
-                liveUrl: "https://silvervalleypainting.com/",
-                image: "/portfolio/silver-valley-hero-1440.jpg",
-                alt: "Silver Valley Painting homepage screenshot",
+                name: "CDA Structures",
+                industry: "Post-Frame & Steel Construction",
+                liveUrl: "https://cdastructures.com",
+                image: "/portfolio/cdastructures-hero-1440.jpg",
+                alt: "CDA Structures homepage screenshot",
               },
             ].map((p) => (
               <div

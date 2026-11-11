@@ -9,6 +9,12 @@ http://jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 https://www.jeremyhowardwebdesign.com/*  https://aralostudio.com/:splat  301!
 http://www.jeremyhowardwebdesign.com/*   https://aralostudio.com/:splat  301!
 
+# Case studies temporarily hidden (hidden: true in portfolioProjects.ts) →
+# portfolio hub. 302, not 301: these are expected to come back, so search
+# engines should keep the original URL. Delete the lines when un-hiding.
+/portfolio/silver-valley-painting   /portfolio/  302!
+/portfolio/silver-valley-painting/* /portfolio/  302!
+
 # Consolidated thin city pages → stronger neighbor page — 301 permanent.
 # Caldwell folded into Nampa (Canyon County), Kuna folded into Meridian.
 # Must precede the SPA fallback below.

@@ -5,13 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/check-images.mjs dist",
+    "build": "astro build && node scripts/check-images.mjs dist && node scripts/check-links.mjs dist",
     "preview": "astro preview",
     "check": "astro check && tsc --noEmit",
     "format": "prettier --write .",
     "seo:snapshot": "node scripts/seo-snapshot.mjs dist .seo-baseline/astro-latest.json",
     "seo:parity": "node scripts/seo-snapshot.mjs dist /tmp/astro-candidate.json && node scripts/seo-parity.mjs .seo-baseline/react-baseline.json /tmp/astro-candidate.json",
-    "check:images": "node scripts/check-images.mjs dist"
+    "check:images": "node scripts/check-images.mjs dist",
+    "check:links": "node scripts/check-links.mjs dist"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.2",
